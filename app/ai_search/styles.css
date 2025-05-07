@@ -1,0 +1,229 @@
+
+a {
+  font-family: Arial, sans-serif;
+}
+
+textarea {
+  font-family: Arial, sans-serif;
+}
+
+/* Container for chat messages */
+.chatbox {
+  width: 600px;
+  height: 400px;
+  padding: 10px;
+  margin-bottom: 10px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.introduction {
+  width: 600px;
+  justify-items: center;
+}
+
+.introduction h3 {
+  font-size: 26px;
+}
+
+/* Search box wrapper */
+.search-container {
+  width: 600px;
+  /*height: 60px;*/
+  border: 2px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Text input area */
+.input-container {
+  flex: 1;
+}
+
+#search-input {
+  width: 95%;
+  min-height: 50px;
+  max-height: 100px;
+  overflow-y: auto;
+  resize: none;
+  padding: 8px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  font-size: 16px;
+}
+
+/* Button row */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  background: #f9f9f9;
+  border-top: 1px solid #e5e5e5;
+  border-radius: 0px 0px 20px 20px;
+}
+
+.button-container button {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.button_cls {
+
+}
+
+.button_cls span{
+  align-items: center;
+}
+
+/* Circular submit button */
+#submit-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Message styles */
+.message {
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 8px;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+
+.user-message {
+/*  background: #e1ffc7;*/
+  background: #f1f0f0;
+  align-self: flex-end;
+}
+.bot-message {
+/*  background: #f1f0f0;
+*/  
+  background: white;
+  align-self: flex-start;
+}
+
+
+/*sidebar and main content*/
+/* Sidebar styling */
+.sidebar {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: -250px; /* Initially hidden off-screen */
+            background-color: #f9f9f9;
+            padding-top: 20px;
+            transition: 0.3s;
+            z-index: 1;
+}
+
+.sidebar a {
+            color: #0d0d0d;
+            text-decoration: none;
+            display: block;
+            padding: 10px 15px;
+            font-size: 16px;
+            transition: background-color 0.3s;
+}
+
+.sidebar a:hover {
+            /*background-color: #575757;*/
+            background-color: #e8e8e8;
+}
+
+.sidebar .close-btn {
+            font-size: 36px;
+            /*color: white;*/
+            color: #9b9b9b;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+}
+
+/* Main content area */
+.main-content {
+            margin-left: 0;
+            transition: margin-left 0.3s;
+            padding: 20px;
+            flex-grow: 1;
+}
+
+/* Button to open the sidebar */
+.open-btn {
+            font-size: 24px;
+            cursor: pointer;
+            padding: 10px 15px;
+            background-color: #9b9b9b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin: 20px;
+}
+
+/* When sidebar is opened, shift the main content */
+.sidebar.open {
+    left: 0;
+}
+
+/*code container*/
+.main-content.shifted {
+            margin-left: 250px;
+}
+
+.code-container {
+            color: #000000;
+            background-color: #f8f8f8;
+
+            padding: 15px;
+            border-radius: 8px;
+            position: relative;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 800px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.code-container pre {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.5;
+            overflow-x: auto;
+}
+
+.copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: #000000;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+}
+
+.div_content_wrapper{
+  display: flex;
+  justify-content: center;
+}
+
+.div_content_wrapper_center {
+}
