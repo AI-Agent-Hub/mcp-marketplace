@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MCP Marketplace Plugin Demo</title>
+    <style>
+        body { padding: 20px; font-family: Arial, sans-serif; }
+        .container { max-width: 800px; margin: 0 auto; }
+        .container h3 {font-size: 26px;color: grey;}
+        iframe { border: 1px solid #ccc; margin-top: 20px; }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="./plugin/mcp_marketplace/scripts.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <h3>Agent MCP Marketplace Plugin Demo</h3>
+        <iframe class="div_iframe_agent_marketplace" src="./plugin/mcp_marketplace/index.html" style="border:none; position: relative; width: 500px; height: 500px; z-index: 1;"></iframe>
+    </div>
+
+    <script>
+        // Parent page message listener
+        window.addEventListener('message', (event) => {
+            if (event.data.type === 'agentSelection') {
+                console.log('Selected Agents:', event.data.selected);
+                window.selectedAgents = event.data.selected;
+            }
+        });
+
+        // Example function to get selected agents
+        function getSelectedAgents() {
+            return window.selectedAgents || [];
+        }
+    </script>
+</body>
+</html>
