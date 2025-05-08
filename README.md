@@ -1,20 +1,27 @@
 ## Open MCP Marketplace | AI Agent Marketplace Plugin from DeepNLP
 
-The open source MCP Marketplace plugin is a pure web project (html/js/css), which contains the the MCP tools configs files that can be easily integrated to your AI apps and upgrade your AI Agent Tools ability.
+The open source MCP Marketplace plugin is a pure web project (html/js/css), which will display available MCP tools meta and config files in the frontend, so that user can choose, manage and install their preferred MCP tools in similar functions (Map, Payment, Fetch). Itcan be easily integrated to your AI apps, and upgrade your AI Agent tools use ability (LLM).
 
 **KEY Features**
 
-- Agent Button: Show the Panel of MCP Tools from all the web
-- Select MCP servers: Users can choose which MCP tools to perform tasks from mcp tools marketplace with similar features, such as (Map Location, Search, Fetch, Payment, etc). 
-- MCP Tools Dispatcher: Your LLM/agent can also benifit from dispatching the query to the MCP tools, making decision on which tools to choose. The decision or dispatcher agent functions with more than the description text, but also the genunie user reviews score (0-5), ratings and call numbers statistics.
-
+- Html-Based Agent Button: Show the Panel of MCP Tools from all the open web directory MCP marketplace (e.g. deepnlp, pulsemcp).
+- Browser and Pagination: User can browser the MCP Tools by Category and use pagination to navigate
+- Select and Install MCP servers: Users can choose which MCP tools to perform tasks from mcp tools marketplace with similar features, such as Map Location, Search, Fetch, Payment, etc. 
+- Autonomous MCP Tools Dispatcher: Your LLM/agent can also benifit from dispatching the query/prompt to the MCP tools, making decision on which tools to choose. The decision or dispatcher agent functions with more than the description text, but also the genunie user reviews score (0-5), ratings and call numbers statistics.
 
 ![Open MCP Marketplace DeepNLP Panel](https://raw.githubusercontent.com/AI-Agent-Hub/mcp-marketplace/refs/heads/main/docs/remote_mcp_server.jpg)
 
-Demo and Websites
+Related
 - [MCP Marketplace DeepNLP](http://www.deepnlp.org/store/ai-agent/mcp-server)
-- [Web Demo]()
+- [MCP Marketplace PulseMCP](https://www.pulsemcp.com/)
 - [AI Agent Marketplace](http://www.deepnlp.org/store/ai-agent)
+
+## Update: Support Marketplace and API
+
+| Source | value | description |
+| --- | ---- | ---- |
+| deepnlp.org | http://www.deepnlp.org/api/mcp_marketplace/v1 | http://www.deepnlp.org/workspace, This endpoint is for demo and debug purpose only and may not have enough quota for production use. For production worthy endpoint please register the API keys |
+| pulsemcp.com | https://api.pulsemcp.com/v0beta/servers | Website: https://www.pulsemcp.com/api |
 
 
 ## 1. Integration 
@@ -27,7 +34,6 @@ Go to file ./app/ai_search/index.html and open the index.html with your browser.
 
 **Step 1**. Integrate AI Search Engine Demo with MCP Marketplace Plugin
 ![Open MCP Marketplace DeepNLP Panel](https://raw.githubusercontent.com/AI-Agent-Hub/mcp-marketplace/refs/heads/main/docs/remote_mcp_server.jpg)
-
 
 **Step 2**. Choose the Tools and Test the Tools Choosen
 
@@ -42,7 +48,7 @@ Go to file ./app/ai_search/index.html and open the index.html with your browser.
 git clone https://github.com/AI-Agent-Hub/mcp-marketplace.git
 cd ./open_mcp_marketplace
 
-## Copy Files to Your Project
+## Project Structure and Copy Files to Your Project
 
 ./plugin/mcp_marketplace/
 ./plugin/mcp_marketplace/index.html
@@ -52,22 +58,55 @@ cd ./open_mcp_marketplace
 ```
 
 
-#### Set Endpoint of where the MCP info json is fetching
+#### Set Endpoint of the MCP Plugin info json is fetching
 
-Go to file ./plugin/mcp_marketplace/scripts.js
+Go to file ./plugin/mcp_marketplace/scripts.js and change the endpoint provider by config
+
+```
+
+// API: deepnlp
+const config = getConfigByName("deepnlp");
+
+// API: pulsemcp
+const config = getConfigByName("pulsemcp");
 
 
-| variable | value | description |
-| --- | ---- | ---- |
-| ENDPOINT_MCP_MARKETPLACE_DEENLP | http://www.deepnlp.org/api/mcp_marketplace/v1 | This endpoint is for demo and debug purpose only and may not have enough quota for production use. For production worthy endpoint please register the API keys on http://www.deepnlp.org/workspace |
-| loadLocal | false | if set to true: js will load from local json mcp.json file; if set to false: load from remote endpoint|
+```
+
+#### DeepNLP Endpoint
+
+Demo URL: http://www.deepnlp.org/api/mcp_marketplace/v1?field=MCP%20Server
+
+| key | value | 
+| --- | ---- | 
+| endpoint | http://www.deepnlp.org/api/mcp_marketplace/v1 |
+| inputParams | {"field": "MCP SERVER"} |
+| loadLocal | false |
+| loadLocalData | - | 
+| timeout | 5000 |
+
+
+#### PulseMCP Endpoint
+
+API URL: https://api.pulsemcp.com/v0beta/servers?query=image&count_per_page=10
+Plugin Demo:
+
+![PulseMCP Demo](https://raw.githubusercontent.com/AI-Agent-Hub/mcp-marketplace/refs/heads/main/docs/pulsemcp_demo.jpg)
 
 Change loadLocal to false and the js script will fetch mcp.json and MCP SERVER Info from the remote endpoint.
 
 
+| key | value | 
+| --- | ---- | 
+| endpoint | https://api.pulsemcp.com/v0beta/servers | 
+| inputParams | {"query": "image", "count_per_page": 10} |
+| loadLocal | false |
+| loadLocalData | - |
+| timeout | 5000 |
+
 #### Integration
 
-Go to your app main project file, for example a index.html.
+Go to your app main project file, for example in the ./app/ai_search folder, find the main page index.html.
 
 ```
 
@@ -113,6 +152,4 @@ In javascript, access the global variables `selectedItems` to get user selected 
 ```
 
 ### Use Cases
-
-
 
