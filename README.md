@@ -1,13 +1,16 @@
 ## Open MCP Marketplace | AI Agent Marketplace Plugin from DeepNLP
 
-The open source MCP Marketplace plugin is a pure web project (html/js/css), which will display available MCP tools meta and config files in the frontend, so that user can choose, manage and install their preferred MCP tools in similar functions (Map, Payment, Fetch). Itcan be easily integrated to your AI apps, and upgrade your AI Agent tools use ability (LLM).
+The open source MCP Marketplace plugin is a pure web-based project (html/js/css), which will display available MCP tools in the frontend and fetch meta info and mcp.json from various API endpoint provider. User can choose, manage and install their preferred MCP tools in similar functionalities (such as Map, Browser Use, Payment, Fetch, etc). It can be easily integrated to your AI apps, and upgrade the tools use ability of your AI Agent .
+
 
 **KEY Features**
 
-- Html-Based Agent Button: Show the Panel of MCP Tools from all the open web directory MCP marketplace (e.g. deepnlp, pulsemcp).
-- Browser and Pagination: User can browser the MCP Tools by Category and use pagination to navigate
+- Pure Web-based Agent Plugin: Show the Panel of MCP Tools from available open MCP marketplace.
+- Browser and Pagination: User can browser the MCP Tools by Category and use pagination to navigate.
+- Support various MCP Marketplace API Endpoint: Such as pulsemcp.com, deepnlp.org, etc.
 - Select and Install MCP servers: Users can choose which MCP tools to perform tasks from mcp tools marketplace with similar features, such as Map Location, Search, Fetch, Payment, etc. 
-- Autonomous MCP Tools Dispatcher: Your LLM/agent can also benifit from dispatching the query/prompt to the MCP tools, making decision on which tools to choose. The decision or dispatcher agent functions with more than the description text, but also the genunie user reviews score (0-5), ratings and call numbers statistics.
+- Autonomous MCP Tools Dispatcher (TBD): Your LLM/agent can also benifit from dispatching the query/prompt of the MCP tools, making decision on which tools to choose. The decision or dispatcher agent functions with more than the description text, but also extra information such as github stars, user reviews score, ratings and call numbers statistics.
+
 
 ![Open MCP Marketplace DeepNLP Panel](https://raw.githubusercontent.com/AI-Agent-Hub/mcp-marketplace/refs/heads/main/docs/remote_mcp_server.jpg)
 
@@ -16,26 +19,30 @@ Related
 - [MCP Marketplace PulseMCP](https://www.pulsemcp.com/)
 - [AI Agent Marketplace](http://www.deepnlp.org/store/ai-agent)
 
-## Update: Support Marketplace and API
+## Update: Supported MCP Marketplace API Provider
 
-| Source | value | description |
+
+| Endpoint | value | description |
 | --- | ---- | ---- |
-| deepnlp.org | http://www.deepnlp.org/api/mcp_marketplace/v1 | http://www.deepnlp.org/workspace, This endpoint is for demo and debug purpose only and may not have enough quota for production use. For production worthy endpoint please register the API keys |
-| pulsemcp.com | https://api.pulsemcp.com/v0beta/servers | Website: https://www.pulsemcp.com/api |
+| deepnlp.org | http://www.deepnlp.org/api/mcp_marketplace/v1 | http://www.deepnlp.org/store/ai-agent/mcp-server |
+| pulsemcp.com | https://api.pulsemcp.com/v0beta/servers | https://www.pulsemcp.com/api |
 
 
 ## 1. Integration 
 
-If you have a chatbot or ai search engine box and you want to integrate the MCP tools integration plugin to your app, you can follow the below step and an AI Search Engine Demo
+If you have a chatbot or ai search engine box and you want to integrate the MCP marketplace plugin to your app, you can follow the below step and see example of an AI Search Engine Demo
 
-#### Demo: AI Search with MCP Marketplace Plugin 
+#### Example: AI Search with MCP Marketplace Plugin 
 
+**Step 1**. 
 Go to file ./app/ai_search/index.html and open the index.html with your browser.
 
-**Step 1**. Integrate AI Search Engine Demo with MCP Marketplace Plugin
+Integrate AI Search Engine Demo with MCP Marketplace Plugin
 ![Open MCP Marketplace DeepNLP Panel](https://raw.githubusercontent.com/AI-Agent-Hub/mcp-marketplace/refs/heads/main/docs/remote_mcp_server.jpg)
 
-**Step 2**. Choose the Tools and Test the Tools Choosen
+**Step 2**.
+
+Choose the Tools and click the Go button, you can see the System Prompt of user choosen plugins
 
 ![Open MCP Marketplace DeepNLP System Prompt](https://raw.githubusercontent.com/AI-Agent-Hub/mcp-marketplace/refs/heads/main/docs/remote_mcp_server_system_prompt.jpg)
 
@@ -58,7 +65,7 @@ cd ./open_mcp_marketplace
 ```
 
 
-#### Set Endpoint of the MCP Plugin info json is fetching
+#### Set Endpoint of the MCP Plugin
 
 Go to file ./plugin/mcp_marketplace/scripts.js and change the endpoint provider by config
 
@@ -73,25 +80,87 @@ const config = getConfigByName("pulsemcp");
 
 ```
 
-#### DeepNLP Endpoint
+#### 2.1 DeepNLP Endpoint
 
-Demo URL: http://www.deepnlp.org/api/mcp_marketplace/v1?field=MCP%20Server
+Demo API URL: http://www.deepnlp.org/api/mcp_marketplace/v1?field=MCP%20Server
 
 | key | value | 
 | --- | ---- | 
 | endpoint | http://www.deepnlp.org/api/mcp_marketplace/v1 |
-| inputParams | {"field": "MCP SERVER"} |
+| inputParams | {"field": "MCP SERVER", "page_id": 0, "page_size": 20} |
+| inputParams.query | e.g. payment/map |
+| inputParams.page_id | starting from 0|
+| inputParams.count_per_page | e.g. default 20 |
+| inputParams.offset | - equal to page_id * count_per_page, we use pageid to go to next page instead|
+| paginationParams | {"query": "MCP SERVER", "count_per_page": 20, "page_id": 0} |
+| extraParams | {"field": "MCP SERVER", "subfield": ""} |
+| mapper | function, map meta data in result json |
+| paginationParamsMapper | function, map meta data, merge the required paginationParams and extraParams |
 | loadLocal | false |
 | loadLocalData | - | 
 | timeout | 5000 |
 
+Note: field and subfield refers to the category and sub-category of MCP Servers.
 
-#### PulseMCP Endpoint
 
-API URL: https://api.pulsemcp.com/v0beta/servers?query=image&count_per_page=10
+```
+{
+  "item_map": {
+    "MCP SERVER": [
+      {
+        "content_name": "PayPal",
+        "publisher_id": "pub-paypal",
+        "website": "https://mcp.paypal.com",
+        "review_cnt": "1",
+        "subfield": "PAYMENT",
+        "field": "MCP SERVER",
+        "rating": "5.0",
+        "description": "",
+        "content_tag_list": "official",
+        "thumbnail_picture": "https://www.paypalobjects.com/webstatic/icon/favicon.ico"
+      },
+      {
+        "content_name": "Google Maps",
+        "publisher_id": "pub-google-maps",
+        "website": "https://github.com/modelcontextprotocol/servers/tree/main/src/google-maps",
+        "review_cnt": "1",
+        "subfield": "MAP",
+        "field": "MCP SERVER",
+        "rating": "5.0",
+        "description": "",
+        "content_tag_list": "official",
+        "thumbnail_picture": "http://118.190.154.215/scripts/img/ai_service_content/b7fe82a3ab985ce1a953f7b4ad9c5e01.jpeg"
+      },
+    ]
+  },
+  "page_id_map": {
+    "MCP SERVER": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    ]
+  },
+  "group_cnt": {
+    "MCP SERVER": 20
+  },
+  "group_total": {
+    "MCP SERVER": 289
+  }
+}
+
+
+```
+
+
+#### 2.2 PulseMCP Endpoint
+
+URL: https://api.pulsemcp.com/v0beta/servers?query=image&count_per_page=10
+
 Plugin Demo:
 
 ![PulseMCP Demo](https://raw.githubusercontent.com/AI-Agent-Hub/mcp-marketplace/refs/heads/main/docs/pulsemcp_demo.jpg)
+
+
+Pagination Demo:
+
+![PulseMCP Pagination Demo](https://raw.githubusercontent.com/AI-Agent-Hub/mcp-marketplace/refs/heads/main/docs/pulsemcp_pagination_demo.jpg)
 
 Change loadLocal to false and the js script will fetch mcp.json and MCP SERVER Info from the remote endpoint.
 
@@ -100,11 +169,42 @@ Change loadLocal to false and the js script will fetch mcp.json and MCP SERVER I
 | --- | ---- | 
 | endpoint | https://api.pulsemcp.com/v0beta/servers | 
 | inputParams | {"query": "image", "count_per_page": 10} |
+| paginationParams | e.g. {"query": image, "count_per_page": 10, "page_id": 0} |
+| extraParams | e.g. { "offset": 10 } |
+| mapper | function, map meta data in result json |
+| paginationParamsMapper | function, map meta data, merge the required paginationParams and extraParams |
 | loadLocal | false |
 | loadLocalData | - |
 | timeout | 5000 |
 
-#### Integration
+
+https://api.pulsemcp.com/v0beta/servers?query=image&count_per_page=10&offset=30
+
+```
+{
+  "servers": [
+    {
+      "name": "example-mcp",
+      "url": "https://example-mcp.com",
+      "external_url": "https://example-mcp.com/landing",
+      "short_description": "A powerful MCP server for example use cases",
+      "source_code_url": "https://github.com/example/example-mcp",
+      "github_stars": 1200,
+      "package_registry": "npm",
+      "package_name": "example-mcp",
+      "package_download_count": 50000,
+      "EXPERIMENTAL_ai_generated_description": "An AI-generated description of the server capabilities"
+    }
+  ],
+  "next": "https://api.pulsemcp.com/v0beta/servers?offset=50",
+  "total_count": 1
+}
+```
+
+
+## 3. Development
+
+#### 3.1 Web Integration
 
 Go to your app main project file, for example in the ./app/ai_search folder, find the main page index.html.
 
@@ -137,7 +237,8 @@ Go to your app main project file, for example in the ./app/ai_search folder, fin
 
 ```
 
-#### Get User Selected Tools
+
+#### 3.2 Get User Selected Tools
 
 In javascript, access the global variables `selectedItems` to get user selected tools and configs
 
@@ -151,5 +252,27 @@ In javascript, access the global variables `selectedItems` to get user selected 
 
 ```
 
-### Use Cases
+#### 3.2 Pagination 
+
+The params for pagination rest API can be user defined for different endpoint. Since different API provider have differnt keys of parameters, will leave a 
+mapper function to allow customized and mapping.
+
+
+| key | type |description  |
+| --- | ---- | ---- | 
+| query | required | Used to filter the meta by query, serve as the section name also. | 
+| count_per_page | required | e.g. 20 | 
+| page_id | required | Used as the page selector (page 0 - n) at the bottom of each section, Starting from 0 | 
+| offset | optional | The index of items to skip, which is equivalent to (page_id * count_per_page). | 
+
+
+## 4. Contribution
+
+
+## 5. Resources
+
+
+
+
+
 
