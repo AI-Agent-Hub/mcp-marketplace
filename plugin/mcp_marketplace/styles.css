@@ -124,7 +124,8 @@
 .page_selector {
     display: grid;
     grid-column-gap: 5px;
-    grid-template-columns: REPEAT(30, minmax(35px, 45px));
+    grid-row-gap: 2px;
+    grid-template-columns: REPEAT(auto-fill, minmax(35px, 45px));
 }
 .page_id_wrapper {height: 16px; min-width: 20px; float: left; text-align:center}
 .page_id_wrapper_start {margin-right: 5px}
@@ -132,3 +133,4 @@
 .page_id_a {color: #a6a49c;font-size:16px}
 .page_id_a:hover {text-decoration: underline}
 .page_id_a_active {color: #a6a49c;font-size:16px; text-decoration: underline}
+
