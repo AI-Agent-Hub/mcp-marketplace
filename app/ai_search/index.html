@@ -14,19 +14,14 @@
   <script type="text/javascript">
 
         function setSideBar() {
-            // Get the elements
             const sidebar = document.getElementById('sidebar');
             const openBtn = document.getElementById('open-btn');
             const closeBtn = document.getElementById('close-btn');
             const mainContent = document.getElementById('main-content');
-
-            // Open sidebar function
             openBtn.addEventListener('click', () => {
                 sidebar.classList.add('open');
                 mainContent.classList.add('shifted');
             });
-
-            // Close sidebar function
             closeBtn.addEventListener('click', () => {
                 sidebar.classList.remove('open');
                 mainContent.classList.remove('shifted');
@@ -41,6 +36,7 @@
         });
 
         window.onload = function() {
+            // set side
             setSideBar();
         };
 
@@ -81,9 +77,12 @@
                         <div class="[display:var(--force-hide-label)] ps-1 pe-1 whitespace-nowrap">Agent</div>
                     </button>
                     <div class="panel hidden">
-                        <div class="panel_section">
-                            <h3>MCP Tools</h3>
-                            <div class="grid-container" id="items-grid"></div>
+                        <div class="panel_section_container">
+                          <div class="panel_section">
+                              <h3></h3>
+                              <div class="grid-container" id="items-grid"></div>
+                              <div class="page_selector"></div>
+                          </div>
                         </div>
                     </div>
                 </div>
