@@ -94,7 +94,6 @@ function renderItemsGroupPagination(agentsMap, agentsIndexMap, paginationRequire
     if (agentsIndexMap == null) {
         agentsIndexMap = new Map();
     }
-    // define the section and pageId that user wants to refresh
     var sectionId = (paginationRequiredParams["query"] != null)?paginationRequiredParams["query"]:"";
     var pageId = (paginationRequiredParams["page_id"] != null)?paginationRequiredParams["page_id"]:"";
     if (sectionId == null || sectionId == "") {
