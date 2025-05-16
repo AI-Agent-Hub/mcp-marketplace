@@ -10,7 +10,7 @@ The open source MCP Marketplace plugin is a pure web-based project (html/js/css)
 - Support various MCP Marketplace API Endpoint: Such as pulsemcp.com, deepnlp.org, etc.
 - Select and Install MCP servers: Users can choose which MCP tools to perform tasks from mcp tools marketplace with similar features, such as Map Location, Search, Fetch, Payment, etc. 
 - Autonomous MCP Tools Dispatcher (TBD): Your LLM/agent can also benifit from dispatching the query/prompt of the MCP tools, making decision on which tools to choose. The decision or dispatcher agent functions with more than the description text, but also extra information such as github stars, user reviews score, ratings and call numbers statistics.
-
+- Python and Typescript SDK to search and registry of MCP Servers and Tools
 
 ![Open MCP Marketplace DeepNLP Panel](https://raw.githubusercontent.com/AI-Agent-Hub/mcp-marketplace/refs/heads/main/docs/remote_mcp_server.jpg)
 
@@ -28,11 +28,14 @@ Related
 | pulsemcp.com | https://api.pulsemcp.com/v0beta/servers | https://www.pulsemcp.com/api |
 
 
-## 1. Integration 
+
+## Frontend Web-Based Plugin
+
+**1. Integration**
 
 If you have a chatbot or ai search engine box and you want to integrate the MCP marketplace plugin to your app, you can follow the below step and see example of an AI Search Engine Demo
 
-#### Example: AI Search with MCP Marketplace Plugin 
+**Example: AI Search with MCP Marketplace Plugin**
 
 **Step 1**. 
 Go to file ./app/ai_search/index.html and open the index.html with your browser.
@@ -47,9 +50,9 @@ Choose the Tools and click the Go button, you can see the System Prompt of user 
 ![Open MCP Marketplace DeepNLP System Prompt](https://raw.githubusercontent.com/AI-Agent-Hub/mcp-marketplace/refs/heads/main/docs/remote_mcp_server_system_prompt.jpg)
 
 
-## 2. Install
+**2. Install**
 
-#### Clone Project and Copy The MCP Marketplace Plugin Folder
+Clone Project and Copy The MCP Marketplace Plugin Folder
 
 ```
 git clone https://github.com/AI-Agent-Hub/mcp-marketplace.git
@@ -64,8 +67,31 @@ cd ./open_mcp_marketplace
 
 ```
 
+## Python and Typescript SDK
 
-#### Set Endpoint of the MCP Plugin
+```
+pip install mcp-marketplace
+
+```
+**Usage**
+
+```
+
+import mcp_marketplace as mcpm
+
+## endpoint: deepnlp
+mcpm.set_endpoint("deepnlp")
+result = mcpm.search(query="map", page_id=0, count_per_page=20, mode="dict")
+
+print ("DEBUG: run_setup_config_deepnlp result:")
+print (result)
+
+```
+
+
+
+### FrontEnd Plugin
+**Set Endpoint of the MCP Plugin**
 
 Go to file ./plugin/mcp_marketplace/scripts.js and change the endpoint provider by config
 
@@ -80,7 +106,7 @@ const config = getConfigByName("pulsemcp");
 
 ```
 
-#### 2.1 DeepNLP Endpoint
+**2.1 DeepNLP Endpoint**
 
 Demo API URL: http://www.deepnlp.org/api/mcp_marketplace/v1?field=MCP%20Server
 
