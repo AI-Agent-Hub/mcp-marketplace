@@ -120,7 +120,7 @@ https://api.pulsemcp.com/v0beta/servers?query=image&count_per_page=10
 https://api.pulsemcp.com/v0beta/servers
 ```
 
-** Parameter **
+**Parameter**
 
 | param | type | example |
 | --- | ---- |  ---- | 
