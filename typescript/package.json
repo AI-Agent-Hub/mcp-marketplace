@@ -1,0 +1,26 @@
+{
+  "name": "mcp_marketplace",
+  "version": "1.0.0",
+  "description": "The open source MCP Marketplace provide common interface for MCP Service Registry service of your MCP Servers such as list, get, create, delete of your MCP Meta and Config information. It supports various endpoints. It also comes with frontend plugin, which is a pure web-based project (html/js/css), which will display available MCP tools in the frontend and fetch meta info and mcp.json from various API endpoint provider. User can choose, manage and install their preferred MCP tools in similar functionalities (such as Map, Browser Use, Payment, Fetch, etc). It can be easily integrated to your AI apps, and upgrade the tools use ability of your AI Agent.",
+  "keywords": [
+    "mcp",
+    "marketplace",
+    "mcp",
+    "registry"
+  ],
+  "homepage": "https://github.com/AI-Agent-Hub/mcp-marketplace#readme",
+  "bugs": {
+    "url": "https://github.com/AI-Agent-Hub/mcp-marketplace/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AI-Agent-Hub/mcp-marketplace.git"
+  },
+  "license": "ISC",
+  "author": "AI-Agent-Hub",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
