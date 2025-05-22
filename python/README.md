@@ -2,10 +2,13 @@
 
 MCP Marketplace Python Package is a common interface to give you access to public MCP Servers, Tools, Configurations. It supports various API endpoint (such as pulsemcp.com, deepnlp.org, etc).
 
+[PyPI](https://www.pypi.org/project/mcp-marketplace)|[Document](http://www.deepnlp.org/doc/mcp_marketplace)|[MCP Marketplace](http://deepnlp.org/store/ai-agent/mcp-server)|
+
 ### Features
 
-1. API to Search MCP Tools: Users can search MCP Servers Meta Info and tools fit for mcp.json by query, such as "map", "payment", "browser use"
-2. Registry: Allow Users to register the MCP Marketplace create, delete, update their MCP servers through various endpoints. (WIP)
+1. Search API of MCP Tools: Users can search MCP Servers Meta Info and tools fit for mcp.json by query, such as "map", "payment", "browser use"
+2. List MCP Tools API: And Allow LLM and AI Apps to Find Your MCP Server
+3. Registry: Allow Users to register the MCP Marketplace create, delete, update their MCP servers through various endpoints. (WIP)
 
 ### Python API
 
@@ -17,6 +20,10 @@ pip install mcp-marketplace
 ```
 
 ### Usage 
+
+Example 1. Search MCP Marketplace By Query or Server ID
+
+The server id follows the same in the github repo ${owner}/${repo}
 
 ```
 
@@ -38,6 +45,23 @@ print ("DEBUG: run_setup_config_pulsemcp result:")
 print (result2)
 
 ```
+
+
+Example 2. List Tools of MCP Servers 
+
+Let's choose the unique id of browser use mcp "/puppeteer/puppeteer". And we can search the MCP meta and list the tools as below.
+
+```
+    import mcp_marketplace as mcpm
+        
+    result_q = mcpm.search(query="browser use", mode="list", page_id=0, count_per_page=100, config_name="deepnlp")
+    result_id = mcpm.search(id="/puppeteer/puppeteer", mode="list", page_id=0, count_per_page=100, config_name="deepnlp")
+    tools = mcpm.list_tools(id="/puppeteer/puppeteer", config_name="deepnlp_tool")
+
+    print (f'{result_id}')
+    print (f'{tools}')
+```
+
 
 ### MCP Result
 
@@ -95,6 +119,11 @@ http://www.deepnlp.org/api/mcp_marketplace/v1?mode=dict&query=map&page_id=0&coun
 
 http://www.deepnlp.org/api/mcp_marketplace/v1?mode=dict&query=map&offset=50&count_per_page=5
 
+
+# List Tools
+
+http://www.deepnlp.org/api/mcp_marketplace/v1/tools/puppeteer/puppeteer
+
 ```
 
 
@@ -128,13 +157,12 @@ https://api.pulsemcp.com/v0beta/servers
 | count_per_page | integer |  5 |
 | offset | integer | Equivalent to (page_id * count_per_page) e.g. 0 |
 
+
 ### Related
 - [MCP Marketplace DeepNLP](http://deepnlp.org/store/ai-agent/mcp-server)
 - [MCP Marketplace PulseMCP](https://www.pulsemcp.com/)
 - [Pypi](https://pypi.org/project/mcp-marketplace)
 - [Github](https://github.com/AI-Agent-Hub/mcp-marketplace)
 - [AI Agent Marketplace](http://www.deepnlp.org/store/ai-agent)
-
-
 
 
