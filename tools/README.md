@@ -1,6 +1,9 @@
-# MCP Marketplace Tools Schema Collection
-This folder is intended to host the realtime tools schema from Open MCP Servers from Marketplace.
-The data file should follow the format {server_name}.json file. And each line in each json file represent the schema of each tool
+# MCP Marketplace MCP Tools Schema Collection
+
+This folder is intended to host 5000+ MCP Servers' realtime tools schema from Open MCP Servers from Marketplace.
+The data file should follow the format /{ownername}_{reponame}/{server_name}.json file. 
+And each line in each json file represent the schema of each tool
+
 
 
 ### Data Format
