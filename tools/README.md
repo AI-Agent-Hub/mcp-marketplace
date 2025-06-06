@@ -1,21 +1,31 @@
 # MCP Marketplace MCP Tools Schema Collection
 
-This folder is intended to host 5000+ MCP Servers' realtime tools schema from Open MCP Servers from Marketplace.
-The data file should follow the format /{ownername}_{reponame}/{server_name}.json file. 
+This folder is intended to host 5000+ MCP Servers' available tools schema from Open MCP Servers listed on the marketplace (http://www.deepnlp.org/store/ai-agent/mcp-server).
+The data file should follow the format <code>tool_{ownername}_{reponame}_{server_name}.json</code> file. 
 And each line in each json file represent the schema of each tool
 
+Since a lot of MCP Servers have similar server_name such as "weather_mcp", "map_mcp" or others, you should add your Github/Nodejs owner_name and repo_name for the unique_id of tools schema filename.
+
+<code>tool_{ownername}_{reponame}_{server_name}.json</code> 
+
+| Field | Value |
+| --- | --- |
+|  **github** |  https://github.com/mendableai/firecrawl-mcp-server  |
+|  **owner_name** |  mendableai | 
+|  **repo_name** | firecrawl-mcp-server |
+|  **server_name** | mcp-server-firecrawl |
+|  **file_name** | tool_mendableai_firecrawl-mcp-server_mcp-server-firecrawl.json |
 
 
 ### Data Format
-
-Server File Name: {server_id}.json. The {server_id} should be the same the the keys in the mcp.json config file of each client.
 
 ```
 ./tools
 ./tools/schema/google-maps.json
 ```
 
-Data format of each tool in the server
+Each line contains one line of json of Each tool.
+
 ```json
 {"name": "maps_geocode", "description": "Convert an address into geographic coordinates", "input_schema": {"type": "object", "properties": {"address": {"type": "string", "description": "The address to geocode"}}, "required": ["address"]}}
 {"name": "maps_reverse_geocode", "description": "Convert coordinates into an address", "input_schema": {"type": "object", "properties": {"latitude": {"type": "number", "description": "Latitude coordinate"}, "longitude": {"type": "number", "description": "Longitude coordinate"}}, "required": ["latitude", "longitude"]}}
@@ -27,12 +37,48 @@ Data format of each tool in the server
 
 ```
 
+Alternatively, file format can be like in a whole json file for several tools.
+
+```json
+{
+  "tools": [
+    {
+      "name": "tavily-extract",
+      "description": "A powerful web content extraction tool that retrieves and processes raw content from specified URLs, ideal for data collection, content analysis, and research tasks.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "urls": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of URLs to extract content from"
+          },
+          "extract_depth": {
+            "type": "string",
+            "enum": [
+              "basic",
+              "advanced"
+            ],
+            "description": "Depth of extraction - 'basic' or 'advanced', if usrls are linkedin use 'advanced' or if explicitly told to use advanced",
+            "default": "basic"
+          },
+          "include_images": {
+            "type": "boolean",
+            "description": "Include a list of images extracted from the urls in the response",
+            "default": false
+          }
+        },
+        "required": [
+          "urls"
+        ]
+      }
+    }
+  ]
+}
+```         
+
 ### Contributing
 
 If you are interested in contributing to this repo of MCP Tools Schema. Please fork the repo, Create a PR add your {server_id}.json file to the ./tools/schema folder and we will review the PR.
-
-
-
-
-
-
