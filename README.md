@@ -3,7 +3,12 @@
 ![Open MCP Marketplace DeepNLP Panel](https://raw.githubusercontent.com/AI-Agent-Hub/mcp-marketplace/refs/heads/main/docs/remote_mcp_server.jpg)
 
 
-**Basic**
+## Basic
+
+[![MCP Marketplace User Review Rating Badge](http://www.deepnlp.org/api/marketplace/svg?name=ai-agent-marketplace-index/ai-agent-marketplace-index)](http://deepnlp.org/store/mcp-server/mcp-server/pub-ai-agent-marketplace-index/ai-agent-marketplace-index)
+[![AI Agent Marketplace DeepNLP](http://www.deepnlp.org/api/ai_agent_marketplace/svg?name=ai-agent-marketplace-index/ai-agent-marketplace-index)](http://deepnlp.org/store/mcp-server/mcp-server/pub-ai-agent-marketplace-index/ai-agent-marketplace-index)
+
+
 Open MCP Marketplace is an open source project, which aims to make MCP and AI Agent integration **Easier**.
 
 - You can get well-cleaned up MCP Servers Meta information, Tools and Config Schema, etc. 
@@ -22,6 +27,8 @@ Dataset Collection of MCP Servers Tool/Function Call Schemas from 5000+ MCP serv
 - **Pure Web-based Plugin** : Show the Panel of MCP Tools from available open MCP marketplace, Support Filtering, Search, Installation  <br>
 - **Browse Navigate and Pagination** : User can browser the MCP Tools by category and use pagination to navigate. <br>
 - **Customized MCP servers Selection and Installation** : Users can choose which MCP tools to perform tasks from mcp tools marketplace with similar features, such as Map Location, Search, Fetch, Payment, etc.  <br>
+- **Badge**: Put Badge on your homepage Track MCP Servers User Reviews and Ratings, such as ![MCP Marketplace User Review Rating Badge](http://www.deepnlp.org/api/marketplace/svg?name=ai-agent-marketplace-index/ai-agent-marketplace-index)
+
 
 3. Various API Endpoint Support for Your AI Client Development
 
@@ -53,7 +60,6 @@ MCP Marketplace Browse and Pagination of MCP Servers [Demo](http://deepnlp.org/t
 
 
 
-
 ## 3. Various API Endpoint Support for Your AI Client Development
 ### Supported MCP Marketplace API Provider
 
@@ -67,6 +73,7 @@ MCP Marketplace Browse and Pagination of MCP Servers [Demo](http://deepnlp.org/t
 ### Python and Typescript SDK
 
 For official documentation of MCP Marketplace API, please check http://www.deepnlp.org/doc/mcp_marketplace
+, [Python SDK](./python/README.md) and [Typescript SDK (WIP)]()
 
 **Installation**
 
@@ -166,6 +173,23 @@ curl http://www.deepnlp.org/api/mcp_marketplace/v1/tools/google-maps/google-maps
 ```
 GET /api/mcp_marketplace/v1/server/${owner_id}/${repo_name}
 ```
+
+
+## Resources
+
+### Badage
+
+Put Badge on your homepage markdown to track MCP Servers User Reviews and Ratings, such as [![MCP Marketplace User Review Rating Badge](http://www.deepnlp.org/api/marketplace/svg?name=google-maps/google-maps)](http://www.deepnlp.org/store/ai-agent/mcp-server/pub-google-maps/google-maps). 
+
+
+change google-maps/google-maps to your MCP "owner_name"/"repo_name"
+```
+![MCP Marketplace User Review Rating Badge](http://www.deepnlp.org/api/marketplace/svg?name=${owner_name}/${repo_name})](http://www.deepnlp.org/store/ai-agent/mcp-server/pub-${owner_name}/${repo_name})
+
+## google map
+![MCP Marketplace User Review Rating Badge](http://www.deepnlp.org/api/marketplace/svg?name=google-maps/google-maps)](http://www.deepnlp.org/store/ai-agent/mcp-server/pub-google-maps/google-maps)
+```
+
 
 ## 4. Contribution
 
