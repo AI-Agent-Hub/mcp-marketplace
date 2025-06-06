@@ -1,0 +1,3 @@
+npm warn exec The following package was not found and will be installed: @modelcontextprotocol/inspector@0.14.0
+npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/Users/xichen.dxc/Desktop/project/gitlab/ai_agent_marketplace_hub/<path_to_your_home_directory/.npm/_npx/5a9d879542beca3a/node_modules/diff/dist/diff.min.js'
+npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/Users/xichen.dxc/Desktop/project/gitlab/ai_agent_marketplace_hub/<path_to_your_home_directory/.npm/_npx/5a9d879542beca3a/node_modules/diff/lib/util/distance-iterator.js'

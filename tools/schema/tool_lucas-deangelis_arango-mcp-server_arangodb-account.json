@@ -1,0 +1,73 @@
+{
+  "tools": [
+    {
+      "name": "readQuery",
+      "description": "Run a read-only AQL query",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "databaseName": {
+            "type": "string"
+          },
+          "aql": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "databaseName",
+          "aql"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "readWriteQuery",
+      "description": "Run an AQL query",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "databaseName": {
+            "type": "string"
+          },
+          "aql": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "databaseName",
+          "aql"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "listDatabases",
+      "description": "List all the databases",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "listCollections",
+      "description": "List all the collections in a database",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "databaseName": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "databaseName"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    }
+  ]
+}

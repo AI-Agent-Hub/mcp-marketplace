@@ -1,0 +1,41 @@
+{
+  "tools": [
+    {
+      "name": "introspectGraphQLSchema",
+      "description": "Fetches the schema of the target GraphQL API using introspection. Returns the schema in JSON format.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "executeGraphQLOperation",
+      "description": "Executes an arbitrary GraphQL query or mutation against the target API. Use introspectGraphQLSchema first to understand the available operations.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "The GraphQL query string to execute."
+          },
+          "variables": {
+            "type": "object",
+            "additionalProperties": {},
+            "description": "An optional object containing variables for the query."
+          },
+          "operationName": {
+            "type": "string",
+            "description": "An optional name for the operation, if the query contains multiple operations."
+          }
+        },
+        "required": [
+          "query"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    }
+  ]
+}

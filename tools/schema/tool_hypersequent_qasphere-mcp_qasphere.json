@@ -1,0 +1,201 @@
+{
+  "tools": [
+    {
+      "name": "get_test_case",
+      "description": "Get a test case from QA Sphere using a marker in the format PROJECT_CODE-SEQUENCE (e.g., BDI-123). You can use URLs like: https://example.eu1.qasphere.com/project/%PROJECT_CODE%/tcase/%SEQUENCE%?any Extract %PROJECT_CODE% and %SEQUENCE% from the URL and use them as the marker.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "marker": {
+            "type": "string",
+            "pattern": "^[A-Z0-9]+-\\d+$"
+          }
+        },
+        "required": [
+          "marker"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "get_project",
+      "description": "Get a project information from QA Sphere using a project code (e.g., BDI). You can extract PROJECT_CODE from URLs https://example.eu1.qasphere.com/project/%PROJECT_CODE%/...",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "projectCode": {
+            "type": "string",
+            "pattern": "^[A-Z0-9]+$"
+          }
+        },
+        "required": [
+          "projectCode"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "list_projects",
+      "description": "Get a list of all projects from current QA Sphere TMS account (qasphere.com)",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "list_test_cases",
+      "description": "List test cases from a project in QA Sphere. Supports pagination and various filtering options.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "projectCode": {
+            "type": "string",
+            "pattern": "^[A-Z0-9]+$"
+          },
+          "page": {
+            "type": "number"
+          },
+          "limit": {
+            "type": "number",
+            "default": 20
+          },
+          "sortField": {
+            "type": "string",
+            "enum": [
+              "id",
+              "seq",
+              "folder_id",
+              "author_id",
+              "pos",
+              "title",
+              "priority",
+              "created_at",
+              "updated_at",
+              "legacy_id"
+            ]
+          },
+          "sortOrder": {
+            "type": "string",
+            "enum": [
+              "asc",
+              "desc"
+            ]
+          },
+          "search": {
+            "type": "string"
+          },
+          "include": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "steps",
+                "tags",
+                "project",
+                "folder",
+                "path"
+              ]
+            }
+          },
+          "folders": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "priorities": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "high",
+                "medium",
+                "low"
+              ]
+            }
+          },
+          "draft": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "projectCode"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "list_test_cases_folders",
+      "description": "List folders for test cases within a specific QA Sphere project. Allows pagination and sorting.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "projectCode": {
+            "type": "string",
+            "pattern": "^[A-Z0-9]+$"
+          },
+          "page": {
+            "type": "number"
+          },
+          "limit": {
+            "type": "number",
+            "default": 100
+          },
+          "sortField": {
+            "type": "string",
+            "enum": [
+              "id",
+              "project_id",
+              "title",
+              "pos",
+              "parent_id",
+              "created_at",
+              "updated_at"
+            ]
+          },
+          "sortOrder": {
+            "type": "string",
+            "enum": [
+              "asc",
+              "desc"
+            ]
+          }
+        },
+        "required": [
+          "projectCode"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "list_test_cases_tags",
+      "description": "List all tags defined within a specific QA Sphere project.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "projectCode": {
+            "type": "string",
+            "pattern": "^[A-Z0-9]+$"
+          }
+        },
+        "required": [
+          "projectCode"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    }
+  ]
+}

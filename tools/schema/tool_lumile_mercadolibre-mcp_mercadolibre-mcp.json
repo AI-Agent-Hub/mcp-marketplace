@@ -1,0 +1,43 @@
+{
+  "tools": [
+    {
+      "name": "seller_reputation",
+      "description": "Obtiene la reputación de un vendedor",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "sellerId": {
+            "type": "string",
+            "description": "ID del vendedor"
+          }
+        }
+      }
+    },
+    {
+      "name": "product_reviews",
+      "description": "Obtiene las reseñas de un producto",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "productId": {
+            "type": "string",
+            "description": "ID del producto"
+          }
+        }
+      }
+    },
+    {
+      "name": "product_description",
+      "description": "Obtiene la descripción de un producto",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "productId": {
+            "type": "string",
+            "description": "ID del producto"
+          }
+        }
+      }
+    }
+  ]
+}

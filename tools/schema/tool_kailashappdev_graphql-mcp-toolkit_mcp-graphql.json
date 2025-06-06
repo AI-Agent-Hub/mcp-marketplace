@@ -1,0 +1,40 @@
+{
+  "tools": [
+    {
+      "name": "introspect-schema",
+      "description": "Introspect the GraphQL schema, use this tool before doing a query to get the schema information if you do not have it available as a resource already.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "__ignore__": {
+            "type": "boolean",
+            "default": false,
+            "description": "This does not do anything"
+          }
+        },
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "query-graphql",
+      "description": "Query a GraphQL endpoint with the given query and variables",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string"
+          },
+          "variables": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "query"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    }
+  ]
+}

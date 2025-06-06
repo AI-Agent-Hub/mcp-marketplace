@@ -1,0 +1,109 @@
+{
+  "tools": [
+    {
+      "name": "search_cards",
+      "description": "Search for MTG cards by a text query, e.g. 'oracle text includes: draw cards'. Returns a list of matching cards (with basic fields: name, set, collector_number, ID). If no matches are found, returns an error message from Scryfall.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "A full text query, e.g. 't:goblin pow=2 o:haste'"
+          }
+        },
+        "required": [
+          "query"
+        ]
+      }
+    },
+    {
+      "name": "get_card_by_id",
+      "description": "Retrieve a card by its Scryfall ID (a 36-char UUID). Returns the card data in JSON.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The Scryfall UUID, e.g. 'c09c71fb-7acb-4ffb-a47b-8961a0cf4990'"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      }
+    },
+    {
+      "name": "get_card_by_name",
+      "description": "Retrieve a card by its exact English name, e.g. 'Black Lotus'. Returns the card data in JSON. If multiple cards share that exact name, Scryfall returns one (usually the most relevant printing).",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Exact name of the card, e.g. 'Lightning Bolt'"
+          }
+        },
+        "required": [
+          "name"
+        ]
+      }
+    },
+    {
+      "name": "random_card",
+      "description": "Retrieve a random Magic card from Scryfall. Returns JSON data for that random card.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    },
+    {
+      "name": "get_rulings",
+      "description": "Retrieve official rulings for a specified card by Scryfall ID or Oracle ID. Returns an array of rulings. Each ruling has a 'published_at' date and a 'comment' field.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "A Scryfall ID or Oracle ID. Example: 'c09c71fb-7acb-4ffb-a47b-8961a0cf4990'"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      }
+    },
+    {
+      "name": "get_prices_by_id",
+      "description": "Retrieve price information for a card by its Scryfall ID. Returns JSON with usd, usd_foil, eur, tix, etc.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Scryfall ID of the card"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      }
+    },
+    {
+      "name": "get_prices_by_name",
+      "description": "Retrieve price information for a card by its exact name. Returns JSON with usd, usd_foil, eur, tix, etc.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Exact card name"
+          }
+        },
+        "required": [
+          "name"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+npm warn exec The following package was not found and will be installed: @modelcontextprotocol/inspector@0.14.0
+npm error code ECONNRESET
+npm error syscall read
+npm error errno ECONNRESET
+npm error network request to https://registry.npmjs.org/typescript/-/typescript-5.8.3.tgz failed, reason: read ECONNRESET
+npm error network This is a problem related to network connectivity.
+npm error network In most cases you are behind a proxy or have bad network settings.
+npm error network
+npm error network If you are behind a proxy, please make sure that the
+npm error network 'proxy' config is set properly.  See: 'npm help config'
+npm error A complete log of this run can be found in: /Users/xichen.dxc/Desktop/project/gitlab/ai_agent_marketplace_hub/<path_to_your_home_directory/.npm/_logs/2025-06-06T14_56_42_375Z-debug-0.log

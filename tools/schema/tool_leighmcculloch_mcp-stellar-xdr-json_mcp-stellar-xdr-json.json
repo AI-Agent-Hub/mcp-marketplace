@@ -1,0 +1,57 @@
+{
+  "tools": [
+    {
+      "name": "xdr_guess",
+      "description": "Guess what type Stellar XDR is, getting back a list of possible types.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "xdr": {
+            "type": "string",
+            "description": "Base64-encoded XDR"
+          }
+        },
+        "required": [
+          "xdr"
+        ]
+      }
+    },
+    {
+      "name": "xdr_decode",
+      "description": "Decode a Stellar XDR to JSON",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "Type name"
+          },
+          "xdr": {
+            "type": "string",
+            "description": "Base64-encoded XDR of the transaction"
+          }
+        },
+        "required": [
+          "type",
+          "xdr"
+        ]
+      }
+    },
+    {
+      "name": "xdr_decode_transaction",
+      "description": "Decode a Stellar transaction from XDR to JSON",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "xdr": {
+            "type": "string",
+            "description": "Base64-encoded XDR of the transaction"
+          }
+        },
+        "required": [
+          "xdr"
+        ]
+      }
+    }
+  ]
+}

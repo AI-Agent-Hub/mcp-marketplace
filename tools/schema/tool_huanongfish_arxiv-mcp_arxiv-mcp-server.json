@@ -1,0 +1,4 @@
+npm warn exec The following package was not found and will be installed: @modelcontextprotocol/inspector@0.14.0
+npm error A complete log of this run can be found in: /Users/xichen.dxc/Desktop/project/gitlab/ai_agent_marketplace_hub/<path_to_your_home_directory/.npm/_logs/2025-06-06T14_56_43_645Z-debug-0.log
+_modules/yargs-parser/build'
+npm error A complete log of this run can be found in: /Users/xichen.dxc/Desktop/project/gitlab/ai_agent_marketplace_hub/<path_to_your_home_directory/.npm/_logs/2025-06-06T14_56_43_648Z-debug-0.log

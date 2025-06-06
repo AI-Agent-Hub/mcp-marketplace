@@ -1,0 +1,40 @@
+{
+  "tools": [
+    {
+      "name": "scrape_url_html",
+      "description": "Use a URL to scrape a website using the ScrAPI service and retrieve the result as HTML. Use this for scraping website content that is difficult to access because of bot detection, captchas or even geolocation restrictions. The result will be in HTML which is preferable if advanced parsing is required.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "url"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "scrape_url_markdown",
+      "description": "Use a URL to scrape a website using the ScrAPI service and retrieve the result as Markdown. Use this for scraping website content that is difficult to access because of bot detection, captchas or even geolocation restrictions. The result will be in Markdown which is preferable if the text content of the webpage is important and not the structural information of the page.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "url"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    }
+  ]
+}

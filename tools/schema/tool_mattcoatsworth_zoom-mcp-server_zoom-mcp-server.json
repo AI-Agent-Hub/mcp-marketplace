@@ -1,0 +1,86 @@
+{
+  "tools": [
+    {
+      "name": "create_meeting",
+      "description": "Create a meeting",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "agenda": {
+            "type": "string",
+            "maxLength": 2000,
+            "description": "The meeting's agenda.",
+            "default": "New Meeting's agenda"
+          },
+          "start_time": {
+            "type": "string",
+            "description": "The meeting's start time. This supports local time and GMT formats.To set a meeting's start time in GMT, use the yyyy-MM-ddTHH:mm:ssZ date-time format. For example, 2020-03-31T12:02:00Z. To set a meeting's start time using a specific timezone, use the yyyy-MM-ddTHH:mm:ss date-time format and specify the timezone ID in the timezone field. If you do not specify a timezone, the timezone value defaults to your Zoom account's timezone. You can also use UTC for the timezone value. Note: If no start_time is set for a scheduled meeting, the start_time is set at the current time and the meeting type changes to an instant meeting, which expires after 30 days. current time is 2025-06-06T15:48:29.724Z."
+          },
+          "timezone": {
+            "type": "string",
+            "description": "Timezone for the meeting's start time. The Current timezone is Asia/Shanghai."
+          },
+          "topic": {
+            "type": "string",
+            "maxLength": 200,
+            "description": "The meeting's topic."
+          }
+        },
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "list_meetings",
+      "description": "List scheduled meetings",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "The type of meeting. Choose from upcoming, scheduled or previous_meetings. upcoming - All upcoming meetings; scheduled - All valid previous (unexpired) meetings and upcoming scheduled meetings; previous_meetings - All the previous meetings;",
+            "default": "upcoming"
+          }
+        },
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "delete_a_meeting",
+      "description": "Delete a meeting with a given ID",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number",
+            "description": "The ID of the meeting to delete."
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "get_a_meeting_details",
+      "description": "Retrieve the meeting's details with a given ID",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number",
+            "description": "The ID of the meeting."
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    }
+  ]
+}

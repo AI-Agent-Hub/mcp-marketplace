@@ -1,0 +1,487 @@
+{
+  "tools": [
+    {
+      "name": "generate_image",
+      "description": "Generate an image from a text prompt using Flux Schnell model",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "prompt": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Prompt for generated image"
+          },
+          "seed": {
+            "type": "integer",
+            "description": "Random seed. Set for reproducible generation"
+          },
+          "go_fast": {
+            "type": "boolean",
+            "default": true,
+            "description": "Run faster predictions with model optimized for speed (currently fp8 quantized); disable to run in original bf16"
+          },
+          "megapixels": {
+            "type": "string",
+            "enum": [
+              "1",
+              "0.25"
+            ],
+            "default": "1",
+            "description": "Approximate number of megapixels for generated image"
+          },
+          "num_outputs": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 4,
+            "default": 1,
+            "description": "Number of outputs to generate"
+          },
+          "aspect_ratio": {
+            "type": "string",
+            "enum": [
+              "1:1",
+              "16:9",
+              "21:9",
+              "3:2",
+              "2:3",
+              "4:5",
+              "5:4",
+              "3:4",
+              "4:3",
+              "9:16",
+              "9:21"
+            ],
+            "default": "1:1",
+            "description": "Aspect ratio for the generated image"
+          },
+          "output_format": {
+            "type": "string",
+            "enum": [
+              "webp",
+              "jpg",
+              "png"
+            ],
+            "default": "webp",
+            "description": "Format of the output images"
+          },
+          "output_quality": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 100,
+            "default": 80,
+            "description": "Quality when saving the output images, from 0 to 100. 100 is best quality, 0 is lowest quality. Not relevant for .png outputs"
+          },
+          "num_inference_steps": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 4,
+            "default": 4,
+            "description": "Number of denoising steps. 4 is recommended, and lower number of steps produce lower quality outputs, faster."
+          },
+          "disable_safety_checker": {
+            "type": "boolean",
+            "default": false,
+            "description": "Disable safety checker for generated images."
+          },
+          "support_image_mcp_response_type": {
+            "type": "boolean",
+            "default": true,
+            "description": "Disable if the image type is not supported in the response, if it's Cursor app for example"
+          }
+        },
+        "required": [
+          "prompt"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "generate_multiple_images",
+      "description": "Generate multiple images from an array of prompts using Flux Schnell model",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "prompts": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "maxItems": 10,
+            "description": "Array of text descriptions for the images to generate"
+          },
+          "seed": {
+            "type": "integer",
+            "description": "Random seed. Set for reproducible generation"
+          },
+          "go_fast": {
+            "type": "boolean",
+            "default": true,
+            "description": "Run faster predictions with model optimized for speed (currently fp8 quantized); disable to run in original bf16"
+          },
+          "megapixels": {
+            "type": "string",
+            "enum": [
+              "1",
+              "0.25"
+            ],
+            "default": "1",
+            "description": "Approximate number of megapixels for generated image"
+          },
+          "aspect_ratio": {
+            "type": "string",
+            "enum": [
+              "1:1",
+              "16:9",
+              "21:9",
+              "3:2",
+              "2:3",
+              "4:5",
+              "5:4",
+              "3:4",
+              "4:3",
+              "9:16",
+              "9:21"
+            ],
+            "default": "1:1",
+            "description": "Aspect ratio for the generated image"
+          },
+          "output_format": {
+            "type": "string",
+            "enum": [
+              "webp",
+              "jpg",
+              "png"
+            ],
+            "default": "webp",
+            "description": "Format of the output images"
+          },
+          "output_quality": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 100,
+            "default": 80,
+            "description": "Quality when saving the output images, from 0 to 100. 100 is best quality, 0 is lowest quality. Not relevant for .png outputs"
+          },
+          "num_inference_steps": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 4,
+            "default": 4,
+            "description": "Number of denoising steps. 4 is recommended, and lower number of steps produce lower quality outputs, faster."
+          },
+          "disable_safety_checker": {
+            "type": "boolean",
+            "default": false,
+            "description": "Disable safety checker for generated images."
+          },
+          "support_image_mcp_response_type": {
+            "type": "boolean",
+            "default": true,
+            "description": "Disable if the image type is not supported in the response, if it's Cursor app for example"
+          }
+        },
+        "required": [
+          "prompts"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "generate_image_variants",
+      "description": "Generate multiple variants of the same image from a single prompt",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "prompt": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Text description for the image to generate variants of"
+          },
+          "num_variants": {
+            "type": "integer",
+            "minimum": 2,
+            "maximum": 10,
+            "default": 4,
+            "description": "Number of image variants to generate (2-10)"
+          },
+          "prompt_variations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Optional list of prompt modifiers to apply to variants (e.g., ['in watercolor style', 'in oil painting style']). If provided, these will be used instead of random seeds."
+          },
+          "variation_mode": {
+            "type": "string",
+            "enum": [
+              "append",
+              "replace"
+            ],
+            "default": "append",
+            "description": "How to apply prompt variations: 'append' adds to the base prompt, 'replace' uses variations as standalone prompts"
+          },
+          "seed": {
+            "type": "integer",
+            "description": "Base random seed. Each variant will use seed+variant_index for reproducibility"
+          },
+          "go_fast": {
+            "type": "boolean",
+            "default": true,
+            "description": "Run faster predictions with model optimized for speed (currently fp8 quantized); disable to run in original bf16"
+          },
+          "megapixels": {
+            "type": "string",
+            "enum": [
+              "1",
+              "0.25"
+            ],
+            "default": "1",
+            "description": "Approximate number of megapixels for generated image"
+          },
+          "aspect_ratio": {
+            "type": "string",
+            "enum": [
+              "1:1",
+              "16:9",
+              "21:9",
+              "3:2",
+              "2:3",
+              "4:5",
+              "5:4",
+              "3:4",
+              "4:3",
+              "9:16",
+              "9:21"
+            ],
+            "default": "1:1",
+            "description": "Aspect ratio for the generated image"
+          },
+          "output_format": {
+            "type": "string",
+            "enum": [
+              "webp",
+              "jpg",
+              "png"
+            ],
+            "default": "webp",
+            "description": "Format of the output images"
+          },
+          "output_quality": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 100,
+            "default": 80,
+            "description": "Quality when saving the output images, from 0 to 100. 100 is best quality, 0 is lowest quality. Not relevant for .png outputs"
+          },
+          "num_inference_steps": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 4,
+            "default": 4,
+            "description": "Number of denoising steps. 4 is recommended, and lower number of steps produce lower quality outputs, faster."
+          },
+          "disable_safety_checker": {
+            "type": "boolean",
+            "default": false,
+            "description": "Disable safety checker for generated images."
+          },
+          "support_image_mcp_response_type": {
+            "type": "boolean",
+            "default": true,
+            "description": "Support image MCP response type on client side"
+          }
+        },
+        "required": [
+          "prompt"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "generate_svg",
+      "description": "Generate an SVG from a text prompt using Recraft model",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "prompt": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Prompt for generated SVG"
+          },
+          "size": {
+            "type": "string",
+            "enum": [
+              "1024x1024",
+              "1365x1024",
+              "1024x1365",
+              "1536x1024",
+              "1024x1536",
+              "1820x1024",
+              "1024x1820",
+              "1024x2048",
+              "2048x1024",
+              "1434x1024",
+              "1024x1434",
+              "1024x1280",
+              "1280x1024",
+              "1024x1707",
+              "1707x1024"
+            ],
+            "default": "1024x1024",
+            "description": "Size of the generated SVG"
+          },
+          "style": {
+            "type": "string",
+            "enum": [
+              "any",
+              "engraving",
+              "line_art",
+              "line_circuit",
+              "linocut"
+            ],
+            "default": "any",
+            "description": "Style of the generated image."
+          }
+        },
+        "required": [
+          "prompt"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "get_prediction",
+      "description": "Get details of a specific prediction by ID",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "predictionId": {
+            "type": "string",
+            "minLength": 1,
+            "description": "ID of the prediction to retrieve"
+          }
+        },
+        "required": [
+          "predictionId"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "create_prediction",
+      "description": "Generate an prediction from a text prompt using Flux Schnell model",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "prompt": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Prompt for generated image"
+          },
+          "seed": {
+            "type": "integer",
+            "description": "Random seed. Set for reproducible generation"
+          },
+          "go_fast": {
+            "type": "boolean",
+            "default": true,
+            "description": "Run faster predictions with model optimized for speed (currently fp8 quantized); disable to run in original bf16"
+          },
+          "megapixels": {
+            "type": "string",
+            "enum": [
+              "1",
+              "0.25"
+            ],
+            "default": "1",
+            "description": "Approximate number of megapixels for generated image"
+          },
+          "num_outputs": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 4,
+            "default": 1,
+            "description": "Number of outputs to generate"
+          },
+          "aspect_ratio": {
+            "type": "string",
+            "enum": [
+              "1:1",
+              "16:9",
+              "21:9",
+              "3:2",
+              "2:3",
+              "4:5",
+              "5:4",
+              "3:4",
+              "4:3",
+              "9:16",
+              "9:21"
+            ],
+            "default": "1:1",
+            "description": "Aspect ratio for the generated image"
+          },
+          "output_format": {
+            "type": "string",
+            "enum": [
+              "webp",
+              "jpg",
+              "png"
+            ],
+            "default": "webp",
+            "description": "Format of the output images"
+          },
+          "output_quality": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 100,
+            "default": 80,
+            "description": "Quality when saving the output images, from 0 to 100. 100 is best quality, 0 is lowest quality. Not relevant for .png outputs"
+          },
+          "num_inference_steps": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 4,
+            "default": 4,
+            "description": "Number of denoising steps. 4 is recommended, and lower number of steps produce lower quality outputs, faster."
+          },
+          "disable_safety_checker": {
+            "type": "boolean",
+            "default": false,
+            "description": "Disable safety checker for generated images."
+          }
+        },
+        "required": [
+          "prompt"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "prediction_list",
+      "description": "Get a list of recent predictions from Replicate",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 100,
+            "default": 50,
+            "description": "Maximum number of predictions to return"
+          }
+        },
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    }
+  ]
+}

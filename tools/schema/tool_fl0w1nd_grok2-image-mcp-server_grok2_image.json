@@ -1,0 +1,22 @@
+{
+  "tools": [
+    {
+      "name": "generate_image",
+      "description": "Generate an image based on a text prompt using the Grok-2 image model, ensure return the image URL to the user with markdown image format.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "prompt": {
+            "type": "string",
+            "description": "描述要生成的图像内容"
+          }
+        },
+        "required": [
+          "prompt"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    }
+  ]
+}

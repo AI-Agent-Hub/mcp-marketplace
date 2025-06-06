@@ -1,0 +1,84 @@
+(node:3583) Warning: Setting the NODE_TLS_REJECT_UNAUTHORIZED environment variable to '0' makes TLS connections and HTTPS requests insecure by disabling certificate verification.
+(Use `node --trace-warnings ...` to show where the warning was created)
+{
+  "tools": [
+    {
+      "name": "get_next_tasks",
+      "description": "Get a list of all pending tasks",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "project": {
+            "type": "string",
+            "pattern": "^[a-z.]+$"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^a-z$"
+            }
+          }
+        },
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "mark_task_done",
+      "description": "Mark a task as done (completed)",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "identifier": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "identifier"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "add_task",
+      "description": "Add a new task",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string"
+          },
+          "due": {
+            "type": "string"
+          },
+          "priority": {
+            "type": "string",
+            "enum": [
+              "H",
+              "M",
+              "L"
+            ]
+          },
+          "project": {
+            "type": "string",
+            "pattern": "^[a-z.]+$"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^a-z$"
+            }
+          }
+        },
+        "required": [
+          "description"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    }
+  ]
+}

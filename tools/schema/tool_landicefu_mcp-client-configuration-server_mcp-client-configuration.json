@@ -1,0 +1,125 @@
+{
+  "tools": [
+    {
+      "name": "get_configuration_path",
+      "description": "Get the path to the configuration file for a specific client",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "client": {
+            "type": "string",
+            "description": "Client name (cline, roo_code, windsurf, claude)"
+          }
+        },
+        "required": [
+          "client"
+        ]
+      }
+    },
+    {
+      "name": "get_configuration",
+      "description": "Get the entire configuration for a specific client",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "client": {
+            "type": "string",
+            "description": "Client name (cline, roo_code, windsurf, claude)"
+          }
+        },
+        "required": [
+          "client"
+        ]
+      }
+    },
+    {
+      "name": "list_servers",
+      "description": "List all server names configured in a specific client",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "client": {
+            "type": "string",
+            "description": "Client name (cline, roo_code, windsurf, claude)"
+          }
+        },
+        "required": [
+          "client"
+        ]
+      }
+    },
+    {
+      "name": "get_server_configuration",
+      "description": "Get the configuration for a specific server from a client configuration",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "client": {
+            "type": "string",
+            "description": "Client name (cline, roo_code, windsurf, claude)"
+          },
+          "server_name": {
+            "type": "string",
+            "description": "Name of the server to retrieve"
+          }
+        },
+        "required": [
+          "client",
+          "server_name"
+        ]
+      }
+    },
+    {
+      "name": "add_server_configuration",
+      "description": "Add or update a server configuration in a client configuration",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "client": {
+            "type": "string",
+            "description": "Client name (cline, roo_code, windsurf, claude)"
+          },
+          "server_name": {
+            "type": "string",
+            "description": "Name of the server to add or update"
+          },
+          "json_config": {
+            "type": "object",
+            "description": "Server configuration in JSON format"
+          },
+          "allow_override": {
+            "type": "boolean",
+            "description": "Whether to allow overriding an existing server configuration with the same name (default: false)",
+            "default": false
+          }
+        },
+        "required": [
+          "client",
+          "server_name",
+          "json_config"
+        ]
+      }
+    },
+    {
+      "name": "remove_server_configuration",
+      "description": "Remove a server configuration from a client configuration",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "client": {
+            "type": "string",
+            "description": "Client name (cline, roo_code, windsurf, claude)"
+          },
+          "server_name": {
+            "type": "string",
+            "description": "Name of the server to remove"
+          }
+        },
+        "required": [
+          "client",
+          "server_name"
+        ]
+      }
+    }
+  ]
+}

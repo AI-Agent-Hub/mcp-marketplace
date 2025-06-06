@@ -1,0 +1,111 @@
+{
+  "tools": [
+    {
+      "name": "getAccount",
+      "description": "Get Osmosis blockchain account info. Includes balances and address.",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "getSwapQuoteInGivenOut",
+      "description": "Get a swap quote for a desired amount out with decimals identified with tickers like BTC, ETH, OSMO, etc. Dont show the ID to the user.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "tickerIn": {
+            "type": "string",
+            "description": "The ticker symbol of the token you want to swap from (e.g., BTC, ETH, OSMO)"
+          },
+          "amountOut": {
+            "type": "string",
+            "description": "The amount of the output token you want to receive"
+          },
+          "tickerOut": {
+            "type": "string",
+            "description": "The ticker symbol of the token you want to receive (e.g., BTC, ETH, OSMO)"
+          }
+        },
+        "required": [
+          "tickerIn",
+          "amountOut",
+          "tickerOut"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "getSwapQuoteOutGivenIn",
+      "description": "Get a swap quote for a specified amount in with decimals identified with tickers like BTC, ETH, OSMO, etc. Dont show the ID to the user.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "tickerIn": {
+            "type": "string",
+            "description": "The ticker symbol of the token you want to swap from (e.g., BTC, ETH, OSMO)"
+          },
+          "amountIn": {
+            "type": "string",
+            "description": "The amount of the input token you want to swap"
+          },
+          "tickerOut": {
+            "type": "string",
+            "description": "The ticker symbol of the token you want to receive (e.g., BTC, ETH, OSMO)"
+          }
+        },
+        "required": [
+          "tickerIn",
+          "amountIn",
+          "tickerOut"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "sendSwapInGivenOutTx",
+      "description": "Execute a token in given out amount swap quote transaction by ID. Use getSwapQuoteInGivenOut tool to get quotes. Use the returned txHash generate a mintscan block explorer link.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "quoteId": {
+            "type": "string",
+            "description": "The id of the quote to send"
+          },
+          "slippageTolerancePercent": {
+            "type": "number",
+            "description": "The percentage of slippage tolerance for the amount in of the quote. Default is 0.5%"
+          }
+        },
+        "required": [
+          "quoteId"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "sendSwapOutGivenInTx",
+      "description": "Execute a token out given in amount swap quote transaction by ID. Use getSwapQuoteOutGivenIn tool to get quotes. Use the returned txHash generate a mintscan block explorer link.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "quoteId": {
+            "type": "string",
+            "description": "The id of the quote to send"
+          },
+          "slippageTolerancePercent": {
+            "type": "number",
+            "description": "The percentage of slippage tolerance for the amount out of the quote. Default is 0.5%"
+          }
+        },
+        "required": [
+          "quoteId"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+(node:11722) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+{
+  "tools": [
+    {
+      "name": "create_link",
+      "description": "Create a new short link on dub.co, asking the user which domain to use",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "The destination URL to shorten"
+          },
+          "key": {
+            "type": "string",
+            "description": "Optional custom slug for the short link. If not provided, a random slug will be generated."
+          },
+          "externalId": {
+            "type": "string",
+            "description": "Optional external ID for the link"
+          },
+          "domain": {
+            "type": "string",
+            "description": "Optional domain slug to use. If not provided, the primary domain will be used."
+          }
+        },
+        "required": [
+          "url"
+        ]
+      }
+    },
+    {
+      "name": "update_link",
+      "description": "Update an existing short link on dub.co",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "linkId": {
+            "type": "string",
+            "description": "The ID of the link to update"
+          },
+          "url": {
+            "type": "string",
+            "description": "The new destination URL"
+          },
+          "domain": {
+            "type": "string",
+            "description": "The new domain for the short link"
+          },
+          "key": {
+            "type": "string",
+            "description": "The new slug for the short link"
+          }
+        },
+        "required": [
+          "linkId"
+        ]
+      }
+    },
+    {
+      "name": "delete_link",
+      "description": "Delete a short link on dub.co",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "linkId": {
+            "type": "string",
+            "description": "The ID of the link to delete"
+          }
+        },
+        "required": [
+          "linkId"
+        ]
+      }
+    }
+  ]
+}
+(node:12422) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)

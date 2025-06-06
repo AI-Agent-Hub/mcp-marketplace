@@ -1,0 +1,85 @@
+(node:3539) Warning: Setting the NODE_TLS_REJECT_UNAUTHORIZED environment variable to '0' makes TLS connections and HTTPS requests insecure by disabling certificate verification.
+(Use `node --trace-warnings ...` to show where the warning was created)
+{
+  "tools": [
+    {
+      "name": "whois_domain",
+      "description": "Looksup whois information about the domain",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "domain": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "domain"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "whois_tld",
+      "description": "Looksup whois information about the Top Level Domain (TLD)",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "tld": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "tld"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "whois_ip",
+      "description": "Looksup whois information about the IP",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "ip": {
+            "type": "string",
+            "anyOf": [
+              {
+                "format": "ipv4"
+              },
+              {
+                "format": "ipv6"
+              }
+            ]
+          }
+        },
+        "required": [
+          "ip"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "whois_as",
+      "description": "Looksup whois information about the Autonomous System Number (ASN)",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "asn": {
+            "type": "string",
+            "pattern": "^AS\\d+$"
+          }
+        },
+        "required": [
+          "asn"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    }
+  ]
+}

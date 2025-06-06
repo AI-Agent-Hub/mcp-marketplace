@@ -1,0 +1,768 @@
+{
+  "tools": [
+    {
+      "name": "create_feishu_document",
+      "description": "Creates a new Feishu document and returns its information. Use this tool when you need to create a document from scratch with a specific title and folder location.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "Document title (required). This will be displayed in the Feishu document list and document header."
+          },
+          "folderToken": {
+            "type": "string",
+            "description": "Folder token (required). Specifies where to create the document. Format is an alphanumeric string like \"doxcnOu1ZKYH4RtX1Y5XwL5WGRh\"."
+          }
+        },
+        "required": [
+          "title",
+          "folderToken"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "get_feishu_document_info",
+      "description": "Retrieves basic information about a Feishu document. Use this to verify a document exists, check access permissions, or get metadata like title, type, and creation information.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "documentId": {
+            "type": "string",
+            "description": "Document ID or URL (required). Supports the following formats:\n1. Standard document URL: https://xxx.feishu.cn/docs/xxx or https://xxx.feishu.cn/docx/xxx\n2. Direct document ID: e.g., JcKbdlokYoPIe0xDzJ1cduRXnRf\nNote: Wiki links require conversion with convert_feishu_wiki_to_document_id first."
+          }
+        },
+        "required": [
+          "documentId"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "get_feishu_document_content",
+      "description": "Retrieves the plain text content of a Feishu document. Ideal for content analysis, processing, or when you need to extract text without formatting. The content maintains the document structure but without styling. Note: For Feishu wiki links (https://xxx.feishu.cn/wiki/xxx) you must first use convert_feishu_wiki_to_document_id tool to obtain a compatible document ID.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "documentId": {
+            "type": "string",
+            "description": "Document ID or URL (required). Supports the following formats:\n1. Standard document URL: https://xxx.feishu.cn/docs/xxx or https://xxx.feishu.cn/docx/xxx\n2. Direct document ID: e.g., JcKbdlokYoPIe0xDzJ1cduRXnRf\nNote: Wiki links require conversion with convert_feishu_wiki_to_document_id first."
+          },
+          "lang": {
+            "type": "number",
+            "default": 0,
+            "description": "Language code (optional). Default is 0 (Chinese). Use 1 for English if available."
+          }
+        },
+        "required": [
+          "documentId"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "get_feishu_document_blocks",
+      "description": "Retrieves the block structure information of a Feishu document. Essential to use before inserting content to understand document structure and determine correct insertion positions. Returns a detailed hierarchy of blocks with their IDs, types, and content. Note: For Feishu wiki links (https://xxx.feishu.cn/wiki/xxx) you must first use convert_feishu_wiki_to_document_id tool to obtain a compatible document ID.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "documentId": {
+            "type": "string",
+            "description": "Document ID or URL (required). Supports the following formats:\n1. Standard document URL: https://xxx.feishu.cn/docs/xxx or https://xxx.feishu.cn/docx/xxx\n2. Direct document ID: e.g., JcKbdlokYoPIe0xDzJ1cduRXnRf\nNote: Wiki links require conversion with convert_feishu_wiki_to_document_id first."
+          }
+        },
+        "required": [
+          "documentId"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "get_feishu_block_content",
+      "description": "Retrieves the detailed content and structure of a specific block in a Feishu document. Useful for inspecting block properties, formatting, and content, especially before making updates or for debugging purposes. Note: For Feishu wiki links (https://xxx.feishu.cn/wiki/xxx) you must first use convert_feishu_wiki_to_document_id tool to obtain a compatible document ID.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "documentId": {
+            "type": "string",
+            "description": "Document ID or URL (required). Supports the following formats:\n1. Standard document URL: https://xxx.feishu.cn/docs/xxx or https://xxx.feishu.cn/docx/xxx\n2. Direct document ID: e.g., JcKbdlokYoPIe0xDzJ1cduRXnRf\nNote: Wiki links require conversion with convert_feishu_wiki_to_document_id first."
+          },
+          "blockId": {
+            "type": "string",
+            "description": "Block ID (required). The ID of the specific block to get content from. You can obtain block IDs using the get_feishu_document_blocks tool."
+          }
+        },
+        "required": [
+          "documentId",
+          "blockId"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "update_feishu_block_text",
+      "description": "Updates the text content and styling of a specific block in a Feishu document. Can be used to modify content in existing text, code, or heading blocks while preserving the block type and other properties. Note: For Feishu wiki links (https://xxx.feishu.cn/wiki/xxx) you must first use convert_feishu_wiki_to_document_id tool to obtain a compatible document ID.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "documentId": {
+            "type": "string",
+            "description": "Document ID or URL (required). Supports the following formats:\n1. Standard document URL: https://xxx.feishu.cn/docs/xxx or https://xxx.feishu.cn/docx/xxx\n2. Direct document ID: e.g., JcKbdlokYoPIe0xDzJ1cduRXnRf\nNote: Wiki links require conversion with convert_feishu_wiki_to_document_id first."
+          },
+          "blockId": {
+            "type": "string",
+            "description": "Block ID (required). The ID of the specific block to get content from. You can obtain block IDs using the get_feishu_document_blocks tool."
+          },
+          "textElements": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "text": {
+                  "type": "string",
+                  "description": "Text content. Provide plain text without markdown syntax; use style object for formatting."
+                },
+                "style": {
+                  "type": "object",
+                  "properties": {
+                    "bold": {
+                      "type": "boolean",
+                      "description": "Whether to make text bold. Default is false, equivalent to **text** in Markdown."
+                    },
+                    "italic": {
+                      "type": "boolean",
+                      "description": "Whether to make text italic. Default is false, equivalent to *text* in Markdown."
+                    },
+                    "underline": {
+                      "type": "boolean",
+                      "description": "Whether to add underline. Default is false."
+                    },
+                    "strikethrough": {
+                      "type": "boolean",
+                      "description": "Whether to add strikethrough. Default is false, equivalent to ~~text~~ in Markdown."
+                    },
+                    "inline_code": {
+                      "type": "boolean",
+                      "description": "Whether to format as inline code. Default is false, equivalent to `code` in Markdown."
+                    },
+                    "text_color": {
+                      "type": "number",
+                      "description": "Text color value. Default is 0 (black). Available values are only: 1 (gray), 2 (brown), 3 (orange), 4 (yellow), 5 (green), 6 (blue), 7 (purple). Values outside this range will cause an error."
+                    },
+                    "background_color": {
+                      "type": "number",
+                      "description": "Background color value. Available values are only: 1 (gray), 2 (brown), 3 (orange), 4 (yellow), 5 (green), 6 (blue), 7 (purple). Values outside this range will cause an error."
+                    }
+                  },
+                  "additionalProperties": false,
+                  "description": "Text style settings. Explicitly set style properties instead of relying on Markdown syntax conversion."
+                }
+              },
+              "required": [
+                "text"
+              ],
+              "additionalProperties": false
+            },
+            "description": "Array of text content objects. A block can contain multiple text segments with different styles. Example: [{text:\"Hello\",style:{bold:true}},{text:\" World\",style:{italic:true}}]"
+          }
+        },
+        "required": [
+          "documentId",
+          "blockId",
+          "textElements"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "batch_create_feishu_blocks",
+      "description": "PREFERRED: Efficiently creates multiple blocks (text, code, heading, list) in a single API call. USE THIS TOOL when creating multiple consecutive blocks at the same position - reduces API calls by up to 90%. KEY FEATURES: (1) Handles any number of blocks by auto-batching large requests (>50 blocks), (2) Creates blocks at consecutive positions in a document, (3) Supports direct heading level format (e.g. \"heading1\", \"heading2\") or standard \"heading\" type with level in options. CORRECT FORMAT: mcp_feishu_batch_create_feishu_blocks({documentId:\"doc123\",parentBlockId:\"para123\",startIndex:0,blocks:[{blockType:\"text\",options:{...}},{blockType:\"heading1\",options:{heading:{content:\"Title\"}}}]}). For separate positions, use individual block creation tools instead. For wiki links (https://xxx.feishu.cn/wiki/xxx), first convert with convert_feishu_wiki_to_document_id tool.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "documentId": {
+            "type": "string",
+            "description": "Document ID or URL (required). Supports the following formats:\n1. Standard document URL: https://xxx.feishu.cn/docs/xxx or https://xxx.feishu.cn/docx/xxx\n2. Direct document ID: e.g., JcKbdlokYoPIe0xDzJ1cduRXnRf\nNote: Wiki links require conversion with convert_feishu_wiki_to_document_id first."
+          },
+          "parentBlockId": {
+            "type": "string",
+            "description": "Parent block ID (required). Target block ID where content will be added, without any URL prefix. For page-level (root level) insertion, extract and use only the document ID portion (not the full URL) as parentBlockId. Obtain existing block IDs using the get_feishu_document_blocks tool."
+          },
+          "index": {
+            "type": "number",
+            "description": "Insertion position index (required). Specifies where the block should be inserted. Use 0 to insert at the beginning. Use get_feishu_document_blocks tool to understand document structure if unsure. For consecutive insertions, calculate next index as previous index + 1."
+          },
+          "blocks": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "blockType": {
+                  "type": "string",
+                  "description": "Block type (required). Supports: 'text', 'code', 'heading', 'list', as well as 'heading1' through 'heading9'. For headings, we recommend using 'heading' with level property, but 'heading1'-'heading9' are also supported."
+                },
+                "options": {
+                  "anyOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "text": {
+                          "type": "object",
+                          "properties": {
+                            "textStyles": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "text": {
+                                    "type": "string",
+                                    "description": "Text segment content. The actual text to display."
+                                  },
+                                  "style": {
+                                    "type": "object",
+                                    "properties": {
+                                      "bold": {
+                                        "type": "boolean",
+                                        "description": "Whether to make text bold. Default is false, equivalent to **text** in Markdown."
+                                      },
+                                      "italic": {
+                                        "type": "boolean",
+                                        "description": "Whether to make text italic. Default is false, equivalent to *text* in Markdown."
+                                      },
+                                      "underline": {
+                                        "type": "boolean",
+                                        "description": "Whether to add underline. Default is false."
+                                      },
+                                      "strikethrough": {
+                                        "type": "boolean",
+                                        "description": "Whether to add strikethrough. Default is false, equivalent to ~~text~~ in Markdown."
+                                      },
+                                      "inline_code": {
+                                        "type": "boolean",
+                                        "description": "Whether to format as inline code. Default is false, equivalent to `code` in Markdown."
+                                      },
+                                      "text_color": {
+                                        "type": "number",
+                                        "description": "Text color value. Default is 0 (black). Available values are only: 1 (gray), 2 (brown), 3 (orange), 4 (yellow), 5 (green), 6 (blue), 7 (purple). Values outside this range will cause an error."
+                                      },
+                                      "background_color": {
+                                        "type": "number",
+                                        "description": "Background color value. Available values are only: 1 (gray), 2 (brown), 3 (orange), 4 (yellow), 5 (green), 6 (blue), 7 (purple). Values outside this range will cause an error."
+                                      }
+                                    },
+                                    "additionalProperties": false,
+                                    "description": "Text style settings. Explicitly set style properties instead of relying on Markdown syntax conversion."
+                                  }
+                                },
+                                "required": [
+                                  "text"
+                                ],
+                                "additionalProperties": false
+                              },
+                              "description": "Array of text content objects with styles. A block can contain multiple text segments with different styles. Example: [{text:\"Hello\",style:{bold:true}},{text:\" World\",style:{italic:true}}]"
+                            },
+                            "align": {
+                              "type": "number",
+                              "default": 1,
+                              "description": "Text alignment: 1 for left (default), 2 for center, 3 for right."
+                            }
+                          },
+                          "required": [
+                            "textStyles"
+                          ],
+                          "additionalProperties": false
+                        }
+                      },
+                      "required": [
+                        "text"
+                      ],
+                      "additionalProperties": false,
+                      "description": "Text block options. Used when blockType is 'text'."
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "code": {
+                          "type": "object",
+                          "properties": {
+                            "code": {
+                              "type": "string",
+                              "description": "Code content. The complete code text to display."
+                            },
+                            "language": {
+                              "type": "number",
+                              "default": 1,
+                              "description": "Programming language code (optional). Common language codes:\n1: PlainText; 2: ABAP; 3: Ada; 4: Apache; 5: Apex; 6: Assembly; 7: Bash; 8: CSharp; 9: C++; 10: C; 11: COBOL; 12: CSS; 13: CoffeeScript; 14: D; 15: Dart; 16: Delphi; 17: Django; 18: Dockerfile; 19: Erlang; 20: Fortran; 22: Go; 23: Groovy; 24: HTML; 25: HTMLBars; 26: HTTP; 27: Haskell; 28: JSON; 29: Java; 30: JavaScript; 31: Julia; 32: Kotlin; 33: LateX; 34: Lisp; 36: Lua; 37: MATLAB; 38: Makefile; 39: Markdown; 40: Nginx; 41: Objective-C; 43: PHP; 44: Perl; 46: PowerShell; 47: Prolog; 48: ProtoBuf; 49: Python; 50: R; 52: Ruby; 53: Rust; 54: SAS; 55: SCSS; 56: SQL; 57: Scala; 58: Scheme; 60: Shell; 61: Swift; 62: Thrift; 63: TypeScript; 64: VBScript; 65: Visual Basic; 66: XML; 67: YAML; 68: CMake; 69: Diff; 70: Gherkin; 71: GraphQL. Default is 1 (PlainText)."
+                            },
+                            "wrap": {
+                              "type": "boolean",
+                              "default": false,
+                              "description": "Whether to enable automatic line wrapping. Default is false."
+                            }
+                          },
+                          "required": [
+                            "code"
+                          ],
+                          "additionalProperties": false
+                        }
+                      },
+                      "required": [
+                        "code"
+                      ],
+                      "additionalProperties": false,
+                      "description": "Code block options. Used when blockType is 'code'."
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "heading": {
+                          "type": "object",
+                          "properties": {
+                            "level": {
+                              "type": "number",
+                              "minimum": 1,
+                              "maximum": 9,
+                              "description": "Heading level from 1 to 9, where 1 is the largest (h1) and 9 is the smallest (h9)."
+                            },
+                            "content": {
+                              "type": "string",
+                              "description": "Heading text content. The actual text of the heading."
+                            },
+                            "align": {
+                              "type": "number",
+                              "default": 1,
+                              "description": "Text alignment (optional): 1 for left (default), 2 for center, 3 for right. Only these three values are allowed."
+                            }
+                          },
+                          "required": [
+                            "level",
+                            "content"
+                          ],
+                          "additionalProperties": false
+                        }
+                      },
+                      "required": [
+                        "heading"
+                      ],
+                      "additionalProperties": false,
+                      "description": "Heading block options. Used with both 'heading' and 'headingN' formats."
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "list": {
+                          "type": "object",
+                          "properties": {
+                            "content": {
+                              "type": "string",
+                              "description": "List item content. The actual text of the list item."
+                            },
+                            "isOrdered": {
+                              "type": "boolean",
+                              "default": false,
+                              "description": "Whether this is an ordered (numbered) list item. Default is false (bullet point/unordered)."
+                            },
+                            "align": {
+                              "$ref": "#/properties/blocks/items/properties/options/anyOf/2/properties/heading/properties/align"
+                            }
+                          },
+                          "required": [
+                            "content"
+                          ],
+                          "additionalProperties": false
+                        }
+                      },
+                      "required": [
+                        "list"
+                      ],
+                      "additionalProperties": false,
+                      "description": "List block options. Used when blockType is 'list'."
+                    },
+                    {
+                      "type": "object",
+                      "additionalProperties": {},
+                      "description": "Fallback for any other block options"
+                    }
+                  ],
+                  "description": "Options for the specific block type. Provide the corresponding options object based on blockType."
+                }
+              },
+              "required": [
+                "blockType",
+                "options"
+              ],
+              "additionalProperties": false
+            },
+            "description": "Array of block configurations. CRITICAL: Must be a JSON array object, NOT a string. CORRECT: blocks:[{...}] - WITHOUT quotes around array. INCORRECT: blocks:\"[{...}]\". Example: [{blockType:\"text\",options:{text:{textStyles:[{text:\"Hello\",style:{bold:true}}]}}},{blockType:\"heading1\",options:{heading:{content:\"My Title\"}}}]. Auto-batches requests when exceeding 50 blocks."
+          }
+        },
+        "required": [
+          "documentId",
+          "parentBlockId",
+          "index",
+          "blocks"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "create_feishu_text_block",
+      "description": "Creates a new text block with precise style control. Unlike markdown-based formatting, this tool lets you explicitly set text styles for each text segment. Ideal for formatted documents where exact styling control is needed. NOTE: If creating multiple blocks at once, use batch_create_feishu_blocks tool instead for better efficiency. Note: For Feishu wiki links (https://xxx.feishu.cn/wiki/xxx) you must first use convert_feishu_wiki_to_document_id tool to obtain a compatible document ID.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "documentId": {
+            "type": "string",
+            "description": "Document ID or URL (required). Supports the following formats:\n1. Standard document URL: https://xxx.feishu.cn/docs/xxx or https://xxx.feishu.cn/docx/xxx\n2. Direct document ID: e.g., JcKbdlokYoPIe0xDzJ1cduRXnRf\nNote: Wiki links require conversion with convert_feishu_wiki_to_document_id first."
+          },
+          "parentBlockId": {
+            "type": "string",
+            "description": "Parent block ID (required). Target block ID where content will be added, without any URL prefix. For page-level (root level) insertion, extract and use only the document ID portion (not the full URL) as parentBlockId. Obtain existing block IDs using the get_feishu_document_blocks tool."
+          },
+          "textContents": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "text": {
+                  "type": "string",
+                  "description": "Text content. Provide plain text without markdown syntax; use style object for formatting."
+                },
+                "style": {
+                  "type": "object",
+                  "properties": {
+                    "bold": {
+                      "type": "boolean",
+                      "description": "Whether to make text bold. Default is false, equivalent to **text** in Markdown."
+                    },
+                    "italic": {
+                      "type": "boolean",
+                      "description": "Whether to make text italic. Default is false, equivalent to *text* in Markdown."
+                    },
+                    "underline": {
+                      "type": "boolean",
+                      "description": "Whether to add underline. Default is false."
+                    },
+                    "strikethrough": {
+                      "type": "boolean",
+                      "description": "Whether to add strikethrough. Default is false, equivalent to ~~text~~ in Markdown."
+                    },
+                    "inline_code": {
+                      "type": "boolean",
+                      "description": "Whether to format as inline code. Default is false, equivalent to `code` in Markdown."
+                    },
+                    "text_color": {
+                      "type": "number",
+                      "description": "Text color value. Default is 0 (black). Available values are only: 1 (gray), 2 (brown), 3 (orange), 4 (yellow), 5 (green), 6 (blue), 7 (purple). Values outside this range will cause an error."
+                    },
+                    "background_color": {
+                      "type": "number",
+                      "description": "Background color value. Available values are only: 1 (gray), 2 (brown), 3 (orange), 4 (yellow), 5 (green), 6 (blue), 7 (purple). Values outside this range will cause an error."
+                    }
+                  },
+                  "additionalProperties": false,
+                  "description": "Text style settings. Explicitly set style properties instead of relying on Markdown syntax conversion."
+                }
+              },
+              "required": [
+                "text"
+              ],
+              "additionalProperties": false
+            },
+            "description": "Array of text content objects. A block can contain multiple text segments with different styles. Example: [{text:\"Hello\",style:{bold:true}},{text:\" World\",style:{italic:true}}]"
+          },
+          "align": {
+            "type": "number",
+            "default": 1,
+            "description": "Text alignment: 1 for left (default), 2 for center, 3 for right."
+          },
+          "index": {
+            "type": "number",
+            "description": "Insertion position index (required). Specifies where the block should be inserted. Use 0 to insert at the beginning. Use get_feishu_document_blocks tool to understand document structure if unsure. For consecutive insertions, calculate next index as previous index + 1."
+          }
+        },
+        "required": [
+          "documentId",
+          "parentBlockId",
+          "textContents",
+          "index"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "create_feishu_code_block",
+      "description": "Creates a new code block with syntax highlighting and formatting options. Ideal for technical documentation, tutorials, or displaying code examples with proper formatting and language-specific highlighting. NOTE: If creating multiple blocks at once, use batch_create_feishu_blocks tool instead for better efficiency. Note: For Feishu wiki links (https://xxx.feishu.cn/wiki/xxx) you must first use convert_feishu_wiki_to_document_id tool to obtain a compatible document ID.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "documentId": {
+            "type": "string",
+            "description": "Document ID or URL (required). Supports the following formats:\n1. Standard document URL: https://xxx.feishu.cn/docs/xxx or https://xxx.feishu.cn/docx/xxx\n2. Direct document ID: e.g., JcKbdlokYoPIe0xDzJ1cduRXnRf\nNote: Wiki links require conversion with convert_feishu_wiki_to_document_id first."
+          },
+          "parentBlockId": {
+            "type": "string",
+            "description": "Parent block ID (required). Target block ID where content will be added, without any URL prefix. For page-level (root level) insertion, extract and use only the document ID portion (not the full URL) as parentBlockId. Obtain existing block IDs using the get_feishu_document_blocks tool."
+          },
+          "code": {
+            "type": "string",
+            "description": "Code content (required). The complete code text to display."
+          },
+          "language": {
+            "type": "number",
+            "default": 1,
+            "description": "Programming language code (optional). Common language codes:\n1: PlainText; 2: ABAP; 3: Ada; 4: Apache; 5: Apex; 6: Assembly; 7: Bash; 8: CSharp; 9: C++; 10: C; 11: COBOL; 12: CSS; 13: CoffeeScript; 14: D; 15: Dart; 16: Delphi; 17: Django; 18: Dockerfile; 19: Erlang; 20: Fortran; 22: Go; 23: Groovy; 24: HTML; 25: HTMLBars; 26: HTTP; 27: Haskell; 28: JSON; 29: Java; 30: JavaScript; 31: Julia; 32: Kotlin; 33: LateX; 34: Lisp; 36: Lua; 37: MATLAB; 38: Makefile; 39: Markdown; 40: Nginx; 41: Objective-C; 43: PHP; 44: Perl; 46: PowerShell; 47: Prolog; 48: ProtoBuf; 49: Python; 50: R; 52: Ruby; 53: Rust; 54: SAS; 55: SCSS; 56: SQL; 57: Scala; 58: Scheme; 60: Shell; 61: Swift; 62: Thrift; 63: TypeScript; 64: VBScript; 65: Visual Basic; 66: XML; 67: YAML; 68: CMake; 69: Diff; 70: Gherkin; 71: GraphQL. Default is 1 (PlainText)."
+          },
+          "wrap": {
+            "type": "boolean",
+            "default": false,
+            "description": "Whether to enable automatic line wrapping. Default is false."
+          },
+          "index": {
+            "type": "number",
+            "description": "Insertion position index (required). Specifies where the block should be inserted. Use 0 to insert at the beginning. Use get_feishu_document_blocks tool to understand document structure if unsure. For consecutive insertions, calculate next index as previous index + 1."
+          }
+        },
+        "required": [
+          "documentId",
+          "parentBlockId",
+          "code",
+          "index"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "create_feishu_heading_block",
+      "description": "Creates a heading block with customizable level and alignment. Use this tool to add section titles, chapter headings, or any hierarchical structure elements to your document. Supports nine heading levels for different emphasis needs. NOTE: If creating multiple blocks at once, use batch_create_feishu_blocks tool instead for better efficiency. Note: For Feishu wiki links (https://xxx.feishu.cn/wiki/xxx) you must first use convert_feishu_wiki_to_document_id tool to obtain a compatible document ID.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "documentId": {
+            "type": "string",
+            "description": "Document ID or URL (required). Supports the following formats:\n1. Standard document URL: https://xxx.feishu.cn/docs/xxx or https://xxx.feishu.cn/docx/xxx\n2. Direct document ID: e.g., JcKbdlokYoPIe0xDzJ1cduRXnRf\nNote: Wiki links require conversion with convert_feishu_wiki_to_document_id first."
+          },
+          "parentBlockId": {
+            "type": "string",
+            "description": "Parent block ID (required). Target block ID where content will be added, without any URL prefix. For page-level (root level) insertion, extract and use only the document ID portion (not the full URL) as parentBlockId. Obtain existing block IDs using the get_feishu_document_blocks tool."
+          },
+          "level": {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 9,
+            "description": "Heading level (required). Integer between 1 and 9, where 1 is the largest heading (h1) and 9 is the smallest (h9)."
+          },
+          "content": {
+            "type": "string",
+            "description": "Heading text content (required). The actual text of the heading."
+          },
+          "align": {
+            "type": "number",
+            "default": 1,
+            "description": "Text alignment (optional): 1 for left (default), 2 for center, 3 for right. Only these three values are allowed."
+          },
+          "index": {
+            "type": "number",
+            "description": "Insertion position index (required). Specifies where the block should be inserted. Use 0 to insert at the beginning. Use get_feishu_document_blocks tool to understand document structure if unsure. For consecutive insertions, calculate next index as previous index + 1."
+          }
+        },
+        "required": [
+          "documentId",
+          "parentBlockId",
+          "level",
+          "content",
+          "index"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "create_feishu_list_block",
+      "description": "Creates a list item block (either ordered or unordered). Perfect for creating hierarchical and structured content with bullet points or numbered lists. NOTE: If creating multiple blocks at once, use batch_create_feishu_blocks tool instead for better efficiency. Note: For Feishu wiki links (https://xxx.feishu.cn/wiki/xxx) you must first use convert_feishu_wiki_to_document_id tool to obtain a compatible document ID.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "documentId": {
+            "type": "string",
+            "description": "Document ID or URL (required). Supports the following formats:\n1. Standard document URL: https://xxx.feishu.cn/docs/xxx or https://xxx.feishu.cn/docx/xxx\n2. Direct document ID: e.g., JcKbdlokYoPIe0xDzJ1cduRXnRf\nNote: Wiki links require conversion with convert_feishu_wiki_to_document_id first."
+          },
+          "parentBlockId": {
+            "type": "string",
+            "description": "Parent block ID (required). Target block ID where content will be added, without any URL prefix. For page-level (root level) insertion, extract and use only the document ID portion (not the full URL) as parentBlockId. Obtain existing block IDs using the get_feishu_document_blocks tool."
+          },
+          "content": {
+            "type": "string",
+            "description": "List item content (required). The actual text of the list item."
+          },
+          "isOrdered": {
+            "type": "boolean",
+            "default": false,
+            "description": "Whether this is an ordered (numbered) list item. Default is false (bullet point/unordered)."
+          },
+          "align": {
+            "type": "number",
+            "default": 1,
+            "description": "Text alignment (optional): 1 for left (default), 2 for center, 3 for right. Only these three values are allowed."
+          },
+          "index": {
+            "type": "number",
+            "description": "Insertion position index (required). Specifies where the block should be inserted. Use 0 to insert at the beginning. Use get_feishu_document_blocks tool to understand document structure if unsure. For consecutive insertions, calculate next index as previous index + 1."
+          }
+        },
+        "required": [
+          "documentId",
+          "parentBlockId",
+          "content",
+          "index"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "convert_feishu_wiki_to_document_id",
+      "description": "Converts a Feishu Wiki document link to a compatible document ID. This conversion is required before using wiki links with any other Feishu document tools.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "wikiUrl": {
+            "type": "string",
+            "description": "Wiki URL or Token (required). Supports complete URL formats like https://xxx.feishu.cn/wiki/xxxxx or direct use of the Token portion"
+          }
+        },
+        "required": [
+          "wikiUrl"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "delete_feishu_document_blocks",
+      "description": "Deletes one or more consecutive blocks from a Feishu document. Use this tool to remove unwanted content, clean up document structure, or clear space before inserting new content. Supports batch deletion for efficiency. Note: For Feishu wiki links (https://xxx.feishu.cn/wiki/xxx) you must first use convert_feishu_wiki_to_document_id tool to obtain a compatible document ID.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "documentId": {
+            "type": "string",
+            "description": "Document ID or URL (required). Supports the following formats:\n1. Standard document URL: https://xxx.feishu.cn/docs/xxx or https://xxx.feishu.cn/docx/xxx\n2. Direct document ID: e.g., JcKbdlokYoPIe0xDzJ1cduRXnRf\nNote: Wiki links require conversion with convert_feishu_wiki_to_document_id first."
+          },
+          "parentBlockId": {
+            "type": "string",
+            "description": "Parent block ID (required). Target block ID where content will be added, without any URL prefix. For page-level (root level) insertion, extract and use only the document ID portion (not the full URL) as parentBlockId. Obtain existing block IDs using the get_feishu_document_blocks tool."
+          },
+          "startIndex": {
+            "type": "number",
+            "description": "Starting insertion position index (required). Specifies where the first block should be inserted. Use 0 to insert at the beginning. Use get_feishu_document_blocks tool to understand document structure if unsure."
+          },
+          "endIndex": {
+            "type": "number",
+            "description": "Ending position index (required). Specifies the end of the range for deletion (exclusive). For example, to delete blocks 2, 3, and 4, use startIndex=2, endIndex=5. To delete a single block at position 2, use startIndex=2, endIndex=3."
+          }
+        },
+        "required": [
+          "documentId",
+          "parentBlockId",
+          "startIndex",
+          "endIndex"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "get_feishu_image_resource",
+      "description": "Downloads an image resource from Feishu by its media ID. Use this to retrieve images referenced in document blocks or other Feishu resources. Returns the binary image data that can be saved or processed further. For example, extract the media_id from an image block in a document, then use this tool to download the actual image.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "mediaId": {
+            "type": "string",
+            "description": "Media ID (required). The unique identifier for a media resource (image, file, etc.) in Feishu. Usually obtained from image blocks or file references in documents. Format is typically like \"boxcnrHpsg1QDqXAAAyachabcef\"."
+          },
+          "extra": {
+            "type": "string",
+            "description": "Extra parameters for media download (optional). These parameters are passed directly to the Feishu API and can modify how the media is returned."
+          }
+        },
+        "required": [
+          "mediaId"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "get_feishu_root_folder_info",
+      "description": "Retrieves basic information about the root folder in Feishu Drive. Returns the token, ID and user ID of the root folder, which can be used for subsequent folder operations.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "get_feishu_folder_files",
+      "description": "Retrieves a list of files and subfolders in a specified folder. Use this to explore folder contents, view file metadata, and get URLs and tokens for further operations.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "folderToken": {
+            "type": "string",
+            "description": "Folder token (required). The unique identifier for a folder in Feishu. Format is an alphanumeric string like \"FWK2fMleClICfodlHHWc4Mygnhb\"."
+          },
+          "orderBy": {
+            "type": "string",
+            "default": "EditedTime",
+            "description": "Order by field (optional). Specifies how to sort the file list. Available values: \"EditedTime\" (default), \"CreatedTime\", \"Name\". For user-friendly display, case insensitive."
+          },
+          "direction": {
+            "type": "string",
+            "default": "DESC",
+            "description": "Sort direction (optional). Specifies the sort order. Available values: \"DESC\" (default) for descending order, \"ASC\" for ascending order. Case sensitive."
+          }
+        },
+        "required": [
+          "folderToken"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "create_feishu_folder",
+      "description": "Creates a new folder in a specified parent folder. Use this to organize documents and files within your Feishu Drive structure. Returns the token and URL of the newly created folder.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "folderToken": {
+            "type": "string",
+            "description": "Folder token (required). The unique identifier for a folder in Feishu. Format is an alphanumeric string like \"FWK2fMleClICfodlHHWc4Mygnhb\"."
+          },
+          "folderName": {
+            "type": "string",
+            "description": "Folder name (required). The name for the new folder to be created."
+          }
+        },
+        "required": [
+          "folderToken",
+          "folderName"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    }
+  ]
+}

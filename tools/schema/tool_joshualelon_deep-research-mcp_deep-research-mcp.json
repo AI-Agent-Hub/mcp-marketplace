@@ -1,0 +1,31 @@
+npm warn exec The following package was not found and will be installed: @modelcontextprotocol/inspector@0.14.0
+npm error code ENOTEMPTY
+npm error syscall rmdir
+npm error path /Users/xichen.dxc/Desktop/project/gitlab/ai_agent_marketplace_hub/<path_to_your_home_directory/.npm/_npx/5a9d879542beca3a/node_modules/cliui/build
+npm error errno -66
+npm error ENOTEMPTY: directory not empty, rmdir '/Users/xichen.dxc/Desktop/project/gitlab/ai_agent_marketplace_hub/<path_to_your_home_directory/.npm/_npx/5a9d879542beca3a/node_modules/cliui/build'
+npm error A complete log of this run can be found in: /Users/xichen.dxc/Desktop/project/gitlab/ai_agent_marketplace_hub/<path_to_your_home_directory/.npm/_logs/2025-06-06T14_56_43_574Z-debug-0.log
+e_directory/.npm/_npx/5a9d879542beca3a/node_modules/escalade/sync/index.js'
+npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/Users/xichen.dxc/Desktop/project/gitlab/ai_agent_marketplace_hub/<path_to_your_home_directory/.npm/_npx/5a9d879542beca3a/node_modules/es-object-atoms/test/index.js'
+npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/Users/xichen.dxc/Desktop/project/gitlab/ai_agent_marketplace_hub/<path_to_your_home_directory/.npm/_npx/5a9d879542beca3a/node_modules/get-intrinsic/test/GetIntrinsic.js'
+npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/Users/xichen.dxc/Desktop/project/gitlab/ai_agent_marketplace_hub/<path_to_your_home_directory/.npm/_npx/5a9d879542beca3a/node_modules/object-inspect/example/all.js'
+npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/Users/xichen.dxc/Desktop/project/gitlab/ai_agent_marketplace_hub/<path_to_your_home_directory/.npm/_npx/5a9d879542beca3a/node_modules/detect-node-es/esm/node.js'
+npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/Users/xichen.dxc/Desktop/project/gitlab/ai_agent_marketplace_hub/<path_to_your_home_directory/.npm/_npx/5a9d879542beca3a/node_modules/escalade/dist/index.mjs'
+npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, lstat '/Users/xichen.dxc/Desktop/project/gitlab/ai_agent_marketplace_hub/<path_to_your_home_directory/.npm/_npx/5a9d879542beca3a/node_modules/isexe/test'
+npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/Users/xichen.dxc/Desktop/project/gitlab/ai_agent_marketplace_hub/<path_to_your_home_directory/.npm/_npx/5a9d879542beca3a/node_modules/side-channel-map/test/index.js'
+npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/Users/xichen.dxc/Desktop/project/gitlab/ai_agent_marketplace_hub/<path_to_your_home_directory/.npm/_npx/5a9d879542beca3a/node_modules/side-channel-list/test/index.js'
+npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/Users/xichen.dxc/Desktop/project/gitlab/ai_agent_marketplace_hub/<path_to_your_home_directory/.npm/_npx/5a9d879542beca3a/node_modules/object-inspect/example/circular.js'
+npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/Users/xichen.dxc/Desktop/project/gitlab/ai_agent_marketplace_hub/<path_to_your_home_directory/.npm/_npx/5a9d879542beca3a/node_modules/escalade/sync/index.mjs'
+npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/Users/xichen.dxc/Desktop/project/gitlab/ai_agent_marketplace_hub/<path_to_your_home_directory/.npm/_npx/5a9d879542beca3a/node_modules/acorn-walk/dist/walk.mjs'
+npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/Users/xichen.dxc/Desktop/project/gitlab/ai_agent_marketplace_hub/<path_to_your_home_directory/.npm/_npx/5a9d879542beca3a/node_modules/escalade/sync/index.d.mts'
+npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/Users/xichen.dxc/Desktop/project/gitlab/ai_agent_marketplace_hub/<path_to_your_home_directory/.npm/_npx/5a9d879542beca3a/node_modules/acorn-walk/dist/walk.d.mts'
+npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/Users/xichen.dxc/Desktop/project/gitlab/ai_agent_marketplace_hub/<path_to_your_home_directory/.npm/_npx/5a9d879542beca3a/node_modules/escalade/sync/index.d.ts'
+npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/Users/xichen.dxc/Desktop/project/gitlab/ai_agent_marketplace_hub/<path_to_your_home_directory/.npm/_npx/5a9d879542beca3a/node_modules/acorn-walk/dist/walk.d.ts'
+npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/Users/xichen.dxc/Desktop/project/gitlab/ai_agent_marketplace_hub/<path_to_your_home_directory/.npm/_npx/5a9d879542beca3a/node_modules/object-inspect/example/fn.js'
+npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/Users/xichen.dxc/Desktop/project/gitlab/ai_agent_marketplace_hub/<path_to_your_home_directory/.npm/_npx/5a9d879542beca3a/node_modules/object-inspect/example/inspect.js'
+npm error code ENOTEMPTY
+npm error syscall rmdir
+npm error path /Users/xichen.dxc/Desktop/project/gitlab/ai_agent_marketplace_hub/<path_to_your_home_directory/.npm/_npx/5a9d879542beca3a/node_modules/has-symbols/test
+npm error errno -66
+npm error ENOTEMPTY: directory not empty, rmdir '/Users/xichen.dxc/Desktop/project/gitlab/ai_agent_marketplace_hub/<path_to_your_home_directory/.npm/_npx/5a9d879542beca3a/node_modules/has-symbols/test'
+npm error A complete log of this run can be found in: /Users/xichen.dxc/Desktop/project/gitlab/ai_agent_marketplace_hub/<path_to_your_home_directory/.npm/_logs/2025-06-06T14_56_43_781Z-debug-0.log

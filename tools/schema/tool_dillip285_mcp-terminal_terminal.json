@@ -1,0 +1,31 @@
+{
+  "tools": [
+    {
+      "name": "execute_command",
+      "description": "Execute a command in the local system",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "command": {
+            "type": "string",
+            "description": "Command to execute"
+          },
+          "args": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Command arguments"
+          },
+          "cwd": {
+            "type": "string",
+            "description": "Working directory for command execution"
+          }
+        },
+        "required": [
+          "command"
+        ]
+      }
+    }
+  ]
+}

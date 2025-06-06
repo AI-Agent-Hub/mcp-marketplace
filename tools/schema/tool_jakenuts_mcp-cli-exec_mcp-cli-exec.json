@@ -1,0 +1,61 @@
+Failed to connect to MCP server: MCP error -32000: Connection closed
+Failed to connect to MCP server: MCP error -32000: Connection closed
+
+Failed with exit code: 1
+pe": "object",
+        "properties": {
+          "command": {
+            "type": "string",
+            "description": "The CLI command to execute"
+          },
+          "timeout": {
+            "type": "number",
+            "description": "Optional timeout in milliseconds (default: 5 minutes)",
+            "minimum": 0
+          }
+        },
+        "required": [
+          "command"
+        ]
+      }
+    },
+    {
+      "name": "cli-exec",
+      "description": "Execute one or more CLI commands in a specific working directory",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "workingDirectory": {
+            "type": "string",
+            "description": "Working directory to execute commands in"
+          },
+          "commands": {
+            "oneOf": [
+              {
+                "type": "string",
+                "description": "Single command or && separated commands"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Array of commands to execute sequentially"
+              }
+            ],
+            "description": "Commands to execute"
+          },
+          "timeout": {
+            "type": "number",
+            "description": "Optional timeout in milliseconds per command (default: 5 minutes)",
+            "minimum": 0
+          }
+        },
+        "required": [
+          "workingDirectory",
+          "commands"
+        ]
+      }
+    }
+  ]
+}

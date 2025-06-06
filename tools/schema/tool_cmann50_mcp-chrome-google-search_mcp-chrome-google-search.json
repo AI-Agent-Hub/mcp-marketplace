@@ -1,0 +1,69 @@
+{
+  "tools": [
+    {
+      "name": "web-search",
+      "description": "Search webpages and get a specific page of results (each page has ~10 results). Optionally filter by site and timeframe.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query_text": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Plain text to search for (no Google operators plain text only - use other parameters for site/date filtering)"
+          },
+          "site": {
+            "type": "string",
+            "description": "Limit search to specific domain (e.g. 'github.com' or 'docs.python.org')"
+          },
+          "timeframe": {
+            "type": "string",
+            "enum": [
+              "h",
+              "d",
+              "w",
+              "m",
+              "y"
+            ],
+            "description": "Time range filter (h=hour, d=day, w=week, m=month, y=year)"
+          },
+          "pageNumber": {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 5,
+            "default": 1,
+            "description": "Which page of results to fetch (1-5). Each page contains ~10 results"
+          }
+        },
+        "required": [
+          "query_text"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "web_fetch",
+      "description": "Extract readable text content from a webpage using Chrome browser automation.\n\nKey Features:\n- Returns main content text and optionally links",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "format": "uri",
+            "description": "Webpage URL to fetch (must include http:// or https://)"
+          },
+          "includeLinks": {
+            "type": "boolean",
+            "default": false,
+            "description": "Whether to include extracted links in the output"
+          }
+        },
+        "required": [
+          "url"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    }
+  ]
+}

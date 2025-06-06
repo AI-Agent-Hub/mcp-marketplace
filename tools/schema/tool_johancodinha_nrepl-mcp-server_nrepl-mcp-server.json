@@ -1,0 +1,61 @@
+{
+  "tools": [
+    {
+      "name": "connect",
+      "description": "Connect to an nREPL server.\nExample: (connect {:host \"localhost\" :port 1234})",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "host": {
+            "type": "string",
+            "description": "nREPL server host"
+          },
+          "port": {
+            "type": "number",
+            "description": "nREPL server port"
+          }
+        },
+        "required": [
+          "host",
+          "port"
+        ]
+      }
+    },
+    {
+      "name": "eval_form",
+      "description": "Evaluate Clojure code in a specific namespace or the current one. Examples:\n- Get current namespace: (eval_form {:code \"(str *ns*)\"})\n- Change namespace: (eval_form {:code \"(+ 1 2)\" :ns \"my.namespace\"})\n- Load a file: (eval_form {:code \"(load-file \\\"src/my_file.clj\\\")\"})\n- Define and call functions: (eval_form {:code \"(defn add [a b] (+ a b))\" :ns \"math\"} then\n  (eval_form {:code \"(add 1 2)\" :ns \"math\"})",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "description": "Clojure code to evaluate"
+          },
+          "ns": {
+            "type": "string",
+            "description": "Optional namespace to evaluate in. Changes persist for subsequent evaluations."
+          }
+        },
+        "required": [
+          "code"
+        ]
+      }
+    },
+    {
+      "name": "get_ns_vars",
+      "description": "Get all public vars (functions, values) in a namespace with their metadata and current values. Example:\n- List main namespace vars: (get_ns_vars {:ns \"main\"})\nReturns a map where keys are var names and values contain:\n- :meta - Metadata including :doc string, :line number, :file path\n- :value - Current value of the var",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "ns": {
+            "type": "string",
+            "description": "Namespace to inspect"
+          }
+        },
+        "required": [
+          "ns"
+        ]
+      }
+    }
+  ]
+}

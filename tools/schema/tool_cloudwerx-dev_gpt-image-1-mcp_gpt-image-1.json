@@ -1,0 +1,206 @@
+{
+  "tools": [
+    {
+      "name": "create_image",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "prompt": {
+            "type": "string",
+            "maxLength": 32000
+          },
+          "background": {
+            "type": "string",
+            "enum": [
+              "transparent",
+              "opaque",
+              "auto"
+            ]
+          },
+          "n": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 10
+          },
+          "output_compression": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "output_format": {
+            "type": "string",
+            "enum": [
+              "png",
+              "jpeg",
+              "webp"
+            ]
+          },
+          "quality": {
+            "type": "string",
+            "enum": [
+              "high",
+              "medium",
+              "low",
+              "auto"
+            ]
+          },
+          "size": {
+            "type": "string",
+            "enum": [
+              "1024x1024",
+              "1536x1024",
+              "1024x1536",
+              "auto"
+            ]
+          },
+          "user": {
+            "type": "string"
+          },
+          "moderation": {
+            "type": "string",
+            "enum": [
+              "low",
+              "auto"
+            ]
+          }
+        },
+        "required": [
+          "prompt"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "annotations": {
+        "title": "Generate new images using OpenAI's gpt-image-1 model",
+        "description": "Use this tool when you need to create a brand new image from a text prompt. Provide a detailed, descriptive prompt for best results. The prompt should describe visual elements, style, mood, colors, and composition. For highest quality, use 'high' quality setting and specify size (1024x1024 is standard). To display the generated image, embed the returned markdown directly in your response: ![Description]({url}). Do NOT use code blocks around the markdown. Always refer to the image contents in your response text. Best for: visualizing concepts, creating illustrations, or generating visual examples."
+      }
+    },
+    {
+      "name": "create_image_edit",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "image": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "filePath": {
+                    "type": "string"
+                  },
+                  "isBase64": {
+                    "type": "boolean",
+                    "default": false
+                  }
+                },
+                "required": [
+                  "filePath"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "filePath": {
+                      "type": "string"
+                    },
+                    "isBase64": {
+                      "type": "boolean",
+                      "default": false
+                    }
+                  },
+                  "required": [
+                    "filePath"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            ]
+          },
+          "prompt": {
+            "type": "string",
+            "maxLength": 32000
+          },
+          "background": {
+            "type": "string",
+            "enum": [
+              "transparent",
+              "opaque",
+              "auto"
+            ]
+          },
+          "mask": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "filePath": {
+                    "type": "string"
+                  },
+                  "isBase64": {
+                    "type": "boolean",
+                    "default": false
+                  }
+                },
+                "required": [
+                  "filePath"
+                ],
+                "additionalProperties": false
+              }
+            ]
+          },
+          "n": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 10
+          },
+          "quality": {
+            "type": "string",
+            "enum": [
+              "high",
+              "medium",
+              "low",
+              "auto"
+            ]
+          },
+          "size": {
+            "type": "string",
+            "enum": [
+              "1024x1024",
+              "1536x1024",
+              "1024x1536",
+              "auto"
+            ]
+          },
+          "user": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "image",
+          "prompt"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "annotations": {
+        "title": "Edit existing images using OpenAI's gpt-image-1 model",
+        "description": "Use this tool when you need to modify an existing image. You must provide both the source image (as base64 or file path) and a text prompt describing the desired changes. Optionally add a mask to specify which areas to edit. The prompt should clearly state what to add, remove, or change in the image. This is ideal for: adding elements to images, changing colors or style, removing backgrounds, or generating variations of existing visuals. To display the edited image, embed the returned markdown directly in your response: ![Description]({url}). Do NOT use code blocks around the markdown. Always describe both the original image and the changes made."
+      }
+    }
+  ]
+}

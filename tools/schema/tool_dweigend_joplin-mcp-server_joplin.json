@@ -1,0 +1,9 @@
+npm warn exec The following package was not found and will be installed: @modelcontextprotocol/inspector@0.14.0
+npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/Users/xichen.dxc/Desktop/project/gitlab/ai_agent_marketplace_hub/<path_to_your_home_directory/.npm/_npx/5a9d879542beca3a/node_modules/body-parser/lib/types/text.js'
+npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open '/Users/xichen.dxc/Desktop/project/gitlab/ai_agent_marketplace_hub/<path_to_your_home_directory/.npm/_npx/5a9d879542beca3a/node_modules/body-parser/lib/types/urlencoded.js'
+npm error code ENOTEMPTY
+npm error syscall rmdir
+npm error path /Users/xichen.dxc/Desktop/project/gitlab/ai_agent_marketplace_hub/<path_to_your_home_directory/.npm/_npx/5a9d879542beca3a/node_modules/cliui/build
+npm error errno -66
+npm error ENOTEMPTY: directory not empty, rmdir '/Users/xichen.dxc/Desktop/project/gitlab/ai_agent_marketplace_hub/<path_to_your_home_directory/.npm/_npx/5a9d879542beca3a/node_modules/cliui/build'
+npm error A complete log of this run can be found in: /Users/xichen.dxc/Desktop/project/gitlab/ai_agent_marketplace_hub/<path_to_your_home_directory/.npm/_logs/2025-06-06T14_56_42_869Z-debug-0.log

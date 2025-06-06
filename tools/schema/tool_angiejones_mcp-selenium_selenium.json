@@ -1,0 +1,444 @@
+Failed to connect to MCP server: MCP error -32001: Request timed out
+Failed to connect to MCP server: MCP error -32001: Request timed out
+
+Failed with exit code: 1
+{
+          "browser": {
+            "type": "string",
+            "enum": [
+              "chrome",
+              "firefox"
+            ],
+            "description": "Browser to launch (chrome or firefox)"
+          },
+          "options": {
+            "type": "object",
+            "properties": {
+              "headless": {
+                "type": "boolean",
+                "description": "Run browser in headless mode"
+              },
+              "arguments": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Additional browser arguments"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "browser"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "navigate",
+      "description": "navigates to a URL",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "URL to navigate to"
+          }
+        },
+        "required": [
+          "url"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "find_element",
+      "description": "finds an element",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "by": {
+            "type": "string",
+            "enum": [
+              "id",
+              "css",
+              "xpath",
+              "name",
+              "tag",
+              "class"
+            ],
+            "description": "Locator strategy to find element"
+          },
+          "value": {
+            "type": "string",
+            "description": "Value for the locator strategy"
+          },
+          "timeout": {
+            "type": "number",
+            "description": "Maximum time to wait for element in milliseconds"
+          }
+        },
+        "required": [
+          "by",
+          "value"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "click_element",
+      "description": "clicks an element",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "by": {
+            "type": "string",
+            "enum": [
+              "id",
+              "css",
+              "xpath",
+              "name",
+              "tag",
+              "class"
+            ],
+            "description": "Locator strategy to find element"
+          },
+          "value": {
+            "type": "string",
+            "description": "Value for the locator strategy"
+          },
+          "timeout": {
+            "type": "number",
+            "description": "Maximum time to wait for element in milliseconds"
+          }
+        },
+        "required": [
+          "by",
+          "value"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "send_keys",
+      "description": "sends keys to an element, aka typing",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "by": {
+            "type": "string",
+            "enum": [
+              "id",
+              "css",
+              "xpath",
+              "name",
+              "tag",
+              "class"
+            ],
+            "description": "Locator strategy to find element"
+          },
+          "value": {
+            "type": "string",
+            "description": "Value for the locator strategy"
+          },
+          "timeout": {
+            "type": "number",
+            "description": "Maximum time to wait for element in milliseconds"
+          },
+          "text": {
+            "type": "string",
+            "description": "Text to enter into the element"
+          }
+        },
+        "required": [
+          "by",
+          "value",
+          "text"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "get_element_text",
+      "description": "gets the text() of an element",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "by": {
+            "type": "string",
+            "enum": [
+              "id",
+              "css",
+              "xpath",
+              "name",
+              "tag",
+              "class"
+            ],
+            "description": "Locator strategy to find element"
+          },
+          "value": {
+            "type": "string",
+            "description": "Value for the locator strategy"
+          },
+          "timeout": {
+            "type": "number",
+            "description": "Maximum time to wait for element in milliseconds"
+          }
+        },
+        "required": [
+          "by",
+          "value"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "hover",
+      "description": "moves the mouse to hover over an element",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "by": {
+            "type": "string",
+            "enum": [
+              "id",
+              "css",
+              "xpath",
+              "name",
+              "tag",
+              "class"
+            ],
+            "description": "Locator strategy to find element"
+          },
+          "value": {
+            "type": "string",
+            "description": "Value for the locator strategy"
+          },
+          "timeout": {
+            "type": "number",
+            "description": "Maximum time to wait for element in milliseconds"
+          }
+        },
+        "required": [
+          "by",
+          "value"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "drag_and_drop",
+      "description": "drags an element and drops it onto another element",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "by": {
+            "type": "string",
+            "enum": [
+              "id",
+              "css",
+              "xpath",
+              "name",
+              "tag",
+              "class"
+            ],
+            "description": "Locator strategy to find element"
+          },
+          "value": {
+            "type": "string",
+            "description": "Value for the locator strategy"
+          },
+          "timeout": {
+            "type": "number",
+            "description": "Maximum time to wait for element in milliseconds"
+          },
+          "targetBy": {
+            "type": "string",
+            "enum": [
+              "id",
+              "css",
+              "xpath",
+              "name",
+              "tag",
+              "class"
+            ],
+            "description": "Locator strategy to find target element"
+          },
+          "targetValue": {
+            "type": "string",
+            "description": "Value for the target locator strategy"
+          }
+        },
+        "required": [
+          "by",
+          "value",
+          "targetBy",
+          "targetValue"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "double_click",
+      "description": "performs a double click on an element",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "by": {
+            "type": "string",
+            "enum": [
+              "id",
+              "css",
+              "xpath",
+              "name",
+              "tag",
+              "class"
+            ],
+            "description": "Locator strategy to find element"
+          },
+          "value": {
+            "type": "string",
+            "description": "Value for the locator strategy"
+          },
+          "timeout": {
+            "type": "number",
+            "description": "Maximum time to wait for element in milliseconds"
+          }
+        },
+        "required": [
+          "by",
+          "value"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "right_click",
+      "description": "performs a right click (context click) on an element",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "by": {
+            "type": "string",
+            "enum": [
+              "id",
+              "css",
+              "xpath",
+              "name",
+              "tag",
+              "class"
+            ],
+            "description": "Locator strategy to find element"
+          },
+          "value": {
+            "type": "string",
+            "description": "Value for the locator strategy"
+          },
+          "timeout": {
+            "type": "number",
+            "description": "Maximum time to wait for element in milliseconds"
+          }
+        },
+        "required": [
+          "by",
+          "value"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "press_key",
+      "description": "simulates pressing a keyboard key",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string",
+            "description": "Key to press (e.g., 'Enter', 'Tab', 'a', etc.)"
+          }
+        },
+        "required": [
+          "key"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "upload_file",
+      "description": "uploads a file using a file input element",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "by": {
+            "type": "string",
+            "enum": [
+              "id",
+              "css",
+              "xpath",
+              "name",
+              "tag",
+              "class"
+            ],
+            "description": "Locator strategy to find element"
+          },
+          "value": {
+            "type": "string",
+            "description": "Value for the locator strategy"
+          },
+          "timeout": {
+            "type": "number",
+            "description": "Maximum time to wait for element in milliseconds"
+          },
+          "filePath": {
+            "type": "string",
+            "description": "Absolute path to the file to upload"
+          }
+        },
+        "required": [
+          "by",
+          "value",
+          "filePath"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "take_screenshot",
+      "description": "captures a screenshot of the current page",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "outputPath": {
+            "type": "string",
+            "description": "Optional path where to save the screenshot. If not provided, returns base64 data."
+          }
+        },
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "close_session",
+      "description": "closes the current browser session",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    }
+  ]
+}
