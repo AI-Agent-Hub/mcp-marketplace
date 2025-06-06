@@ -1,0 +1,1360 @@
+{
+"inputSchema": {
+        "type": "object",
+        "properties": {
+          "frameType": {
+            "type": "string",
+            "enum": [
+              "phone",
+              "tablet",
+              "desktop",
+              "browser",
+              "watch",
+              "tv"
+            ],
+            "description": "Type of the frame shape to create."
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the frame shape."
+          },
+          "fillColor": {
+            "type": "string",
+            "enum": [
+              "white",
+              "black",
+              "gray",
+              "light-gray",
+              "very-light-gray",
+              "red",
+              "light-red",
+              "very-light-red",
+              "green",
+              "light-green",
+              "very-light-green",
+              "blue",
+              "light-blue",
+              "very-light-blue",
+              "yellow",
+              "light-yellow",
+              "very-light-yellow",
+              "cyan",
+              "light-cyan",
+              "very-light-cyan",
+              "magenta",
+              "light-magenta",
+              "very-light-magenta",
+              "orange",
+              "light-orange",
+              "very-light-orange",
+              "purple",
+              "light-purple",
+              "very-light-purple"
+            ],
+            "description": "Background color of the frame shape."
+          }
+        },
+        "required": [
+          "frameType",
+          "name"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "create_rectangle",
+      "description": "Create a rectangle shape in Frame0.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the rectangle shape."
+          },
+          "parentId": {
+            "type": "string",
+            "description": "ID of the parent shape. Typically frame ID."
+          },
+          "left": {
+            "type": "number",
+            "description": "Left position of the rectangle shape in the absolute coordinate system."
+          },
+          "top": {
+            "type": "number",
+            "description": "Left position of the rectangle shape in the absolute coordinate system."
+          },
+          "width": {
+            "type": "number",
+            "description": "Width of the rectangle shape."
+          },
+          "height": {
+            "type": "number",
+            "description": "Height of the rectangle shape."
+          },
+          "fillColor": {
+            "type": "string",
+            "enum": [
+              "white",
+              "black",
+              "gray",
+              "light-gray",
+              "very-light-gray",
+              "red",
+              "light-red",
+              "very-light-red",
+              "green",
+              "light-green",
+              "very-light-green",
+              "blue",
+              "light-blue",
+              "very-light-blue",
+              "yellow",
+              "light-yellow",
+              "very-light-yellow",
+              "cyan",
+              "light-cyan",
+              "very-light-cyan",
+              "magenta",
+              "light-magenta",
+              "very-light-magenta",
+              "orange",
+              "light-orange",
+              "very-light-orange",
+              "purple",
+              "light-purple",
+              "very-light-purple"
+            ],
+            "description": "Fill color of the rectangle shape."
+          },
+          "strokeColor": {
+            "type": "string",
+            "enum": [
+              "white",
+              "black",
+              "gray",
+              "light-gray",
+              "very-light-gray",
+              "red",
+              "light-red",
+              "very-light-red",
+              "green",
+              "light-green",
+              "very-light-green",
+              "blue",
+              "light-blue",
+              "very-light-blue",
+              "yellow",
+              "light-yellow",
+              "very-light-yellow",
+              "cyan",
+              "light-cyan",
+              "very-light-cyan",
+              "magenta",
+              "light-magenta",
+              "very-light-magenta",
+              "orange",
+              "light-orange",
+              "very-light-orange",
+              "purple",
+              "light-purple",
+              "very-light-purple"
+            ],
+            "description": "Stroke color of the rectangle shape."
+          },
+          "corners": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 4,
+            "maxItems": 4,
+            "description": "Corner radius of the rectangle shape. Must be in the form of [left-top, right-top, right-bottom, left-bottom]."
+          }
+        },
+        "required": [
+          "name",
+          "left",
+          "top",
+          "width",
+          "height"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "create_ellipse",
+      "description": "Create an ellipse shape in Frame0.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the ellipse shape."
+          },
+          "parentId": {
+            "type": "string",
+            "description": "ID of the parent shape. Typically frame ID."
+          },
+          "left": {
+            "type": "number",
+            "description": "Left position of the ellipse shape in the absolute coordinate system."
+          },
+          "top": {
+            "type": "number",
+            "description": "Top position of the ellipse shape in the absolute coordinate system."
+          },
+          "width": {
+            "type": "number",
+            "description": "Width of the ellipse shape."
+          },
+          "height": {
+            "type": "number",
+            "description": "Height of the ellipse shape."
+          },
+          "fillColor": {
+            "type": "string",
+            "enum": [
+              "white",
+              "black",
+              "gray",
+              "light-gray",
+              "very-light-gray",
+              "red",
+              "light-red",
+              "very-light-red",
+              "green",
+              "light-green",
+              "very-light-green",
+              "blue",
+              "light-blue",
+              "very-light-blue",
+              "yellow",
+              "light-yellow",
+              "very-light-yellow",
+              "cyan",
+              "light-cyan",
+              "very-light-cyan",
+              "magenta",
+              "light-magenta",
+              "very-light-magenta",
+              "orange",
+              "light-orange",
+              "very-light-orange",
+              "purple",
+              "light-purple",
+              "very-light-purple"
+            ],
+            "description": "Fill color of the ellipse shape."
+          },
+          "strokeColor": {
+            "type": "string",
+            "enum": [
+              "white",
+              "black",
+              "gray",
+              "light-gray",
+              "very-light-gray",
+              "red",
+              "light-red",
+              "very-light-red",
+              "green",
+              "light-green",
+              "very-light-green",
+              "blue",
+              "light-blue",
+              "very-light-blue",
+              "yellow",
+              "light-yellow",
+              "very-light-yellow",
+              "cyan",
+              "light-cyan",
+              "very-light-cyan",
+              "magenta",
+              "light-magenta",
+              "very-light-magenta",
+              "orange",
+              "light-orange",
+              "very-light-orange",
+              "purple",
+              "light-purple",
+              "very-light-purple"
+            ],
+            "description": "Stroke color of the ellipse shape."
+          }
+        },
+        "required": [
+          "name",
+          "left",
+          "top",
+          "width",
+          "height"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "create_text",
+      "description": "Create a text shape in Frame0.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "label",
+              "paragraph",
+              "heading",
+              "link",
+              "normal"
+            ],
+            "description": "Type of the text shape to create. If type is 'paragraph', text width need to be updated using 'update_shape' tool."
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the text shape."
+          },
+          "parentId": {
+            "type": "string",
+            "description": "ID of the parent shape. Typically frame ID."
+          },
+          "left": {
+            "type": "number",
+            "description": "Left position of the text shape in the absolute coordinate system. Position need to be adjusted using 'move_shape' tool based on the width and height of the created text."
+          },
+          "top": {
+            "type": "number",
+            "description": "Top position of the text shape in the absolute coordinate system.  Position need to be adjusted using 'move_shape' tool based on the width and height of the created text."
+          },
+          "width": {
+            "type": "number",
+            "description": "Width of the text shape. if the type is 'paragraph' recommend to set width."
+          },
+          "text": {
+            "type": "string",
+            "description": "Plain text content to display of the text shape. Use newline character (0x0A) instead of '\\n' for new line. Dont's use HTML and CSS code in the text content."
+          },
+          "fontColor": {
+            "type": "string",
+            "enum": [
+              "white",
+              "black",
+              "gray",
+              "light-gray",
+              "very-light-gray",
+              "red",
+              "light-red",
+              "very-light-red",
+              "green",
+              "light-green",
+              "very-light-green",
+              "blue",
+              "light-blue",
+              "very-light-blue",
+              "yellow",
+              "light-yellow",
+              "very-light-yellow",
+              "cyan",
+              "light-cyan",
+              "very-light-cyan",
+              "magenta",
+              "light-magenta",
+              "very-light-magenta",
+              "orange",
+              "light-orange",
+              "very-light-orange",
+              "purple",
+              "light-purple",
+              "very-light-purple"
+            ],
+            "description": "Font color of the text shape."
+          },
+          "fontSize": {
+            "type": "number",
+            "description": "Font size of the text shape."
+          }
+        },
+        "required": [
+          "name",
+          "left",
+          "top",
+          "text"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "create_line",
+      "description": "Create a polyline shape in Frame0.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the line shape."
+          },
+          "parentId": {
+            "type": "string",
+            "description": "ID of the parent shape. Typically frame ID."
+          },
+          "points": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 2,
+              "items": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                }
+              ]
+            },
+            "minItems": 2,
+            "description": "Array of points of the line shape. At least 2 points are required. If first point and last point are the same, it will be a polygon."
+          },
+          "startArrowhead": {
+            "type": "string",
+            "enum": [
+              "none",
+              "arrow",
+              "bar",
+              "circle",
+              "circle-filled",
+              "circle-plus",
+              "cross",
+              "crowfoot-many",
+              "crowfoot-one",
+              "crowfoot-one-many",
+              "crowfoot-only-one",
+              "crowfoot-zero-many",
+              "crowfoot-zero-one",
+              "diamond",
+              "diamond-filled",
+              "dot",
+              "plus",
+              "solid-arrow",
+              "square",
+              "triangle",
+              "triangle-filled"
+            ],
+            "default": "none",
+            "description": "Start arrowhead of the line shape."
+          },
+          "endArrowhead": {
+            "type": "string",
+            "enum": [
+              "none",
+              "arrow",
+              "bar",
+              "circle",
+              "circle-filled",
+              "circle-plus",
+              "cross",
+              "crowfoot-many",
+              "crowfoot-one",
+              "crowfoot-one-many",
+              "crowfoot-only-one",
+              "crowfoot-zero-many",
+              "crowfoot-zero-one",
+              "diamond",
+              "diamond-filled",
+              "dot",
+              "plus",
+              "solid-arrow",
+              "square",
+              "triangle",
+              "triangle-filled"
+            ],
+            "default": "none",
+            "description": "End arrowhead of the line shape."
+          },
+          "fillColor": {
+            "type": "string",
+            "enum": [
+              "white",
+              "black",
+              "gray",
+              "light-gray",
+              "very-light-gray",
+              "red",
+              "light-red",
+              "very-light-red",
+              "green",
+              "light-green",
+              "very-light-green",
+              "blue",
+              "light-blue",
+              "very-light-blue",
+              "yellow",
+              "light-yellow",
+              "very-light-yellow",
+              "cyan",
+              "light-cyan",
+              "very-light-cyan",
+              "magenta",
+              "light-magenta",
+              "very-light-magenta",
+              "orange",
+              "light-orange",
+              "very-light-orange",
+              "purple",
+              "light-purple",
+              "very-light-purple"
+            ],
+            "description": "Fill color of the line shape."
+          },
+          "strokeColor": {
+            "type": "string",
+            "enum": [
+              "white",
+              "black",
+              "gray",
+              "light-gray",
+              "very-light-gray",
+              "red",
+              "light-red",
+              "very-light-red",
+              "green",
+              "light-green",
+              "very-light-green",
+              "blue",
+              "light-blue",
+              "very-light-blue",
+              "yellow",
+              "light-yellow",
+              "very-light-yellow",
+              "cyan",
+              "light-cyan",
+              "very-light-cyan",
+              "magenta",
+              "light-magenta",
+              "very-light-magenta",
+              "orange",
+              "light-orange",
+              "very-light-orange",
+              "purple",
+              "light-purple",
+              "very-light-purple"
+            ],
+            "description": "Stroke color of the line. shape"
+          }
+        },
+        "required": [
+          "name",
+          "points"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "create_connector",
+      "description": "Create a connector shape in Frame0.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the line shape."
+          },
+          "parentId": {
+            "type": "string",
+            "description": "ID of the parent shape. Typically frame ID."
+          },
+          "startId": {
+            "type": "string",
+            "description": "ID of the start shape."
+          },
+          "endId": {
+            "type": "string",
+            "description": "ID of the end shape."
+          },
+          "startArrowhead": {
+            "type": "string",
+            "enum": [
+              "none",
+              "arrow",
+              "bar",
+              "circle",
+              "circle-filled",
+              "circle-plus",
+              "cross",
+              "crowfoot-many",
+              "crowfoot-one",
+              "crowfoot-one-many",
+              "crowfoot-only-one",
+              "crowfoot-zero-many",
+              "crowfoot-zero-one",
+              "diamond",
+              "diamond-filled",
+              "dot",
+              "plus",
+              "solid-arrow",
+              "square",
+              "triangle",
+              "triangle-filled"
+            ],
+            "default": "none",
+            "description": "Start arrowhead of the line shape."
+          },
+          "endArrowhead": {
+            "type": "string",
+            "enum": [
+              "none",
+              "arrow",
+              "bar",
+              "circle",
+              "circle-filled",
+              "circle-plus",
+              "cross",
+              "crowfoot-many",
+              "crowfoot-one",
+              "crowfoot-one-many",
+              "crowfoot-only-one",
+              "crowfoot-zero-many",
+              "crowfoot-zero-one",
+              "diamond",
+              "diamond-filled",
+              "dot",
+              "plus",
+              "solid-arrow",
+              "square",
+              "triangle",
+              "triangle-filled"
+            ],
+            "default": "none",
+            "description": "End arrowhead of the line shape."
+          },
+          "strokeColor": {
+            "type": "string",
+            "enum": [
+              "white",
+              "black",
+              "gray",
+              "light-gray",
+              "very-light-gray",
+              "red",
+              "light-red",
+              "very-light-red",
+              "green",
+              "light-green",
+              "very-light-green",
+              "blue",
+              "light-blue",
+              "very-light-blue",
+              "yellow",
+              "light-yellow",
+              "very-light-yellow",
+              "cyan",
+              "light-cyan",
+              "very-light-cyan",
+              "magenta",
+              "light-magenta",
+              "very-light-magenta",
+              "orange",
+              "light-orange",
+              "very-light-orange",
+              "purple",
+              "light-purple",
+              "very-light-purple"
+            ],
+            "description": "Stroke color of the line. shape"
+          }
+        },
+        "required": [
+          "name",
+          "startId",
+          "endId"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "create_icon",
+      "description": "Create an icon shape in Frame0.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the icon shape to create. The name should be one of the result of 'get_available_icons' tool."
+          },
+          "parentId": {
+            "type": "string",
+            "description": "ID of the parent shape. Typically frame ID."
+          },
+          "left": {
+            "type": "number",
+            "description": "Left position of the icon shape in the absolute coordinate system."
+          },
+          "top": {
+            "type": "number",
+            "description": "Top position of the icon shape in the absolute coordinate system."
+          },
+          "size": {
+            "type": "string",
+            "enum": [
+              "small",
+              "medium",
+              "large",
+              "extra-large"
+            ],
+            "description": "Size of the icon shape. 'small' is 16 x 16, 'medium' is 24 x 24, 'large' is 32 x 32, 'extra-large' is 48 x 48."
+          },
+          "strokeColor": {
+            "type": "string",
+            "enum": [
+              "white",
+              "black",
+              "gray",
+              "light-gray",
+              "very-light-gray",
+              "red",
+              "light-red",
+              "very-light-red",
+              "green",
+              "light-green",
+              "very-light-green",
+              "blue",
+              "light-blue",
+              "very-light-blue",
+              "yellow",
+              "light-yellow",
+              "very-light-yellow",
+              "cyan",
+              "light-cyan",
+              "very-light-cyan",
+              "magenta",
+              "light-magenta",
+              "very-light-magenta",
+              "orange",
+              "light-orange",
+              "very-light-orange",
+              "purple",
+              "light-purple",
+              "very-light-purple"
+            ],
+            "description": "Stroke color of the icon shape."
+          }
+        },
+        "required": [
+          "name",
+          "left",
+          "top",
+          "size"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "create_image",
+      "description": "Create an image shape in Frame0.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the image shape to create."
+          },
+          "parentId": {
+            "type": "string",
+            "description": "ID of the parent shape. Typically frame ID."
+          },
+          "mimeType": {
+            "type": "string",
+            "enum": [
+              "image/png",
+              "image/jpeg",
+              "image/webp",
+              "image/svg+xml"
+            ],
+            "description": "MIME type of the image."
+          },
+          "imageData": {
+            "type": "string",
+            "description": "Base64 encoded image data."
+          },
+          "left": {
+            "type": "number",
+            "description": "Left position of the image shape in the absolute coordinate system."
+          },
+          "top": {
+            "type": "number",
+            "description": "Top position of the image shape in the absolute coordinate system."
+          }
+        },
+        "required": [
+          "name",
+          "mimeType",
+          "imageData",
+          "left",
+          "top"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "update_shape",
+      "description": "Update properties of a shape in Frame0.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "shapeId": {
+            "type": "string",
+            "description": "ID of the shape to update"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the shape."
+          },
+          "width": {
+            "type": "number",
+            "description": "Width of the shape."
+          },
+          "height": {
+            "type": "number",
+            "description": "Height of the shape."
+          },
+          "fillColor": {
+            "type": "string",
+            "enum": [
+              "white",
+              "black",
+              "gray",
+              "light-gray",
+              "very-light-gray",
+              "red",
+              "light-red",
+              "very-light-red",
+              "green",
+              "light-green",
+              "very-light-green",
+              "blue",
+              "light-blue",
+              "very-light-blue",
+              "yellow",
+              "light-yellow",
+              "very-light-yellow",
+              "cyan",
+              "light-cyan",
+              "very-light-cyan",
+              "magenta",
+              "light-magenta",
+              "very-light-magenta",
+              "orange",
+              "light-orange",
+              "very-light-orange",
+              "purple",
+              "light-purple",
+              "very-light-purple"
+            ],
+            "description": "Fill color of the shape."
+          },
+          "strokeColor": {
+            "type": "string",
+            "enum": [
+              "white",
+              "black",
+              "gray",
+              "light-gray",
+              "very-light-gray",
+              "red",
+              "light-red",
+              "very-light-red",
+              "green",
+              "light-green",
+              "very-light-green",
+              "blue",
+              "light-blue",
+              "very-light-blue",
+              "yellow",
+              "light-yellow",
+              "very-light-yellow",
+              "cyan",
+              "light-cyan",
+              "very-light-cyan",
+              "magenta",
+              "light-magenta",
+              "very-light-magenta",
+              "orange",
+              "light-orange",
+              "very-light-orange",
+              "purple",
+              "light-purple",
+              "very-light-purple"
+            ],
+            "description": "Stroke color of the shape."
+          },
+          "fontColor": {
+            "type": "string",
+            "enum": [
+              "white",
+              "black",
+              "gray",
+              "light-gray",
+              "very-light-gray",
+              "red",
+              "light-red",
+              "very-light-red",
+              "green",
+              "light-green",
+              "very-light-green",
+              "blue",
+              "light-blue",
+              "very-light-blue",
+              "yellow",
+              "light-yellow",
+              "very-light-yellow",
+              "cyan",
+              "light-cyan",
+              "very-light-cyan",
+              "magenta",
+              "light-magenta",
+              "very-light-magenta",
+              "orange",
+              "light-orange",
+              "very-light-orange",
+              "purple",
+              "light-purple",
+              "very-light-purple"
+            ],
+            "description": "Font color of the text shape."
+          },
+          "fontSize": {
+            "type": "number",
+            "description": "Font size of the text shape."
+          },
+          "corners": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 4,
+            "maxItems": 4,
+            "description": "Corner radius of the rectangle shape. Must be in the form of [left-top, right-top, right-bottom, left-bottom]."
+          },
+          "text": {
+            "type": "string",
+            "description": "Plain text content to display of the text shape. Don't include escape sequences and HTML and CSS code in the text content."
+          }
+        },
+        "required": [
+          "shapeId"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "duplicate_shape",
+      "description": "Duplicate a shape in Frame0.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "shapeId": {
+            "type": "string",
+            "description": "ID of the shape to duplicate"
+          },
+          "parentId": {
+            "type": "string",
+            "description": "ID of the parent shape where the duplicated shape will be added. If not provided, the duplicated shape will be added to the current page."
+          },
+          "dx": {
+            "type": "number",
+            "description": "Delta X value by which the duplicated shape moves."
+          },
+          "dy": {
+            "type": "number",
+            "description": "Delta Y value by which the duplicated shape moves."
+          }
+        },
+        "required": [
+          "shapeId"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "delete_shape",
+      "description": "Delete a shape in Frame0.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "shapeId": {
+            "type": "string",
+            "description": "ID of the shape to delete"
+          }
+        },
+        "required": [
+          "shapeId"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "get_available_icons",
+      "description": "Get available icon shapes in Frame0.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "move_shape",
+      "description": "Move a shape in Frame0.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "shapeId": {
+            "type": "string",
+            "description": "ID of the shape to move"
+          },
+          "dx": {
+            "type": "number",
+            "description": "Delta X"
+          },
+          "dy": {
+            "type": "number",
+            "description": "Delta Y"
+          }
+        },
+        "required": [
+          "shapeId",
+          "dx",
+          "dy"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "align_shapes",
+      "description": "Align shapes in Frame0.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "alignType": {
+            "type": "string",
+            "enum": [
+              "bring-to-front",
+              "send-to-back",
+              "align-left",
+              "align-right",
+              "align-horizontal-center",
+              "align-top",
+              "align-bottom",
+              "align-vertical-center",
+              "distribute-horizontally",
+              "distribute-vertically"
+            ],
+            "description": "Type of the alignment to apply."
+          },
+          "shapeIdArray": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Array of shape IDs to align"
+          }
+        },
+        "required": [
+          "alignType",
+          "shapeIdArray"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "group",
+      "description": "Group shapes in Frame0.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "shapeIdArray": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Array of shape IDs to group"
+          },
+          "parentId": {
+            "type": "string",
+            "description": "ID of the parent shape where the group will be added. If not provided, the group will be added to the current page."
+          }
+        },
+        "required": [
+          "shapeIdArray"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "ungroup",
+      "description": "Ungroup a group in Frame0.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "groupId": {
+            "type": "string",
+            "description": "ID of the group to ungroup"
+          }
+        },
+        "required": [
+          "groupId"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "set_link",
+      "description": "Set a link from a shape to a URL or a page in Frame0.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "shapeId": {
+            "type": "string",
+            "description": "ID of the shape to set link"
+          },
+          "linkType": {
+            "type": "string",
+            "enum": [
+              "none",
+              "web",
+              "page",
+              "action:backward"
+            ],
+            "description": "Type of the link to set."
+          },
+          "url": {
+            "type": "string",
+            "description": "URL to set. Required if linkType is 'web'."
+          },
+          "pageId": {
+            "type": "string",
+            "description": "ID of the page to set. Required if linkType is 'page'."
+          }
+        },
+        "required": [
+          "shapeId",
+          "linkType"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "export_shape_as_image",
+      "description": "Export shape as image in Frame0.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "shapeId": {
+            "type": "string",
+            "description": "ID of the shape to export"
+          },
+          "format": {
+            "type": "string",
+            "enum": [
+              "image/png",
+              "image/jpeg",
+              "image/webp"
+            ],
+            "default": "image/png",
+            "description": "Image format to export."
+          }
+        },
+        "required": [
+          "shapeId"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "add_page",
+      "description": "Add a new page in Frame0. The added page becomes the current page.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the page to add."
+          }
+        },
+        "required": [
+          "name"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "update_page",
+      "description": "Update a page in Frame0.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "pageId": {
+            "type": "string",
+            "description": "ID of the page to update."
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the page."
+          }
+        },
+        "required": [
+          "pageId",
+          "name"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "duplicate_page",
+      "description": "Duplicate a page in Frame0.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "pageId": {
+            "type": "string",
+            "description": "ID of the page to duplicate"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the duplicated page."
+          }
+        },
+        "required": [
+          "pageId"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "delete_page",
+      "description": "Delete a page in Frame0.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "pageId": {
+            "type": "string",
+            "description": "ID of the page to delete"
+          }
+        },
+        "required": [
+          "pageId"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "get_current_page_id",
+      "description": "Get ID of the current page in Frame0.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "set_current_page_by_id",
+      "description": "Set current page by ID in Frame0.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "pageId": {
+            "type": "string",
+            "description": "ID of the page to set as current page."
+          }
+        },
+        "required": [
+          "pageId"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "get_page",
+      "description": "Get page data in Frame0.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "pageId": {
+            "type": "string",
+            "description": "ID of the page to get data. If not provided, the current page data is returned."
+          },
+          "exportShapes": {
+            "type": "boolean",
+            "default": true,
+            "description": "Export shapes data included in the page."
+          }
+        },
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "get_all_pages",
+      "description": "Get all pages data in Frame0.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "exportShapes": {
+            "type": "boolean",
+            "default": false,
+            "description": "Export shapes data included in the page data."
+          }
+        },
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "export_page_as_image",
+      "description": "Export page as image in Frame0.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "pageId": {
+            "type": "string",
+            "description": "ID of the page to export. If not provided, the current page is used."
+          },
+          "format": {
+            "type": "string",
+            "enum": [
+              "image/png",
+              "image/jpeg",
+              "image/webp"
+            ],
+            "default": "image/png",
+            "description": "Image format to export."
+          }
+        },
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    }
+  ]
+}

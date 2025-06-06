@@ -1,0 +1,68 @@
+{
+  "tools": [
+    {
+      "name": "mysql_query",
+      "description": "Execute read-only SELECT queries against the MySQL database.\n- Maximum query length: 4096 characters\n- Maximum result rows: 1000\n- Query timeout: 30 seconds",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "sql": {
+            "type": "string",
+            "description": "SQL SELECT query to execute"
+          }
+        },
+        "required": [
+          "sql"
+        ]
+      }
+    },
+    {
+      "name": "mysql_execute",
+      "description": "Execute data modification queries (INSERT/UPDATE/DELETE).\n- Returns affected rows count and insert ID\n- Supports parameterized queries\n- Automatic transaction handling",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "sql": {
+            "type": "string",
+            "description": "SQL statement (INSERT, UPDATE, or DELETE)"
+          },
+          "params": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Parameters for the SQL statement"
+          }
+        },
+        "required": [
+          "sql"
+        ]
+      }
+    },
+    {
+      "name": "list_tables",
+      "description": "List all tables in current database",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    },
+    {
+      "name": "describe_table",
+      "description": "Show table structure",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "table": {
+            "type": "string",
+            "description": "Table name"
+          }
+        },
+        "required": [
+          "table"
+        ]
+      }
+    }
+  ]
+}

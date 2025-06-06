@@ -1,0 +1,40 @@
+{
+  "tools": [
+    {
+      "name": "get_available_templates",
+      "description": "Get all available presentation templates.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "title": "get_available_templatesArguments"
+      }
+    },
+    {
+      "name": "generate_powerpoint",
+      "description": "\n    Generate a PowerPoint presentation based on text, length, and template.\n    Waits up to a configured time for the result.\n    ",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "plain_text": {
+            "title": "Plain Text",
+            "type": "string"
+          },
+          "length": {
+            "title": "Length",
+            "type": "integer"
+          },
+          "template": {
+            "title": "Template",
+            "type": "string"
+          }
+        },
+        "required": [
+          "plain_text",
+          "length",
+          "template"
+        ],
+        "title": "generate_powerpointArguments"
+      }
+    }
+  ]
+}

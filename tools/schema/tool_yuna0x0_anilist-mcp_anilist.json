@@ -1,0 +1,2382 @@
+{
+  "tools": [
+    {
+      "name": "favourite_studio",
+      "description": "[Requires Login] Favourite or unfavourite a studio by its ID",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number",
+            "description": "The AniList ID of the studio to favourite/unfavourite"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "get_genres",
+      "description": "Get all available genres on AniList",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "get_media_tags",
+      "description": "Get all available media tags on AniList",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "get_site_statistics",
+      "description": "Get AniList site statistics over the last seven days",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "get_studio",
+      "description": "Get information about a studio by its AniList ID or name",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "studio": {
+            "type": [
+              "string",
+              "number"
+            ],
+            "description": "The studio ID or name"
+          }
+        },
+        "required": [
+          "studio"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "delete_activity",
+      "description": "[Requires Login] Delete the current authorized user's activity post",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number",
+            "description": "The AniList activity ID to delete"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "get_activity",
+      "description": "Get a specific AniList activity by its ID",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "activityID": {
+            "type": "number",
+            "description": "The AniList activity ID"
+          }
+        },
+        "required": [
+          "activityID"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "get_user_activity",
+      "description": "Fetch activities from a user",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "user": {
+            "type": "number",
+            "description": "The user's AniList ID"
+          },
+          "page": {
+            "type": "number",
+            "default": 1,
+            "description": "The page number to display"
+          },
+          "perPage": {
+            "type": "number",
+            "default": 25,
+            "description": "How many entries to display on one page (max 25)"
+          }
+        },
+        "required": [
+          "user"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "post_message_activity",
+      "description": "[Requires Login] Post a new message activity or update an existing one",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string",
+            "description": "The activity message text"
+          },
+          "recipientId": {
+            "type": "number",
+            "description": "The target user to send the message to"
+          },
+          "isPrivate": {
+            "type": "boolean",
+            "default": false,
+            "description": "Set to true if it is a private message"
+          },
+          "id": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "AniList Activity ID (null to create new, number to update)"
+          }
+        },
+        "required": [
+          "text",
+          "recipientId",
+          "id"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "post_text_activity",
+      "description": "[Requires Login] Post a new text activity or update an existing one",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string",
+            "description": "The content of the activity"
+          },
+          "id": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "AniList Activity ID (null to create new, number to update)"
+          }
+        },
+        "required": [
+          "text",
+          "id"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "add_list_entry",
+      "description": "[Requires Login] Add an entry to the authorized user's list",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number",
+            "description": "The AniList ID of the media entry to add"
+          },
+          "options": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number",
+                "description": "The ID of the list entry"
+              },
+              "mediaId": {
+                "type": "number",
+                "description": "The ID of the media to add"
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "CURRENT",
+                  "PLANNING",
+                  "COMPLETED",
+                  "DROPPED",
+                  "PAUSED",
+                  "REPEATING"
+                ],
+                "description": "The status of the media on the list"
+              },
+              "score": {
+                "type": "number",
+                "description": "The score given to the media"
+              },
+              "scoreRaw": {
+                "type": "number",
+                "description": "The raw score in 100 point format"
+              },
+              "progress": {
+                "type": "number",
+                "description": "The amount of episodes/chapters consumed"
+              },
+              "progressVolumes": {
+                "type": "number",
+                "description": "The amount of volumes read (manga only)"
+              },
+              "repeat": {
+                "type": "number",
+                "description": "Amount of times the media has been repeated"
+              },
+              "priority": {
+                "type": "number",
+                "description": "Priority level of the media"
+              },
+              "private": {
+                "type": "boolean",
+                "description": "Whether the entry should be private"
+              },
+              "notes": {
+                "type": "string",
+                "description": "Text notes about the media"
+              },
+              "hiddenFromStatusLists": {
+                "type": "boolean",
+                "description": "Whether the entry should be hidden from non-custom lists"
+              },
+              "customLists": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Array of custom list names for the media"
+              },
+              "advancedScores": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "description": "Advanced scores as an object"
+              },
+              "startedAt": {
+                "type": "object",
+                "properties": {
+                  "year": {
+                    "type": "number"
+                  },
+                  "month": {
+                    "type": "number"
+                  },
+                  "day": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "year",
+                  "month",
+                  "day"
+                ],
+                "additionalProperties": false,
+                "description": "When the user started the media"
+              },
+              "completedAt": {
+                "type": "object",
+                "properties": {
+                  "year": {
+                    "type": "number"
+                  },
+                  "month": {
+                    "type": "number"
+                  },
+                  "day": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "year",
+                  "month",
+                  "day"
+                ],
+                "additionalProperties": false,
+                "description": "When the user completed the media"
+              }
+            },
+            "required": [
+              "id",
+              "mediaId",
+              "status",
+              "score",
+              "scoreRaw",
+              "progress",
+              "progressVolumes",
+              "repeat",
+              "priority",
+              "private",
+              "notes",
+              "hiddenFromStatusLists",
+              "customLists",
+              "advancedScores",
+              "startedAt",
+              "completedAt"
+            ],
+            "additionalProperties": false,
+            "description": "Values to save with the entry"
+          }
+        },
+        "required": [
+          "id",
+          "options"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "get_user_anime_list",
+      "description": "Get a user's anime list",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "user": {
+            "type": [
+              "number",
+              "string"
+            ],
+            "description": "Username or user ID"
+          }
+        },
+        "required": [
+          "user"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "get_user_manga_list",
+      "description": "Get a user's manga list",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "user": {
+            "type": [
+              "number",
+              "string"
+            ],
+            "description": "Username or user ID"
+          }
+        },
+        "required": [
+          "user"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "remove_list_entry",
+      "description": "[Requires Login] Remove an entry from the authorized user's list",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number",
+            "description": "The AniList list ID of the entry to remove"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "update_list_entry",
+      "description": "[Requires Login] Update an entry on the authorized user's list",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number",
+            "description": "The AniList list ID of the entry to edit"
+          },
+          "options": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number",
+                "description": "The ID of the list entry"
+              },
+              "mediaId": {
+                "type": "number",
+                "description": "The ID of the media to add"
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "CURRENT",
+                  "PLANNING",
+                  "COMPLETED",
+                  "DROPPED",
+                  "PAUSED",
+                  "REPEATING"
+                ],
+                "description": "The status of the media on the list"
+              },
+              "score": {
+                "type": "number",
+                "description": "The score given to the media"
+              },
+              "scoreRaw": {
+                "type": "number",
+                "description": "The raw score in 100 point format"
+              },
+              "progress": {
+                "type": "number",
+                "description": "The amount of episodes/chapters consumed"
+              },
+              "progressVolumes": {
+                "type": "number",
+                "description": "The amount of volumes read (manga only)"
+              },
+              "repeat": {
+                "type": "number",
+                "description": "Amount of times the media has been repeated"
+              },
+              "priority": {
+                "type": "number",
+                "description": "Priority level of the media"
+              },
+              "private": {
+                "type": "boolean",
+                "description": "Whether the entry should be private"
+              },
+              "notes": {
+                "type": "string",
+                "description": "Text notes about the media"
+              },
+              "hiddenFromStatusLists": {
+                "type": "boolean",
+                "description": "Whether the entry should be hidden from non-custom lists"
+              },
+              "customLists": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Array of custom list names for the media"
+              },
+              "advancedScores": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "description": "Advanced scores as an object"
+              },
+              "startedAt": {
+                "type": "object",
+                "properties": {
+                  "year": {
+                    "type": "number"
+                  },
+                  "month": {
+                    "type": "number"
+                  },
+                  "day": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "year",
+                  "month",
+                  "day"
+                ],
+                "additionalProperties": false,
+                "description": "When the user started the media"
+              },
+              "completedAt": {
+                "type": "object",
+                "properties": {
+                  "year": {
+                    "type": "number"
+                  },
+                  "month": {
+                    "type": "number"
+                  },
+                  "day": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "year",
+                  "month",
+                  "day"
+                ],
+                "additionalProperties": false,
+                "description": "When the user completed the media"
+              }
+            },
+            "required": [
+              "id",
+              "mediaId",
+              "status",
+              "score",
+              "scoreRaw",
+              "progress",
+              "progressVolumes",
+              "repeat",
+              "priority",
+              "private",
+              "notes",
+              "hiddenFromStatusLists",
+              "customLists",
+              "advancedScores",
+              "startedAt",
+              "completedAt"
+            ],
+            "additionalProperties": false,
+            "description": "Values to save with the entry"
+          }
+        },
+        "required": [
+          "id",
+          "options"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "get_anime",
+      "description": "Get detailed information about an anime by its AniList ID",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number",
+            "description": "The AniList ID of the anime"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "favourite_anime",
+      "description": "[Requires Login] Favourite or unfavourite an anime by its ID",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number",
+            "description": "The AniList ID of the anime to favourite/unfavourite"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "favourite_manga",
+      "description": "[Requires Login] Favourite or unfavourite a manga by its ID",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number",
+            "description": "The AniList ID of the manga to favourite/unfavourite"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "get_manga",
+      "description": "Get detailed information about a manga by its AniList ID",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number",
+            "description": "The AniList ID of the manga"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "get_character",
+      "description": "Get information about a character by their AniList ID or name",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": [
+              "number",
+              "string"
+            ],
+            "description": "The AniList ID of the character"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "favourite_character",
+      "description": "[Requires Login] Favourite or unfavourite a character by its ID",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number",
+            "description": "The AniList ID of the character to favourite/unfavourite"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "favourite_staff",
+      "description": "[Requires Login] Favourite or unfavourite a staff member by their ID",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number",
+            "description": "The AniList ID of the staff member to favourite/unfavourite"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "get_todays_birthday_characters",
+      "description": "Get all characters whose birthday is today",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "type": "number",
+            "default": 1,
+            "description": "What page in the search to target"
+          }
+        },
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "get_todays_birthday_staff",
+      "description": "Get all staff members whose birthday is today",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "type": "number",
+            "default": 1,
+            "description": "What page in the search to target"
+          }
+        },
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "get_staff",
+      "description": "Get information about staff member by their AniList ID or name",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": [
+              "number",
+              "string"
+            ],
+            "description": "The AniList ID or name of the staff member"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "get_recommendation",
+      "description": "Get an AniList recommendation by its ID",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recommendID": {
+            "type": "number",
+            "description": "The AniList recommendation ID"
+          }
+        },
+        "required": [
+          "recommendID"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "get_recommendations_for_media",
+      "description": "Get AniList recommendations for a specific media",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "mediaID": {
+            "type": "number",
+            "description": "The AniList media ID"
+          },
+          "page": {
+            "type": "number",
+            "default": 1,
+            "description": "Target a specific page number for recommendations"
+          },
+          "perPage": {
+            "type": "number",
+            "default": 25,
+            "description": "Limit the page amount (max 25 per AniList limits)"
+          }
+        },
+        "required": [
+          "mediaID"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "search_activity",
+      "description": "Search for activities on AniList",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "activityID": {
+            "type": "number",
+            "description": "The activity ID to lookup (leave it as undefined for no specific ID)"
+          },
+          "filter": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number",
+                "description": "The id of the activity"
+              },
+              "userId": {
+                "type": "number",
+                "description": "The userID of the account with the activity"
+              },
+              "messengerId": {
+                "type": "number",
+                "description": "The ID of who sent the message"
+              },
+              "mediaId": {
+                "type": "number",
+                "description": "The ID of the media"
+              },
+              "type": {
+                "type": "string",
+                "enum": [
+                  "TEXT",
+                  "ANIME_LIST",
+                  "MANGA_LIST",
+                  "MESSAGE",
+                  "MEDIA_LIST"
+                ],
+                "description": "The type of activity"
+              },
+              "isFollowing": {
+                "type": "boolean",
+                "description": "[Requires Login] Filter users by who is following the authorized user"
+              },
+              "hasReplies": {
+                "type": "boolean",
+                "description": "Filter by which activities have replies"
+              },
+              "hasRepliesOrTypeText": {
+                "type": "boolean",
+                "description": "Filter by which activities have replies or text"
+              },
+              "createdAt": {
+                "type": "number",
+                "description": "The time at which the activity was created"
+              },
+              "id_not": {
+                "type": "number",
+                "description": "Exclude an activity with the given ID"
+              },
+              "id_in": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "description": "Include any activities with the given IDs"
+              },
+              "id_not_in": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "description": "Excludes any activities with the given IDs"
+              },
+              "userId_not": {
+                "type": "number",
+                "description": "Exclude any activity with the given userID"
+              },
+              "userId_in": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "description": "Includes any activity with the given userIDs"
+              },
+              "userId_not_in": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "description": "Exclude any activity with the given userIDs"
+              },
+              "messengerId_not": {
+                "type": "number",
+                "description": "Exclude any activity with the given message sender ID"
+              },
+              "messengerId_in": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "description": "Include any activity with the given message sender IDs"
+              },
+              "messengerId_not_in": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "description": "Exclude any activity with the given message sender IDs"
+              },
+              "mediaId_not": {
+                "type": "number",
+                "description": "Exclude any activity with the given media ID"
+              },
+              "mediaId_in": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "description": "Include any activity with the given media IDs"
+              },
+              "mediaId_not_in": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "description": "Exclude any activity with the given media IDs"
+              },
+              "type_not": {
+                "$ref": "#/properties/filter/properties/type",
+                "description": "Exclude any activity with the same ActivityType"
+              },
+              "type_in": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/properties/filter/properties/type"
+                },
+                "description": "Include any activity with the given ActivityTypes"
+              },
+              "type_not_in": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/properties/filter/properties/type"
+                },
+                "description": "Exclude any activity with the given ActivityTypes"
+              },
+              "createdAt_greater": {
+                "type": "number",
+                "description": "Include any activity created at the given date or more recent"
+              },
+              "createdAt_lesser": {
+                "type": "number",
+                "description": "Include any activity created at the given date or less recent"
+              },
+              "sort": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "ID",
+                    "ID_DESC"
+                  ]
+                },
+                "description": "Sort the query by the parameters given."
+              }
+            },
+            "additionalProperties": false,
+            "description": "Filter object for searching activities (leave it as undefined for no specific filter)"
+          },
+          "page": {
+            "type": "number",
+            "default": 1,
+            "description": "Page number for results"
+          },
+          "perPage": {
+            "type": "number",
+            "default": 5,
+            "description": "Results per page (max 25)"
+          }
+        },
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "search_anime",
+      "description": "Search for anime with query term and filters",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "term": {
+            "type": "string",
+            "description": "Query term for finding anime (leave it as undefined when no query term specified.)\nQuery term is used for searching with specific word or title in mind.\n\nYou SHOULD not include things that can be found in the filter object, such as genre or tag.\nThose things should be included in the filter object instead.\n\nTo check whether a user requested term should be considered as a query term or a filter term.\nIt is recommended to use tools like 'get_genres' and 'get_media_tags' first."
+          },
+          "filter": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number",
+                "description": "The AniList ID"
+              },
+              "idMal": {
+                "type": "number",
+                "description": "The MyAnimeList ID"
+              },
+              "startDate": {
+                "type": "object",
+                "properties": {
+                  "year": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "month": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "day": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  }
+                },
+                "required": [
+                  "year",
+                  "month",
+                  "day"
+                ],
+                "additionalProperties": false,
+                "description": "The start date of the media"
+              },
+              "endDate": {
+                "$ref": "#/properties/filter/properties/startDate",
+                "description": "The end date of the media"
+              },
+              "season": {
+                "type": "string",
+                "enum": [
+                  "WINTER",
+                  "SPRING",
+                  "SUMMER",
+                  "FALL"
+                ],
+                "description": "The season the media aired"
+              },
+              "seasonYear": {
+                "type": "number",
+                "description": "The year of the season"
+              },
+              "type": {
+                "type": "string",
+                "enum": [
+                  "ANIME",
+                  "MANGA"
+                ],
+                "description": "The type of the media (ANIME or MANGA)"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "TV",
+                  "TV_SHORT",
+                  "MOVIE",
+                  "SPECIAL",
+                  "OVA",
+                  "ONA",
+                  "MUSIC",
+                  "MANGA",
+                  "NOVEL",
+                  "ONE_SHOT"
+                ],
+                "description": "The format of the media"
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "FINISHED",
+                  "RELEASING",
+                  "NOT_YET_RELEASED",
+                  "CANCELLED",
+                  "HIATUS"
+                ],
+                "description": "The current status of the media"
+              },
+              "episodes": {
+                "type": "number",
+                "description": "The number of episodes in the media"
+              },
+              "duration": {
+                "type": "number",
+                "description": "The duration of episodes in minutes"
+              },
+              "chapters": {
+                "type": "number",
+                "description": "The number of chapters in the media"
+              },
+              "volumes": {
+                "type": "number",
+                "description": "The number of volumes in the media"
+              },
+              "isAdult": {
+                "type": "boolean",
+                "description": "If the media is intended for adult audiences"
+              },
+              "genre": {
+                "type": "string",
+                "description": "Filter by a specific genre"
+              },
+              "tag": {
+                "type": "string",
+                "description": "Filter by a specific tag"
+              },
+              "minimumTagRank": {
+                "type": "number",
+                "description": "The minimum tag rank to filter by"
+              },
+              "tagCategory": {
+                "type": "string",
+                "description": "Filter by tag category"
+              },
+              "onList": {
+                "type": "boolean",
+                "description": "[Requires Login] Filter by if the media is on the authenticated user's list"
+              },
+              "licensedBy": {
+                "type": "string",
+                "description": "Filter by media licensed by a specific company"
+              },
+              "averageScore": {
+                "type": "number",
+                "description": "Filter by the media's average score"
+              },
+              "popularity": {
+                "type": "number",
+                "description": "Filter by the media's popularity"
+              },
+              "source": {
+                "$ref": "#/properties/filter/properties/format",
+                "description": "Filter by the media's source type"
+              },
+              "countryOfOrigin": {
+                "type": "number",
+                "description": "Filter by the country where the media was created (ISO 3166-1 alpha-2 country code)"
+              },
+              "search": {
+                "type": "string",
+                "description": "Filter by search query"
+              },
+              "id_not": {
+                "type": "number",
+                "description": "Filter by media ID not equal to value"
+              },
+              "id_in": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "description": "Filter by media ID in array"
+              },
+              "id_not_in": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "description": "Filter by media ID not in array"
+              },
+              "idMal_not": {
+                "type": "number",
+                "description": "Filter by MyAnimeList ID not equal to value"
+              },
+              "idMal_in": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "description": "Filter by MyAnimeList ID in array"
+              },
+              "idMal_not_in": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "description": "Filter by MyAnimeList ID not in array"
+              },
+              "startDate_greater": {
+                "type": "number",
+                "description": "Filter by start date greater than value (FuzzyDateInt format)"
+              },
+              "startDate_lesser": {
+                "type": "number",
+                "description": "Filter by start date less than value (FuzzyDateInt format)"
+              },
+              "startDate_like": {
+                "type": "string",
+                "description": "Filter by start date that matches pattern"
+              },
+              "endDate_greater": {
+                "type": "number",
+                "description": "Filter by end date greater than value (FuzzyDateInt format)"
+              },
+              "endDate_lesser": {
+                "type": "number",
+                "description": "Filter by end date less than value (FuzzyDateInt format)"
+              },
+              "endDate_like": {
+                "type": "string",
+                "description": "Filter by end date that matches pattern"
+              },
+              "format_in": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/properties/filter/properties/format"
+                },
+                "description": "Filter by media format in array"
+              },
+              "format_not": {
+                "$ref": "#/properties/filter/properties/format",
+                "description": "Filter by media format not equal to value"
+              },
+              "format_not_in": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/properties/filter/properties/format"
+                },
+                "description": "Filter by media format not in array"
+              },
+              "status_in": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/properties/filter/properties/status"
+                },
+                "description": "Filter by media status in array"
+              },
+              "status_not": {
+                "$ref": "#/properties/filter/properties/status",
+                "description": "Filter by media status not equal to value"
+              },
+              "status_not_in": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/properties/filter/properties/status"
+                },
+                "description": "Filter by media status not in array"
+              },
+              "episodes_greater": {
+                "type": "number",
+                "description": "Filter by episode count greater than value"
+              },
+              "episodes_lesser": {
+                "type": "number",
+                "description": "Filter by episode count less than value"
+              },
+              "duration_greater": {
+                "type": "number",
+                "description": "Filter by episode duration greater than value"
+              },
+              "duration_lesser": {
+                "type": "number",
+                "description": "Filter by episode duration less than value"
+              },
+              "chapters_greater": {
+                "type": "number",
+                "description": "Filter by chapter count greater than value"
+              },
+              "chapters_lesser": {
+                "type": "number",
+                "description": "Filter by chapter count less than value"
+              },
+              "volumes_greater": {
+                "type": "number",
+                "description": "Filter by volume count greater than value"
+              },
+              "volumes_lesser": {
+                "type": "number",
+                "description": "Filter by volume count less than value"
+              },
+              "genre_in": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Filter by genres in array"
+              },
+              "genre_not_in": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Filter by genres not in array"
+              },
+              "tag_in": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Filter by tags in array"
+              },
+              "tag_not_in": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Filter by tags not in array"
+              },
+              "tagCategory_in": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Filter by tag categories in array"
+              },
+              "tagCategory_not_in": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Filter by tag categories not in array"
+              },
+              "licensedBy_in": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Filter by media licensed by companies in array"
+              },
+              "averageScore_not": {
+                "type": "number",
+                "description": "Filter by average score not equal to value"
+              },
+              "averageScore_greater": {
+                "type": "number",
+                "description": "Filter by average score greater than value"
+              },
+              "averageScore_lesser": {
+                "type": "number",
+                "description": "Filter by average score less than value"
+              },
+              "popularity_not": {
+                "type": "number",
+                "description": "Filter by popularity not equal to value"
+              },
+              "popularity_greater": {
+                "type": "number",
+                "description": "Filter by popularity greater than value"
+              },
+              "popularity_lesser": {
+                "type": "number",
+                "description": "Filter by popularity less than value"
+              },
+              "source_in": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "ORIGINAL",
+                    "MANGA",
+                    "LIGHT_NOVEL",
+                    "VISUAL_NOVEL",
+                    "VIDEO_GAME",
+                    "OTHER",
+                    "NOVEL",
+                    "DOUJINSHI",
+                    "ANIME"
+                  ]
+                },
+                "description": "Filter by source types in array"
+              },
+              "sort": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "ID",
+                    "ID_DESC",
+                    "TITLE_ROMAJI",
+                    "TITLE_ROMAJI_DESC",
+                    "TITLE_ENGLISH",
+                    "TITLE_ENGLISH_DESC",
+                    "TITLE_NATIVE",
+                    "TITLE_NATIVE_DESC",
+                    "TYPE",
+                    "TYPE_DESC",
+                    "FORMAT",
+                    "FORMAT_DESC",
+                    "START_DATE",
+                    "START_DATE_DESC",
+                    "END_DATE",
+                    "END_DATE_DESC",
+                    "SCORE",
+                    "SCORE_DESC",
+                    "POPULARITY",
+                    "POPULARITY_DESC",
+                    "TRENDING",
+                    "TRENDING_DESC",
+                    "EPISODES",
+                    "EPISODES_DESC",
+                    "DURATION",
+                    "DURATION_DESC",
+                    "STATUS",
+                    "STATUS_DESC",
+                    "CHAPTERS",
+                    "CHAPTERS_DESC",
+                    "VOLUMES",
+                    "VOLUMES_DESC",
+                    "UPDATED_AT",
+                    "UPDATED_AT_DESC",
+                    "SEARCH_MATCH",
+                    "FAVOURITES",
+                    "FAVOURITES_DESC"
+                  ]
+                },
+                "description": "Sort the results by the provided sort options"
+              }
+            },
+            "additionalProperties": false,
+            "description": "Filter object for searching anime.\nYou MUST NOT include \"{ \"type\": \"ANIME\" }\" in the filter object. As it is already included in the API call.\nWhen no sorting method or any filter is specified, you SHOULD use the site default: \"{ \"sort\": [\"SEARCH_MATCH\"] }\".\nOtherwise, request is likely to fail or return no results."
+          },
+          "page": {
+            "type": "number",
+            "default": 1,
+            "description": "Page number for results"
+          },
+          "amount": {
+            "type": "number",
+            "default": 5,
+            "description": "Results per page (max 25)"
+          }
+        },
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "search_character",
+      "description": "Search for characters based on a query term",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "term": {
+            "type": "string",
+            "description": "Search term for finding characters"
+          },
+          "page": {
+            "type": "number",
+            "default": 1,
+            "description": "Page number for results"
+          },
+          "amount": {
+            "type": "number",
+            "default": 5,
+            "description": "Results per page (max 25)"
+          }
+        },
+        "required": [
+          "term"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "search_manga",
+      "description": "Search for manga with query term and filters",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "term": {
+            "type": "string",
+            "description": "Query term for finding manga (leave it as undefined when no query term specified.)\nQuery term is used for searching with specific word or title in mind.\n\nYou SHOULD not include things that can be found in the filter object, such as genre or tag.\nThose things should be included in the filter object instead.\n\nTo check whether a user requested term should be considered as a query term or a filter term.\nIt is recommended to use tools like 'get_genres' and 'get_media_tags' first."
+          },
+          "filter": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number",
+                "description": "The AniList ID"
+              },
+              "idMal": {
+                "type": "number",
+                "description": "The MyAnimeList ID"
+              },
+              "startDate": {
+                "type": "object",
+                "properties": {
+                  "year": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "month": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "day": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  }
+                },
+                "required": [
+                  "year",
+                  "month",
+                  "day"
+                ],
+                "additionalProperties": false,
+                "description": "The start date of the media"
+              },
+              "endDate": {
+                "$ref": "#/properties/filter/properties/startDate",
+                "description": "The end date of the media"
+              },
+              "season": {
+                "type": "string",
+                "enum": [
+                  "WINTER",
+                  "SPRING",
+                  "SUMMER",
+                  "FALL"
+                ],
+                "description": "The season the media aired"
+              },
+              "seasonYear": {
+                "type": "number",
+                "description": "The year of the season"
+              },
+              "type": {
+                "type": "string",
+                "enum": [
+                  "ANIME",
+                  "MANGA"
+                ],
+                "description": "The type of the media (ANIME or MANGA)"
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "TV",
+                  "TV_SHORT",
+                  "MOVIE",
+                  "SPECIAL",
+                  "OVA",
+                  "ONA",
+                  "MUSIC",
+                  "MANGA",
+                  "NOVEL",
+                  "ONE_SHOT"
+                ],
+                "description": "The format of the media"
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "FINISHED",
+                  "RELEASING",
+                  "NOT_YET_RELEASED",
+                  "CANCELLED",
+                  "HIATUS"
+                ],
+                "description": "The current status of the media"
+              },
+              "episodes": {
+                "type": "number",
+                "description": "The number of episodes in the media"
+              },
+              "duration": {
+                "type": "number",
+                "description": "The duration of episodes in minutes"
+              },
+              "chapters": {
+                "type": "number",
+                "description": "The number of chapters in the media"
+              },
+              "volumes": {
+                "type": "number",
+                "description": "The number of volumes in the media"
+              },
+              "isAdult": {
+                "type": "boolean",
+                "description": "If the media is intended for adult audiences"
+              },
+              "genre": {
+                "type": "string",
+                "description": "Filter by a specific genre"
+              },
+              "tag": {
+                "type": "string",
+                "description": "Filter by a specific tag"
+              },
+              "minimumTagRank": {
+                "type": "number",
+                "description": "The minimum tag rank to filter by"
+              },
+              "tagCategory": {
+                "type": "string",
+                "description": "Filter by tag category"
+              },
+              "onList": {
+                "type": "boolean",
+                "description": "[Requires Login] Filter by if the media is on the authenticated user's list"
+              },
+              "licensedBy": {
+                "type": "string",
+                "description": "Filter by media licensed by a specific company"
+              },
+              "averageScore": {
+                "type": "number",
+                "description": "Filter by the media's average score"
+              },
+              "popularity": {
+                "type": "number",
+                "description": "Filter by the media's popularity"
+              },
+              "source": {
+                "$ref": "#/properties/filter/properties/format",
+                "description": "Filter by the media's source type"
+              },
+              "countryOfOrigin": {
+                "type": "number",
+                "description": "Filter by the country where the media was created (ISO 3166-1 alpha-2 country code)"
+              },
+              "search": {
+                "type": "string",
+                "description": "Filter by search query"
+              },
+              "id_not": {
+                "type": "number",
+                "description": "Filter by media ID not equal to value"
+              },
+              "id_in": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "description": "Filter by media ID in array"
+              },
+              "id_not_in": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "description": "Filter by media ID not in array"
+              },
+              "idMal_not": {
+                "type": "number",
+                "description": "Filter by MyAnimeList ID not equal to value"
+              },
+              "idMal_in": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "description": "Filter by MyAnimeList ID in array"
+              },
+              "idMal_not_in": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "description": "Filter by MyAnimeList ID not in array"
+              },
+              "startDate_greater": {
+                "type": "number",
+                "description": "Filter by start date greater than value (FuzzyDateInt format)"
+              },
+              "startDate_lesser": {
+                "type": "number",
+                "description": "Filter by start date less than value (FuzzyDateInt format)"
+              },
+              "startDate_like": {
+                "type": "string",
+                "description": "Filter by start date that matches pattern"
+              },
+              "endDate_greater": {
+                "type": "number",
+                "description": "Filter by end date greater than value (FuzzyDateInt format)"
+              },
+              "endDate_lesser": {
+                "type": "number",
+                "description": "Filter by end date less than value (FuzzyDateInt format)"
+              },
+              "endDate_like": {
+                "type": "string",
+                "description": "Filter by end date that matches pattern"
+              },
+              "format_in": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/properties/filter/properties/format"
+                },
+                "description": "Filter by media format in array"
+              },
+              "format_not": {
+                "$ref": "#/properties/filter/properties/format",
+                "description": "Filter by media format not equal to value"
+              },
+              "format_not_in": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/properties/filter/properties/format"
+                },
+                "description": "Filter by media format not in array"
+              },
+              "status_in": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/properties/filter/properties/status"
+                },
+                "description": "Filter by media status in array"
+              },
+              "status_not": {
+                "$ref": "#/properties/filter/properties/status",
+                "description": "Filter by media status not equal to value"
+              },
+              "status_not_in": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/properties/filter/properties/status"
+                },
+                "description": "Filter by media status not in array"
+              },
+              "episodes_greater": {
+                "type": "number",
+                "description": "Filter by episode count greater than value"
+              },
+              "episodes_lesser": {
+                "type": "number",
+                "description": "Filter by episode count less than value"
+              },
+              "duration_greater": {
+                "type": "number",
+                "description": "Filter by episode duration greater than value"
+              },
+              "duration_lesser": {
+                "type": "number",
+                "description": "Filter by episode duration less than value"
+              },
+              "chapters_greater": {
+                "type": "number",
+                "description": "Filter by chapter count greater than value"
+              },
+              "chapters_lesser": {
+                "type": "number",
+                "description": "Filter by chapter count less than value"
+              },
+              "volumes_greater": {
+                "type": "number",
+                "description": "Filter by volume count greater than value"
+              },
+              "volumes_lesser": {
+                "type": "number",
+                "description": "Filter by volume count less than value"
+              },
+              "genre_in": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Filter by genres in array"
+              },
+              "genre_not_in": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Filter by genres not in array"
+              },
+              "tag_in": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Filter by tags in array"
+              },
+              "tag_not_in": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Filter by tags not in array"
+              },
+              "tagCategory_in": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Filter by tag categories in array"
+              },
+              "tagCategory_not_in": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Filter by tag categories not in array"
+              },
+              "licensedBy_in": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Filter by media licensed by companies in array"
+              },
+              "averageScore_not": {
+                "type": "number",
+                "description": "Filter by average score not equal to value"
+              },
+              "averageScore_greater": {
+                "type": "number",
+                "description": "Filter by average score greater than value"
+              },
+              "averageScore_lesser": {
+                "type": "number",
+                "description": "Filter by average score less than value"
+              },
+              "popularity_not": {
+                "type": "number",
+                "description": "Filter by popularity not equal to value"
+              },
+              "popularity_greater": {
+                "type": "number",
+                "description": "Filter by popularity greater than value"
+              },
+              "popularity_lesser": {
+                "type": "number",
+                "description": "Filter by popularity less than value"
+              },
+              "source_in": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "ORIGINAL",
+                    "MANGA",
+                    "LIGHT_NOVEL",
+                    "VISUAL_NOVEL",
+                    "VIDEO_GAME",
+                    "OTHER",
+                    "NOVEL",
+                    "DOUJINSHI",
+                    "ANIME"
+                  ]
+                },
+                "description": "Filter by source types in array"
+              },
+              "sort": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "ID",
+                    "ID_DESC",
+                    "TITLE_ROMAJI",
+                    "TITLE_ROMAJI_DESC",
+                    "TITLE_ENGLISH",
+                    "TITLE_ENGLISH_DESC",
+                    "TITLE_NATIVE",
+                    "TITLE_NATIVE_DESC",
+                    "TYPE",
+                    "TYPE_DESC",
+                    "FORMAT",
+                    "FORMAT_DESC",
+                    "START_DATE",
+                    "START_DATE_DESC",
+                    "END_DATE",
+                    "END_DATE_DESC",
+                    "SCORE",
+                    "SCORE_DESC",
+                    "POPULARITY",
+                    "POPULARITY_DESC",
+                    "TRENDING",
+                    "TRENDING_DESC",
+                    "EPISODES",
+                    "EPISODES_DESC",
+                    "DURATION",
+                    "DURATION_DESC",
+                    "STATUS",
+                    "STATUS_DESC",
+                    "CHAPTERS",
+                    "CHAPTERS_DESC",
+                    "VOLUMES",
+                    "VOLUMES_DESC",
+                    "UPDATED_AT",
+                    "UPDATED_AT_DESC",
+                    "SEARCH_MATCH",
+                    "FAVOURITES",
+                    "FAVOURITES_DESC"
+                  ]
+                },
+                "description": "Sort the results by the provided sort options"
+              }
+            },
+            "additionalProperties": false,
+            "description": "Filter object for searching manga.\nYou MUST NOT include \"{ \"type\": \"MANGA\" }\" in the filter object. As it is already included in the API call.\nWhen no sorting method or any filter is specified, you SHOULD use the site default: \"{ \"sort\": [\"SEARCH_MATCH\"] }\".\nOtherwise, request is likely to fail or return no results."
+          },
+          "page": {
+            "type": "number",
+            "default": 1,
+            "description": "Page number for results"
+          },
+          "amount": {
+            "type": "number",
+            "default": 5,
+            "description": "Results per page (max 25)"
+          }
+        },
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "search_staff",
+      "description": "Search for staff members based on a query term",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "term": {
+            "type": "string",
+            "description": "Search term for finding staff members"
+          },
+          "page": {
+            "type": "number",
+            "default": 1,
+            "description": "Page number for results"
+          },
+          "amount": {
+            "type": "number",
+            "default": 5,
+            "description": "Results per page (max 25)"
+          }
+        },
+        "required": [
+          "term"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "search_studio",
+      "description": "Search for studios based on a query term",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "term": {
+            "type": "string",
+            "description": "Search term for finding studios"
+          },
+          "page": {
+            "type": "number",
+            "default": 1,
+            "description": "Page number for results"
+          },
+          "amount": {
+            "type": "number",
+            "default": 5,
+            "description": "Results per page (max 25)"
+          }
+        },
+        "required": [
+          "term"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "search_user",
+      "description": "Search for users on AniList",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "term": {
+            "type": "string",
+            "description": "Search term for finding users"
+          },
+          "page": {
+            "type": "number",
+            "default": 1,
+            "description": "Page number for results"
+          },
+          "amount": {
+            "type": "number",
+            "default": 5,
+            "description": "Results per page (max 25)"
+          }
+        },
+        "required": [
+          "term"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "delete_thread",
+      "description": "[Requires Login] Delete a thread by its ID",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number",
+            "description": "The AniList thread ID to delete"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "get_thread",
+      "description": "Get a specific thread by its AniList ID",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number",
+            "description": "The AniList ID of the thread"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "get_thread_comments",
+      "description": "Get comments for a specific thread",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number",
+            "description": "The AniList thread ID"
+          },
+          "page": {
+            "type": "number",
+            "default": 1,
+            "description": "The page number"
+          },
+          "perPage": {
+            "type": "number",
+            "default": 25,
+            "description": "How many comments per page"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "get_full_user_info",
+      "description": "Get a user's complete profile and stats information",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "user": {
+            "type": [
+              "number",
+              "string"
+            ],
+            "description": "Username or user ID"
+          }
+        },
+        "required": [
+          "user"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "follow_user",
+      "description": "[Requires Login] Follow or unfollow a user by their ID",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "userID": {
+            "type": "number",
+            "description": "The user ID of the account to follow/unfollow"
+          }
+        },
+        "required": [
+          "userID"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "get_authorized_user",
+      "description": "[Requires Login] Get profile information of the currently authorized user",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "get_user_recent_activity",
+      "description": "Get recent activity from a user",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "user": {
+            "type": "number",
+            "description": "The user's AniList ID (Number ID only, DO NOT use username, any kind of string or other types except for numbers.)"
+          }
+        },
+        "required": [
+          "user"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "get_user_profile",
+      "description": "Get a user's AniList profile",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "user": {
+            "type": [
+              "number",
+              "string"
+            ],
+            "description": "Username or user ID"
+          }
+        },
+        "required": [
+          "user"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "get_user_stats",
+      "description": "Get a user's AniList statistics",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "user": {
+            "type": [
+              "number",
+              "string"
+            ],
+            "description": "Username or user ID"
+          }
+        },
+        "required": [
+          "user"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "update_user",
+      "description": "[Requires Login] Update user settings",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "options": {
+            "type": "object",
+            "properties": {
+              "about": {
+                "type": "string",
+                "description": "The user's description"
+              },
+              "titleLanguage": {
+                "type": "string",
+                "enum": [
+                  "ROMAJI",
+                  "ENGLISH",
+                  "NATIVE",
+                  "ROMAJI_STYLISED",
+                  "ENGLISH_STYLISED",
+                  "NATIVE_STYLISED"
+                ],
+                "description": "The user's preferred title language"
+              },
+              "displayAdultContent": {
+                "type": "boolean",
+                "description": "True if the user wants to display adult content"
+              },
+              "airingNotifications": {
+                "type": "boolean",
+                "description": "True if the user wants airing notifications"
+              },
+              "profileColor": {
+                "type": "string",
+                "description": "The user's profile highlight color"
+              },
+              "activityMergeTime": {
+                "type": "number",
+                "description": "The minutes between activity for them to be merged together. 0 is Never, Above 2 weeks (20160 mins) is always."
+              },
+              "staffNameLanguage": {
+                "type": "string",
+                "enum": [
+                  "ROMAJI",
+                  "NATIVE",
+                  "ROMAJI_WESTERN"
+                ],
+                "description": "The user's preferred way to see staff and characters"
+              },
+              "notificationOptions": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "enum": [
+                        "ACTIVITY_MESSAGE",
+                        "ACTIVITY_REPLY",
+                        "FOLLOWING",
+                        "ACTIVITY_MENTION",
+                        "THREAD_COMMENT_MENTION",
+                        "THREAD_SUBSCRIBED",
+                        "THREAD_COMMENT_REPLY",
+                        "AIRING",
+                        "ACTIVITY_LIKE",
+                        "ACTIVITY_REPLY_LIKE",
+                        "THREAD_LIKE",
+                        "THREAD_COMMENT_LIKE",
+                        "ACTIVITY_REPLY_SUBSCRIBED",
+                        "RELATED_MEDIA_ADDITION",
+                        "MEDIA_DATA_CHANGE",
+                        "MEDIA_MERGE",
+                        "MEDIA_DELETION"
+                      ]
+                    },
+                    "enabled": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "type",
+                    "enabled"
+                  ],
+                  "additionalProperties": false
+                },
+                "description": "The user's notification options"
+              },
+              "timezone": {
+                "type": "string",
+                "description": "The user's timezone offset format"
+              },
+              "scoreFormat": {
+                "type": "string",
+                "enum": [
+                  "POINT_100",
+                  "POINT_10_DECIMAL",
+                  "POINT_10",
+                  "POINT_5",
+                  "POINT_3"
+                ],
+                "description": "The user's score format"
+              },
+              "rowOrder": {
+                "type": "string",
+                "description": "The user's default list order"
+              },
+              "animeListOptions": {
+                "type": "object",
+                "properties": {
+                  "sectionOrder": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "splitCompletedSectionByFormat": {
+                    "type": "boolean"
+                  },
+                  "customLists": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "advancedScoring": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "advancedScoringEnabled": {
+                    "type": "boolean"
+                  },
+                  "theme": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "sectionOrder",
+                  "splitCompletedSectionByFormat",
+                  "customLists",
+                  "advancedScoring",
+                  "advancedScoringEnabled",
+                  "theme"
+                ],
+                "additionalProperties": false,
+                "description": "The user's options for anime lists"
+              },
+              "mangaListOptions": {
+                "type": "object",
+                "properties": {
+                  "sectionOrder": {
+                    "$ref": "#/properties/options/properties/animeListOptions/properties/sectionOrder"
+                  },
+                  "splitCompletedSectionByFormat": {
+                    "$ref": "#/properties/options/properties/animeListOptions/properties/splitCompletedSectionByFormat"
+                  },
+                  "customLists": {
+                    "$ref": "#/properties/options/properties/animeListOptions/properties/customLists"
+                  },
+                  "advancedScoring": {
+                    "$ref": "#/properties/options/properties/animeListOptions/properties/advancedScoring"
+                  },
+                  "advancedScoringEnabled": {
+                    "$ref": "#/properties/options/properties/animeListOptions/properties/advancedScoringEnabled"
+                  },
+                  "theme": {
+                    "$ref": "#/properties/options/properties/animeListOptions/properties/theme"
+                  }
+                },
+                "required": [
+                  "sectionOrder",
+                  "splitCompletedSectionByFormat",
+                  "customLists",
+                  "advancedScoring",
+                  "advancedScoringEnabled",
+                  "theme"
+                ],
+                "additionalProperties": false,
+                "description": "The user's options for manga lists"
+              }
+            },
+            "required": [
+              "about",
+              "titleLanguage",
+              "displayAdultContent",
+              "airingNotifications",
+              "profileColor",
+              "activityMergeTime",
+              "staffNameLanguage",
+              "notificationOptions",
+              "timezone",
+              "scoreFormat",
+              "rowOrder",
+              "animeListOptions",
+              "mangaListOptions"
+            ],
+            "additionalProperties": false,
+            "description": "User options to update"
+          }
+        },
+        "required": [
+          "options"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    }
+  ]
+}

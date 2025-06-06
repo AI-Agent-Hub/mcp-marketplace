@@ -1,0 +1,48 @@
+{
+  "tools": [
+    {
+      "name": "search_google",
+      "description": "Search Google for a query",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "Search query"
+          }
+        },
+        "required": [
+          "query"
+        ]
+      }
+    },
+    {
+      "name": "visit_page",
+      "description": "Visit a webpage and extract its content",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "URL to visit"
+          },
+          "takeScreenshot": {
+            "type": "boolean",
+            "description": "Whether to take a screenshot"
+          }
+        },
+        "required": [
+          "url"
+        ]
+      }
+    },
+    {
+      "name": "take_screenshot",
+      "description": "Take a screenshot of the current page",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    }
+  ]
+}

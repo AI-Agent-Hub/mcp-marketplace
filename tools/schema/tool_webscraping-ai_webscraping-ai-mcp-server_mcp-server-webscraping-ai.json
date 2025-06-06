@@ -1,0 +1,596 @@
+{
+  "tools": [
+    {
+      "name": "webscraping_ai_question",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "URL of the target page."
+          },
+          "question": {
+            "type": "string",
+            "description": "Question or instructions to ask the LLM model about the target page."
+          },
+          "timeout": {
+            "type": "number",
+            "default": 15000,
+            "description": "Maximum web page retrieval time in ms (15000 by default, maximum is 30000)."
+          },
+          "js": {
+            "type": "boolean",
+            "default": true,
+            "description": "Execute on-page JavaScript using a headless browser (true by default)."
+          },
+          "js_timeout": {
+            "type": "number",
+            "default": 2000,
+            "description": "Maximum JavaScript rendering time in ms (2000 by default)."
+          },
+          "wait_for": {
+            "type": "string",
+            "description": "CSS selector to wait for before returning the page content."
+          },
+          "proxy": {
+            "type": "string",
+            "enum": [
+              "datacenter",
+              "residential"
+            ],
+            "default": "residential",
+            "description": "Type of proxy, datacenter or residential (residential by default)."
+          },
+          "country": {
+            "type": "string",
+            "enum": [
+              "us",
+              "gb",
+              "de",
+              "it",
+              "fr",
+              "ca",
+              "es",
+              "ru",
+              "jp",
+              "kr",
+              "in"
+            ],
+            "description": "Country of the proxy to use (US by default)."
+          },
+          "custom_proxy": {
+            "type": "string",
+            "description": "Your own proxy URL in \"http://user:password@host:port\" format."
+          },
+          "device": {
+            "type": "string",
+            "enum": [
+              "desktop",
+              "mobile",
+              "tablet"
+            ],
+            "description": "Type of device emulation."
+          },
+          "error_on_404": {
+            "type": "boolean",
+            "description": "Return error on 404 HTTP status on the target page (false by default)."
+          },
+          "error_on_redirect": {
+            "type": "boolean",
+            "description": "Return error on redirect on the target page (false by default)."
+          },
+          "js_script": {
+            "type": "string",
+            "description": "Custom JavaScript code to execute on the target page."
+          }
+        },
+        "required": [
+          "url",
+          "question"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "webscraping_ai_fields",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "URL of the target page."
+          },
+          "fields": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            },
+            "description": "Dictionary of field names with instructions for extraction."
+          },
+          "timeout": {
+            "type": "number",
+            "default": 15000,
+            "description": "Maximum web page retrieval time in ms (15000 by default, maximum is 30000)."
+          },
+          "js": {
+            "type": "boolean",
+            "default": true,
+            "description": "Execute on-page JavaScript using a headless browser (true by default)."
+          },
+          "js_timeout": {
+            "type": "number",
+            "default": 2000,
+            "description": "Maximum JavaScript rendering time in ms (2000 by default)."
+          },
+          "wait_for": {
+            "type": "string",
+            "description": "CSS selector to wait for before returning the page content."
+          },
+          "proxy": {
+            "type": "string",
+            "enum": [
+              "datacenter",
+              "residential"
+            ],
+            "default": "residential",
+            "description": "Type of proxy, datacenter or residential (residential by default)."
+          },
+          "country": {
+            "type": "string",
+            "enum": [
+              "us",
+              "gb",
+              "de",
+              "it",
+              "fr",
+              "ca",
+              "es",
+              "ru",
+              "jp",
+              "kr",
+              "in"
+            ],
+            "description": "Country of the proxy to use (US by default)."
+          },
+          "custom_proxy": {
+            "type": "string",
+            "description": "Your own proxy URL in \"http://user:password@host:port\" format."
+          },
+          "device": {
+            "type": "string",
+            "enum": [
+              "desktop",
+              "mobile",
+              "tablet"
+            ],
+            "description": "Type of device emulation."
+          },
+          "error_on_404": {
+            "type": "boolean",
+            "description": "Return error on 404 HTTP status on the target page (false by default)."
+          },
+          "error_on_redirect": {
+            "type": "boolean",
+            "description": "Return error on redirect on the target page (false by default)."
+          },
+          "js_script": {
+            "type": "string",
+            "description": "Custom JavaScript code to execute on the target page."
+          }
+        },
+        "required": [
+          "url",
+          "fields"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "webscraping_ai_html",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "URL of the target page."
+          },
+          "return_script_result": {
+            "type": "boolean",
+            "description": "Return result of the custom JavaScript code execution."
+          },
+          "format": {
+            "type": "string",
+            "enum": [
+              "json",
+              "text"
+            ],
+            "description": "Response format (json or text)."
+          },
+          "timeout": {
+            "type": "number",
+            "default": 15000,
+            "description": "Maximum web page retrieval time in ms (15000 by default, maximum is 30000)."
+          },
+          "js": {
+            "type": "boolean",
+            "default": true,
+            "description": "Execute on-page JavaScript using a headless browser (true by default)."
+          },
+          "js_timeout": {
+            "type": "number",
+            "default": 2000,
+            "description": "Maximum JavaScript rendering time in ms (2000 by default)."
+          },
+          "wait_for": {
+            "type": "string",
+            "description": "CSS selector to wait for before returning the page content."
+          },
+          "proxy": {
+            "type": "string",
+            "enum": [
+              "datacenter",
+              "residential"
+            ],
+            "default": "residential",
+            "description": "Type of proxy, datacenter or residential (residential by default)."
+          },
+          "country": {
+            "type": "string",
+            "enum": [
+              "us",
+              "gb",
+              "de",
+              "it",
+              "fr",
+              "ca",
+              "es",
+              "ru",
+              "jp",
+              "kr",
+              "in"
+            ],
+            "description": "Country of the proxy to use (US by default)."
+          },
+          "custom_proxy": {
+            "type": "string",
+            "description": "Your own proxy URL in \"http://user:password@host:port\" format."
+          },
+          "device": {
+            "type": "string",
+            "enum": [
+              "desktop",
+              "mobile",
+              "tablet"
+            ],
+            "description": "Type of device emulation."
+          },
+          "error_on_404": {
+            "type": "boolean",
+            "description": "Return error on 404 HTTP status on the target page (false by default)."
+          },
+          "error_on_redirect": {
+            "type": "boolean",
+            "description": "Return error on redirect on the target page (false by default)."
+          },
+          "js_script": {
+            "type": "string",
+            "description": "Custom JavaScript code to execute on the target page."
+          }
+        },
+        "required": [
+          "url"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "webscraping_ai_text",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "URL of the target page."
+          },
+          "text_format": {
+            "type": "string",
+            "enum": [
+              "plain",
+              "xml",
+              "json"
+            ],
+            "default": "json",
+            "description": "Format of the text response."
+          },
+          "return_links": {
+            "type": "boolean",
+            "description": "Return links from the page body text."
+          },
+          "timeout": {
+            "type": "number",
+            "default": 15000,
+            "description": "Maximum web page retrieval time in ms (15000 by default, maximum is 30000)."
+          },
+          "js": {
+            "type": "boolean",
+            "default": true,
+            "description": "Execute on-page JavaScript using a headless browser (true by default)."
+          },
+          "js_timeout": {
+            "type": "number",
+            "default": 2000,
+            "description": "Maximum JavaScript rendering time in ms (2000 by default)."
+          },
+          "wait_for": {
+            "type": "string",
+            "description": "CSS selector to wait for before returning the page content."
+          },
+          "proxy": {
+            "type": "string",
+            "enum": [
+              "datacenter",
+              "residential"
+            ],
+            "default": "residential",
+            "description": "Type of proxy, datacenter or residential (residential by default)."
+          },
+          "country": {
+            "type": "string",
+            "enum": [
+              "us",
+              "gb",
+              "de",
+              "it",
+              "fr",
+              "ca",
+              "es",
+              "ru",
+              "jp",
+              "kr",
+              "in"
+            ],
+            "description": "Country of the proxy to use (US by default)."
+          },
+          "custom_proxy": {
+            "type": "string",
+            "description": "Your own proxy URL in \"http://user:password@host:port\" format."
+          },
+          "device": {
+            "type": "string",
+            "enum": [
+              "desktop",
+              "mobile",
+              "tablet"
+            ],
+            "description": "Type of device emulation."
+          },
+          "error_on_404": {
+            "type": "boolean",
+            "description": "Return error on 404 HTTP status on the target page (false by default)."
+          },
+          "error_on_redirect": {
+            "type": "boolean",
+            "description": "Return error on redirect on the target page (false by default)."
+          },
+          "js_script": {
+            "type": "string",
+            "description": "Custom JavaScript code to execute on the target page."
+          }
+        },
+        "required": [
+          "url"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "webscraping_ai_selected",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "URL of the target page."
+          },
+          "selector": {
+            "type": "string",
+            "description": "CSS selector to extract content for."
+          },
+          "format": {
+            "type": "string",
+            "enum": [
+              "json",
+              "text"
+            ],
+            "default": "json",
+            "description": "Response format (json or text)."
+          },
+          "timeout": {
+            "type": "number",
+            "default": 15000,
+            "description": "Maximum web page retrieval time in ms (15000 by default, maximum is 30000)."
+          },
+          "js": {
+            "type": "boolean",
+            "default": true,
+            "description": "Execute on-page JavaScript using a headless browser (true by default)."
+          },
+          "js_timeout": {
+            "type": "number",
+            "default": 2000,
+            "description": "Maximum JavaScript rendering time in ms (2000 by default)."
+          },
+          "wait_for": {
+            "type": "string",
+            "description": "CSS selector to wait for before returning the page content."
+          },
+          "proxy": {
+            "type": "string",
+            "enum": [
+              "datacenter",
+              "residential"
+            ],
+            "default": "residential",
+            "description": "Type of proxy, datacenter or residential (residential by default)."
+          },
+          "country": {
+            "type": "string",
+            "enum": [
+              "us",
+              "gb",
+              "de",
+              "it",
+              "fr",
+              "ca",
+              "es",
+              "ru",
+              "jp",
+              "kr",
+              "in"
+            ],
+            "description": "Country of the proxy to use (US by default)."
+          },
+          "custom_proxy": {
+            "type": "string",
+            "description": "Your own proxy URL in \"http://user:password@host:port\" format."
+          },
+          "device": {
+            "type": "string",
+            "enum": [
+              "desktop",
+              "mobile",
+              "tablet"
+            ],
+            "description": "Type of device emulation."
+          },
+          "error_on_404": {
+            "type": "boolean",
+            "description": "Return error on 404 HTTP status on the target page (false by default)."
+          },
+          "error_on_redirect": {
+            "type": "boolean",
+            "description": "Return error on redirect on the target page (false by default)."
+          },
+          "js_script": {
+            "type": "string",
+            "description": "Custom JavaScript code to execute on the target page."
+          }
+        },
+        "required": [
+          "url",
+          "selector"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "webscraping_ai_selected_multiple",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "URL of the target page."
+          },
+          "selectors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Array of CSS selectors to extract content for."
+          },
+          "timeout": {
+            "type": "number",
+            "default": 15000,
+            "description": "Maximum web page retrieval time in ms (15000 by default, maximum is 30000)."
+          },
+          "js": {
+            "type": "boolean",
+            "default": true,
+            "description": "Execute on-page JavaScript using a headless browser (true by default)."
+          },
+          "js_timeout": {
+            "type": "number",
+            "default": 2000,
+            "description": "Maximum JavaScript rendering time in ms (2000 by default)."
+          },
+          "wait_for": {
+            "type": "string",
+            "description": "CSS selector to wait for before returning the page content."
+          },
+          "proxy": {
+            "type": "string",
+            "enum": [
+              "datacenter",
+              "residential"
+            ],
+            "default": "residential",
+            "description": "Type of proxy, datacenter or residential (residential by default)."
+          },
+          "country": {
+            "type": "string",
+            "enum": [
+              "us",
+              "gb",
+              "de",
+              "it",
+              "fr",
+              "ca",
+              "es",
+              "ru",
+              "jp",
+              "kr",
+              "in"
+            ],
+            "description": "Country of the proxy to use (US by default)."
+          },
+          "custom_proxy": {
+            "type": "string",
+            "description": "Your own proxy URL in \"http://user:password@host:port\" format."
+          },
+          "device": {
+            "type": "string",
+            "enum": [
+              "desktop",
+              "mobile",
+              "tablet"
+            ],
+            "description": "Type of device emulation."
+          },
+          "error_on_404": {
+            "type": "boolean",
+            "description": "Return error on 404 HTTP status on the target page (false by default)."
+          },
+          "error_on_redirect": {
+            "type": "boolean",
+            "description": "Return error on redirect on the target page (false by default)."
+          },
+          "js_script": {
+            "type": "string",
+            "description": "Custom JavaScript code to execute on the target page."
+          }
+        },
+        "required": [
+          "url",
+          "selectors"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "webscraping_ai_account",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    }
+  ]
+}

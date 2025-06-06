@@ -1,0 +1,36 @@
+{
+  "tools": [
+    {
+      "name": "get_information_10k_sec_tesla",
+      "description": "Get information from the 10k-SEC-Tesla index. The index contains 10k",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "The query used to get information from the 10k-SEC-Tesla index."
+          }
+        },
+        "required": [
+          "query"
+        ]
+      }
+    },
+    {
+      "name": "get_information_10k_sec_apple",
+      "description": "Get information from the 10k-SEC-Apple index. The index contains 10k",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "The query used to get information from the 10k-SEC-Apple index."
+          }
+        },
+        "required": [
+          "query"
+        ]
+      }
+    }
+  ]
+}

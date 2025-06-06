@@ -1,0 +1,31 @@
+{
+  "tools": [
+    {
+      "name": "bitcoin_price",
+      "description": "Get realtime bitcoin price",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "get_crypto_price",
+      "description": "Get realtime crypto price on crypto",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the crypto coin"
+          }
+        }
+      }
+    },
+    {
+      "name": "list_assets",
+      "description": "Get all available crypto assets",
+      "inputSchema": {
+        "type": "object"
+      }
+    }
+  ]
+}

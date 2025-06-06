@@ -1,0 +1,37 @@
+(node:3661) Warning: Setting the NODE_TLS_REJECT_UNAUTHORIZED environment variable to '0' makes TLS connections and HTTPS requests insecure by disabling certificate verification.
+(Use `node --trace-warnings ...` to show where the warning was created)
+npm error code EACCES
+npm error syscall mkdir
+npm error path /Users/username
+npm error errno EACCES
+npm error FetchError: Invalid response body while trying to fetch https://registry.npmjs.org/@modelcontextprotocol%2finspector: EACCES: permission denied, mkdir '/Users/username'
+npm error     at /usr/local/lib/node_modules/npm/node_modules/minipass-fetch/lib/body.js:170:15
+npm error     at async Response.json (/usr/local/lib/node_modules/npm/node_modules/minipass-fetch/lib/body.js:75:17)
+npm error     at async RegistryFetcher.packument (/usr/local/lib/node_modules/npm/node_modules/pacote/lib/registry.js:98:25)
+npm error     at async RegistryFetcher.manifest (/usr/local/lib/node_modules/npm/node_modules/pacote/lib/registry.js:128:23)
+npm error     at async getManifest (/usr/local/lib/node_modules/npm/node_modules/libnpmexec/lib/index.js:28:22)
+npm error     at async missingFromTree (/usr/local/lib/node_modules/npm/node_modules/libnpmexec/lib/index.js:63:22)
+npm error     at async /usr/local/lib/node_modules/npm/node_modules/libnpmexec/lib/index.js:185:32
+npm error     at async Promise.all (index 0)
+npm error     at async exec (/usr/local/lib/node_modules/npm/node_modules/libnpmexec/lib/index.js:183:3)
+npm error     at async Npm.exec (/usr/local/lib/node_modules/npm/lib/npm.js:208:9) {
+npm error   code: 'EACCES',
+npm error   errno: 'EACCES',
+npm error   syscall: 'mkdir',
+npm error   path: '/Users/username',
+npm error   type: 'system'
+npm error }
+npm error
+npm error The operation was rejected by your operating system.
+npm error It is likely you do not have the permissions to access this file as the current user
+npm error
+npm error If you believe this might be a permissions issue, please double-check the
+npm error permissions of the file and its containing directories, or try running
+npm error the command again as root/Administrator.
+npm notice
+npm notice New minor version of npm available! 11.3.0 -> 11.4.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.4.1
+npm notice To update run: npm install -g npm@11.4.1
+npm notice
+npm error Log files were not written due to an error writing to the directory: /Users/username/.npm/_logs
+npm error You can rerun the command with `--loglevel=verbose` to see the logs in your terminal

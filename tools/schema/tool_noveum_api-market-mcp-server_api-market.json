@@ -1,0 +1,938 @@
+{
+  "tools": [
+    {
+      "name": "distance_and_duration_bw_starts_and_stops",
+      "description": "Calculate length and driving time of the optimal routes between origin and destination points on the real road network.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "origins": {
+            "type": "string",
+            "description": "List of origins described as semicolon-delimited coordinate pairs with latitudes and longitudes. Maximum 25 pairs per request."
+          },
+          "destinations": {
+            "type": "string",
+            "description": "List of destinations described as semicolon-delimited coordinate pairs with latitudes and longitudes. If not specified, an n x n matrix will be generated using the origins. Maximum 25 pairs per request."
+          },
+          "avoid_tolls": {
+            "type": "boolean",
+            "description": "Avoid tolls"
+          },
+          "avoid_highways": {
+            "type": "boolean",
+            "description": "Avoid highways"
+          },
+          "avoid_ferries": {
+            "type": "boolean",
+            "description": "Avoid ferries"
+          },
+          "start_time": {
+            "type": "string",
+            "description": "Time when travel is expected to start. You can specify the time as an integer in seconds since midnight, January 1, 1970 UTC or you can use 'now' to specify the current time."
+          }
+        },
+        "required": [
+          "origins"
+        ]
+      }
+    },
+    {
+      "name": "Get_audio_analysis_URL",
+      "description": "This endpoint retrieves the URL of the transcription and analysis of the audio for the given request ID.\n",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "description": "Unique identifier for the request."
+          }
+        },
+        "required": [
+          "request_id"
+        ]
+      }
+    },
+    {
+      "name": "Whisper_Audio_Processing",
+      "description": "API for sentece wise transcription and analysis of audio, using AI models. Make sure to call get audio analysis URL with the request ID received from this API.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "audio": {
+            "type": "string",
+            "default": "https://replicate.delivery/mgxm/e5159b1b-508a-4be4-b892-e1eb47850bdc/OSR_uk_000_0050_8k.wav"
+          },
+          "model": {
+            "type": "string",
+            "default": "large-v3"
+          },
+          "translate": {
+            "type": "boolean",
+            "default": false
+          },
+          "temperature": {
+            "type": "integer",
+            "default": 0
+          },
+          "transcription": {
+            "type": "string",
+            "default": "plain text"
+          },
+          "suppress_tokens": {
+            "type": "string",
+            "default": -1
+          },
+          "logprob_threshold": {
+            "type": "integer",
+            "default": -1
+          },
+          "no_speech_threshold": {
+            "type": "integer",
+            "default": 0.6
+          },
+          "condition_on_previous_text": {
+            "type": "boolean",
+            "default": true
+          },
+          "compression_ratio_threshold": {
+            "type": "integer",
+            "default": 2.4
+          },
+          "temperature_increment_on_fallback": {
+            "type": "integer",
+            "default": 0.2
+          }
+        },
+        "required": [
+          "audio",
+          "model",
+          "translate",
+          "temperature",
+          "transcription",
+          "suppress_tokens",
+          "logprob_threshold",
+          "no_speech_threshold",
+          "condition_on_previous_text",
+          "compression_ratio_threshold",
+          "temperature_increment_on_fallback"
+        ]
+      }
+    },
+    {
+      "name": "Upload",
+      "description": "Make a POST request to capix/faceswap/upload/",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    },
+    {
+      "name": "ImageFaceSwap",
+      "description": "Make a POST request to capix/faceswap/faceswap/v1/image",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "target_url": {
+            "type": "string",
+            "title": "Target Url",
+            "description": "Require an image with a face",
+            "default": "https://storage.ws.pho.to/s2/7aa4876bc1f50bc92fc54cb3c326181ac5bbf5ef_m.jpeg"
+          },
+          "swap_url": {
+            "type": "string",
+            "title": "Swap Url",
+            "description": "Require an image with a face",
+            "default": "https://storage.ws.pho.to/s2/818f3e408ee37c090cf23a3d12e15a08ada80ad9_m.jpeg"
+          }
+        },
+        "required": [
+          "swap_url",
+          "target_url"
+        ]
+      }
+    },
+    {
+      "name": "VideoFaceSwap",
+      "description": "Make a POST request to capix/faceswap/faceswap/v1/video",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "target_url": {
+            "type": "string",
+            "pattern": "^.*\\.mp4$",
+            "title": "Target Url",
+            "description": "Require only .mp4 video file url",
+            "default": "https://storage.ws.pho.to/s2/7e2131eaef5e5cbb0d2c9eef7e2f19343b5a1292.mp4"
+          },
+          "swap_url": {
+            "type": "string",
+            "title": "Swap Url",
+            "description": "Require an image with a face",
+            "default": "https://storage.ws.pho.to/s2/818f3e408ee37c090cf23a3d12e15a08ada80ad9_m.jpeg"
+          }
+        },
+        "required": [
+          "swap_url",
+          "target_url"
+        ]
+      }
+    },
+    {
+      "name": "Result",
+      "description": "Make a POST request to capix/faceswap/result/",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "title": "Request Id"
+          }
+        },
+        "required": [
+          "request_id"
+        ]
+      }
+    },
+    {
+      "name": "Forward_Geocoding",
+      "description": "Obtain location(geographic coordinates) for address.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "address": {
+            "type": "string",
+            "description": "The address that you want to geocode"
+          },
+          "postal_code": {
+            "type": "string",
+            "description": "postal_code parameter"
+          },
+          "country": {
+            "type": "string",
+            "description": "The two-letter bias country code (ccTLD or ISO 3166-1) in which to return results"
+          },
+          "area": {
+            "type": "string",
+            "description": "area parameter"
+          },
+          "locality": {
+            "type": "string",
+            "description": "locality parameter"
+          },
+          "street": {
+            "type": "string",
+            "description": "street parameter"
+          },
+          "language": {
+            "type": "string",
+            "description": "The two-letter language code in which to return results (ISO 639-1)"
+          },
+          "region": {
+            "type": "string",
+            "description": "region parameter"
+          },
+          "bounds": {
+            "type": "string",
+            "description": "The bounding box for results preference"
+          }
+        },
+        "required": [
+          "address"
+        ]
+      }
+    },
+    {
+      "name": "Reverse_Geocoding",
+      "description": "Obtain address for location.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "location": {
+            "type": "string",
+            "description": "The location for which you wish to obtain the human-readable address"
+          },
+          "language": {
+            "type": "string",
+            "description": "The two-letter language code in which to return results (ISO 639-1)"
+          }
+        },
+        "required": [
+          "location"
+        ]
+      }
+    },
+    {
+      "name": "DNS_Checker_API",
+      "description": "Make a POST request to magicapi/dnschecker/dnschecker",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "domain": {
+            "type": "string",
+            "default": "google.com"
+          }
+        },
+        "required": [
+          "domain"
+        ]
+      }
+    },
+    {
+      "name": "Get_coder_output_URL",
+      "description": "This endpoint retrieves the URL of the coding assistant's response for a given request ID.\n",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "description": "Unique identifier for the request."
+          }
+        },
+        "required": [
+          "request_id"
+        ]
+      }
+    },
+    {
+      "name": "Coding_Assistant",
+      "description": "Coding Assistant. \n Make sure you call get coder output URL MCP tool to get the URL for the request id received from this API ",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "top_k": {
+            "type": "integer",
+            "default": 250
+          },
+          "top_p": {
+            "type": "integer",
+            "default": 0.95
+          },
+          "prompt": {
+            "type": "string",
+            "default": "Write a javascript function that calculates euclidean distance between two coordinates of any dimension"
+          },
+          "max_tokens": {
+            "type": "integer",
+            "default": 500
+          },
+          "temperature": {
+            "type": "integer",
+            "default": 0.95
+          },
+          "system_prompt": {
+            "type": "string"
+          },
+          "repeat_penalty": {
+            "type": "integer",
+            "default": 1.1
+          },
+          "presence_penalty": {
+            "type": "integer",
+            "default": 0
+          },
+          "frequency_penalty": {
+            "type": "integer",
+            "default": 0
+          }
+        },
+        "required": [
+          "top_k",
+          "top_p",
+          "prompt",
+          "max_tokens",
+          "temperature",
+          "system_prompt",
+          "repeat_penalty",
+          "presence_penalty",
+          "frequency_penalty"
+        ]
+      }
+    },
+    {
+      "name": "A_fast_nsfw_detection_API",
+      "description": "Make a POST request to bridgeml/nsfw!detection/nsfw_detection",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "image": {
+            "type": "string",
+            "default": "https://blog.api.market/wp-content/uploads/2024/07/wonder_woman.png",
+            "description": "The url for image that wants to be checked for nsfw"
+          }
+        },
+        "required": [
+          "image"
+        ]
+      }
+    },
+    {
+      "name": "getWhoisInfo",
+      "description": "Make a GET request to magicapi/whois/whois/{domain}",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "domain": {
+            "type": "string",
+            "description": "Domain to query WHOIS information for"
+          }
+        },
+        "required": [
+          "domain"
+        ]
+      }
+    },
+    {
+      "name": "Get_Unblurred_Image_URL",
+      "description": "This endpoint retrieves the URL of the Unblurred image for a given request ID.\n",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "description": "Unique identifier for the request."
+          }
+        },
+        "required": [
+          "request_id"
+        ]
+      }
+    },
+    {
+      "name": "Deblurer",
+      "description": "API for image deblurring. \n Make sure you call get deblurred image URL, MCP tool to get the URL for the request id received from this API",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "image": {
+            "type": "string",
+            "default": "https://replicate.delivery/mgxm/e7a66188-34c6-483b-813f-be5c96a3952b/blurry-reds-0.jpg"
+          },
+          "task_type": {
+            "type": "string",
+            "default": "Image Debluring (REDS)"
+          }
+        },
+        "required": [
+          "image",
+          "task_type"
+        ]
+      }
+    },
+    {
+      "name": "text-to-image",
+      "description": "Make a POST request to bridgeml/text!to!image/text_to_image",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "prompt": {
+            "type": "string",
+            "default": "Futuristic space battle, hyper realistic, 4k",
+            "description": "The prompt for generating the image"
+          },
+          "height": {
+            "type": "integer",
+            "default": 1024,
+            "description": "The height of the image"
+          },
+          "width": {
+            "type": "integer",
+            "default": 1024,
+            "description": "The width of the image"
+          },
+          "scheduler": {
+            "type": "string",
+            "default": "K_EULER",
+            "description": "The scheduler to use"
+          },
+          "num_outputs": {
+            "type": "integer",
+            "default": 1,
+            "description": "The number of outputs"
+          },
+          "guidance_scale": {
+            "type": "number",
+            "default": 0,
+            "description": "The guidance scale"
+          },
+          "negative_prompt": {
+            "type": "string",
+            "default": "worst quality, low quality",
+            "description": "The negative prompt"
+          },
+          "num_inference_steps": {
+            "type": "integer",
+            "default": 4,
+            "description": "The number of inference steps"
+          }
+        },
+        "required": [
+          "prompt",
+          "height",
+          "width"
+        ]
+      }
+    },
+    {
+      "name": "Get_ageing_gif_URL",
+      "description": "This endpoint retrieves the URL of the ageing gif for a given request ID.\n",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "description": "Unique identifier for the request."
+          }
+        },
+        "required": [
+          "request_id"
+        ]
+      }
+    },
+    {
+      "name": "Period_changer",
+      "description": "API for generating ageing gif using AI models. Make sure to call get ageing gif URL, with the result id received from this API",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "image": {
+            "type": "string",
+            "default": "https://replicate.delivery/mgxm/806bea64-bb51-4c8a-bf4d-15602eb60fdd/1287.jpg"
+          },
+          "target_age": {
+            "type": "string",
+            "default": "default"
+          }
+        },
+        "required": [
+          "image",
+          "target_age"
+        ]
+      }
+    },
+    {
+      "name": "Search_for_places_by_text",
+      "description": "Search for places by text string",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string",
+            "description": "A text string on which to search"
+          },
+          "language": {
+            "type": "string",
+            "description": "The two-letter language code in which to return results (ISO 639-1)"
+          },
+          "bounds": {
+            "type": "string",
+            "description": "The bounding box for results preference. Format: south,west,north,east. Coordinates: decimal degrees."
+          }
+        },
+        "required": [
+          "text"
+        ]
+      }
+    },
+    {
+      "name": "Search_for_nearby_places",
+      "description": "Search for places around location within a specified radius.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "location": {
+            "type": "string",
+            "description": "The latitude/longitude around which to retrieve places"
+          },
+          "radius": {
+            "type": "integer",
+            "description": "The distance (in meters) within which to return results. Max = 10000 m."
+          },
+          "type": {
+            "type": "string",
+            "description": "The type of places that are returned"
+          },
+          "language": {
+            "type": "string",
+            "description": "The two-letter language code in which to return results (ISO 639-1)"
+          }
+        },
+        "required": [
+          "location"
+        ]
+      }
+    },
+    {
+      "name": "Get_hairstyled_image_URL",
+      "description": "This endpoint retrieves the URL of the simulated hairstyle image for a given request ID.\n",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "description": "Unique identifier for the request."
+          }
+        },
+        "required": [
+          "request_id"
+        ]
+      }
+    },
+    {
+      "name": "Hair_style_simulator",
+      "description": "API for simulating different hair styles using AI models. Make sure to call get hairstyled image after with the request id received from this API.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "image": {
+            "type": "string",
+            "default": "https://replicate.delivery/mgxm/b8be17a7-abcb-4421-80f2-e6a1e3fe38c7/MarkZuckerberg.jpg"
+          },
+          "editing_type": {
+            "type": "string",
+            "default": "both"
+          },
+          "color_description": {
+            "type": "string",
+            "default": "blond"
+          },
+          "hairstyle_description": {
+            "type": "string",
+            "default": "hi-top fade hairstyle"
+          }
+        },
+        "required": [
+          "image",
+          "editing_type",
+          "color_description",
+          "hairstyle_description"
+        ]
+      }
+    },
+    {
+      "name": "BridgeML_API",
+      "description": "Make a POST request to bridgeml/codellama/bridgeml/codellama",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "messages": {
+            "type": "array",
+            "description": "List of messages",
+            "items": {
+              "type": "object",
+              "properties": {
+                "role": {
+                  "type": "string",
+                  "description": "Role of the message sender",
+                  "enum": [
+                    "user",
+                    "assistant"
+                  ]
+                },
+                "content": {
+                  "type": "string",
+                  "description": "Content of the message"
+                }
+              }
+            },
+            "example": [
+              {
+                "role": "user",
+                "content": "hello"
+              },
+              {
+                "role": "assistant",
+                "content": ""
+              }
+            ]
+          },
+          "temperature": {
+            "type": "number",
+            "description": "Temperature for text generation",
+            "example": 1
+          },
+          "max_tokens": {
+            "type": "number",
+            "description": "Maximum number of tokens to generate",
+            "example": 256
+          },
+          "top_p": {
+            "type": "number",
+            "description": "Top P sampling value",
+            "example": 1
+          },
+          "frequency_penalty": {
+            "type": "number",
+            "description": "Frequency penalty value",
+            "example": 0
+          },
+          "stream": {
+            "type": "boolean",
+            "description": "Flag indicating if response should be streamed",
+            "example": false
+          }
+        }
+      }
+    },
+    {
+      "name": "Search_Videos",
+      "description": "Retrieve video search results based on query parameters",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "q": {
+            "type": "string",
+            "description": "Search query"
+          },
+          "count": {
+            "type": "integer",
+            "description": "Number of results to return"
+          },
+          "country": {
+            "type": "string",
+            "description": "Country code"
+          },
+          "search_lang": {
+            "type": "string",
+            "description": "Search language"
+          },
+          "spellcheck": {
+            "type": "boolean",
+            "description": "Enable spellcheck"
+          }
+        },
+        "required": [
+          "q"
+        ]
+      }
+    },
+    {
+      "name": "Search_Web",
+      "description": "Retrieve web search results based on query parameters",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "q": {
+            "type": "string",
+            "description": "Search query"
+          }
+        },
+        "required": [
+          "q"
+        ]
+      }
+    },
+    {
+      "name": "Search_Images",
+      "description": "Retrieve image search results based on query parameters",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "q": {
+            "type": "string",
+            "description": "Search query"
+          },
+          "safesearch": {
+            "type": "string",
+            "description": "Safe search filter"
+          },
+          "count": {
+            "type": "integer",
+            "description": "Number of results to return"
+          },
+          "search_lang": {
+            "type": "string",
+            "description": "Search language"
+          },
+          "country": {
+            "type": "string",
+            "description": "Country code"
+          },
+          "spellcheck": {
+            "type": "boolean",
+            "description": "Enable spellcheck"
+          }
+        },
+        "required": [
+          "q"
+        ]
+      }
+    },
+    {
+      "name": "Search_News",
+      "description": "Retrieve news search results based on query parameters",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "q": {
+            "type": "string",
+            "description": "Search query"
+          },
+          "count": {
+            "type": "integer",
+            "description": "Number of results to return"
+          },
+          "country": {
+            "type": "string",
+            "description": "Country code"
+          },
+          "search_lang": {
+            "type": "string",
+            "description": "Search language"
+          },
+          "spellcheck": {
+            "type": "boolean",
+            "description": "Enable spellcheck"
+          }
+        },
+        "required": [
+          "q"
+        ]
+      }
+    },
+    {
+      "name": "Search_Suggestions",
+      "description": "Retrieve search suggestions based on query parameters",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "q": {
+            "type": "string",
+            "description": "Search query"
+          },
+          "country": {
+            "type": "string",
+            "description": "Country code"
+          },
+          "count": {
+            "type": "integer",
+            "description": "Number of suggestions to return"
+          }
+        },
+        "required": [
+          "q"
+        ]
+      }
+    },
+    {
+      "name": "Spellcheck_Search",
+      "description": "Retrieve spellcheck suggestions based on query parameters",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "q": {
+            "type": "string",
+            "description": "Search query"
+          },
+          "country": {
+            "type": "string",
+            "description": "Country code"
+          }
+        },
+        "required": [
+          "q"
+        ]
+      }
+    },
+    {
+      "name": "Check_domain_availability",
+      "description": "Submit a domain name to check its availability.\n",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "domain_name": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    {
+      "name": "best_route_for_multiple_stops",
+      "description": "Finding optimal route to visit several locations.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "stops": {
+            "type": "string",
+            "description": "List of locations described as semicolon-delimited coordinate pairs with latitudes and longitudes. Maximum 25 pairs per request."
+          },
+          "avoid_tolls": {
+            "type": "boolean",
+            "description": "Avoid tolls"
+          },
+          "avoid_highways": {
+            "type": "boolean",
+            "description": "Avoid highways"
+          },
+          "avoid_ferries": {
+            "type": "boolean",
+            "description": "Avoid ferries"
+          },
+          "optimize": {
+            "type": "boolean",
+            "description": "Instructs the API to reorder stops to find the optimized route. The route first stop and last stop order is not changed, their position is considered fixed."
+          }
+        },
+        "required": [
+          "stops"
+        ]
+      }
+    },
+    {
+      "name": "best_route_bw_start_and_stop",
+      "description": "Finding optimal route from a origin to a destination, passing through multiple waypoints(optional).",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "origin": {
+            "type": "string",
+            "description": "The location from which you wish to calculate directions."
+          },
+          "destination": {
+            "type": "string",
+            "description": "The location to which you wish to calculate directions."
+          },
+          "waypoints": {
+            "type": "string",
+            "description": "An array of intermediate locations to include along the route between the origin and destination points as pass through locations. Maximum: 23 per request."
+          },
+          "avoid_tolls": {
+            "type": "boolean",
+            "description": "Avoid tolls"
+          },
+          "avoid_highways": {
+            "type": "boolean",
+            "description": "Avoid highways"
+          },
+          "avoid_ferries": {
+            "type": "boolean",
+            "description": "Avoid ferries"
+          },
+          "start_time": {
+            "type": "string",
+            "description": "Time when travel is expected to start. You can specify the time as an integer in seconds since midnight, January 1, 1970 UTC or you can use 'now' to specify the current time."
+          }
+        },
+        "required": [
+          "origin",
+          "destination"
+        ]
+      }
+    },
+    {
+      "name": "Extract_information_from_a_URL",
+      "description": "Make a POST request to pipfeed/parse/extract",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "example": "https://techcrunch.com/2022/04/18/web-scraping-legal-court/"
+          }
+        },
+        "required": [
+          "url"
+        ]
+      }
+    }
+  ]
+}

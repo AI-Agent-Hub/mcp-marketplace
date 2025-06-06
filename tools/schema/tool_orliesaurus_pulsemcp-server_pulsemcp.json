@@ -1,0 +1,43 @@
+(node:3566) Warning: Setting the NODE_TLS_REJECT_UNAUTHORIZED environment variable to '0' makes TLS connections and HTTPS requests insecure by disabling certificate verification.
+(Use `node --trace-warnings ...` to show where the warning was created)
+{
+  "tools": [
+    {
+      "name": "list_servers",
+      "description": "List MCP servers with optional filtering",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "Search term to filter servers"
+          },
+          "integrations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Filter by integration slugs"
+          },
+          "count_per_page": {
+            "type": "number",
+            "description": "Number of results per page (maximum: 5000)",
+            "maximum": 5000
+          },
+          "offset": {
+            "type": "number",
+            "description": "Number of results to skip for pagination"
+          }
+        }
+      }
+    },
+    {
+      "name": "list_integrations",
+      "description": "List all available integrations",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "tools": [
+    {
+      "name": "get_github_actions",
+      "description": "Get available GitHub Actions for a repository",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "owner": {
+            "type": "string",
+            "description": "Owner of the repository (username or organization)"
+          },
+          "repo": {
+            "type": "string",
+            "description": "Name of the repository"
+          },
+          "token": {
+            "type": "string",
+            "description": "GitHub personal access token (optional)"
+          }
+        },
+        "required": [
+          "owner",
+          "repo"
+        ]
+      }
+    },
+    {
+      "name": "get_github_action",
+      "description": "Get detailed information about a specific GitHub Action, including inputs and their requirements",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "owner": {
+            "type": "string",
+            "description": "Owner of the action (username or organization)"
+          },
+          "repo": {
+            "type": "string",
+            "description": "Repository name of the action"
+          },
+          "path": {
+            "type": "string",
+            "description": "Path to the action.yml or action.yaml file (usually just 'action.yml')"
+          },
+          "ref": {
+            "type": "string",
+            "description": "Git reference (branch, tag, or commit SHA, default: main)"
+          },
+          "token": {
+            "type": "string",
+            "description": "GitHub personal access token (optional)"
+          }
+        },
+        "required": [
+          "owner",
+          "repo"
+        ]
+      }
+    },
+    {
+      "name": "trigger_github_action",
+      "description": "Trigger a GitHub workflow dispatch event with custom inputs",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "owner": {
+            "type": "string",
+            "description": "Owner of the repository (username or organization)"
+          },
+          "repo": {
+            "type": "string",
+            "description": "Name of the repository"
+          },
+          "workflow_id": {
+            "type": "string",
+            "description": "The ID or filename of the workflow to trigger"
+          },
+          "ref": {
+            "type": "string",
+            "description": "The git reference to trigger the workflow on (default: main)"
+          },
+          "inputs": {
+            "type": "object",
+            "description": "Inputs to pass to the workflow (must match the workflow's defined inputs)"
+          },
+          "token": {
+            "type": "string",
+            "description": "GitHub personal access token (must have workflow scope)"
+          }
+        },
+        "required": [
+          "owner",
+          "repo",
+          "workflow_id"
+        ]
+      }
+    },
+    {
+      "name": "get_github_release",
+      "description": "Get the latest 2 releases from a GitHub repository",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "owner": {
+            "type": "string",
+            "description": "Owner of the repository (username or organization)"
+          },
+          "repo": {
+            "type": "string",
+            "description": "Name of the repository"
+          },
+          "token": {
+            "type": "string",
+            "description": "GitHub personal access token (optional)"
+          }
+        },
+        "required": [
+          "owner",
+          "repo"
+        ]
+      }
+    }
+  ]
+}

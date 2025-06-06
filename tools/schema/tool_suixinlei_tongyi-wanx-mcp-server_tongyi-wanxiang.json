@@ -1,0 +1,79 @@
+{
+  "tools": [
+    {
+      "name": "wanx-t2i-image-generation",
+      "description": "使用阿里云万相文生图大模型的文生图能力，由于图片生成耗时比较久，需要调用 wanx-t2i-image-generation-result 工具获取结果",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "prompt": {
+            "type": "string"
+          },
+          "negative_prompt": {
+            "type": "string"
+          },
+          "seed": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "prompt",
+          "negative_prompt"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "wanx-t2i-image-generation-result",
+      "description": "获取阿里云万相文生图大模型的文生图结果",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "task_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "task_id"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "wanx-t2v-video-generation",
+      "description": "使用阿里云万相文生视频大模型的文生视频能力，由于视频生成耗时比较久，需要调用 wanx-t2v-video-generation-result 工具获取结果",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "prompt": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "prompt"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "wanx-t2v-video-generation-result",
+      "description": "获取阿里云万相文生视频大模型的文生视频结果",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "task_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "task_id"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    }
+  ]
+}

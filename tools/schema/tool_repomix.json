@@ -1,0 +1,221 @@
+{
+  "tools": [
+    {
+      "name": "pack_codebase",
+      "description": "Package a local code directory into a consolidated XML file for AI analysis. This tool analyzes the codebase structure, extracts relevant code content, and generates a comprehensive report including metrics, file tree, and formatted code content. Supports Tree-sitter compression for efficient token usage.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "directory": {
+            "type": "string",
+            "description": "Directory to pack (Absolute path)"
+          },
+          "compress": {
+            "type": "boolean",
+            "default": false,
+            "description": "Enable Tree-sitter compression to extract essential code signatures and structure while removing implementation details. Reduces token usage by ~70% while preserving semantic meaning. Generally not needed since grep_repomix_output allows incremental content retrieval. Use only when you specifically need the entire codebase content for large repositories (default: false)."
+          },
+          "includePatterns": {
+            "type": "string",
+            "description": "Specify files to include using fast-glob patterns. Multiple patterns can be comma-separated (e.g., \"**/*.{js,ts}\", \"src/**,docs/**\"). Only matching files will be processed. Useful for focusing on specific parts of the codebase."
+          },
+          "ignorePatterns": {
+            "type": "string",
+            "description": "Specify additional files to exclude using fast-glob patterns. Multiple patterns can be comma-separated (e.g., \"test/**,*.spec.js\", \"node_modules/**,dist/**\"). These patterns supplement .gitignore and built-in exclusions."
+          },
+          "topFilesLength": {
+            "type": "number",
+            "default": 10,
+            "description": "Number of largest files by size to display in the metrics summary for codebase analysis (default: 10)"
+          }
+        },
+        "required": [
+          "directory"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "annotations": {
+        "title": "Pack Local Codebase",
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "pack_remote_repository",
+      "description": "Fetch, clone, and package a GitHub repository into a consolidated XML file for AI analysis. This tool automatically clones the remote repository, analyzes its structure, and generates a comprehensive report. Supports various GitHub URL formats and includes security checks to prevent exposure of sensitive information.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "remote": {
+            "type": "string",
+            "description": "GitHub repository URL or user/repo format (e.g., \"yamadashy/repomix\", \"https://github.com/user/repo\", or \"https://github.com/user/repo/tree/branch\")"
+          },
+          "compress": {
+            "type": "boolean",
+            "default": false,
+            "description": "Enable Tree-sitter compression to extract essential code signatures and structure while removing implementation details. Reduces token usage by ~70% while preserving semantic meaning. Generally not needed since grep_repomix_output allows incremental content retrieval. Use only when you specifically need the entire codebase content for large repositories (default: false)."
+          },
+          "includePatterns": {
+            "type": "string",
+            "description": "Specify files to include using fast-glob patterns. Multiple patterns can be comma-separated (e.g., \"**/*.{js,ts}\", \"src/**,docs/**\"). Only matching files will be processed. Useful for focusing on specific parts of the codebase."
+          },
+          "ignorePatterns": {
+            "type": "string",
+            "description": "Specify additional files to exclude using fast-glob patterns. Multiple patterns can be comma-separated (e.g., \"test/**,*.spec.js\", \"node_modules/**,dist/**\"). These patterns supplement .gitignore and built-in exclusions."
+          },
+          "topFilesLength": {
+            "type": "number",
+            "default": 10,
+            "description": "Number of largest files by size to display in the metrics summary for codebase analysis (default: 10)"
+          }
+        },
+        "required": [
+          "remote"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "annotations": {
+        "title": "Pack Remote Repository",
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": true
+      }
+    },
+    {
+      "name": "read_repomix_output",
+      "description": "Read the contents of a Repomix-generated output file. Supports partial reading with line range specification for large files. This tool is designed for environments where direct file system access is limited (e.g., web-based environments, sandboxed applications). For direct file system access, use standard file operations.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "outputId": {
+            "type": "string",
+            "description": "ID of the Repomix output file to read"
+          },
+          "startLine": {
+            "type": "number",
+            "description": "Starting line number (1-based, inclusive). If not specified, reads from beginning."
+          },
+          "endLine": {
+            "type": "number",
+            "description": "Ending line number (1-based, inclusive). If not specified, reads to end."
+          }
+        },
+        "required": [
+          "outputId"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "annotations": {
+        "title": "Read Repomix Output",
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "grep_repomix_output",
+      "description": "Search for patterns in a Repomix output file using grep-like functionality with JavaScript RegExp syntax. Returns matching lines with optional context lines around matches.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "outputId": {
+            "type": "string",
+            "description": "ID of the Repomix output file to search"
+          },
+          "pattern": {
+            "type": "string",
+            "description": "Search pattern (JavaScript RegExp regular expression syntax)"
+          },
+          "contextLines": {
+            "type": "number",
+            "default": 0,
+            "description": "Number of context lines to show before and after each match (default: 0). Overridden by beforeLines/afterLines if specified."
+          },
+          "beforeLines": {
+            "type": "number",
+            "description": "Number of context lines to show before each match (like grep -B). Takes precedence over contextLines."
+          },
+          "afterLines": {
+            "type": "number",
+            "description": "Number of context lines to show after each match (like grep -A). Takes precedence over contextLines."
+          },
+          "ignoreCase": {
+            "type": "boolean",
+            "default": false,
+            "description": "Perform case-insensitive matching (default: false)"
+          }
+        },
+        "required": [
+          "outputId",
+          "pattern"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "annotations": {
+        "title": "Grep Repomix Output",
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "file_system_read_file",
+      "description": "Read a file from the local file system using an absolute path. Includes built-in security validation to detect and prevent access to files containing sensitive information (API keys, passwords, secrets).",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "Absolute path to the file to read"
+          }
+        },
+        "required": [
+          "path"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "annotations": {
+        "title": "Read File",
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "file_system_read_directory",
+      "description": "List the contents of a directory using an absolute path. Returns a formatted list showing files and subdirectories with clear [FILE]/[DIR] indicators. Useful for exploring project structure and understanding codebase organization.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "Absolute path to the directory to list"
+          }
+        },
+        "required": [
+          "path"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "annotations": {
+        "title": "Read Directory",
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    }
+  ]
+}

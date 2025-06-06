@@ -1,0 +1,98 @@
+{
+  "tools": [
+    {
+      "name": "mixpanel_track_event",
+      "description": "Track a custom event in Mixpanel",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "event_name": {
+            "type": "string",
+            "description": "Name of the event to track"
+          },
+          "distinct_id": {
+            "type": "string",
+            "description": "User identifier (optional)"
+          },
+          "properties": {
+            "type": "object",
+            "description": "Additional properties to track with the event (optional)"
+          }
+        },
+        "required": [
+          "event_name"
+        ]
+      }
+    },
+    {
+      "name": "mixpanel_track_pageview",
+      "description": "Track a page view event in Mixpanel",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "page_name": {
+            "type": "string",
+            "description": "Name of the page viewed"
+          },
+          "distinct_id": {
+            "type": "string",
+            "description": "User identifier (optional)"
+          },
+          "referrer": {
+            "type": "string",
+            "description": "Referring page (optional)"
+          }
+        },
+        "required": [
+          "page_name"
+        ]
+      }
+    },
+    {
+      "name": "mixpanel_track_signup",
+      "description": "Track a signup event and create a user profile in Mixpanel",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "user_name": {
+            "type": "string",
+            "description": "User's full name"
+          },
+          "email": {
+            "type": "string",
+            "description": "User's email address"
+          },
+          "plan": {
+            "type": "string",
+            "description": "Signup plan (optional)"
+          }
+        },
+        "required": [
+          "user_name",
+          "email"
+        ]
+      }
+    },
+    {
+      "name": "mixpanel_set_user_profile",
+      "description": "Update a user's profile properties in Mixpanel",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "distinct_id": {
+            "type": "string",
+            "description": "User identifier"
+          },
+          "properties": {
+            "type": "object",
+            "description": "Profile properties to set"
+          }
+        },
+        "required": [
+          "distinct_id",
+          "properties"
+        ]
+      }
+    }
+  ]
+}

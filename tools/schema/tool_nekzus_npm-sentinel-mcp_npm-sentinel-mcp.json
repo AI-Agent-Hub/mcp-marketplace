@@ -1,0 +1,531 @@
+{
+  "tools": [
+    {
+      "name": "npmVersions",
+      "description": "Get all available versions of an NPM package",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "packages": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of package names to get versions for"
+          }
+        },
+        "required": [
+          "packages"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "annotations": {
+        "title": "Get All Package Versions",
+        "readOnlyHint": true,
+        "idempotentHint": true,
+        "openWorldHint": true
+      }
+    },
+    {
+      "name": "npmLatest",
+      "description": "Get the latest version and changelog of an NPM package",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "packages": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of package names to get latest versions for"
+          }
+        },
+        "required": [
+          "packages"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "annotations": {
+        "title": "Get Latest Package Information",
+        "readOnlyHint": true,
+        "idempotentHint": true,
+        "openWorldHint": true
+      }
+    },
+    {
+      "name": "npmDeps",
+      "description": "Analyze dependencies and devDependencies of an NPM package",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "packages": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of package names to analyze dependencies for"
+          }
+        },
+        "required": [
+          "packages"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "annotations": {
+        "title": "Get Package Dependencies",
+        "readOnlyHint": true,
+        "idempotentHint": true,
+        "openWorldHint": true
+      }
+    },
+    {
+      "name": "npmTypes",
+      "description": "Check TypeScript types availability and version for a package",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "packages": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of package names to check types for"
+          }
+        },
+        "required": [
+          "packages"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "annotations": {
+        "title": "Check TypeScript Type Availability",
+        "readOnlyHint": true,
+        "idempotentHint": true,
+        "openWorldHint": true
+      }
+    },
+    {
+      "name": "npmSize",
+      "description": "Get package size information including dependencies and bundle size",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "packages": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of package names to get size information for"
+          }
+        },
+        "required": [
+          "packages"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "annotations": {
+        "title": "Get Package Size (Bundlephobia)",
+        "readOnlyHint": true,
+        "idempotentHint": true,
+        "openWorldHint": true
+      }
+    },
+    {
+      "name": "npmVulnerabilities",
+      "description": "Check for known vulnerabilities in packages",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "packages": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of package names to check for vulnerabilities"
+          }
+        },
+        "required": [
+          "packages"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "annotations": {
+        "title": "Check Package Vulnerabilities (OSV.dev)",
+        "readOnlyHint": true,
+        "idempotentHint": false,
+        "openWorldHint": true
+      }
+    },
+    {
+      "name": "npmTrends",
+      "description": "Get download trends and popularity metrics for packages",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "packages": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of package names to get trends for"
+          },
+          "period": {
+            "type": "string",
+            "enum": [
+              "last-week",
+              "last-month",
+              "last-year"
+            ],
+            "description": "Time period for trends. Options: \"last-week\", \"last-month\", \"last-year\"",
+            "default": "last-month"
+          }
+        },
+        "required": [
+          "packages"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "annotations": {
+        "title": "Get NPM Package Download Trends",
+        "readOnlyHint": true,
+        "idempotentHint": true,
+        "openWorldHint": true
+      }
+    },
+    {
+      "name": "npmCompare",
+      "description": "Compare multiple NPM packages based on various metrics",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "packages": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of package names to compare"
+          }
+        },
+        "required": [
+          "packages"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "annotations": {
+        "title": "Compare NPM Packages",
+        "readOnlyHint": true,
+        "idempotentHint": true,
+        "openWorldHint": true
+      }
+    },
+    {
+      "name": "npmMaintainers",
+      "description": "Get maintainers information for NPM packages",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "packages": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of package names to get maintainers for"
+          }
+        },
+        "required": [
+          "packages"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "annotations": {
+        "title": "Get NPM Package Maintainers",
+        "readOnlyHint": true,
+        "idempotentHint": true,
+        "openWorldHint": true
+      }
+    },
+    {
+      "name": "npmScore",
+      "description": "Get consolidated package score based on quality, maintenance, and popularity metrics",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "packages": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of package names to get scores for"
+          }
+        },
+        "required": [
+          "packages"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "annotations": {
+        "title": "Get NPM Package Score (NPMS.io)",
+        "readOnlyHint": true,
+        "idempotentHint": true,
+        "openWorldHint": true
+      }
+    },
+    {
+      "name": "npmPackageReadme",
+      "description": "Get the README content for NPM packages",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "packages": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of package names to get READMEs for"
+          }
+        },
+        "required": [
+          "packages"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "annotations": {
+        "title": "Get NPM Package README",
+        "readOnlyHint": true,
+        "idempotentHint": true,
+        "openWorldHint": true
+      }
+    },
+    {
+      "name": "npmSearch",
+      "description": "Search for NPM packages with optional limit",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "Search query for packages"
+          },
+          "limit": {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 50,
+            "description": "Maximum number of results to return (default: 10)"
+          }
+        },
+        "required": [
+          "query"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "annotations": {
+        "title": "Search NPM Packages",
+        "readOnlyHint": true,
+        "idempotentHint": false,
+        "openWorldHint": true
+      }
+    },
+    {
+      "name": "npmLicenseCompatibility",
+      "description": "Check license compatibility between multiple packages",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "packages": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "description": "List of package names to check for license compatibility"
+          }
+        },
+        "required": [
+          "packages"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "annotations": {
+        "title": "Check NPM License Compatibility",
+        "readOnlyHint": true,
+        "idempotentHint": true,
+        "openWorldHint": true
+      }
+    },
+    {
+      "name": "npmRepoStats",
+      "description": "Get repository statistics for NPM packages",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "packages": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of package names to get repository stats for"
+          }
+        },
+        "required": [
+          "packages"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "annotations": {
+        "title": "Get NPM Package Repository Stats (GitHub)",
+        "readOnlyHint": true,
+        "idempotentHint": true,
+        "openWorldHint": true
+      }
+    },
+    {
+      "name": "npmDeprecated",
+      "description": "Check if packages are deprecated",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "packages": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of package names to check for deprecation"
+          }
+        },
+        "required": [
+          "packages"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "annotations": {
+        "title": "Check NPM Package Deprecation Status",
+        "readOnlyHint": true,
+        "idempotentHint": true,
+        "openWorldHint": true
+      }
+    },
+    {
+      "name": "npmChangelogAnalysis",
+      "description": "Analyze changelog and release history of packages",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "packages": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of package names to analyze changelogs for"
+          }
+        },
+        "required": [
+          "packages"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "annotations": {
+        "title": "Analyze NPM Package Changelog (GitHub)",
+        "readOnlyHint": true,
+        "idempotentHint": true,
+        "openWorldHint": true
+      }
+    },
+    {
+      "name": "npmAlternatives",
+      "description": "Find alternative packages with similar functionality",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "packages": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of package names to find alternatives for"
+          }
+        },
+        "required": [
+          "packages"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "annotations": {
+        "title": "Find NPM Package Alternatives",
+        "readOnlyHint": true,
+        "idempotentHint": false,
+        "openWorldHint": true
+      }
+    },
+    {
+      "name": "npmQuality",
+      "description": "Analyze package quality metrics",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "packages": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of package names to analyze"
+          }
+        },
+        "required": [
+          "packages"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "annotations": {
+        "title": "Analyze NPM Package Quality (NPMS.io)",
+        "readOnlyHint": true,
+        "idempotentHint": true,
+        "openWorldHint": true
+      }
+    },
+    {
+      "name": "npmMaintenance",
+      "description": "Analyze package maintenance metrics",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "packages": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of package names to analyze"
+          }
+        },
+        "required": [
+          "packages"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "annotations": {
+        "title": "Analyze NPM Package Maintenance (NPMS.io)",
+        "readOnlyHint": true,
+        "idempotentHint": true,
+        "openWorldHint": true
+      }
+    }
+  ]
+}

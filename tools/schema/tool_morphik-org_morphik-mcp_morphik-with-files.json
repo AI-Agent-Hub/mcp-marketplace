@@ -1,0 +1,16 @@
+npm warn exec The following package was not found and will be installed: @modelcontextprotocol/inspector@0.14.0
+npm error code ETIMEDOUT
+npm error syscall read
+npm error errno -60
+npm error network read ETIMEDOUT
+npm error network This is a problem related to network connectivity.
+npm error network In most cases you are behind a proxy or have bad network settings.
+npm error network
+npm error network If you are behind a proxy, please make sure that the
+npm error network 'proxy' config is set properly.  See: 'npm help config'
+npm notice
+npm notice New minor version of npm available! 11.3.0 -> 11.4.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.4.1
+npm notice To update run: npm install -g npm@11.4.1
+npm notice
+npm error A complete log of this run can be found in: /Users/xichen.dxc/Desktop/project/gitlab/ai_agent_marketplace_hub/<path_to_your_home_directory/.npm/_logs/2025-06-06T14_56_38_784Z-debug-0.log

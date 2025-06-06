@@ -1,0 +1,80 @@
+{
+  "tools": [
+    {
+      "name": "control_device",
+      "description": "Control a Home Assistant entity by turning it on or off.\n    \n    Args:\n        entity_id: The Home Assistant entity ID to control (format: domain.entity)\n        state: The desired state ('on' or 'off')\n    ",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "entity_id": {
+            "title": "Entity Id",
+            "type": "string"
+          },
+          "state": {
+            "title": "State",
+            "type": "string"
+          }
+        },
+        "required": [
+          "entity_id",
+          "state"
+        ],
+        "title": "control_deviceArguments"
+      }
+    },
+    {
+      "name": "search_entities",
+      "description": "Search for Home Assistant entities matching a natural language description.\n    \n    Args:\n        description: Natural language description of the entity (e.g., \"office light\", \"kitchen fan\")\n    \n    Returns:\n        A list of matching entity IDs with their friendly names, or an error message\n    ",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "title": "Description",
+            "type": "string"
+          }
+        },
+        "required": [
+          "description"
+        ],
+        "title": "search_entitiesArguments"
+      }
+    },
+    {
+      "name": "set_device_color",
+      "description": "Set the color and optionally brightness of a light entity.\n    \n    Args:\n        entity_id: The Home Assistant entity ID to control (format: light.entity)\n        red: Red component (0-255)\n        green: Green component (0-255)\n        blue: Blue component (0-255)\n        brightness: Optional brightness level (0-255)\n    ",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "entity_id": {
+            "title": "Entity Id",
+            "type": "string"
+          },
+          "red": {
+            "title": "Red",
+            "type": "integer"
+          },
+          "green": {
+            "title": "Green",
+            "type": "integer"
+          },
+          "blue": {
+            "title": "Blue",
+            "type": "integer"
+          },
+          "brightness": {
+            "default": null,
+            "title": "Brightness",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "entity_id",
+          "red",
+          "green",
+          "blue"
+        ],
+        "title": "set_device_colorArguments"
+      }
+    }
+  ]
+}

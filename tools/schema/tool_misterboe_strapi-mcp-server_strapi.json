@@ -1,0 +1,171 @@
+{
+  "tools": [
+    {
+      "name": "strapi_list_servers",
+      "description": "List all available Strapi servers from the configuration.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    },
+    {
+      "name": "strapi_get_content_types",
+      "description": "Get all content types from Strapi. Returns the complete schema of all content types.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "server": {
+            "type": "string",
+            "description": "The name of the server to connect to"
+          }
+        },
+        "required": [
+          "server"
+        ]
+      }
+    },
+    {
+      "name": "strapi_get_components",
+      "description": "Get all components from Strapi with pagination support. Returns both component data and pagination metadata (page, pageSize, total, pageCount).",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "server": {
+            "type": "string",
+            "description": "The name of the server to connect to"
+          },
+          "page": {
+            "type": "number",
+            "description": "Page number (starts at 1)",
+            "minimum": 1,
+            "default": 1
+          },
+          "pageSize": {
+            "type": "number",
+            "description": "Number of items per page",
+            "minimum": 1,
+            "default": 25
+          }
+        },
+        "required": [
+          "server"
+        ]
+      }
+    },
+    {
+      "name": "strapi_rest",
+      "description": "Execute REST API requests against Strapi endpoints. IMPORTANT: All write operations (POST, PUT, DELETE) require explicit user authorization via the userAuthorized parameter.\n\n1. Reading components:\nparams: { populate: ['SEO'] } // Populate a component\nparams: { populate: { SEO: { fields: ['Title', 'seoDescription'] } } } // With field selection\n\n2. Updating components (REQUIRES USER AUTHORIZATION):\nbody: {\n  data: {\n    // For single components:\n    componentName: {\n      Title: 'value',\n      seoDescription: 'value'\n    },\n    // For repeatable components:\n    componentName: [\n      { field: 'value' }\n    ]\n  }\n}\nuserAuthorized: true // Must set this to true for POST/PUT/DELETE after getting user permission\n\n3. Other parameters:\n- fields: Select specific fields\n- filters: Filter results\n- sort: Sort results\n- pagination: Page through results",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "server": {
+            "type": "string",
+            "description": "The name of the server to connect to"
+          },
+          "endpoint": {
+            "type": "string",
+            "description": "The API endpoint (e.g., 'api/articles')"
+          },
+          "method": {
+            "type": "string",
+            "enum": [
+              "GET",
+              "POST",
+              "PUT",
+              "DELETE"
+            ],
+            "description": "HTTP method to use",
+            "default": "GET"
+          },
+          "params": {
+            "type": "object",
+            "description": "Optional query parameters for GET requests. For components, use populate: ['componentName'] or populate: { componentName: { fields: ['field1'] } }",
+            "additionalProperties": true,
+            "required": false
+          },
+          "body": {
+            "type": "object",
+            "description": "Request body for POST/PUT requests. For components, use: { data: { componentName: { field: 'value' } } } for single components or { data: { componentName: [{ field: 'value' }] } } for repeatable components",
+            "additionalProperties": true,
+            "required": false
+          },
+          "userAuthorized": {
+            "type": "boolean",
+            "description": "REQUIRED for POST/PUT/DELETE operations. Client MUST obtain explicit user authorization before setting this to true.",
+            "default": false
+          }
+        },
+        "required": [
+          "server",
+          "endpoint"
+        ]
+      }
+    },
+    {
+      "name": "strapi_upload_media",
+      "description": "Upload media to Strapi's media library from a URL with format conversion, quality control, and metadata options. IMPORTANT: This is a write operation that REQUIRES explicit user authorization via the userAuthorized parameter.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "server": {
+            "type": "string",
+            "description": "The name of the server to connect to"
+          },
+          "url": {
+            "type": "string",
+            "description": "URL of the image to upload"
+          },
+          "format": {
+            "type": "string",
+            "enum": [
+              "jpeg",
+              "png",
+              "webp",
+              "original"
+            ],
+            "description": "Target format for the image. Use 'original' to keep the source format.",
+            "default": "original"
+          },
+          "quality": {
+            "type": "number",
+            "description": "Image quality (1-100). Only applies when converting formats.",
+            "minimum": 1,
+            "maximum": 100,
+            "default": 80
+          },
+          "metadata": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Name of the file"
+              },
+              "caption": {
+                "type": "string",
+                "description": "Caption for the image"
+              },
+              "alternativeText": {
+                "type": "string",
+                "description": "Alternative text for accessibility"
+              },
+              "description": {
+                "type": "string",
+                "description": "Detailed description of the image"
+              }
+            }
+          },
+          "userAuthorized": {
+            "type": "boolean",
+            "description": "REQUIRED for media upload operations. Client MUST obtain explicit user authorization before setting this to true.",
+            "default": false
+          }
+        },
+        "required": [
+          "server",
+          "url"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,265 @@
+{
+  "tools": [
+    {
+      "name": "ping",
+      "description": "Simple ping command to check server connectivity",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "title": "pingArguments"
+      }
+    },
+    {
+      "name": "get_qgis_info",
+      "description": "Get QGIS information",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "title": "get_qgis_infoArguments"
+      }
+    },
+    {
+      "name": "load_project",
+      "description": "Load a QGIS project from the specified path.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "title": "Path",
+            "type": "string"
+          }
+        },
+        "required": [
+          "path"
+        ],
+        "title": "load_projectArguments"
+      }
+    },
+    {
+      "name": "create_new_project",
+      "description": "Create a new project a save it",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "title": "Path",
+            "type": "string"
+          }
+        },
+        "required": [
+          "path"
+        ],
+        "title": "create_new_projectArguments"
+      }
+    },
+    {
+      "name": "get_project_info",
+      "description": "Get current project information",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "title": "get_project_infoArguments"
+      }
+    },
+    {
+      "name": "add_vector_layer",
+      "description": "Add a vector layer to the project.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "title": "Path",
+            "type": "string"
+          },
+          "provider": {
+            "default": "ogr",
+            "title": "Provider",
+            "type": "string"
+          },
+          "name": {
+            "default": null,
+            "title": "Name",
+            "type": "string"
+          }
+        },
+        "required": [
+          "path"
+        ],
+        "title": "add_vector_layerArguments"
+      }
+    },
+    {
+      "name": "add_raster_layer",
+      "description": "Add a raster layer to the project.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "title": "Path",
+            "type": "string"
+          },
+          "provider": {
+            "default": "gdal",
+            "title": "Provider",
+            "type": "string"
+          },
+          "name": {
+            "default": null,
+            "title": "Name",
+            "type": "string"
+          }
+        },
+        "required": [
+          "path"
+        ],
+        "title": "add_raster_layerArguments"
+      }
+    },
+    {
+      "name": "get_layers",
+      "description": "Retrieve all layers in the current project.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "title": "get_layersArguments"
+      }
+    },
+    {
+      "name": "remove_layer",
+      "description": "Remove a layer from the project by its ID.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "layer_id": {
+            "title": "Layer Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "layer_id"
+        ],
+        "title": "remove_layerArguments"
+      }
+    },
+    {
+      "name": "zoom_to_layer",
+      "description": "Zoom to the extent of a specified layer.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "layer_id": {
+            "title": "Layer Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "layer_id"
+        ],
+        "title": "zoom_to_layerArguments"
+      }
+    },
+    {
+      "name": "get_layer_features",
+      "description": "Retrieve features from a vector layer with an optional limit.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "layer_id": {
+            "title": "Layer Id",
+            "type": "string"
+          },
+          "limit": {
+            "default": 10,
+            "title": "Limit",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "layer_id"
+        ],
+        "title": "get_layer_featuresArguments"
+      }
+    },
+    {
+      "name": "execute_processing",
+      "description": "Execute a processing algorithm with the given parameters.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "algorithm": {
+            "title": "Algorithm",
+            "type": "string"
+          },
+          "parameters": {
+            "title": "Parameters",
+            "type": "object"
+          }
+        },
+        "required": [
+          "algorithm",
+          "parameters"
+        ],
+        "title": "execute_processingArguments"
+      }
+    },
+    {
+      "name": "save_project",
+      "description": "Save the current project to the given path, or to the current project path if not specified.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "default": null,
+            "title": "Path",
+            "type": "string"
+          }
+        },
+        "title": "save_projectArguments"
+      }
+    },
+    {
+      "name": "render_map",
+      "description": "Render the current map view to an image file with the specified dimensions.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "title": "Path",
+            "type": "string"
+          },
+          "width": {
+            "default": 800,
+            "title": "Width",
+            "type": "integer"
+          },
+          "height": {
+            "default": 600,
+            "title": "Height",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "path"
+        ],
+        "title": "render_mapArguments"
+      }
+    },
+    {
+      "name": "execute_code",
+      "description": "Execute arbitrary PyQGIS code provided as a string.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "title": "Code",
+            "type": "string"
+          }
+        },
+        "required": [
+          "code"
+        ],
+        "title": "execute_codeArguments"
+      }
+    }
+  ]
+}

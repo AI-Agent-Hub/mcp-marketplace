@@ -1,0 +1,372 @@
+{
+  "tools": [
+    {
+      "name": "get_config",
+      "description": "\n                        Get the complete server configuration as JSON. Config includes fields for:\n                        - blockedCommands (array of blocked shell commands)\n                        - defaultShell (shell to use for commands)\n                        - allowedDirectories (paths the server can access)\n                        - fileReadLineLimit (max lines for read_file, default 1000)\n                        - fileWriteLineLimit (max lines per write_file call, default 50)\n                        - telemetryEnabled (boolean for telemetry opt-in/out)\n                        -  version (version of the DesktopCommander)\n                        This command can be referenced as \"DC: ...\" or \"use Desktop Commander to ...\" in your instructions.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "set_config_value",
+      "description": "\n                        Set a specific configuration value by key.\n                        \n                        WARNING: Should be used in a separate chat from file operations and \n                        command execution to prevent security issues.\n                        \n                        Config keys include:\n                        - blockedCommands (array)\n                        - defaultShell (string)\n                        - allowedDirectories (array of paths)\n                        - fileReadLineLimit (number, max lines for read_file)\n                        - fileWriteLineLimit (number, max lines per write_file call)\n                        - telemetryEnabled (boolean)\n                        \n                        IMPORTANT: Setting allowedDirectories to an empty array ([]) allows full access \n                        to the entire file system, regardless of the operating system.\n                        \n                        This command can be referenced as \"DC: ...\" or \"use Desktop Commander to ...\" in your instructions.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string"
+          },
+          "value": {}
+        },
+        "required": [
+          "key"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "read_file",
+      "description": "\n                        Read the contents of a file from the file system or a URL with optional offset and length parameters.\n                        \n                        Prefer this over 'execute_command' with cat/type for viewing files.\n                        \n                        Supports partial file reading with:\n                        - 'offset' (start line, default: 0)\n                        - 'length' (max lines to read, default: configurable via 'fileReadLineLimit' setting, initially 1000)\n                        \n                        When reading from the file system, only works within allowed directories.\n                        Can fetch content from URLs when isUrl parameter is set to true\n                        (URLs are always read in full regardless of offset/length).\n                        \n                        Handles text files normally and image files are returned as viewable images.\n                        Recognized image types: PNG, JPEG, GIF, WebP.\n                        \n                        IMPORTANT: Always use absolute paths (starting with '/' or drive letter like 'C:\\') for reliability. Relative paths may fail as they depend on the current working directory. Tilde paths (~/...) might not work in all contexts. Unless the user explicitly asks for relative paths, use absolute paths.\n                        This command can be referenced as \"DC: ...\" or \"use Desktop Commander to ...\" in your instructions.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "isUrl": {
+            "type": "boolean",
+            "default": false
+          },
+          "offset": {
+            "type": "number",
+            "default": 0
+          },
+          "length": {
+            "type": "number",
+            "default": 1000
+          }
+        },
+        "required": [
+          "path"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "read_multiple_files",
+      "description": "\n                        Read the contents of multiple files simultaneously.\n                        \n                        Each file's content is returned with its path as a reference.\n                        Handles text files normally and renders images as viewable content.\n                        Recognized image types: PNG, JPEG, GIF, WebP.\n                        \n                        Failed reads for individual files won't stop the entire operation.\n                        Only works within allowed directories.\n                        \n                        IMPORTANT: Always use absolute paths (starting with '/' or drive letter like 'C:\\') for reliability. Relative paths may fail as they depend on the current working directory. Tilde paths (~/...) might not work in all contexts. Unless the user explicitly asks for relative paths, use absolute paths.\n                        This command can be referenced as \"DC: ...\" or \"use Desktop Commander to ...\" in your instructions.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "paths"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "write_file",
+      "description": "\n                        Write or append to file contents with a configurable line limit per call (default: 50 lines).\n                        THIS IS A STRICT REQUIREMENT. ANY file with more than the configured limit MUST BE written in chunks or IT WILL FAIL.\n\n                        ⚠️ IMPORTANT: PREVENTATIVE CHUNKING REQUIRED in these scenarios:\n                        1. When content exceeds 2,000 words or 30 lines\n                        2. When writing MULTIPLE files one after another (each next file is more likely to be truncated)\n                        3. When the file is the LAST ONE in a series of operations in the same message\n                        \n                        ALWAYS split files writes in to multiple smaller writes PREEMPTIVELY without asking the user in these scenarios.\n                        \n                        REQUIRED PROCESS FOR LARGE NEW FILE WRITES OR REWRITES:\n                        1. FIRST → write_file(filePath, firstChunk, {mode: 'rewrite'})\n                        2. THEN → write_file(filePath, secondChunk, {mode: 'append'})\n                        3. THEN → write_file(filePath, thirdChunk, {mode: 'append'})\n                        ... and so on for each chunk\n                        \n                        HANDLING TRUNCATION (\"Continue\" prompts):\n                        If user asked to \"Continue\" after unfinished file write:\n                        1. First, read the file to find out what content was successfully written\n                        2. Identify exactly where the content was truncated\n                        3. Continue writing ONLY the remaining content using {mode: 'append'}\n                        4. Split the remaining content into smaller chunks (15-20 lines per chunk)\n                        \n                        Files over the line limit (configurable via 'fileWriteLineLimit' setting) WILL BE REJECTED if not broken into chunks as described above.\n                        Only works within allowed directories.\n                        \n                        IMPORTANT: Always use absolute paths (starting with '/' or drive letter like 'C:\\') for reliability. Relative paths may fail as they depend on the current working directory. Tilde paths (~/...) might not work in all contexts. Unless the user explicitly asks for relative paths, use absolute paths.\n                        This command can be referenced as \"DC: ...\" or \"use Desktop Commander to ...\" in your instructions.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          },
+          "mode": {
+            "type": "string",
+            "enum": [
+              "rewrite",
+              "append"
+            ],
+            "default": "rewrite"
+          }
+        },
+        "required": [
+          "path",
+          "content"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "create_directory",
+      "description": "\n                        Create a new directory or ensure a directory exists.\n                        \n                        Can create multiple nested directories in one operation.\n                        Only works within allowed directories.\n                        \n                        IMPORTANT: Always use absolute paths (starting with '/' or drive letter like 'C:\\') for reliability. Relative paths may fail as they depend on the current working directory. Tilde paths (~/...) might not work in all contexts. Unless the user explicitly asks for relative paths, use absolute paths.\n                        This command can be referenced as \"DC: ...\" or \"use Desktop Commander to ...\" in your instructions.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "path"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "list_directory",
+      "description": "\n                        Get a detailed listing of all files and directories in a specified path.\n                        \n                        Use this instead of 'execute_command' with ls/dir commands.\n                        Results distinguish between files and directories with [FILE] and [DIR] prefixes.\n                        Only works within allowed directories.\n                        \n                        IMPORTANT: Always use absolute paths (starting with '/' or drive letter like 'C:\\') for reliability. Relative paths may fail as they depend on the current working directory. Tilde paths (~/...) might not work in all contexts. Unless the user explicitly asks for relative paths, use absolute paths.\n                        This command can be referenced as \"DC: ...\" or \"use Desktop Commander to ...\" in your instructions.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "path"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "move_file",
+      "description": "\n                        Move or rename files and directories.\n                        \n                        Can move files between directories and rename them in a single operation.\n                        Both source and destination must be within allowed directories.\n                        \n                        IMPORTANT: Always use absolute paths (starting with '/' or drive letter like 'C:\\') for reliability. Relative paths may fail as they depend on the current working directory. Tilde paths (~/...) might not work in all contexts. Unless the user explicitly asks for relative paths, use absolute paths.\n                        This command can be referenced as \"DC: ...\" or \"use Desktop Commander to ...\" in your instructions.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "source": {
+            "type": "string"
+          },
+          "destination": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "source",
+          "destination"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "search_files",
+      "description": "\n                        Finds files by name using a case-insensitive substring matching.\n                        \n                        Use this instead of 'execute_command' with find/dir/ls for locating files.\n                        Searches through all subdirectories from the starting path.\n                        \n                        Has a default timeout of 30 seconds which can be customized using the timeoutMs parameter.\n                        Only searches within allowed directories.\n                        \n                        IMPORTANT: Always use absolute paths (starting with '/' or drive letter like 'C:\\') for reliability. Relative paths may fail as they depend on the current working directory. Tilde paths (~/...) might not work in all contexts. Unless the user explicitly asks for relative paths, use absolute paths.\n                        This command can be referenced as \"DC: ...\" or \"use Desktop Commander to ...\" in your instructions.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "pattern": {
+            "type": "string"
+          },
+          "timeoutMs": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "path",
+          "pattern"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "search_code",
+      "description": "\n                        Search for text/code patterns within file contents using ripgrep.\n                        \n                        Use this instead of 'execute_command' with grep/find for searching code content.\n                        Fast and powerful search similar to VS Code search functionality.\n                        \n                        Supports regular expressions, file pattern filtering, and context lines.\n                        Has a default timeout of 30 seconds which can be customized.\n                        Only searches within allowed directories.\n                        \n                        IMPORTANT: Always use absolute paths (starting with '/' or drive letter like 'C:\\') for reliability. Relative paths may fail as they depend on the current working directory. Tilde paths (~/...) might not work in all contexts. Unless the user explicitly asks for relative paths, use absolute paths.\n                        This command can be referenced as \"DC: ...\" or \"use Desktop Commander to ...\" in your instructions.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "pattern": {
+            "type": "string"
+          },
+          "filePattern": {
+            "type": "string"
+          },
+          "ignoreCase": {
+            "type": "boolean"
+          },
+          "maxResults": {
+            "type": "number"
+          },
+          "includeHidden": {
+            "type": "boolean"
+          },
+          "contextLines": {
+            "type": "number"
+          },
+          "timeoutMs": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "path",
+          "pattern"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "get_file_info",
+      "description": "\n                        Retrieve detailed metadata about a file or directory including:\n                        - size\n                        - creation time\n                        - last modified time \n                        - permissions\n                        - type\n                        - lineCount (for text files)\n                        - lastLine (zero-indexed number of last line, for text files)\n                        - appendPosition (line number for appending, for text files)\n                        \n                        Only works within allowed directories.\n                        \n                        IMPORTANT: Always use absolute paths (starting with '/' or drive letter like 'C:\\') for reliability. Relative paths may fail as they depend on the current working directory. Tilde paths (~/...) might not work in all contexts. Unless the user explicitly asks for relative paths, use absolute paths.\n                        This command can be referenced as \"DC: ...\" or \"use Desktop Commander to ...\" in your instructions.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "path"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "edit_block",
+      "description": "\n                        Apply surgical text replacements to files.\n                        \n                        BEST PRACTICE: Make multiple small, focused edits rather than one large edit.\n                        Each edit_block call should change only what needs to be changed - include just enough \n                        context to uniquely identify the text being modified.\n                        \n                        Takes:\n                        - file_path: Path to the file to edit\n                        - old_string: Text to replace\n                        - new_string: Replacement text\n                        - expected_replacements: Optional parameter for number of replacements\n                        \n                        By default, replaces only ONE occurrence of the search text.\n                        To replace multiple occurrences, provide the expected_replacements parameter with\n                        the exact number of matches expected.\n                        \n                        UNIQUENESS REQUIREMENT: When expected_replacements=1 (default), include the minimal\n                        amount of context necessary (typically 1-3 lines) before and after the change point,\n                        with exact whitespace and indentation.\n                        \n                        When editing multiple sections, make separate edit_block calls for each distinct change\n                        rather than one large replacement.\n                        \n                        When a close but non-exact match is found, a character-level diff is shown in the format:\n                        common_prefix{-removed-}{+added+}common_suffix to help you identify what's different.\n                        \n                        Similar to write_file, there is a configurable line limit (fileWriteLineLimit) that warns\n                        if the edited file exceeds this limit. If this happens, consider breaking your edits into\n                        smaller, more focused changes.\n                        \n                        IMPORTANT: Always use absolute paths (starting with '/' or drive letter like 'C:\\') for reliability. Relative paths may fail as they depend on the current working directory. Tilde paths (~/...) might not work in all contexts. Unless the user explicitly asks for relative paths, use absolute paths.\n                        This command can be referenced as \"DC: ...\" or \"use Desktop Commander to ...\" in your instructions.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "file_path": {
+            "type": "string"
+          },
+          "old_string": {
+            "type": "string"
+          },
+          "new_string": {
+            "type": "string"
+          },
+          "expected_replacements": {
+            "type": "number",
+            "default": 1
+          }
+        },
+        "required": [
+          "file_path",
+          "old_string",
+          "new_string"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "execute_command",
+      "description": "\n                        Execute a terminal command with timeout.\n                        \n                        Command will continue running in background if it doesn't complete within timeout.\n                        \n                        NOTE: For file operations, prefer specialized tools like read_file, search_code, \n                        list_directory instead of cat, grep, or ls commands.\n                        \n                        IMPORTANT: Always use absolute paths (starting with '/' or drive letter like 'C:\\') for reliability. Relative paths may fail as they depend on the current working directory. Tilde paths (~/...) might not work in all contexts. Unless the user explicitly asks for relative paths, use absolute paths.\n                        This command can be referenced as \"DC: ...\" or \"use Desktop Commander to ...\" in your instructions.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "command": {
+            "type": "string"
+          },
+          "timeout_ms": {
+            "type": "number"
+          },
+          "shell": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "command",
+          "timeout_ms"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "read_output",
+      "description": "\n                        Read new output from a running terminal session.\n                        Set timeout_ms for long running commands.\n                        \n                        This command can be referenced as \"DC: ...\" or \"use Desktop Commander to ...\" in your instructions.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "pid": {
+            "type": "number"
+          },
+          "timeout_ms": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "pid"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "force_terminate",
+      "description": "\n                        Force terminate a running terminal session.\n                        \n                        This command can be referenced as \"DC: ...\" or \"use Desktop Commander to ...\" in your instructions.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "pid": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "pid"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "list_sessions",
+      "description": "\n                        List all active terminal sessions.\n                        \n                        This command can be referenced as \"DC: ...\" or \"use Desktop Commander to ...\" in your instructions.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "list_processes",
+      "description": "\n                        List all running processes.\n                        \n                        Returns process information including PID, command name, CPU usage, and memory usage.\n                        \n                        This command can be referenced as \"DC: ...\" or \"use Desktop Commander to ...\" in your instructions.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "kill_process",
+      "description": "\n                        Terminate a running process by PID.\n                        \n                        Use with caution as this will forcefully terminate the specified process.\n                        \n                        This command can be referenced as \"DC: ...\" or \"use Desktop Commander to ...\" in your instructions.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "pid": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "pid"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    }
+  ]
+}

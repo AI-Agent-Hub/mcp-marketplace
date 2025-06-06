@@ -1,0 +1,435 @@
+{
+  "tools": [
+    {
+      "name": "salesforce_search_objects",
+      "description": "Search for Salesforce standard and custom objects by name pattern. Examples: 'Account' will find Account, AccountHistory; 'Order' will find WorkOrder, ServiceOrder__c etc.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "searchPattern": {
+            "type": "string",
+            "description": "Search pattern to find objects (e.g., 'Account Coverage' will find objects like 'AccountCoverage__c')"
+          }
+        },
+        "required": [
+          "searchPattern"
+        ]
+      }
+    },
+    {
+      "name": "salesforce_describe_object",
+      "description": "Get detailed schema metadata including all fields, relationships, and field properties of any Salesforce object. Examples: 'Account' shows all Account fields including custom fields; 'Case' shows all Case fields including relationships to Account, Contact etc.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "objectName": {
+            "type": "string",
+            "description": "API name of the object (e.g., 'Account', 'Contact', 'Custom_Object__c')"
+          }
+        },
+        "required": [
+          "objectName"
+        ]
+      }
+    },
+    {
+      "name": "salesforce_query_records",
+      "description": "Query records from any Salesforce object using SOQL, including relationship queries.\n\nExamples:\n1. Parent-to-child query (e.g., Account with Contacts):\n   - objectName: \"Account\"\n   - fields: [\"Name\", \"(SELECT Id, FirstName, LastName FROM Contacts)\"]\n\n2. Child-to-parent query (e.g., Contact with Account details):\n   - objectName: \"Contact\"\n   - fields: [\"FirstName\", \"LastName\", \"Account.Name\", \"Account.Industry\"]\n\n3. Multiple level query (e.g., Contact -> Account -> Owner):\n   - objectName: \"Contact\"\n   - fields: [\"Name\", \"Account.Name\", \"Account.Owner.Name\"]\n\n4. Related object filtering:\n   - objectName: \"Contact\"\n   - fields: [\"Name\", \"Account.Name\"]\n   - whereClause: \"Account.Industry = 'Technology'\"\n\nNote: When using relationship fields:\n- Use dot notation for parent relationships (e.g., \"Account.Name\")\n- Use subqueries in parentheses for child relationships (e.g., \"(SELECT Id FROM Contacts)\")\n- Custom relationship fields end in \"__r\" (e.g., \"CustomObject__r.Name\")",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "objectName": {
+            "type": "string",
+            "description": "API name of the object to query"
+          },
+          "fields": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of fields to retrieve, including relationship fields"
+          },
+          "whereClause": {
+            "type": "string",
+            "description": "WHERE clause, can include conditions on related objects",
+            "optional": true
+          },
+          "orderBy": {
+            "type": "string",
+            "description": "ORDER BY clause, can include fields from related objects",
+            "optional": true
+          },
+          "limit": {
+            "type": "number",
+            "description": "Maximum number of records to return",
+            "optional": true
+          }
+        },
+        "required": [
+          "objectName",
+          "fields"
+        ]
+      }
+    },
+    {
+      "name": "salesforce_dml_records",
+      "description": "Perform data manipulation operations on Salesforce records:\n  - insert: Create new records\n  - update: Modify existing records (requires Id)\n  - delete: Remove records (requires Id)\n  - upsert: Insert or update based on external ID field\n  Examples: Insert new Accounts, Update Case status, Delete old records, Upsert based on custom external ID",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "operation": {
+            "type": "string",
+            "enum": [
+              "insert",
+              "update",
+              "delete",
+              "upsert"
+            ],
+            "description": "Type of DML operation to perform"
+          },
+          "objectName": {
+            "type": "string",
+            "description": "API name of the object"
+          },
+          "records": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            },
+            "description": "Array of records to process"
+          },
+          "externalIdField": {
+            "type": "string",
+            "description": "External ID field name for upsert operations",
+            "optional": true
+          }
+        },
+        "required": [
+          "operation",
+          "objectName",
+          "records"
+        ]
+      }
+    },
+    {
+      "name": "salesforce_manage_object",
+      "description": "Create new custom objects or modify existing ones in Salesforce:\n  - Create: New custom objects with fields, relationships, and settings\n  - Update: Modify existing object settings, labels, sharing model\n  Examples: Create Customer_Feedback__c object, Update object sharing settings\n  Note: Changes affect metadata and require proper permissions",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "operation": {
+            "type": "string",
+            "enum": [
+              "create",
+              "update"
+            ],
+            "description": "Whether to create new object or update existing"
+          },
+          "objectName": {
+            "type": "string",
+            "description": "API name for the object (without __c suffix)"
+          },
+          "label": {
+            "type": "string",
+            "description": "Label for the object"
+          },
+          "pluralLabel": {
+            "type": "string",
+            "description": "Plural label for the object"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the object",
+            "optional": true
+          },
+          "nameFieldLabel": {
+            "type": "string",
+            "description": "Label for the name field",
+            "optional": true
+          },
+          "nameFieldType": {
+            "type": "string",
+            "enum": [
+              "Text",
+              "AutoNumber"
+            ],
+            "description": "Type of the name field",
+            "optional": true
+          },
+          "nameFieldFormat": {
+            "type": "string",
+            "description": "Display format for AutoNumber field (e.g., 'A-{0000}')",
+            "optional": true
+          },
+          "sharingModel": {
+            "type": "string",
+            "enum": [
+              "ReadWrite",
+              "Read",
+              "Private",
+              "ControlledByParent"
+            ],
+            "description": "Sharing model for the object",
+            "optional": true
+          }
+        },
+        "required": [
+          "operation",
+          "objectName"
+        ]
+      }
+    },
+    {
+      "name": "salesforce_manage_field",
+      "description": "Create new custom fields or modify existing fields on any Salesforce object:\n  - Field Types: Text, Number, Date, Lookup, Master-Detail, Picklist etc.\n  - Properties: Required, Unique, External ID, Length, Scale etc.\n  - Relationships: Create lookups and master-detail relationships\n  Examples: Add Rating__c picklist to Account, Create Account lookup on Custom Object\n  Note: Changes affect metadata and require proper permissions",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "operation": {
+            "type": "string",
+            "enum": [
+              "create",
+              "update"
+            ],
+            "description": "Whether to create new field or update existing"
+          },
+          "objectName": {
+            "type": "string",
+            "description": "API name of the object to add/modify the field"
+          },
+          "fieldName": {
+            "type": "string",
+            "description": "API name for the field (without __c suffix)"
+          },
+          "label": {
+            "type": "string",
+            "description": "Label for the field",
+            "optional": true
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "Checkbox",
+              "Currency",
+              "Date",
+              "DateTime",
+              "Email",
+              "Number",
+              "Percent",
+              "Phone",
+              "Picklist",
+              "MultiselectPicklist",
+              "Text",
+              "TextArea",
+              "LongTextArea",
+              "Html",
+              "Url",
+              "Lookup",
+              "MasterDetail"
+            ],
+            "description": "Field type (required for create)",
+            "optional": true
+          },
+          "required": {
+            "type": "boolean",
+            "description": "Whether the field is required",
+            "optional": true
+          },
+          "unique": {
+            "type": "boolean",
+            "description": "Whether the field value must be unique",
+            "optional": true
+          },
+          "externalId": {
+            "type": "boolean",
+            "description": "Whether the field is an external ID",
+            "optional": true
+          },
+          "length": {
+            "type": "number",
+            "description": "Length for text fields",
+            "optional": true
+          },
+          "precision": {
+            "type": "number",
+            "description": "Precision for numeric fields",
+            "optional": true
+          },
+          "scale": {
+            "type": "number",
+            "description": "Scale for numeric fields",
+            "optional": true
+          },
+          "referenceTo": {
+            "type": "string",
+            "description": "API name of the object to reference (for Lookup/MasterDetail)",
+            "optional": true
+          },
+          "relationshipLabel": {
+            "type": "string",
+            "description": "Label for the relationship (for Lookup/MasterDetail)",
+            "optional": true
+          },
+          "relationshipName": {
+            "type": "string",
+            "description": "API name for the relationship (for Lookup/MasterDetail)",
+            "optional": true
+          },
+          "deleteConstraint": {
+            "type": "string",
+            "enum": [
+              "Cascade",
+              "Restrict",
+              "SetNull"
+            ],
+            "description": "Delete constraint for Lookup fields",
+            "optional": true
+          },
+          "picklistValues": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "label": {
+                  "type": "string"
+                },
+                "isDefault": {
+                  "type": "boolean",
+                  "optional": true
+                }
+              }
+            },
+            "description": "Values for Picklist/MultiselectPicklist fields",
+            "optional": true
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the field",
+            "optional": true
+          }
+        },
+        "required": [
+          "operation",
+          "objectName",
+          "fieldName"
+        ]
+      }
+    },
+    {
+      "name": "salesforce_search_all",
+      "description": "Search across multiple Salesforce objects using SOSL (Salesforce Object Search Language).\n  \nExamples:\n1. Basic search across all objects:\n   {\n     \"searchTerm\": \"John\",\n     \"objects\": [\n       { \"name\": \"Account\", \"fields\": [\"Name\"], \"limit\": 10 },\n       { \"name\": \"Contact\", \"fields\": [\"FirstName\", \"LastName\", \"Email\"] }\n     ]\n   }\n\n2. Advanced search with filters:\n   {\n     \"searchTerm\": \"Cloud*\",\n     \"searchIn\": \"NAME FIELDS\",\n     \"objects\": [\n       { \n         \"name\": \"Account\", \n         \"fields\": [\"Name\", \"Industry\"], \n         \"orderBy\": \"Name DESC\",\n         \"where\": \"Industry = 'Technology'\"\n       }\n     ],\n     \"withClauses\": [\n       { \"type\": \"NETWORK\", \"value\": \"ALL NETWORKS\" },\n       { \"type\": \"SNIPPET\", \"fields\": [\"Description\"] }\n     ]\n   }\n\nNotes:\n- Use * and ? for wildcards in search terms\n- Each object can have its own WHERE, ORDER BY, and LIMIT clauses\n- Support for WITH clauses: DATA CATEGORY, DIVISION, METADATA, NETWORK, PRICEBOOKID, SNIPPET, SECURITY_ENFORCED\n- \"updateable\" and \"viewable\" options control record access filtering",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "searchTerm": {
+            "type": "string",
+            "description": "Text to search for (supports wildcards * and ?)"
+          },
+          "searchIn": {
+            "type": "string",
+            "enum": [
+              "ALL FIELDS",
+              "NAME FIELDS",
+              "EMAIL FIELDS",
+              "PHONE FIELDS",
+              "SIDEBAR FIELDS"
+            ],
+            "description": "Which fields to search in",
+            "optional": true
+          },
+          "objects": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "API name of the object"
+                },
+                "fields": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "description": "Fields to return for this object"
+                },
+                "where": {
+                  "type": "string",
+                  "description": "WHERE clause for this object",
+                  "optional": true
+                },
+                "orderBy": {
+                  "type": "string",
+                  "description": "ORDER BY clause for this object",
+                  "optional": true
+                },
+                "limit": {
+                  "type": "number",
+                  "description": "Maximum number of records to return for this object",
+                  "optional": true
+                }
+              },
+              "required": [
+                "name",
+                "fields"
+              ]
+            },
+            "description": "List of objects to search and their return fields"
+          },
+          "withClauses": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "DATA CATEGORY",
+                    "DIVISION",
+                    "METADATA",
+                    "NETWORK",
+                    "PRICEBOOKID",
+                    "SNIPPET",
+                    "SECURITY_ENFORCED"
+                  ]
+                },
+                "value": {
+                  "type": "string",
+                  "description": "Value for the WITH clause",
+                  "optional": true
+                },
+                "fields": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "description": "Fields for SNIPPET clause",
+                  "optional": true
+                }
+              },
+              "required": [
+                "type"
+              ]
+            },
+            "description": "Additional WITH clauses for the search",
+            "optional": true
+          },
+          "updateable": {
+            "type": "boolean",
+            "description": "Return only updateable records",
+            "optional": true
+          },
+          "viewable": {
+            "type": "boolean",
+            "description": "Return only viewable records",
+            "optional": true
+          }
+        },
+        "required": [
+          "searchTerm",
+          "objects"
+        ]
+      }
+    }
+  ]
+}

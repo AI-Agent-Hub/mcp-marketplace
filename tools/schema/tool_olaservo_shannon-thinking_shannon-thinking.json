@@ -1,0 +1,185 @@
+(node:3523) Warning: Setting the NODE_TLS_REJECT_UNAUTHORIZED environment variable to '0' makes TLS connections and HTTPS requests insecure by disabling certificate verification.
+(Use `node --trace-warnings ...` to show where the warning was created)
+{
+  "tools": [
+    {
+      "name": "shannonthinking",
+      "description": "A problem-solving tool inspired by Claude Shannon's systematic and iterative approach to complex problems.\n\nThis tool helps break down problems using Shannon's methodology of problem definition, mathematical modeling, validation, and practical implementation.\n\nWhen to use this tool:\n- Complex system analysis\n- Information processing problems\n- Engineering design challenges\n- Problems requiring theoretical frameworks\n- Optimization problems\n- Systems requiring practical implementation\n- Problems that need iterative refinement\n- Cases where experimental validation complements theory\n\nKey features:\n- Systematic progression through problem definition → constraints → modeling → validation → implementation\n- Support for revising earlier steps as understanding evolves\n- Ability to mark steps for re-examination with new information\n- Experimental validation alongside formal proofs\n- Explicit tracking of assumptions and dependencies\n- Confidence levels for each step\n- Rich feedback and validation results\n\nParameters explained:\n- thoughtType: Type of thinking step (PROBLEM_DEFINITION, CONSTRAINTS, MODEL, PROOF, IMPLEMENTATION)\n- uncertainty: Confidence level in the current thought (0-1)\n- dependencies: Which previous thoughts this builds upon\n- assumptions: Explicit listing of assumptions made\n- isRevision: Whether this revises an earlier thought\n- revisesThought: Which thought is being revised\n- recheckStep: For marking steps that need re-examination\n- proofElements: For formal validation steps\n- experimentalElements: For empirical validation\n- implementationNotes: For practical application steps\n\nThe tool supports an iterative approach:\n1. Define the problem's fundamental elements (revisable as understanding grows)\n2. Identify system constraints and limitations (can be rechecked with new information)\n3. Develop mathematical/theoretical models\n4. Validate through proofs and/or experimental testing\n5. Design and test practical implementations\n\nEach thought can build on, revise, or re-examine previous steps, creating a flexible yet rigorous problem-solving framework.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "thought": {
+            "type": "string",
+            "description": "Your current thinking step"
+          },
+          "thoughtType": {
+            "type": "string",
+            "enum": [
+              "problem_definition",
+              "constraints",
+              "model",
+              "proof",
+              "implementation"
+            ],
+            "description": "Type of thinking step"
+          },
+          "thoughtNumber": {
+            "type": "integer",
+            "description": "Current thought number",
+            "minimum": 1
+          },
+          "totalThoughts": {
+            "type": "integer",
+            "description": "Estimated total thoughts needed",
+            "minimum": 1
+          },
+          "uncertainty": {
+            "type": "number",
+            "description": "Confidence level (0-1)",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "dependencies": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "description": "Thought numbers this builds upon"
+          },
+          "assumptions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Explicit list of assumptions"
+          },
+          "nextThoughtNeeded": {
+            "type": "boolean",
+            "description": "Whether another thought step is needed"
+          },
+          "isRevision": {
+            "type": "boolean",
+            "description": "Whether this thought revises an earlier one"
+          },
+          "revisesThought": {
+            "type": "integer",
+            "description": "The thought number being revised",
+            "minimum": 1
+          },
+          "recheckStep": {
+            "type": "object",
+            "properties": {
+              "stepToRecheck": {
+                "type": "string",
+                "enum": [
+                  "problem_definition",
+                  "constraints",
+                  "model",
+                  "proof",
+                  "implementation"
+                ],
+                "description": "Which type of step needs re-examination"
+              },
+              "reason": {
+                "type": "string",
+                "description": "Why the step needs to be rechecked"
+              },
+              "newInformation": {
+                "type": "string",
+                "description": "New information prompting the recheck"
+              }
+            },
+            "required": [
+              "stepToRecheck",
+              "reason"
+            ],
+            "description": "For marking steps that need re-examination"
+          },
+          "proofElements": {
+            "type": "object",
+            "properties": {
+              "hypothesis": {
+                "type": "string",
+                "description": "The hypothesis being tested"
+              },
+              "validation": {
+                "type": "string",
+                "description": "How the hypothesis was validated"
+              }
+            },
+            "required": [
+              "hypothesis",
+              "validation"
+            ],
+            "description": "Elements required for formal proof steps"
+          },
+          "experimentalElements": {
+            "type": "object",
+            "properties": {
+              "testDescription": {
+                "type": "string",
+                "description": "Description of the experimental test"
+              },
+              "results": {
+                "type": "string",
+                "description": "Results of the experiment"
+              },
+              "confidence": {
+                "type": "number",
+                "description": "Confidence in the experimental results (0-1)",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "limitations": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Limitations of the experimental validation"
+              }
+            },
+            "required": [
+              "testDescription",
+              "results",
+              "confidence",
+              "limitations"
+            ],
+            "description": "Elements for experimental validation"
+          },
+          "implementationNotes": {
+            "type": "object",
+            "properties": {
+              "practicalConstraints": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "List of practical limitations and constraints"
+              },
+              "proposedSolution": {
+                "type": "string",
+                "description": "Detailed implementation proposal"
+              }
+            },
+            "required": [
+              "practicalConstraints",
+              "proposedSolution"
+            ],
+            "description": "Notes for practical implementation steps"
+          }
+        },
+        "required": [
+          "thought",
+          "thoughtType",
+          "thoughtNumber",
+          "totalThoughts",
+          "uncertainty",
+          "dependencies",
+          "assumptions",
+          "nextThoughtNeeded"
+        ]
+      }
+    }
+  ]
+}

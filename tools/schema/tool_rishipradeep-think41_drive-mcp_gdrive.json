@@ -1,0 +1,99 @@
+{
+  "tools": [
+    {
+      "name": "gdrive_search",
+      "description": "Search for files in Google Drive",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "Search query"
+          },
+          "pageToken": {
+            "type": "string",
+            "description": "Token for the next page of results",
+            "optional": true
+          },
+          "pageSize": {
+            "type": "number",
+            "description": "Number of results per page (max 100)",
+            "optional": true
+          }
+        },
+        "required": [
+          "query"
+        ]
+      }
+    },
+    {
+      "name": "gdrive_read_file",
+      "description": "Read contents of a file from Google Drive",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "fileId": {
+            "type": "string",
+            "description": "ID of the file to read"
+          }
+        },
+        "required": [
+          "fileId"
+        ]
+      }
+    },
+    {
+      "name": "gsheets_update_cell",
+      "description": "Update a cell value in a Google Spreadsheet",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "fileId": {
+            "type": "string",
+            "description": "ID of the spreadsheet"
+          },
+          "range": {
+            "type": "string",
+            "description": "Cell range in A1 notation (e.g. 'Sheet1!A1')"
+          },
+          "value": {
+            "type": "string",
+            "description": "New cell value"
+          }
+        },
+        "required": [
+          "fileId",
+          "range",
+          "value"
+        ]
+      }
+    },
+    {
+      "name": "gsheets_read",
+      "description": "Read data from a Google Spreadsheet with flexible options for ranges and formatting",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "spreadsheetId": {
+            "type": "string",
+            "description": "The ID of the spreadsheet to read"
+          },
+          "ranges": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Optional array of A1 notation ranges like ['Sheet1!A1:B10']. If not provided, reads entire sheet."
+          },
+          "sheetId": {
+            "type": "number",
+            "description": "Optional specific sheet ID to read. If not provided with ranges, reads first sheet."
+          }
+        },
+        "required": [
+          "spreadsheetId"
+        ]
+      }
+    }
+  ]
+}

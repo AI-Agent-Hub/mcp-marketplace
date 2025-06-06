@@ -1,0 +1,104 @@
+{
+  "tools": [
+    {
+      "name": "clickup_authenticate",
+      "description": "Authenticate with ClickUp API using an API token and workspace ID",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "object",
+            "properties": {},
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "type"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "clickup_get_task_by_custom_id",
+      "description": "Get a task by its custom ID",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "object",
+            "properties": {
+              "custom_id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "custom_id"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "type"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "clickup_get_tasks",
+      "description": "Get multiple tasks by their IDs",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "object",
+            "properties": {
+              "task_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "task_ids"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "type"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    },
+    {
+      "name": "clickup_get_task",
+      "description": "Get a task by its ID",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "object",
+            "properties": {
+              "task_id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "task_id"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "type"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    }
+  ]
+}
