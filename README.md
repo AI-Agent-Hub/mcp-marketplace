@@ -1,73 +1,74 @@
-## Open MCP Marketplace | AI Agent Marketplace Plugin from DeepNLP
+## Open MCP Marketplace | AI Agent Marketplace Index and Web Client from DeepNLP
 
-The open source MCP Marketplace plugin is a pure web-based project (html/js/css), which will display available MCP tools in the frontend and fetch meta info and mcp.json from various API endpoint provider. User can choose, manage and install their preferred MCP tools in similar functionalities (such as Map, Browser Use, Payment, Fetch, etc). It can be easily integrated to your AI apps, and upgrade the tools use ability of your AI Agent .
+![Open MCP Marketplace DeepNLP Panel](https://raw.githubusercontent.com/AI-Agent-Hub/mcp-marketplace/refs/heads/main/docs/remote_mcp_server.jpg)
+
+
+**Basic**
+Open MCP Marketplace is an open source project, which aims to make MCP and AI Agent integration **Easier**.
+
+- You can get well-cleaned up MCP Servers Meta information, Tools and Config Schema, etc. 
+- You can integrate a MCP Marketplace (web based client) button or a panel to your AI Apps. So that users can choose their preferred MCP tools (such as Map, Browser Use, Payment, Fetch, etc) to answer their questions. It can be easily integrated to your AI apps, such as Chatbot, AI Search/Deep Research Engine, Video/Image generation, Coding IDE, etc.
 
 
 **KEY Features**
 
-- Pure Web-based Agent Plugin: Show the Panel of MCP Tools from available open MCP marketplace.
-- Browser and Pagination: User can browser the MCP Tools by Category and use pagination to navigate.
-- Support various MCP Marketplace API Endpoint: Such as pulsemcp.com, deepnlp.org, etc.
-- Select and Install MCP servers: Users can choose which MCP tools to perform tasks from mcp tools marketplace with similar features, such as Map Location, Search, Fetch, Payment, etc. 
-- Autonomous MCP Tools Dispatcher (TBD): Your LLM/agent can also benifit from dispatching the query/prompt of the MCP tools, making decision on which tools to choose. The decision or dispatcher agent functions with more than the description text, but also extra information such as github stars, user reviews score, ratings and call numbers statistics.
-- Python and Typescript SDK to search and registry of MCP Servers and Tools
+
+1. MCP Server Public Index of Tools Schema and Config file
+Dataset Collection of MCP Servers Tool/Function Call Schemas from 5000+ MCP servers, Useful for Tools RAG, Tools Dispatcher research and R&D. You can search route planning or "map" keywords from raw schema files. Welcome to add your config to the index. [MCP Tool Schema](./tools/README.md)
+
+
+2. MCP Marketplace Web Integration, See Web Demo and Video how to integrate the Open MCP Marketplace to Your AI Search Engine or Agent Workflow.
+
+- **Pure Web-based Plugin** : Show the Panel of MCP Tools from available open MCP marketplace, Support Filtering, Search, Installation  <br>
+- **Browse Navigate and Pagination** : User can browser the MCP Tools by category and use pagination to navigate. <br>
+- **Customized MCP servers Selection and Installation** : Users can choose which MCP tools to perform tasks from mcp tools marketplace with similar features, such as Map Location, Search, Fetch, Payment, etc.  <br>
+
+3. Various API Endpoint Support for Your AI Client Development
+
+- **Various MCP Marketplace API Endpoint**: Get Server Schema, Such as [pulsemcp.com](http://www.pulsemcp.com), [deepnlp.org](http://www.deepnlp.org), [aiagenta2z.com](http://www.aiagenta2z.com),etc. <br>
+- **GET/UPDATE/CREATE** MCP Servers Meta information to get your MCP Server more visibilityy. <br>
+- **Python and Typescript SDK** Search and registry of MCP Servers and Tools <br>
+- **Rich Meta Data** Tools, Servers Description, URL, Category, Github stars, User reviews score, Ratings and more statistics. <br>
+- **Agent Workflow Integration (WIP)**: - Autonomous MCP Tools Dispatcher (TBD): Your LLM/agent can also benifit from dispatching the query/prompt of the MCP tools, making decision on which tools to choose. The decision or dispatcher agent functions with more than the <br>
+
+
+## 1. MCP Server Public Index of Tools Schema and <code>mcp.config</code> file
+
+See [MCP Tool Schema](./tools/README.md) for details. 
+
+Collected tools schema from google map mcp
+```
+{"name": "maps_geocode", "description": "Convert an address into geographic coordinates", "input_schema": {"type": "object", "properties": {"address": {"type": "string", "description": "The address to geocode"}}, "required": ["address"]}}
+{"name": "maps_directions", "description": "Get directions between two points", "input_schema": {"type": "object", "properties": {"origin": {"type": "string", "description": "Starting point address or coordinates"}, "destination": {"type": "string", "description": "Ending point address or coordinates"}, "mode": {"type": "string", "description": "Travel mode (driving, walking, bicycling, transit)", "enum": ["driving", "walking", "bicycling", "transit"]}}, "required": ["origin", "destination"]}}
+
+```
+
+## 2. MCP Marketplace Web Client Integration
+
+### Demo: AI Search Engine
+
+MCP Marketplace Browse and Pagination of MCP Servers [Demo](http://deepnlp.org/tool/mcp_marketplace)
 
 ![Open MCP Marketplace DeepNLP Panel](https://raw.githubusercontent.com/AI-Agent-Hub/mcp-marketplace/refs/heads/main/docs/remote_mcp_server.jpg)
 
-Related
-- [MCP Marketplace DeepNLP](http://www.deepnlp.org/store/ai-agent/mcp-server)
-- [MCP Marketplace PulseMCP](https://www.pulsemcp.com/)
-- [AI Agent Marketplace](http://www.deepnlp.org/store/ai-agent)
-
-## Update: Supported MCP Marketplace API Provider
 
 
-| Endpoint | value | description |
+
+## 3. Various API Endpoint Support for Your AI Client Development
+### Supported MCP Marketplace API Provider
+
+
+| Endpoint | API | Website |
 | --- | ---- | ---- |
-| deepnlp.org | http://www.deepnlp.org/api/mcp_marketplace/v1 | http://www.deepnlp.org/store/ai-agent/mcp-server |
+| deepnlp.org | http://www.deepnlp.org/api/mcp_marketplace/v1 | http://www.deepnlp.org/doc/mcp_marketplace |
 | pulsemcp.com | https://api.pulsemcp.com/v0beta/servers | https://www.pulsemcp.com/api |
 
 
+### Python and Typescript SDK
 
-## Frontend Web-Based Plugin
+For official documentation of MCP Marketplace API, please check http://www.deepnlp.org/doc/mcp_marketplace
 
-**1. Integration**
-
-If you have a chatbot or ai search engine box and you want to integrate the MCP marketplace plugin to your app, you can follow the below step and see example of an AI Search Engine Demo
-
-**Example: AI Search with MCP Marketplace Plugin**
-
-**Step 1**. 
-Go to file ./app/ai_search/index.html and open the index.html with your browser.
-
-Integrate AI Search Engine Demo with MCP Marketplace Plugin
-![Open MCP Marketplace DeepNLP Panel](https://raw.githubusercontent.com/AI-Agent-Hub/mcp-marketplace/refs/heads/main/docs/remote_mcp_server.jpg)
-
-**Step 2**.
-
-Choose the Tools and click the Go button, you can see the System Prompt of user choosen plugins
-
-![Open MCP Marketplace DeepNLP System Prompt](https://raw.githubusercontent.com/AI-Agent-Hub/mcp-marketplace/refs/heads/main/docs/remote_mcp_server_system_prompt.jpg)
-
-
-**2. Install**
-
-Clone Project and Copy The MCP Marketplace Plugin Folder
-
-```
-git clone https://github.com/AI-Agent-Hub/mcp-marketplace.git
-cd ./open_mcp_marketplace
-
-## Project Structure and Copy Files to Your Project
-
-./plugin/mcp_marketplace/
-./plugin/mcp_marketplace/index.html
-./plugin/mcp_marketplace/scripts.js
-./plugin/mcp_marketplace/styles.css
-
-```
-
-## Python and Typescript SDK
+**Installation**
 
 ```
 pip install mcp-marketplace
@@ -75,222 +76,96 @@ pip install mcp-marketplace
 ```
 **Usage**
 
-```
+#### Search MCP Server 
 
+Search MCP Server by Meta Information by unique id, query or category
+
+
+```
 import mcp_marketplace as mcpm
 
 ## endpoint: deepnlp
 mcpm.set_endpoint("deepnlp")
 result = mcpm.search(query="map", page_id=0, count_per_page=20, mode="dict")
-
-print ("DEBUG: run_setup_config_deepnlp result:")
 print (result)
 
-```
+server_id = "financial-datasets/mcp-server"
+result2 = mcpm.search(query="financial datasets", count_per_page=20, offset=0)
+print (result2)
 
-
-
-### FrontEnd Plugin
-**Set Endpoint of the MCP Plugin**
-
-Go to file ./plugin/mcp_marketplace/scripts.js and change the endpoint provider by config
-
-```
-
-// API: deepnlp
-const config = getConfigByName("deepnlp");
-
-// API: pulsemcp
-const config = getConfigByName("pulsemcp");
-
+# search by batch query
+query_list = ["map", "navigation", "route planning"]
+params_list = [{"query": query, "page_id":0, "count_per_page":50} for query in query_list]
+results = mcpm.search_batch(params_list)
 
 ```
 
-**2.1 DeepNLP Endpoint**
+**Curl Endpoint**
 
-Demo API URL: http://www.deepnlp.org/api/mcp_marketplace/v1?field=MCP%20Server
+```
+curl http://www.deepnlp.org/api/mcp_marketplace/v1/server/google-maps/google-maps
+```
 
-| key | value | 
-| --- | ---- | 
-| endpoint | http://www.deepnlp.org/api/mcp_marketplace/v1 |
-| inputParams | {"field": "MCP SERVER", "page_id": 0, "page_size": 20} |
-| inputParams.query | e.g. payment/map |
-| inputParams.page_id | starting from 0|
-| inputParams.count_per_page | e.g. default 20 |
-| inputParams.offset | - equal to page_id * count_per_page, we use pageid to go to next page instead|
-| paginationParams | {"query": "MCP SERVER", "count_per_page": 20, "page_id": 0} |
-| extraParams | {"field": "MCP SERVER", "subfield": ""} |
-| mapper | function, map meta data in result json |
-| paginationParamsMapper | function, map meta data, merge the required paginationParams and extraParams |
-| loadLocal | false |
-| loadLocalData | - | 
-| timeout | 5000 |
-
-Note: field and subfield refers to the category and sub-category of MCP Servers.
-
+**Result**
 
 ```
 {
-  "item_map": {
-    "MCP SERVER": [
-      {
-        "content_name": "PayPal",
-        "publisher_id": "pub-paypal",
-        "website": "https://mcp.paypal.com",
-        "review_cnt": "1",
-        "subfield": "PAYMENT",
-        "field": "MCP SERVER",
-        "rating": "5.0",
-        "description": "",
-        "content_tag_list": "official",
-        "thumbnail_picture": "https://www.paypalobjects.com/webstatic/icon/favicon.ico"
-      },
-      {
-        "content_name": "Google Maps",
-        "publisher_id": "pub-google-maps",
-        "website": "https://github.com/modelcontextprotocol/servers/tree/main/src/google-maps",
-        "review_cnt": "1",
-        "subfield": "MAP",
-        "field": "MCP SERVER",
-        "rating": "5.0",
-        "description": "",
-        "content_tag_list": "official",
-        "thumbnail_picture": "http://118.190.154.215/scripts/img/ai_service_content/b7fe82a3ab985ce1a953f7b4ad9c5e01.jpeg"
-      },
-    ]
-  },
-  "page_id_map": {
-    "MCP SERVER": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    ]
-  },
-  "group_cnt": {
-    "MCP SERVER": 20
-  },
-  "group_total": {
-    "MCP SERVER": 289
-  }
-}
-
-
-```
-
-
-#### 2.2 PulseMCP Endpoint
-
-URL: https://api.pulsemcp.com/v0beta/servers?query=image&count_per_page=10
-
-Plugin Demo:
-
-![PulseMCP Demo](https://raw.githubusercontent.com/AI-Agent-Hub/mcp-marketplace/refs/heads/main/docs/pulsemcp_demo.jpg)
-
-
-Pagination Demo:
-
-![PulseMCP Pagination Demo](https://raw.githubusercontent.com/AI-Agent-Hub/mcp-marketplace/refs/heads/main/docs/pulsemcp_pagination_demo.jpg)
-
-Change loadLocal to false and the js script will fetch mcp.json and MCP SERVER Info from the remote endpoint.
-
-
-| key | value | 
-| --- | ---- | 
-| endpoint | https://api.pulsemcp.com/v0beta/servers | 
-| inputParams | {"query": "image", "count_per_page": 10} |
-| paginationParams | e.g. {"query": image, "count_per_page": 10, "page_id": 0} |
-| extraParams | e.g. { "offset": 10 } |
-| mapper | function, map meta data in result json |
-| paginationParamsMapper | function, map meta data, merge the required paginationParams and extraParams |
-| loadLocal | false |
-| loadLocalData | - |
-| timeout | 5000 |
-
-
-https://api.pulsemcp.com/v0beta/servers?query=image&count_per_page=10&offset=30
-
-```
-{
-  "servers": [
-    {
-      "name": "example-mcp",
-      "url": "https://example-mcp.com",
-      "external_url": "https://example-mcp.com/landing",
-      "short_description": "A powerful MCP server for example use cases",
-      "source_code_url": "https://github.com/example/example-mcp",
-      "github_stars": 1200,
-      "package_registry": "npm",
-      "package_name": "example-mcp",
-      "package_download_count": 50000,
-      "EXPERIMENTAL_ai_generated_description": "An AI-generated description of the server capabilities"
-    }
-  ],
-  "next": "https://api.pulsemcp.com/v0beta/servers?offset=50",
-  "total_count": 1
+  "total_hits": 1,
+  "id": "google-maps/google-maps",
+  "items": [{
+    "content_name": "Google Maps",
+    "publisher_id": "pub-google-maps",
+    "website": "https://github.com/modelcontextprotocol/servers/tree/main/src/google-maps",
+    "review_cnt": "2",
+    "rating": "4.5",
+    "description": "Google Maps  Location services, directions, and place details\r\n\r\n# Google Maps MCP Server\r\n\r\nMCP Server for the Google Maps API.\r\n\r\n## Tools\r\n\r\n1. \\`maps_geocode\\`\r\n\r\n   - Convert address to coordinates\r\n   - Input: \\`address\\` (string)\r\n   - Returns: location, formatted_address, place_id\r\n\r\n2. \\`maps_reverse_geocode\\`\r\n\r\n   - Convert coordinates to address\r\n   - Inputs:\r\n     - \\`latitude\\` (numb",
+    "ext_info": {
+      "tools": []
+    },
+    "subfield": "MAP",
+    "field": "MCP SERVER",
+    "id": "google-maps/google-maps",
+    "content_tag_list": "official",
+    "config": [],
+    "thumbnail_picture": "http://118.190.154.215/scripts/img/ai_service_content/b7fe82a3ab985ce1a953f7b4ad9c5e01.jpeg"
+  }]
 }
 ```
 
 
-## 3. Development
+#### List Available Tools 
+```
 
-#### 3.1 Web Integration
+import mcp_marketplace as mcpm
 
-Go to your app main project file, for example in the ./app/ai_search folder, find the main page index.html.
+server_id = "google-maps/google-maps"
+result = mcpm.list_tools(id=server_id, config_name="deepnlp_tool")
+    
+server_id = "puppeteer/puppeteer"
+result = mcpm.list_tools(id=server_id, config_name="deepnlp_tool")
 
 ```
 
-<head>
+**Curl Endpoint**
 
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script src="../../plugin/mcp_marketplace/scripts.js"></script>
-  <link rel="stylesheet" href="../../plugin/mcp_marketplace/styles.css">
-<head>
+```
+curl http://www.deepnlp.org/api/mcp_marketplace/v1/tools/google-maps/google-maps
+```
 
-<body>
-
-
-    <!-- add agent marketplace plugin -->
-    <div class="agent-plugin">
-        <button class="agent-button agent-button-base agent-button-close" data-testid="composer-button-agent" aria-pressed="false" aria-label="agent">
-            <div class="[display:var(--force-hide-label)] ps-1 pe-1 whitespace-nowrap">Agent</div>
-        </button>
-        <div class="panel hidden">
-            <div class="panel_section">
-                <h3>MCP Tools</h3>
-                <div class="grid-container" id="items-grid"></div>
-            </div>
-        </div>
-    </div>
-
-</body>
+```
+{"id":"/google-maps/google-maps","tools":[{"name":"maps_geocode","description":"Convert an address into geographic coordinates","input_schema":{"type":"object","properties":{"address":{"type":"string","description":"The address to geocode"}},"required":["address"]}},{"name":"maps_reverse_geocode","description":"Convert coordinates into an address","input_schema":{"type":"object","properties":{"latitude":{"type":"number","description":"Latitude coordinate"},"longitude":{"type":"number","description":"Longitude coordinate"}},"required":["latitude","longitude"]}},{"name":"maps_search_places","description":"Search for places using Google Places API","input_schema":{"type":"object","properties":{"query":{"type":"string","description":"Search query"},"location":{"type":"object","properties":{"latitude":{"type":"number"},"longitude":{"type":"number"}},"description":"Optional center point for the search"},"radius":{"type":"number","description":"Search radius in meters (max 50000)"}},"required":["query"]}},{"name":"maps_place_details","description":"Get detailed information about a specific place","input_schema":{"type":"object","properties":{"place_id":{"type":"string","description":"The place ID to get details for"}},"required":["place_id"]}},{"name":"maps_distance_matrix","description":"Calculate travel distance and time for multiple origins and destinations","input_schema":{"type":"object","properties":{"origins":{"type":"array","items":{"type":"string"},"description":"Array of origin addresses or coordinates"},"destinations":{"type":"array","items":{"type":"string"},"description":"Array of destination addresses or coordinates"},"mode":{"type":"string","description":"Travel mode (driving, walking, bicycling, transit)","enum":["driving","walking","bicycling","transit"]}},"required":["origins","destinations"]}},{"name":"maps_elevation","description":"Get elevation data for locations on the earth","input_schema":{"type":"object","properties":{"locations":{"type":"array","items":{"type":"object","properties":{"latitude":{"type":"number"},"longitude":{"type":"number"}},"required":["latitude","longitude"]},"description":"Array of locations to get elevation for"}},"required":["locations"]}},{"name":"maps_directions","description":"Get directions between two points","input_schema":{"type":"object","properties":{"origin":{"type":"string","description":"Starting point address or coordinates"},"destination":{"type":"string","description":"Ending point address or coordinates"},"mode":{"type":"string","description":"Travel mode (driving, walking, bicycling, transit)","enum":["driving","walking","bicycling","transit"]}},"required":["origin","destination"]}}]}
 
 ```
 
 
-#### 3.2 Get User Selected Tools
+#### List MCP Config files
 
-In javascript, access the global variables `selectedItems` to get user selected tools and configs
 
-```
-    ## ../../plugin/mcp_marketplace/scripts.js
-    ## global variable of js module
-    window.agent_selected_items = selectedItems;
-
-    ## get access
-    var your_variable = window.agent_selected_items
+**API**
 
 ```
-
-#### 3.2 Pagination 
-
-The params for pagination rest API can be user defined for different endpoint. Since different API provider have differnt keys of parameters, will leave a 
-mapper function to allow customized and mapping.
-
-
-| key | type |description  |
-| --- | ---- | ---- | 
-| query | required | Used to filter the meta by query, serve as the section name also. | 
-| count_per_page | required | e.g. 20 | 
-| page_id | required | Used as the page selector (page 0 - n) at the bottom of each section, Starting from 0 | 
-| offset | optional | The index of items to skip, which is equivalent to (page_id * count_per_page). | 
-
+GET /api/mcp_marketplace/v1/server/${owner_id}/${repo_name}
+```
 
 ## 4. Contribution
 
@@ -298,7 +173,9 @@ mapper function to allow customized and mapping.
 ## 5. Resources
 
 
-
+- [MCP Marketplace DeepNLP](http://www.deepnlp.org/store/ai-agent/mcp-server)
+- [MCP Marketplace PulseMCP](https://www.pulsemcp.com/)
+- [AI Agent Marketplace](http://www.deepnlp.org/store/ai-agent)
 
 
 
