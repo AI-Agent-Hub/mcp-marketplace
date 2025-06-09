@@ -1,17 +1,19 @@
 ## Open MCP Marketplace | AI Agent Marketplace Index and Web Client from DeepNLP
 
+[![MCP Marketplace User Review Rating Badge](http://www.deepnlp.org/api/marketplace/svg?name=ai-agent-marketplace-index/ai-agent-marketplace-index)](http://deepnlp.org/store/mcp-server/mcp-server/pub-ai-agent-marketplace-index/ai-agent-marketplace-index) |
+[![AI Agent Marketplace DeepNLP](http://www.deepnlp.org/api/ai_agent_marketplace/svg?name=ai-agent-marketplace-index/ai-agent-marketplace-index)](http://deepnlp.org/store/mcp-server/mcp-server/pub-ai-agent-marketplace-index/ai-agent-marketplace-index) |
+[WeChat](https://raw.githubusercontent.com/AI-Agent-Hub/mcp-marketplace/refs/heads/main/docs/mcp_marketplace_wechat_group.png)
+
+
 ![Open MCP Marketplace DeepNLP Panel](https://raw.githubusercontent.com/AI-Agent-Hub/mcp-marketplace/refs/heads/main/docs/remote_mcp_server.jpg)
 
 
 ## Basic
 
-[![MCP Marketplace User Review Rating Badge](http://www.deepnlp.org/api/marketplace/svg?name=ai-agent-marketplace-index/ai-agent-marketplace-index)](http://deepnlp.org/store/mcp-server/mcp-server/pub-ai-agent-marketplace-index/ai-agent-marketplace-index)
-[![AI Agent Marketplace DeepNLP](http://www.deepnlp.org/api/ai_agent_marketplace/svg?name=ai-agent-marketplace-index/ai-agent-marketplace-index)](http://deepnlp.org/store/mcp-server/mcp-server/pub-ai-agent-marketplace-index/ai-agent-marketplace-index)
-
 
 Open MCP Marketplace is an open source project, which aims to make MCP and AI Agent integration **Easier**.
 
-- You can get well-cleaned up MCP Servers Meta information, Tools and Config Schema, etc. 
+- You can get well-cleaned up MCP Servers Tools Meta information, Tools and Config Schema, etc. 
 - You can integrate a MCP Marketplace (web based client) button or a panel to your AI Apps. So that users can choose their preferred MCP tools (such as Map, Browser Use, Payment, Fetch, etc) to answer their questions. It can be easily integrated to your AI apps, such as Chatbot, AI Search/Deep Research Engine, Video/Image generation, Coding IDE, etc.
 
 
@@ -36,7 +38,10 @@ Dataset Collection of MCP Servers Tool/Function Call Schemas from 5000+ MCP serv
 - **GET/UPDATE/CREATE** MCP Servers Meta information to get your MCP Server more visibilityy. <br>
 - **Python and Typescript SDK** Search and registry of MCP Servers and Tools <br>
 - **Rich Meta Data** Tools, Servers Description, URL, Category, Github stars, User reviews score, Ratings and more statistics. <br>
-- **Agent Workflow Integration (WIP)**: - Autonomous MCP Tools Dispatcher (TBD): Your LLM/agent can also benifit from dispatching the query/prompt of the MCP tools, making decision on which tools to choose. The decision or dispatcher agent functions with more than the <br>
+
+
+4. Agent Workflow of MCP Marketplace
+- [**MCP Tools Dispatcher Agent**](#tool_dispatcher): The MCP Tool Dispatcher Agent helps to retrieve relevent tools from thousands of MCP servers and tools from marketplace, and reduce the context token length of function call LLM.
 
 
 ## 1. MCP Server Public Index of Tools Schema and <code>mcp.config</code> file
@@ -191,10 +196,43 @@ change google-maps/google-maps to your MCP "owner_name"/"repo_name"
 ```
 
 
-## 4. Contribution
+## 4. Agent Workflow of MCP Marketplace<a id="tool_dispatcher"></a>
 
 
-## 5. Resources
+(WIP) Here is a diagram of how MCP Marketplace is integrated to your Agent Workflow
+
+```mermaid
+graph TD
+    Start --> Search[Query Plan]
+    Search[Query Plan] --> QueryPlanning[Query Planning Agent]
+    QueryPlanning --> SearchTask1[Search]
+    SearchTask1 --> DocList[DocList]
+    DocList --> Generation
+    
+    Search[Query Plan] --> ToolDispatcher[Tool Dispatcher Agent]
+    ToolDispatcher --> Task1[MCP Server 1]
+    ToolDispatcher --> Task2[MCP Server 2]
+    ToolDispatcher --> Task3[MCP Server 3]
+    Task1 --> Tool1[Tool List 1]
+    Task2 --> Tool2[Tool List 2]
+    Task3 --> Tool3[Tool List 3]
+
+    Tool1 --> LLM[LLM Function Call Agent]
+    Tool2 --> LLM[LLM Function Call Agent]
+    Tool3 --> LLM[LLM Function Call Agent]
+
+    LLM -->  ToolSelection
+
+    ToolSelection --> ToolResult[Tool Execution Result]
+
+    ToolResult --> Generation
+```
+
+
+## Contribution
+
+
+## Resources
 
 
 - [MCP Marketplace DeepNLP](http://www.deepnlp.org/store/ai-agent/mcp-server)
