@@ -1,0 +1,1 @@
+{"mcpServers": {"puppeteer": {"command": "docker", "args": ["run", "-i", "--rm", "--init", "-e", "DOCKER_CONTAINER=true", "mcp/puppeteer-extra"]}}}

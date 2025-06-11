@@ -1,0 +1,1 @@
+{"mcpServers": {"rust-docs-serde": {"command": "/path/to/your/rustdocs_mcp_server", "args": ["serde@^1.0"]}, "rust-docs-async-stripe-rt": {"command": "rustdocs_mcp_server", "args": ["async-stripe@0.40", "-F", "runtime-tokio-hyper-rustls"]}}}
