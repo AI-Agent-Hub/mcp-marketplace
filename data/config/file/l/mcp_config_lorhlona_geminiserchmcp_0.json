@@ -1,0 +1,1 @@
+{"mcpServers": {"gemini": {"command": "node", "args": ["path/to/gemini-search-server/build/index.js"], "env": {"GEMINI_API_KEY": "your_api_key_here"}}}}

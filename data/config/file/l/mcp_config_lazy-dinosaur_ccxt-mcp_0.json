@@ -1,0 +1,1 @@
+{"mcpServers": {"ccxt-mcp": {"command": "npx", "args": ["-y", "@lazydino/ccxt-mcp"], "accounts": [{"name": "bybit_main", "exchangeId": "bybit", "apiKey": "YOUR_API_KEY", "secret": "YOUR_SECRET_KEY", "defaultType": "spot"}, {"name": "bybit_futures", "exchangeId": "bybit", "apiKey": "YOUR_API_KEY", "secret": "YOUR_SECRET_KEY", "defaultType": "swap"}]}}}

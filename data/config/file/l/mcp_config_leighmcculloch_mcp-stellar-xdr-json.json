@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-stellar-xdr-json": {"command": "npx", "args": ["deno", "run", "--allow-read", "https://github.com/leighmcculloch/mcp-stellar-xdr-json/raw/refs/heads/main/mcp-stellar-xdr-json.ts"]}}}

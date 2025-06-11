@@ -1,0 +1,1 @@
+{"mcpServers": {"slack": {"command": "npm", "args": ["run", "--prefix", "/path/to/slack-user-mcp", "start"], "env": {"SLACK_TOKEN": "xoxp-your-user-token", "SLACK_TEAM_ID": "T01234567"}}}}

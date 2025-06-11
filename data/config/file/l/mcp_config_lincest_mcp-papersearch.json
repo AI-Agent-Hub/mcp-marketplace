@@ -1,0 +1,1 @@
+{"mcpServers": {"papersearch": {"command": "/path/to/uv", "args": ["--directory", "/path/to/papersearch", "run", "papersearch"]}}}

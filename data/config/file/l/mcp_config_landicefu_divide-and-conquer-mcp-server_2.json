@@ -1,0 +1,1 @@
+{"mcpServers": {"divide-and-conquer": {"command": "node", "args": ["/path/to/divide-and-conquer-mcp-server/build/index.js"], "disabled": false}}}

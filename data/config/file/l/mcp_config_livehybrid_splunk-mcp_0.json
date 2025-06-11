@@ -1,0 +1,1 @@
+{"mcpServers": {"splunk": {"command": "poetry", "env": {"SPLUNK_HOST": "your_splunk_host", "SPLUNK_PORT": "8089", "SPLUNK_USERNAME": "your_username", "SPLUNK_PASSWORD": "your_password", "SPLUNK_SCHEME": "https", "VERIFY_SSL": "false"}, "args": ["--directory", "/path/to/splunk-mcp", "run", "python", "splunk_mcp.py", "stdio"]}}}

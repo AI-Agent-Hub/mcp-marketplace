@@ -1,0 +1,1 @@
+{"mcpServers": {"novacv": {"command": "npx", "args": ["mcp-server-novacv"], "env": {"NOVACV_API_KEY": "your_api_key"}}}}

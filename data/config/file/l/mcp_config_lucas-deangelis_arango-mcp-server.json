@@ -1,0 +1,1 @@
+{"mcpServers": {"arangodb-account": {"command": "npx", "args": ["-y", "arango-mcp-server", "http://localhost:8529", "root", "root"]}}}

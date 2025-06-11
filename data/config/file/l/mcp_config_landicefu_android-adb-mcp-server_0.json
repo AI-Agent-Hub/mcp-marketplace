@@ -1,0 +1,1 @@
+{"mcpServers": {"android-adb": {"command": "npx", "args": ["-y", "@landicefu/android-adb-mcp-server"], "env": {}, "disabled": false, "alwaysAllow": []}}}

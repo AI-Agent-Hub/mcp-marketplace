@@ -1,0 +1,1 @@
+{"mcpServers": {"files-vectorstore": {"command": "npx", "args": ["-y", "@lishenxydlgzs/simple-files-vectorstore"], "env": {"WATCH_DIRECTORIES": "/path/to/your/directories"}, "disabled": false, "autoApprove": []}}}

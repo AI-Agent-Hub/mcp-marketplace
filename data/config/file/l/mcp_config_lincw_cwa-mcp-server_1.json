@@ -1,0 +1,1 @@
+{"mcpServers": {"cwa": {"command": "docker", "args": ["exec", "-i", "cwa-mcp-server", "node", "cwa-server.js"]}}}

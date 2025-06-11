@@ -1,0 +1,1 @@
+{"mcpServers": {"divide-and-conquer": {"command": "npx", "args": ["-y", "@landicefu/divide-and-conquer-mcp-server"], "disabled": false}}}

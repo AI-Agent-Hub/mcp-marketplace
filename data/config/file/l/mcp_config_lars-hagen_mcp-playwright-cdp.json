@@ -1,0 +1,1 @@
+{"mcpServers": {"playwright": {"command": "node", "args": ["/path/to/mcp-playwright/dist/index.js"]}}}

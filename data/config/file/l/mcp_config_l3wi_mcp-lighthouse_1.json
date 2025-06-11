@@ -1,0 +1,1 @@
+{"mcpServers": {"lighthouse": {"command": "path/to/node/installation", "args": ["path/to/this/folder/mcp-lighthouse/dist/index.js"]}}}

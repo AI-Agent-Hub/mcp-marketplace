@@ -1,0 +1,1 @@
+{"mcpServers": {"strapi-mcp": {"command": "/path/to/strapi-mcp/build/index.js", "env": {"STRAPI_URL": "http://localhost:1337", "STRAPI_API_TOKEN": "your-api-token-here", "STRAPI_DEV_MODE": "false"}}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"pgsql-mcp-server": {"command": "/path/to/sql-mcp-server", "args": [], "env": {"DB_HOST": "localhost", "DB_PORT": "5432", "DB_NAME": "postgres", "DB_USER": "your_username", "DB_PASSWORD": "your_password", "DB_SSLMODE": "disable"}, "disabled": false, "autoApprove": []}}}

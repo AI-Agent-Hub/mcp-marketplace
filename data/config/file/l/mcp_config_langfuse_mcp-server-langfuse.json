@@ -1,0 +1,1 @@
+{"mcpServers": {"langfuse": {"command": "node", "args": ["<absolute-path>/build/index.js"], "env": {"LANGFUSE_PUBLIC_KEY": "your-public-key", "LANGFUSE_SECRET_KEY": "your-secret-key", "LANGFUSE_BASEURL": "https://cloud.langfuse.com"}}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"last9": {"command": "/opt/homebrew/bin/last9-mcp", "env": {"LAST9_AUTH_TOKEN": "<your_auth_token>", "LAST9_BASE_URL": "<last9_otlp_host>", "LAST9_REFRESH_TOKEN": "<refresh_token_from_last9_dashboard>"}}}}

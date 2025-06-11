@@ -1,0 +1,1 @@
+{"mcpServers": {"ghidra": {"command": "python", "args": ["PATH-TO-REPO/GhidraMCP/ghidra_server.py"]}}}

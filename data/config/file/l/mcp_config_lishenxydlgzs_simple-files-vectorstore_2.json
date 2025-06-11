@@ -1,0 +1,1 @@
+{"mcpServers": {"files-vectorstore": {"command": "npx", "args": ["-y", "@lishenxydlgzs/simple-files-vectorstore"], "env": {"WATCH_CONFIG_FILE": "/path/to/watch-config.json"}, "disabled": false, "autoApprove": []}}}

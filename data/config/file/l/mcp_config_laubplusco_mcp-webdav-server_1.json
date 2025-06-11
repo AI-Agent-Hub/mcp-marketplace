@@ -1,0 +1,1 @@
+{"mcpServers": {"webdav": {"command": "node", "args": ["<path to repository>/dist/index.js"], "env": {"WEBDAV_ROOT_URL": "<WEBDAV_ROOT_URL>", "WEBDAV_ROOT_PATH": "<WEBDAV_ROOT_PATH>", "WEBDAV_USERNAME": "<WEBDAV_USERNAME>", "WEBDAV_PASSWORD": "<WEBDAV_PASSWORD>", "WEBDAV_AUTH_ENABLED": "true|false"}}}}

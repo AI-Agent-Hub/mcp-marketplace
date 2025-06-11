@@ -1,0 +1,1 @@
+{"mcpServers": {"lifi": {"command": "lifi-mcp", "args": ["--keystore", "your-keystore", "--password", "your-password"]}}}

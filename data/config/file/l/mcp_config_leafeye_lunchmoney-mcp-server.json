@@ -1,0 +1,1 @@
+{"mcpServers": {"lunchmoney": {"command": "npx", "args": ["-y", "lunchmoney-mcp-server"], "env": {"LUNCHMONEY_TOKEN": "your_token_here"}}}}

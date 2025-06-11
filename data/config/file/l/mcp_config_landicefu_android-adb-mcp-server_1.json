@@ -1,0 +1,1 @@
+{"mcpServers": {"android-adb": {"command": "node", "args": ["/path/to/android-adb-mcp-server/build/index.js"], "env": {}, "disabled": false, "alwaysAllow": []}}}

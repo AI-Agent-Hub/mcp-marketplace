@@ -1,0 +1,1 @@
+{"mcpServers": {"letzai": {"command": "node", "args": ["/ABSOLUTE/PATH/TO/PARENT/FOLDER/letzai-mcp/build/index.js"], "env": {"LETZAI_API_KEY": "<Your LetzAI API Key>"}}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"onyx-search": {"command": "node", "args": ["/path/to/onyx-mcp-server/build/index.js"], "env": {"ONYX_API_TOKEN": "your-api-token-here", "ONYX_API_URL": "http://localhost:8080/api"}, "disabled": false, "alwaysAllow": []}}}

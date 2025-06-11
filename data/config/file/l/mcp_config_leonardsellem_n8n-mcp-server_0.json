@@ -1,0 +1,1 @@
+{"mcpServers": {"n8n": {"command": "n8n-mcp-server", "env": {"N8N_HOST": "https://your-n8n-instance.com", "N8N_API_KEY": "your-api-key-here"}}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"webdav": {"command": "npx", "args": ["-y", "webdav-mcp-server"], "env": {"WEBDAV_ROOT_URL": "<WEBDAV_ROOT_URL>", "WEBDAV_ROOT_PATH": "<WEBDAV_ROOT_PATH>", "WEBDAV_USERNAME": "<WEBDAV_USERNAME>", "WEBDAV_PASSWORD": "<WEBDAV_PASSWORD>", "WEBDAV_AUTH_ENABLED": "true|false"}}}}

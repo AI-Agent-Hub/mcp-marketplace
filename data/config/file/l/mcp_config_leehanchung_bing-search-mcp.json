@@ -1,0 +1,1 @@
+{"mcpServers": {"bing-search": {"command": "uvx", "args": ["/path/to/your/bing-search-mcp"], "env": {"BING_API_KEY": "your-bing-api-key"}}}}

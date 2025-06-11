@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-client-configuration": {"command": "npx", "args": ["-y", "@landicefu/mcp-client-configuration-server"], "env": {}, "disabled": false, "alwaysAllow": []}}}

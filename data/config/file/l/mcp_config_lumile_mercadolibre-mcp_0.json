@@ -1,0 +1,1 @@
+{"mcpServers": {"mercadolibre-mcp": {"command": "npx", "args": ["-y", "mercadolibre-mcp"], "env": {"CLIENT_ID": "<YOUR_CLIENT_ID>", "CLIENT_SECRET": "<YOUR_CLIENT_SECRET>", "SITE_ID": "<YOUR_SITE_ID>"}}}}

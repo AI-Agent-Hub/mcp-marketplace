@@ -1,0 +1,1 @@
+{"mcpServers": {"wordpress": {"command": "node", "args": ["path/to/build/index.js"], "env": {"WORDPRESS_SITE_URL": "https://your-wordpress-site.com", "WORDPRESS_USERNAME": "your-username", "WORDPRESS_PASSWORD": "your-app-password"}}}}

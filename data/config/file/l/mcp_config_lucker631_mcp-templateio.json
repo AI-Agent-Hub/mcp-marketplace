@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-templateio": {"command": "node", "args": ["/absolute/path/to/mcp-templateio/dist/index.js"]}}}

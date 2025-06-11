@@ -1,0 +1,1 @@
+{"mcpServers": {"cwa": {"command": "node", "args": ["/path/to/cwa-server.js"], "env": {"CWA_API_KEY": "CWA-1E740A28-FFDC-4186-BE0D-B02662F066EF"}}}}

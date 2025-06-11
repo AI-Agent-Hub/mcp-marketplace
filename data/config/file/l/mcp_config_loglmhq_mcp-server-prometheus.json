@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-server-prometheus": {"command": "/path/to/mcp-server-prometheus/build/index.js", "env": {"PROMETHEUS_URL": "http://your-prometheus-instance:9090"}}}}

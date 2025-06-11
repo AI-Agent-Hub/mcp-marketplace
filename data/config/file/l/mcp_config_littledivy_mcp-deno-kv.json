@@ -1,0 +1,1 @@
+{"mcpServers": {"denokv": {"command": "deno", "args": ["--unstable-kv", "jsr:@divy/mcp-deno-kv"]}}}
