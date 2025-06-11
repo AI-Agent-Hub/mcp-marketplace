@@ -1,0 +1,1 @@
+{"mcpServers": {"fastn": {"command": "/path/to/your/uv", "args": ["--directory", "/path/to/your/fastn-server", "run", "fastn-server.py", "--api_key", "YOUR_API_KEY", "--space_id", "YOUR_WORKSPACE_ID"]}}}

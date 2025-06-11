@@ -1,0 +1,1 @@
+{"mcp": {"inputs": [], "servers": {"mcp-server-code-runner": {"command": "docker", "args": ["run", "--rm", "-i", "formulahendry/mcp-server-code-runner"]}}}}

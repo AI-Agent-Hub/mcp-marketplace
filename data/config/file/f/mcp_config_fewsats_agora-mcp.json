@@ -1,0 +1,1 @@
+{"mcpServers": {"Agora": {"command": "uvx", "args": ["agora-mcp"]}, "Fewsats": {"command": "env", "args": ["FEWSATS_API_KEY=YOUR_FEWSATS_API_KEY", "uvx", "fewsats-mcp"]}}}

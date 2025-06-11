@@ -1,0 +1,1 @@
+{"mcpServers": {"binary_ninja_mcp": {"command": "/ABSOLUTE/PATH/TO/binary_ninja_mcp/.venv/bin/python", "args": ["/ABSOLUTE/PATH/TO/binary_ninja_mcp/bridge/binja_mcp_bridge.py"]}}}

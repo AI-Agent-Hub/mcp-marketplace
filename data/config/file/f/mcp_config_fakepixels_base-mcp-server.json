@@ -1,0 +1,1 @@
+{"mcpServers": {"base": {"command": "npx", "args": ["-y", "base-network-mcp-server"], "env": {"BASE_PROVIDER_URL": "https://api.developer.coinbase.com/rpc/v1/base/YOUR_API_KEY", "WALLET_PRIVATE_KEY": "your_private_key_here"}, "disabled": false, "autoApprove": []}}}

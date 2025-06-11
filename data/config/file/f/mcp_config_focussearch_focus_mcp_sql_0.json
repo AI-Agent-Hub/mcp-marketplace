@@ -1,0 +1,1 @@
+{"mcpServers": {"focus_mcp_data": {"command": "java", "args": ["-jar", "path/to/focus_mcp_sql/focus_mcp_sql.jar"], "autoApprove": ["gptText2sqlStart", "gptText2sqlChat"]}}}

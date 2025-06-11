@@ -1,0 +1,1 @@
+{"mcpServers": {"think-tool": {"command": "npx", "args": ["-y", "mcp-think-tank"], "type": "stdio", "env": {"MEMORY_PATH": "./project-memory.jsonl", "EXA_API_KEY": "your-exa-api-key-here", "TOOL_LIMIT": "50", "CACHE_CONTENT": "true", "CONTENT_CACHE_SIZE": "100", "MCP_DEBUG": "false", "AUTO_LINK": "true"}}}}

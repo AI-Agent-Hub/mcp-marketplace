@@ -1,0 +1,1 @@
+{"mcpServers": {"placid": {"command": "npx", "args": ["@felores/placid-mcp-server"], "env": {"PLACID_API_TOKEN": "your-api-token"}}}}

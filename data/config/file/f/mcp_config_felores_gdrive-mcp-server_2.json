@@ -1,0 +1,1 @@
+{"mcpServers": {"gdrive": {"command": "node", "args": ["path/to/gdrive-mcp-server/dist/index.js"], "env": {"GOOGLE_APPLICATION_CREDENTIALS": "path/to/gdrive-mcp-server/credentials/gcp-oauth.keys.json", "MCP_GDRIVE_CREDENTIALS": "path/to/gdrive-mcp-server/credentials/.gdrive-server-credentials.json"}}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"mongodb-lens": {"command": "/path/to/node", "args": ["/path/to/mongodb-lens.js", "mongodb://your-connection-string"]}}}

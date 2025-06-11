@@ -1,0 +1,1 @@
+{"mcpServers": {"markdown-to-html": {"command": "node", "args": ["/path/to/markdown-to-html/build/index.js"]}}}
