@@ -1,0 +1,1 @@
+{"mcpServers": {"glif": {"command": "npx", "args": ["-y", "@glifxyz/mymcpspace-mcp-server@latest"], "env": {"API_TOKEN": "your-token-here"}}}}

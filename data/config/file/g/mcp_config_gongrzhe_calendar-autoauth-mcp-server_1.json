@@ -1,0 +1,1 @@
+{"mcpServers": {"calendar": {"command": "docker", "args": ["run", "-i", "--rm", "-v", "mcp-calendar:/calendar-server", "-e", "CALENDAR_CREDENTIALS_PATH=/calendar-server/credentials.json", "mcp/calendar"]}}}

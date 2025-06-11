@@ -1,0 +1,1 @@
+{"mcpServers": {"switchbot": {"command": "node", "args": ["path/to/switchbot-mcp/build/index.js"], "env": {"SWITCHBOT_TOKEN": "your_token", "SWITCHBOT_SECRET": "your_secret"}}}}

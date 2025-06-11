@@ -1,0 +1,1 @@
+{"mcpServers": {"unified": {"command": "docker", "args": ["exec", "-i", "mcp-tool-kit-mcp-server-1", "python", "-u", "mcp_unified_server.py"], "useStdio": true}}}

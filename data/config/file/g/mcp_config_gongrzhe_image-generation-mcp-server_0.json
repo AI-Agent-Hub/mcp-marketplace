@@ -1,0 +1,1 @@
+{"mcpServers": {"image-gen": {"command": "npx", "args": ["@gongrzhe/image-gen-server"], "env": {"REPLICATE_API_TOKEN": "your-replicate-api-token", "MODEL": "alternative-model-name"}, "disabled": false, "autoApprove": []}}}

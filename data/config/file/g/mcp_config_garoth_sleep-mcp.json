@@ -1,0 +1,1 @@
+{"mcpServers": {"sleep": {"command": "node", "args": ["/path/to/sleep-server/build/index.js"], "disabled": false, "autoApprove": [], "timeout": 300}}}

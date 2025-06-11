@@ -1,0 +1,1 @@
+{"mcpServers": {"sendgrid": {"command": "node", "args": ["/path/to/sendgrid-mcp/build/index.js"], "env": {"SENDGRID_API_KEY": "your-api-key-here"}, "disabled": false, "autoApprove": ["list_contacts", "list_contact_lists", "list_templates", "list_single_sends", "get_single_send", "list_verified_senders", "list_suppression_groups", "get_stats", "validate_email"]}}}
