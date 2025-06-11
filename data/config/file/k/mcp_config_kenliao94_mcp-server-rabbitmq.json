@@ -1,0 +1,1 @@
+{"mcpServers": {"rabbitmq": {"command": "uv", "args": ["--directory", "/path/to/repo/mcp-server-rabbitmq", "run", "mcp-server-rabbitmq", "--rabbitmq-host", "<hostname ex. test.rabbit.com, localhost>", "--port", "<port number ex. 5672>", "--username", "<rabbitmq username>", "--password", "<rabbitmq password>", "--use-tls", "<true if uses amqps, false otherwise>"]}}}

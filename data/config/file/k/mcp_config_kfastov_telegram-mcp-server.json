@@ -1,0 +1,1 @@
+{"mcpServers": {"telegram": {"url": "http://localhost:8080/sse", "disabled": false, "timeout": 30}}}

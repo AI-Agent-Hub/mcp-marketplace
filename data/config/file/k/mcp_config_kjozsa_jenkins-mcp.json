@@ -1,0 +1,1 @@
+{"mcpServers": {"jenkins-mcp": {"command": "uvx", "args": ["jenkins-mcp"], "env": {"JENKINS_URL": "https://your-jenkins-server/", "JENKINS_USERNAME": "your-username", "JENKINS_PASSWORD": "your-password", "JENKINS_USE_API_TOKEN": "false"}}}}

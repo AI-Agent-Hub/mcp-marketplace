@@ -1,0 +1,1 @@
+{"mcpServers": {"docs-rag": {"command": "npx", "args": ["-y", "@kazuph/mcp-docs-rag"], "env": {"DOCS_PATH": "/Users/username/docs", "GEMINI_API_KEY": "your-api-key-here"}}}}

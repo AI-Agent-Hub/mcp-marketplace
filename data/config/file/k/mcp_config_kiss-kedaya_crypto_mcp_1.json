@@ -1,0 +1,1 @@
+{"mcpServers": {"crypto_mcp": {"command": "cmd", "args": ["/c", "npx", "-y", "@smithery/cli@latest", "run", "@telegramtool/crypto_mcp", "--config", "{}"]}}}

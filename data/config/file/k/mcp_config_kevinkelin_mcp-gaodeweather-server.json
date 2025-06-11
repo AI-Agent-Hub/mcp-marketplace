@@ -1,0 +1,1 @@
+{"mcpServers": {"gaodeweather": {"name": "gaodeweather", "command": "uvx", "args": ["mcp-gaodeweather-server"], "env": {"GAODE_KEY": "your apikey"}}}}

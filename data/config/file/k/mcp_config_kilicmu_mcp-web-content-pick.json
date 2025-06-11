@@ -1,0 +1,1 @@
+{"mcpServers": {"web_content_search": {"command": "npx", "args": ["-y", "mcp-web-content-pick"]}}}

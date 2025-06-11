@@ -1,0 +1,1 @@
+{"mcpServers": {"productboard": {"command": "npx", "args": ["-y", "productboard-mcp"], "env": {"PRODUCTBOARD_ACCESS_TOKEN": "<YOUR_TOKEN>"}}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-kibela": {"command": "docker", "args": ["run", "-i", "--rm", "-e", "KIBELA_TEAM", "-e", "KIBELA_TOKEN", "ghcr.io/kj455/mcp-kibela:latest"], "env": {"KIBELA_TEAM": "your-team-name from https://[team-name].kibe.la", "KIBELA_TOKEN": "your-token"}}}}
