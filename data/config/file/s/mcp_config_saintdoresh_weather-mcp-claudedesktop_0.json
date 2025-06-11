@@ -1,0 +1,1 @@
+{"mcpServers": {"weather-mcp": {"command": "py", "args": ["-3.13", "C:\\Path\\To\\Your\\Weather-MCP-ClaudeDesktop\\main.py"]}}}

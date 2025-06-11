@@ -1,0 +1,1 @@
+{"mcpServers": {"salesforce": {"command": "uvx", "args": ["--from", "salesforce-mcp", "salesforce"], "env": {"USERNAME": "YOUR_SALESFORCE_USERNAME", "PASSWORD": "YOUR_SALESFORCE_PASSWORD", "SECURITY_TOKEN": "YOUR_SALESFORCE_SECURITY_TOKEN"}}}}

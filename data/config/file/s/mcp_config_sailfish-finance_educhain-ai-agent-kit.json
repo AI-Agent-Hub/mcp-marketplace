@@ -1,0 +1,1 @@
+{"mcpServers": {"sailfish": {"command": "node", "args": ["/path/to/SubgraphMCP/build/index.js"], "env": {"RPC_URL": "https://your-edu-rpc-url.com"}}}}

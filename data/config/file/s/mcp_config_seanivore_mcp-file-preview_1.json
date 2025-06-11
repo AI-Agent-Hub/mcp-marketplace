@@ -1,0 +1,1 @@
+{"mcpServers": {"file-preview": {"command": "node", "args": ["/path/to/mcp-file-preview/build/index.js"]}}}

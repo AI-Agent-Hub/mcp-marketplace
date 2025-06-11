@@ -1,0 +1,1 @@
+{"mcpServers": {"s3": {"command": "docker", "args": ["exec", "-i", "aws-s3-mcp-server", "node", "dist/index.js"], "env": {}}}}

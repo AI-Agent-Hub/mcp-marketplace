@@ -1,0 +1,1 @@
+{"mcpServers": {"@ScrapeGraphAI-scrapegraph-mcp": {"command": "npx", "args": ["-y", "@smithery/cli@latest", "run", "@ScrapeGraphAI/scrapegraph-mcp", "--config", "\"{\\\"scrapegraphApiKey\\\":\\\"YOUR-SGAI-API-KEY\\\"}\""]}}}

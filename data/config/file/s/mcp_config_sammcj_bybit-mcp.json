@@ -1,0 +1,1 @@
+{"mcpServers": {"bybit": {"command": "node", "args": ["/path/to/bybit-mcp/build/index.js"], "env": {"BYBIT_API_KEY": "your-api-key", "BYBIT_API_SECRET": "your-api-secret", "BYBIT_USE_TESTNET": "false"}}}}

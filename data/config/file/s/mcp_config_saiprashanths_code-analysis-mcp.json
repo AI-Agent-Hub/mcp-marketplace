@@ -1,0 +1,1 @@
+{"mcpServers": {"code-analysis": {"command": "uv", "args": ["--directory", "/PATH/TO/YOUR/REPO", "run", "code_analysis.py"]}}}

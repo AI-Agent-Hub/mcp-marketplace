@@ -1,0 +1,1 @@
+{"mcpServers": {"rag-docs-ollama": {"command": "npx", "args": ["-y", "@sanderkooger/mcp-server-ragdocs"], "env": {"EMBEDDINGS_PROVIDER": "ollama", "OLLAMA_BASE_URL": "http://localhost:11434", "QDRANT_URL": "your-qdrant-url", "QDRANT_API_KEY": "your-qdrant-key"}}}}

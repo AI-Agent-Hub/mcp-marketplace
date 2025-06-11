@@ -1,0 +1,1 @@
+{"mcpServers": {"Votars MCP": {"type": "sse", "url": "http://0.0.0.0:8080/sse", "headers": {"Authorization": "Bearer <your-api-key>"}}}}

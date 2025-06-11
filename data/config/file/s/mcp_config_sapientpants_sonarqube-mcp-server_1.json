@@ -1,0 +1,1 @@
+{"mcpServers": {"sonarqube": {"command": "npx", "args": ["-y", "sonarqube-mcp-server@1.0.1"], "env": {"SONARQUBE_URL": "https://sonarqube.example.com", "SONARQUBE_TOKEN": "your-sonarqube-token", "SONARQUBE_ORGANIZATION": "your-organization-key (optional)"}}}}

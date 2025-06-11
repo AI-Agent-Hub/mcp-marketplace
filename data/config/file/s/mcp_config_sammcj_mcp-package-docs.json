@@ -1,0 +1,1 @@
+{"mcpServers": {"package-docs": {"command": "npx", "args": ["-y", "mcp-package-docs"], "env": {"ENABLE_LSP": "true", "TYPESCRIPT_SERVER": "{\"command\":\"/custom/path/typescript-language-server\",\"args\":[\"--stdio\"]}"}}}}

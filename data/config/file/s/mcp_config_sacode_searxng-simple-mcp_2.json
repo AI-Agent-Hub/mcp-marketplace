@@ -1,0 +1,1 @@
+{"mcpServers": {"searxng": {"command": "python", "args": ["-m", "searxng_simple_mcp.server"], "env": {"SEARXNG_MCP_SEARXNG_URL": "https://your-instance.example.com"}}}}

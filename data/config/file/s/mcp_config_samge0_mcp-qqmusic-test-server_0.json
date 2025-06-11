@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-qqmusic-test-server": {"command": "uv", "args": ["--directory", "{put your local dir here}/mcp-qqmusic-test-server", "run", "main.py"]}}}

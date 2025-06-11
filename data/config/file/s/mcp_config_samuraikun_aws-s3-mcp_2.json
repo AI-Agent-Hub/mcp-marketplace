@@ -1,0 +1,1 @@
+{"globalShortcut": "", "mcpServers": {"s3": {"command": "your-absolute-path-to-node", "args": ["your-absolute-path-to-aws-s3-mcp/dist/index.js"], "env": {"AWS_REGION": "your-aws-region", "S3_BUCKETS": "your-s3-buckets", "S3_MAX_BUCKETS": "your-max-buckets", "AWS_ACCESS_KEY_ID": "your-access-key", "AWS_SECRET_ACCESS_KEY": "your-secret-key"}}}}

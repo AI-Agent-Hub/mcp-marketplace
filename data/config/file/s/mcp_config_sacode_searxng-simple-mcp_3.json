@@ -1,0 +1,1 @@
+{"mcpServers": {"searxng": {"command": "docker", "args": ["run", "--rm", "-i", "--network=host", "-e", "SEARXNG_MCP_SEARXNG_URL=http://localhost:8080", "ghcr.io/sacode/searxng-simple-mcp:latest"]}}}

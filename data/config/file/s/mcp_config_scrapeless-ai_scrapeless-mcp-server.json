@@ -1,0 +1,1 @@
+{"mcpServers": {"scrapelessMcpServer": {"command": "npx", "args": ["-y", "scrapeless-mcp-server"], "env": {"SCRAPELESS_KEY": "YOUR_SCRAPELESS_KEY"}}}}

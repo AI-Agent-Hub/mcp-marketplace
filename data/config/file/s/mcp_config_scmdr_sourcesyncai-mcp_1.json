@@ -1,0 +1,1 @@
+{"mcpServers": {"sourcesyncai-mcp": {"command": "npx", "args": ["-y", "sourcesyncai-mcp"], "env": {"SOURCESYNC_API_KEY": "your_api_key", "SOURCESYNC_NAMESPACE_ID": "your_namespace_id", "SOURCESYNC_TENANT_ID": "your_tenant_id"}}}}

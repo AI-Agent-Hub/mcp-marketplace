@@ -1,0 +1,1 @@
+{"mcpServers": {"s3": {"command": "npx", "args": ["aws-s3-mcp"], "env": {"AWS_REGION": "us-east-1", "S3_BUCKETS": "bucket1,bucket2,bucket3", "S3_MAX_BUCKETS": "5", "AWS_ACCESS_KEY_ID": "your-access-key", "AWS_SECRET_ACCESS_KEY": "your-secret-key"}}}}

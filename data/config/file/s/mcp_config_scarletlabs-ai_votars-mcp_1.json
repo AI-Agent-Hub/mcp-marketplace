@@ -1,0 +1,1 @@
+{"mcpServers": {"Votars MCP Stdio": {"type": "stdio", "command": "votars-mcp", "args": ["-t", "stdio"], "env": {"VOTARS_API_KEY": "<your-api-key>"}}}}

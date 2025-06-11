@@ -1,0 +1,1 @@
+{"mcpServers": {"sonarqube": {"command": "docker", "args": ["run", "-i", "--rm", "-e", "SONARQUBE_URL", "-e", "SONARQUBE_TOKEN", "-e", "SONARQUBE_ORGANIZATION", "sapientpants/sonarqube-mcp-server"], "env": {"SONARQUBE_URL": "https://sonarqube.example.com", "SONARQUBE_TOKEN": "your-sonarqube-token", "SONARQUBE_ORGANIZATION": "your-organization-key (optional)"}}}}

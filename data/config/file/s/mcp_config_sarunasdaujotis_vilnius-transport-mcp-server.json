@@ -1,0 +1,1 @@
+{"mcpServers": {"vilnius_transport": {"command": "uv", "args": ["--directory", "path/vilnius-transport-mcp-server/src/vilnius_transport_mcp", "run", "transport.py"]}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"data-extractor": {"command": "npx", "args": ["-y", "mcp-data-extractor"], "env": {"DISABLE_SOURCE_REPLACEMENT": "true"}, "disabled": false, "autoApprove": ["extract_data", "extract_svg"]}}}

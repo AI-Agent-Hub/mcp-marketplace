@@ -1,0 +1,1 @@
+{"mcpServers": {"flight-planner": {"command": "python", "args": ["/PATH/TO/flight_planner_server.py"], "env": {"PYTHONPATH": "/PATH/TO/PROJECT"}}}}

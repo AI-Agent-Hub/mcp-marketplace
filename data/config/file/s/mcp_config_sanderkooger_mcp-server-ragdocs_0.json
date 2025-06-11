@@ -1,0 +1,1 @@
+{"mcpServers": {"rag-docs-openai": {"command": "npx", "args": ["-y", "@sanderkooger/mcp-server-ragdocs"], "env": {"EMBEDDINGS_PROVIDER": "openai", "OPENAI_API_KEY": "your-openai-key-here", "QDRANT_URL": "your-qdrant-url", "QDRANT_API_KEY": "your-qdrant-key"}}}}
