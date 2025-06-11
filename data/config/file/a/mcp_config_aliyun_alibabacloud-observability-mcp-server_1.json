@@ -1,0 +1,1 @@
+{"mcpServers": {"alibaba_cloud_observability": {"command": "uv", "args": ["--directory", "/path/to/your/alibabacloud-observability-mcp-server", "run", "mcp-server-aliyun-observability"], "env": {"ALIBABA_CLOUD_ACCESS_KEY_ID": "<your_access_key_id>", "ALIBABA_CLOUD_ACCESS_KEY_SECRET": "<your_access_key_secret>"}}}}

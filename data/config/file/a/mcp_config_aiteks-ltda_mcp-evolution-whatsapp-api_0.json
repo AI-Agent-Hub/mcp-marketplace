@@ -1,0 +1,1 @@
+{"mcpServers": {"evo-api": {"command": "node", "args": ["/path/to/your/mcp-evo-api/dist/main.js"]}}}

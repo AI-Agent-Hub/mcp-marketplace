@@ -1,0 +1,1 @@
+{"mcpServers": {"wikipedia": {"command": "uv", "args": ["--directory", "%USERPROFILE%/Documents/GitHub/mcp-wikipedia", "run", "python", "main.py"]}}}

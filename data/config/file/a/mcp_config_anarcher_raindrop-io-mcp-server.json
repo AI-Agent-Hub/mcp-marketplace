@@ -1,0 +1,1 @@
+{"mcpServers": {"raindrop": {"command": "/path/to/raindrop-mcp-server", "env": {"RAINDROP_TOKEN": "your_access_token_here"}}}}

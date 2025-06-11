@@ -1,0 +1,1 @@
+{"mcpServers": {"bunnyshell-mcp": {"command": "node", "args": ["dist/index.js"], "env": {"BNS_API_KEY": "YOUR_API_TOKEN_HERE"}}}}

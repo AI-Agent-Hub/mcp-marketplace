@@ -1,0 +1,1 @@
+{"mcpServers": {"tavily_extract": {"command": "uv", "args": ["--directory", "%USERPROFILE%/Documents/GitHub/mcp-tavily-extract", "run", "python", "main.py"]}}}

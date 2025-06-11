@@ -1,0 +1,1 @@
+{"mcpServers": {"nodemcu": {"command": "node", "args": ["/ABSOLUTE/PATH/TO/YOUR/PROJECT/mcp_server_sdk.js"]}}}

@@ -1,0 +1,1 @@
+{"mcp": {"enabled": true, "servers": {"unreal": {"command": "C:/path/to/your/project/Plugins/UnrealMCP/MCP/run_unreal_mcp.bat", "args": []}}}}

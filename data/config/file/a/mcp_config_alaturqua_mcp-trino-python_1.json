@@ -1,0 +1,1 @@
+{"mcpServers": {"trino": {"command": "python", "args": ["./src/server.py"], "env": {"TRINO_HOST": "your-trino-host", "TRINO_PORT": "8080", "TRINO_USER": "trino"}}}}

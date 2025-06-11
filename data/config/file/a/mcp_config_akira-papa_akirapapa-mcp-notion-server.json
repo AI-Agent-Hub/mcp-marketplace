@@ -1,0 +1,1 @@
+{"mcpServers": {"notion": {"command": "node", "args": ["your-built-file-path"], "env": {"NOTION_API_TOKEN": "your-integration-token"}}}}

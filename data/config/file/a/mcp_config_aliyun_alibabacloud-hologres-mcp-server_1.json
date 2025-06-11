@@ -1,0 +1,1 @@
+{"mcpServers": {"hologres-mcp-server": {"command": "uv", "args": ["run", "--with", "hologres-mcp-server", "hologres-mcp-server"], "env": {"HOLOGRES_HOST": "host", "HOLOGRES_PORT": "port", "HOLOGRES_USER": "access_id", "HOLOGRES_PASSWORD": "access_key", "HOLOGRES_DATABASE": "database"}}}}

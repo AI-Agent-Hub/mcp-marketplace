@@ -1,0 +1,1 @@
+{"mcpServers": {"mantrachain-mcp": {"command": "node", "args": ["your_path/mantrachain-mcp/build/index.js"], "env": {"MNEMONIC": "YOUR_MNEMONIC"}}}}

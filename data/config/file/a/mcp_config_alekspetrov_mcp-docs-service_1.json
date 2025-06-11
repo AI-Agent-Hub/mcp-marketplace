@@ -1,0 +1,1 @@
+{"mcpServers": {"docs-manager": {"command": "npx", "args": ["-y", "mcp-docs-service", "/path/to/your/docs"]}}}
