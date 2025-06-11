@@ -1,0 +1,1 @@
+{"mcpServers": {"3dprint": {"command": "mcp-3d-printer-server", "env": {"API_KEY": "your_api_key_here", "PRINTER_HOST": "your_printer_ip", "PRINTER_TYPE": "octoprint"}}}}

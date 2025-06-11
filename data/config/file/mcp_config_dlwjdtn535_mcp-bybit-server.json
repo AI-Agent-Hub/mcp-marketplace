@@ -1,0 +1,1 @@
+{"mcpServers": {"bybit-server-docker": {"command": "docker", "args": ["run", "-i", "--rm", "--init", "-e", "ACCESS_KEY={ACCESS_KEY}", "-e", "SECRET_KEY={SECRET_KEY}", "dlwjdtn535/mcp-bybit-server:latest"]}}}

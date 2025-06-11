@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-arcknowledge": {"command": "cmd /c uv", "args": ["--directory", "C:/Users/Acer/OneDrive/GitHub/YourDrive", "run", "main.py"], "env": {"DOCUMENT_SOURCES_PATH": "C:/Users/Acer/OneDrive/GitHub/YourDrive/testcustomother.json"}}}}

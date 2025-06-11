@@ -1,0 +1,1 @@
+{"mcpServers": {"ide": {"command": "npx", "args": ["-y", "mcp-proxy-sidecar"], "env": {"WS_PORT": "27042", "IDE_PORT": "63342", "HOST": "127.0.0.1", "LOG_ENABLED": "true"}}}}

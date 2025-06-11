@@ -1,0 +1,1 @@
+{"mcpServers": {"secops-mcp": {"command": "/path/to/your/uv", "args": ["--directory", "/path/to/your/mcp-secops-v3", "run", "secops_mcp.py"], "env": {"CHRONICLE_PROJECT_ID": "your-google-cloud-project-id", "CHRONICLE_CUSTOMER_ID": "your-chronicle-customer-id", "CHRONICLE_REGION": "us"}}}}

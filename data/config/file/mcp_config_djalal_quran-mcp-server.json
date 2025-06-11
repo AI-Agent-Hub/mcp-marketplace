@@ -1,0 +1,1 @@
+{"mcpServers": {"quran-api": {"command": "docker", "args": ["run", "-i", "--rm", "--init", "-e", "API_KEY=your_api_key_if_needed", "-e", "VERBOSE_MODE=true", "quran-mcp-server"], "disabled": false, "autoApprove": []}}}

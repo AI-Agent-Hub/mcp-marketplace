@@ -1,0 +1,1 @@
+{"mcpServers": {"xcode-mcp": {"command": "npx", "args": ["@devyhan/xcode-mcp", "-y"]}}}

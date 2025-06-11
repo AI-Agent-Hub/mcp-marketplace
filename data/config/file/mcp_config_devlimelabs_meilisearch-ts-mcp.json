@@ -1,0 +1,1 @@
+{"mcpServers": {"meilisearch": {"command": "node", "args": ["/path/to/meilisearch-ts-mcp/dist/index.js"], "env": {"MEILISEARCH_HOST": "http://localhost:7700", "MEILISEARCH_API_KEY": "your-api-key"}}}}

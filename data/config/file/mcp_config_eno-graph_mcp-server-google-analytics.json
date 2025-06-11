@@ -1,0 +1,1 @@
+{"mcpServers": {"google-analytics": {"command": "node", "args": ["/path/to/mcp-server-google-analytics/build/index.js"], "env": {"GOOGLE_CLIENT_EMAIL": "your-service-account@project.iam.gserviceaccount.com", "GOOGLE_PRIVATE_KEY": "your-private-key", "GA_PROPERTY_ID": "your-ga4-property-id"}}}}

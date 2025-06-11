@@ -1,0 +1,1 @@
+{"mcpServers": {"mobile-mcp": {"command": "npx", "args": ["-y", "@dynatrace-oss/dynatrace-mcp-server@latest"], "env": {"OAUTH_CLIENT_ID": "", "OAUTH_CLIENT_SECRET": "", "DT_ENVIRONMENT": ""}}}}

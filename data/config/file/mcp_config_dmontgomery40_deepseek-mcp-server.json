@@ -1,0 +1,1 @@
+{"mcpServers": {"deepseek": {"command": "npx", "args": ["-y", "deepseek-mcp-server"], "env": {"DEEPSEEK_API_KEY": "your-api-key"}}}}
