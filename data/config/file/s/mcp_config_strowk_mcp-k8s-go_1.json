@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp_k8s": {"command": "npx", "args": ["@strowk/mcp-k8s"]}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"tongyi-wanxiang": {"command": "npx", "args": ["-y", "tongyi-wanx-mcp-server@latest"], "env": {"DASHSCOPE_API_KEY": "<\u4f60\u7684\u901a\u4e49\u4e07\u76f8 API \u5bc6\u94a5>"}}}}

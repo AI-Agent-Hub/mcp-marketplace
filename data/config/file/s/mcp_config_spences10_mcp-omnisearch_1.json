@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-omnisearch": {"command": "wsl.exe", "args": ["bash", "-c", "TAVILY_API_KEY=key1 PERPLEXITY_API_KEY=key2 KAGI_API_KEY=key3 JINA_AI_API_KEY=key4 BRAVE_API_KEY=key5 FIRECRAWL_API_KEY=key6 node /path/to/mcp-omnisearch/dist/index.js"]}}}

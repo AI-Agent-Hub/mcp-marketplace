@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-perplexity-search": {"command": "npx", "args": ["-y", "mcp-perplexity-search"], "env": {"PERPLEXITY_API_KEY": "your-perplexity-api-key"}}}}

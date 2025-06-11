@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-omnisearch": {"command": "node", "args": ["/path/to/mcp-omnisearch/dist/index.js"], "env": {"TAVILY_API_KEY": "your-tavily-key", "PERPLEXITY_API_KEY": "your-perplexity-key", "KAGI_API_KEY": "your-kagi-key", "JINA_AI_API_KEY": "your-jina-key", "BRAVE_API_KEY": "your-brave-key", "FIRECRAWL_API_KEY": "your-firecrawl-key"}, "disabled": false, "autoApprove": []}}}

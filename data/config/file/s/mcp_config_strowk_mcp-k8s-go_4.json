@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp_k8s_go": {"command": "docker", "args": ["run", "-i", "-v", "~/.kube/config:/home/nonroot/.kube/config", "--rm", "mcpk8s/server:latest"]}}}

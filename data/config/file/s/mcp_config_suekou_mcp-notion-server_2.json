@@ -1,0 +1,1 @@
+{"mcpServers": {"notion": {"command": "npx", "args": ["-y", "@suekou/mcp-notion-server"], "env": {"NOTION_API_TOKEN": "your-integration-token", "NOTION_MARKDOWN_CONVERSION": "true"}}}}

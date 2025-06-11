@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-embedding-search": {"command": "node", "args": ["/path/to/mcp-embedding-search/dist/index.js"], "env": {"TURSO_URL": "your-turso-database-url", "TURSO_AUTH_TOKEN": "your-turso-auth-token"}}}}

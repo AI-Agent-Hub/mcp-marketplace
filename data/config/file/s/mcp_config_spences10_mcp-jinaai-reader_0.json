@@ -1,0 +1,1 @@
+{"mcpServers": {"jinaai-reader": {"command": "node", "args": ["-y", "mcp-jinaai-reader"], "env": {"JINAAI_API_KEY": "your-jinaai-api-key"}}}}

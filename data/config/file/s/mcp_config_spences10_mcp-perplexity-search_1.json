@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-perplexity-search": {"command": "wsl.exe", "args": ["bash", "-c", "source ~/.nvm/nvm.sh && PERPLEXITY_API_KEY=your-perplexity-api-key /home/username/.nvm/versions/node/v20.12.1/bin/npx mcp-perplexity-search"]}}}

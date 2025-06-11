@@ -1,0 +1,1 @@
+{"mcpServers": {"filesystem": {"command": "/Library/Java/JavaVirtualMachines/liberica-jdk-23.jdk/Contents/Home/bin/java", "args": ["-Dspring.ai.mcp.server.stdio=true", "-Dspring.main.web-application-type=none", "-Dlogging.pattern.console=", "-jar", "/Users/stephan/IdeaProjects/JavaFileSystemMCP/target/devoxx-filesystem-0.0.1-SNAPSHOT.jar"]}}}

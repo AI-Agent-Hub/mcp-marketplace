@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp_square_api": {"command": "npx", "args": ["square-mcp-server", "start"], "env": {"ACCESS_TOKEN": "YOUR_SQUARE_ACCESS_TOKEN", "SANDBOX": "true"}}}}

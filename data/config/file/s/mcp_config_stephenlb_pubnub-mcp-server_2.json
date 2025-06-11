@@ -1,0 +1,1 @@
+{"mcpServers": {"pubnub": {"command": "/Users/stephen/.nvm/versions/node/v22.14.0/bin/node", "args": ["/Users/stephen/Projects/mcp-pubnub/index.js"], "env": {"PUBNUB_SUBSCRIBE_KEY": "demo", "PUBNUB_PUBLISH_KEY": "demo"}}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"opengov": {"command": "npx", "args": ["-y", "opengov-mcp-server@latest"], "env": {"DATA_PORTAL_URL": "https://data.cityofchicago.org"}}}}

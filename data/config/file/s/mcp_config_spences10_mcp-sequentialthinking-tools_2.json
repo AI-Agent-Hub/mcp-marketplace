@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-sequentialthinking-tools": {"command": "wsl.exe", "args": ["bash", "-c", "source ~/.nvm/nvm.sh && /home/username/.nvm/versions/node/v20.12.1/bin/npx mcp-sequentialthinking-tools"]}}}

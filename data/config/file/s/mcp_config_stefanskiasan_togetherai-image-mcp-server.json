@@ -1,0 +1,1 @@
+{"mcpServers": {"togetherai-image": {"command": "node", "args": ["/path/to/togetherai-image-server/build/index.js"], "env": {"TOGETHER_API_KEY": "your-api-key-here"}, "disabled": false, "autoApprove": []}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"github": {"command": "java", "args": ["-Dspring.ai.mcp.server.stdio=true", "-Dspring.main.web-application-type=none", "-Dlogging.pattern.console=", "-jar", "/path/to/GitHubMCP/target/GitHubMCP-1.0-SNAPSHOT.jar"], "env": {"GITHUB_TOKEN": "your-github-token-here", "GITHUB_HOST": "github.com", "GITHUB_REPOSITORY": "your-username/your-repository"}}}}

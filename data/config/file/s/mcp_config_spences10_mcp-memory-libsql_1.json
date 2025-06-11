@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-memory-libsql": {"command": "wsl.exe", "args": ["bash", "-c", "source ~/.nvm/nvm.sh && LIBSQL_URL=file:/path/to/database.db /home/username/.nvm/versions/node/v20.12.1/bin/npx mcp-memory-libsql"]}}}

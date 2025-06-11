@@ -1,0 +1,1 @@
+{"mcpServers": {"jinaai-grounding": {"command": "node", "args": ["-y", "mcp-jinaai-grounding"], "env": {"JINAAI_API_KEY": "your-jinaai-api-key"}}}}

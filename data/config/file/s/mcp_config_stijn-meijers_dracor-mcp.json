@@ -1,0 +1,1 @@
+{"mcpServers": {"DraCor API v1": {"command": "uv", "args": ["run", "--with", "mcp[cli]", "--with", "requests", "--with", "pydantic", "--with", "python-multipart", "mcp", "run", "/path/to/dracor-mcp/dracor_mcp_fastmcp.py"], "env": {"DRACOR_API_BASE_URL": "https://dracor.org/api/v1"}}}}

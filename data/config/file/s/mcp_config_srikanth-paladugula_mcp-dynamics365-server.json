@@ -1,0 +1,1 @@
+{"mcpServers": {"Dynamics365": {"command": "node", "args": ["<Path to your MCP server build file ex: rootfolder/build/index.js>"], "env": {"CLIENT_ID": "<D365 Client Id>", "CLIENT_SECRET": "<D365 Client Secret>", "TENANT_ID": "<D365 Tenant ID>", "D365_URL": "Dynamics 365 url"}}}}

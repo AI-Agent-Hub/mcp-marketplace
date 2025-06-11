@@ -1,0 +1,1 @@
+{"mcpServers": {"BloodHound": {"name": "BloodHound", "isActive": true, "command": "uv", "args": ["run", "--with", "mcp[cli],neo4j", "mcp", "run", "<PATH_TO_THE_PROJECT>server.py"], "env": {"BLOODHOUND_URI": "bolt://localhost:7687", "BLOODHOUND_USERNAME": "neo4j", "BLOODHOUND_PASSWORD": "bloodhound"}}}}

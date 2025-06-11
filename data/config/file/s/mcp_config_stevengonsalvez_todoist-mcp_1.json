@@ -1,0 +1,1 @@
+{"mcpServers": {"todoist": {"command": "node", "args": ["/path/to/todoist-mcp/dist/server.js"], "env": {"TODOIST_API_TOKEN": "your_todoist_token"}}}}

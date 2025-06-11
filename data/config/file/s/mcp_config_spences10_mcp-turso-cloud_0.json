@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-turso-cloud": {"command": "npx", "args": ["-y", "mcp-turso-cloud"], "env": {"TURSO_API_TOKEN": "your-turso-api-token", "TURSO_ORGANIZATION": "your-organization-name", "TURSO_DEFAULT_DATABASE": "optional-default-database"}}}}

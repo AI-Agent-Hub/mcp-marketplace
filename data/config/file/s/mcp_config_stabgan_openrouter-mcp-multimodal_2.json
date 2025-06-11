@@ -1,0 +1,1 @@
+{"mcpServers": {"openrouter": {"command": "docker", "args": ["run", "--rm", "-i", "-e", "OPENROUTER_API_KEY=your-api-key-here", "-e", "DEFAULT_MODEL=qwen/qwen2.5-vl-32b-instruct:free", "stabgandocker/openrouter-mcp-multimodal:latest"]}}}

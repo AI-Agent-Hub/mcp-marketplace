@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-turso-cloud": {"command": "wsl.exe", "args": ["bash", "-c", "TURSO_API_TOKEN=your-token TURSO_ORGANIZATION=your-org node /path/to/mcp-turso-cloud/dist/index.js"]}}}

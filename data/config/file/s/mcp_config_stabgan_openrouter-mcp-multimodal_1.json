@@ -1,0 +1,1 @@
+{"mcpServers": {"openrouter": {"command": "uv", "args": ["run", "-m", "openrouter_mcp_multimodal"], "env": {"OPENROUTER_API_KEY": "your-api-key-here", "DEFAULT_MODEL": "qwen/qwen2.5-vl-32b-instruct:free"}}}}

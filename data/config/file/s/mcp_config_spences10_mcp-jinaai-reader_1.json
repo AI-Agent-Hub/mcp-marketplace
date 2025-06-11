@@ -1,0 +1,1 @@
+{"mcpServers": {"jinaai-reader": {"command": "wsl.exe", "args": ["bash", "-c", "JINAAI_API_KEY=your-jinaai-api-key npx mcp-jinaai-reader"]}}}

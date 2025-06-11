@@ -1,0 +1,1 @@
+{"mcpServers": {"pubnub": {"command": "npx", "args": ["-y", "@pubnub/mcp"], "env": {"PUBNUB_SUBSCRIBE_KEY": "YOUR_SUBSCRIBE_KEY", "PUBNUB_PUBLISH_KEY": "YOUR_PUBLISH_KEY"}}}}

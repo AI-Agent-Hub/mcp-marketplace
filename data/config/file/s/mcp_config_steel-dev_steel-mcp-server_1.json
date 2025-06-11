@@ -1,0 +1,1 @@
+{"mcpServers": {"steel-puppeteer": {"command": "node", "args": ["path/to/steel-voyager/dist/index.js"], "env": {"STEEL_LOCAL": "true", "STEEL_BASE_URL": "http://localhost:3000", "GLOBAL_WAIT_SECONDS": "1"}}}}

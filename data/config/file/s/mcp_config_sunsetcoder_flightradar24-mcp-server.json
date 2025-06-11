@@ -1,0 +1,1 @@
+{"mcpServers": {"flightradar24-server": {"command": "node", "args": ["/Users/<username>/<FULL_PATH...>/flightradar24-mcp-server/dist/index.js"], "env": {"FR24_API_KEY": "your_api_key_here", "FR24_API_URL": "https://fr24api.flightradar24.com"}}}}

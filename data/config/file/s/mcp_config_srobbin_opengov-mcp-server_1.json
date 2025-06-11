@@ -1,0 +1,1 @@
+{"mcpServers": {"opengov": {"command": "node", "args": ["/path/to/your/opengov-mcp-server/dist/index.js"], "env": {"DATA_PORTAL_URL": "https://data.cityofchicago.org"}}}}

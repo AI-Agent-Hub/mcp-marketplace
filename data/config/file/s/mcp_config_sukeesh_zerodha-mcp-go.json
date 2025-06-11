@@ -1,0 +1,1 @@
+{"mcpServers": {"zerodha": {"command": "<path-to-zerodha-mcp-binary>", "env": {"ZERODHA_API_KEY": "<api_key>", "ZERODHA_API_SECRET": "<api_secret>"}}}}
