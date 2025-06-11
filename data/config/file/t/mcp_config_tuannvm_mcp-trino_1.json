@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-trino": {"command": "mcp-trino", "args": [], "env": {"TRINO_HOST": "<HOST>", "TRINO_PORT": "<PORT>", "TRINO_USER": "<USERNAME>", "TRINO_PASSWORD": "<PASSWORD>"}}}}

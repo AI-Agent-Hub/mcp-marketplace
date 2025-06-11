@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-trino": {"command": "docker", "args": ["run", "--rm", "-i", "-e", "TRINO_HOST=<HOST>", "-e", "TRINO_PORT=<PORT>", "-e", "TRINO_USER=<USERNAME>", "-e", "TRINO_PASSWORD=<PASSWORD>", "-e", "TRINO_SCHEME=http", "ghcr.io/tuannvm/mcp-trino:latest"], "env": {}}}}

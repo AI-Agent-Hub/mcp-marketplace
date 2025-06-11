@@ -1,0 +1,1 @@
+{"mcpServers": {"generateImage": {"command": "/Users/zhangxudong/Gits/turinhub/cf-mcp-server/mcp-image-generation/node_modules/.bin/workers-mcp", "args": ["run", "generateImage", "https://mcp-image-generation.turinhub.com", "/Users/zhangxudong/Gits/turinhub/cf-mcp-server/mcp-image-generation"], "env": {}}}}

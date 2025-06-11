@@ -1,0 +1,1 @@
+{"mcpServers": {"stockscreen": {"command": "python", "args": ["path/to/stockscreen.py"]}}}

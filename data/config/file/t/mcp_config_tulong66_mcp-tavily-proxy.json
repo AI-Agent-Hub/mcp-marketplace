@@ -1,0 +1,1 @@
+{"mcpServers": {"tavily": {"command": "python", "args": ["-m", "mcp_server_tavily"]}, "env": {"TAVILY_API_KEY": "your_api_key_here", "HTTP_PROXY": "http://your-proxy:port", "HTTPS_PROXY": "http://your-proxy:port"}}}

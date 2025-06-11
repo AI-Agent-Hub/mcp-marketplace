@@ -1,0 +1,1 @@
+{"mcpServers": {"odbc": {"command": "uv", "args": ["--directory", "C:\\path\\to\\mcp-odbc", "run", "odbc-mcp-server", "--config", "C:\\path\\to\\mcp-odbc\\config\\your_config.ini"]}}}

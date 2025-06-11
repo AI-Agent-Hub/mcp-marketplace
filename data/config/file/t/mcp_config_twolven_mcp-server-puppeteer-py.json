@@ -1,0 +1,1 @@
+{"mcpServers": {"puppeteer": {"command": "python", "args": ["path/to/puppeteer.py"]}}}

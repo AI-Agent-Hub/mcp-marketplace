@@ -1,0 +1,1 @@
+{"mcp": {"servers": {"interactive-mcp": {"command": "npx", "args": ["-y", "interactive-mcp"]}}}}

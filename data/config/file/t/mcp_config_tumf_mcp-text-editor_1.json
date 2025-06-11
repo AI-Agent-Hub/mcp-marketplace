@@ -1,0 +1,1 @@
+{"mcpServers": {"text-editor": {"command": "docker", "args": ["run", "-i", "--rm", "--mount", "type=bind,src=/some/path/src,dst=/some/path/dst", "mcp/text-editor"]}}}

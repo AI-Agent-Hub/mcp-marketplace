@@ -1,0 +1,1 @@
+{"globalShortcut": "Alt+Space", "mcpServers": {"Solana Client": {"command": "/Users/tywen/.local/bin/uv", "args": ["--directory", "/Users/tywen/Developer/mcp-sol", "run", "--with", "mcp", "mcp", "run", "/Users/tywen/Developer/mcp-sol/src/server.py"]}}}
