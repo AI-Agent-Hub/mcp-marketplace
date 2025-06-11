@@ -1,0 +1,1 @@
+{"mcpServers": {"MCPControl": {"command": "npx", "args": ["--no-cache", "-y", "mcp-control"]}}}

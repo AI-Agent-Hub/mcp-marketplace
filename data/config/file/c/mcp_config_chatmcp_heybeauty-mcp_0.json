@@ -1,0 +1,1 @@
+{"mcpServers": {"heybeauty-mcp": {"command": "npx", "args": ["-y", "heybeauty-mcp"], "env": {"HEYBEAUTY_API_KEY": "your_heybeauty_api_key"}}}}
