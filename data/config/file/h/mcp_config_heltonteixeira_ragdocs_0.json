@@ -1,0 +1,1 @@
+{"mcpServers": {"ragdocs": {"command": "node", "args": ["@mcpservers/ragdocs"], "env": {"QDRANT_URL": "http://127.0.0.1:6333", "EMBEDDING_PROVIDER": "ollama"}}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"hdw": {"command": "node", "args": ["/path/to/your/build/index.js"], "env": {"HDW_ACCESS_TOKEN": "YOUR_HD_W_ACCESS_TOKEN", "HDW_ACCOUNT_ID": "YOUR_HD_W_ACCOUNT_ID"}}}}

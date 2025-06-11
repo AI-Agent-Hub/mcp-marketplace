@@ -1,0 +1,1 @@
+{"mcpServers": {"audio-player": {"command": "/path/to/your/venv/bin/python", "args": ["/path/to/your/audio-player-mcp/src/audio_player_mcp/player.py"], "env": {"AUDIO_PLAYER_DIR": "/path/to/your/audio/files"}}}}

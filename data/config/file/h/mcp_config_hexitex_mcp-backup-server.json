@@ -1,0 +1,1 @@
+{"mcpServers": {"backup": {"command": "node", "args": ["./dist/index.js"], "env": {"BACKUP_DIR": "./.code_backups", "EMERGENCY_BACKUP_DIR": "./.code_emergency_backups", "MAX_VERSIONS": "20"}}}}

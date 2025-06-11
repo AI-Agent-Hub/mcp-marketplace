@@ -1,0 +1,1 @@
+{"mcpServers": {"attio": {"command": "npx", "args": ["attio-mcp-server"], "env": {"ATTIO_API_KEY": "YOUR_ATTIO_API_KEY"}}}}

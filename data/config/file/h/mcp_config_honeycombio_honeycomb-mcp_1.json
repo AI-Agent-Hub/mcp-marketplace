@@ -1,0 +1,1 @@
+{"mcpServers": {"honeycomb": {"command": "node", "args": ["/fully/qualified/path/to/honeycomb-mcp/build/index.mjs"], "env": {"HONEYCOMB_ENV_PROD_API_KEY": "your_prod_api_key", "HONEYCOMB_ENV_STAGING_API_KEY": "your_staging_api_key"}}}}

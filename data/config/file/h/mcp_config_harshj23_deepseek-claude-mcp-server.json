@@ -1,0 +1,1 @@
+{"mcpServers": {"deepseek-claude": {"command": "uv", "args": ["--directory", "C:\\ABSOLUTE\\PATH\\TO\\PARENT\\FOLDER\\deepseek-claude", "run", "server.py"]}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"sqlexpress": {"command": "uv", "args": ["--directory", "PATH\\TO\\PROJECT\\mcp-sqlexpress", "run", "mcp-server-sqlexpress", "--server", "server\\instance", "--auth", "windows", "--trusted-connection", "yes", "--trust-server-certificate", "yes", "--allowed-databases", "database1,database2"]}}}

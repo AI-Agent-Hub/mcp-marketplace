@@ -1,0 +1,1 @@
+{"mcpServers": {"HeyGen": {"command": "uvx", "args": ["heygen-mcp"], "env": {"HEYGEN_API_KEY": "<insert-your-api-key-here>"}}}}
