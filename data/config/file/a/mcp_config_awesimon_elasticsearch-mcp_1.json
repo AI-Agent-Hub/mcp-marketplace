@@ -1,0 +1,1 @@
+{"mcpServers": {"elasticsearch-mcp": {"command": "node", "args": ["/path/to/your/project/dist/index.js"], "env": {"ES_HOST": "your-elasticsearch-host", "ES_API_KEY": "your-api-key"}}}}

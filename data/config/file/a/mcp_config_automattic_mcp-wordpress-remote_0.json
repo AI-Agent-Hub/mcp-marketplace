@@ -1,0 +1,1 @@
+{"mcpServers": {"wordpress-mcp": {"command": "npx", "args": ["@automattic/mcp-wordpress-remote"], "env": {"WP_API_URL": "https://your-wordpress-site.com", "WP_API_USERNAME": "your-username", "WP_API_PASSWORD": "your-password", "WOO_CUSTOMER_KEY": "your-woo-customer-key", "WOO_CUSTOMER_SECRET": "your-woo-customer-secret", "LOG_FILE": "optional full path to the log file"}}}}

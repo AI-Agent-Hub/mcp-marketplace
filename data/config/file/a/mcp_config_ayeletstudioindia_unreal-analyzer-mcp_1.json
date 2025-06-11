@@ -1,0 +1,1 @@
+{"mcpServers": {"unreal-analyzer": {"command": "node", "args": ["path/to/unreal-analyzer/build/index.js"], "env": {}}}}
