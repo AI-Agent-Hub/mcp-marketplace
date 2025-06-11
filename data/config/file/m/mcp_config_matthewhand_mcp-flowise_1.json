@@ -1,0 +1,1 @@
+{"mcpServers": {"flowise": {"command": "C:\\Users\\matth\\.local\\bin\\uvx.exe", "args": ["--from", "C:\\Users\\matth\\downloads\\mcp-flowise", "mcp-flowise"], "env": {"LOGLEVEL": "ERROR", "APPDATA": "C:\\Users\\matth\\AppData\\Roaming", "FLOWISE_API_KEY": "your-api-key-goes-here", "FLOWISE_API_ENDPOINT": "http://localhost:3000/"}}}}

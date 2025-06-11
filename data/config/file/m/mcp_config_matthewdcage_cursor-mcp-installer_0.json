@@ -1,0 +1,1 @@
+{"mcpServers": {"cursor-mcp-installer": {"command": "cmd", "args": ["/c", "npx", "-y", "@yumia-pretty/cursor-mcp-installer@latest"]}}}

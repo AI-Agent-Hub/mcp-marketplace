@@ -1,0 +1,1 @@
+{"mcpServers": {"watsonx-discovery": {"command": "wsl.exe", "args": ["bash", "-c", "/home/morpheus/.local/bin/uv --directory /home/morpheus/workspace/mcp-discovery run 'server/__main__.py'"]}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"kintone": {"command": "C:\\path\\to\\mcp-server-kintone.exe", "env": {"KINTONE_BASE_URL": "https://<domain>.cybozu.com", "KINTONE_USERNAME": "<your username>", "KINTONE_PASSWORD": "<your password>", "KINTONE_API_TOKEN": "<your api token>, <another api token>, ...", "KINTONE_ALLOW_APPS": "1, 2, 3, ...", "KINTONE_DENY_APPS": "4, 5, ..."}}}}

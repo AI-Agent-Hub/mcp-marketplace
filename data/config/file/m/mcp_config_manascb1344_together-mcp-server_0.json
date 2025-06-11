@@ -1,0 +1,1 @@
+{"mcpServers": {"together-image-gen": {"command": "npx", "args": ["together-mcp@latest -y"], "env": {"TOGETHER_API_KEY": "<API KEY>"}}}}

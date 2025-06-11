@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-flowise": {"command": "uvx", "args": ["--from", "git+https://github.com/matthewhand/mcp-flowise", "mcp-flowise"], "env": {"FLOWISE_API_KEY": "${FLOWISE_API_KEY}", "FLOWISE_API_ENDPOINT": "${FLOWISE_API_ENDPOINT}"}}}}

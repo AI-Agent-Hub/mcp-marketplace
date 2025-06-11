@@ -1,0 +1,1 @@
+{"mcpServers": {"mediaProcessor": {"command": "npx", "args": ["-y", "create-mcp-server@latest"]}}}

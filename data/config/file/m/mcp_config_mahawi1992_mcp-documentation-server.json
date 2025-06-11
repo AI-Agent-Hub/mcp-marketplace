@@ -1,0 +1,1 @@
+{"mcpServers": {"documentation": {"command": "npx", "args": ["-y", "mcp-documentation-server"], "env": {"BRAVE_API_KEY": "<YOUR_BRAVE_API_KEY>"}}}}

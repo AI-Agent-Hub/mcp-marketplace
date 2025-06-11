@@ -1,0 +1,1 @@
+{"mcpServers": {"strava": {"command": "java", "args": ["-jar", "your/path/strava-mcp-server/build/libs/strava-mcp-server-1.0.0-all.jar"]}}}

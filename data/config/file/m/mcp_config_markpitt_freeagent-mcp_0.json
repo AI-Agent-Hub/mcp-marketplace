@@ -1,0 +1,1 @@
+{"mcpServers": {"freeagent": {"command": "node", "args": ["path/to/freeagent-mcp/build/index.js"], "env": {"FREEAGENT_CLIENT_ID": "your_client_id", "FREEAGENT_CLIENT_SECRET": "your_client_secret", "FREEAGENT_ACCESS_TOKEN": "your_access_token", "FREEAGENT_REFRESH_TOKEN": "your_refresh_token"}, "disabled": false, "autoApprove": []}}}

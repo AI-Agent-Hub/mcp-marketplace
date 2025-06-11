@@ -1,0 +1,1 @@
+{"mcpServers": {"flyio": {"command": "uvx", "args": ["mcp-openapi-proxy"], "env": {"OPENAPI_SPEC_URL": "https://raw.githubusercontent.com/abhiaagarwal/peristera/refs/heads/main/fly-machines-gen/fixed_spec.json", "API_KEY": "<your_flyio_token_here>"}}}}

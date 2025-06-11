@@ -1,0 +1,1 @@
+{"mcpServers": {"emergency-medicare-planner": {"command": "npx", "args": ["@manolaz/emergency-medicare-planner-mcp-server"], "env": {"GOOGLE_MAPS_API_KEY": "your_google_maps_api_key"}}}}

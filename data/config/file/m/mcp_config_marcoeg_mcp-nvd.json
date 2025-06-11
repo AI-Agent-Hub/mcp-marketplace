@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-nvd": {"command": "/path/to/uvx", "args": ["mcp-nvd"], "env": {"NVD_API_KEY": "your-api-key"}}}}

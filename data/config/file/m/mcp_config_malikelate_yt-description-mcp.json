@@ -1,0 +1,1 @@
+{"mcpServers": {"youtube-transcript": {"command": "node", "args": ["/absolute/path/to/yt-mcp/build/index.js"]}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"geoserver-mcp": {"command": "C:\\path\\to\\geoserver-mcp\\.venv\\Scripts\\geoserver-mcp", "args": ["--url", "http://localhost:8080/geoserver", "--user", "admin", "--password", "geoserver"]}}}

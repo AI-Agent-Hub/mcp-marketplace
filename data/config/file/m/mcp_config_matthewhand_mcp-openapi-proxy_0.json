@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-openapi-proxy": {"command": "uvx", "args": ["mcp-openapi-proxy"], "env": {"OPENAPI_SPEC_URL": "${OPENAPI_SPEC_URL}", "API_KEY": "${API_OPENAPI_KEY}"}}}}

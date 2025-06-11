@@ -1,0 +1,1 @@
+{"mcpServers": {"pbs-api": {"command": "node", "args": ["path/to/pbs-mcp-standalone/build/index.js"], "env": {"PBS_API_SUBSCRIPTION_KEY": "your-subscription-key-here"}}}}

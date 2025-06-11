@@ -1,0 +1,1 @@
+{"mcpServers": {"dust-agent": {"command": "npm", "args": ["run", "start:server"], "cwd": "path/to/mcp-dust-server", "host": "127.0.0.1", "port": 5001, "timeout": 30000, "env": {"DUST_API_KEY": "${YOUR_API_KEY}", "DUST_WORKSPACE_ID": "${YOUR_WORKSPACE_ID}", "DUST_AGENT_ID": "${YOUR_AGENT_ID}"}}}}

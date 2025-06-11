@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-google-calendar": {"command": "npx", "args": ["-y", "mcp-google-calendar"], "env": {"CREDENTIALS_PATH": "/path/to/your/credentials.json"}}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"MalloryAI": {"command": "/path/to/uv", "args": ["run", "--python", "/path/to/mcp-server/.venv/bin/python", "/path/to/mcp-server/malloryai/mcp/app.py"], "env": {"MALLORY_API_KEY": "your_api_key_here"}}}}

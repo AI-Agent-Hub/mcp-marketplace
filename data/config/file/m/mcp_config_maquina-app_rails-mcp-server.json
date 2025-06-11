@@ -1,0 +1,1 @@
+{"mcpServers": {"railsMcpServer": {"command": "ruby", "args": ["/full/path/to/rails-mcp-server/exe/rails-mcp-server"]}}}

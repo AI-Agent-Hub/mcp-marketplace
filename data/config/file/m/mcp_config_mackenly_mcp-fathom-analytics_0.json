@@ -1,0 +1,1 @@
+{"mcpServers": {"fathom-analytics": {"command": "npx", "args": ["-y", "mcp-fathom-analytics"], "env": {"FATHOM_API_KEY": "your_api_key_here"}}}}

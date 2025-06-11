@@ -1,0 +1,1 @@
+{"mcpServers": {"video-recognition": {"command": "node", "args": ["/path/to/mcp-video-recognition/dist/index.js"], "disabled": false, "autoApprove": []}}}

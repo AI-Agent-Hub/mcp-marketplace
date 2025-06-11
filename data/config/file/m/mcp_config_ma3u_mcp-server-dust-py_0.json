@@ -1,0 +1,1 @@
+{"mcpServers": {"dust": {"command": "/Users/ma3u/projects/mcp-server-dust/.venv/bin/python", "args": ["/Users/ma3u/projects/mcp-server-dust/server.py"], "host": "127.0.0.1", "port": 5001, "timeout": 10000}}}

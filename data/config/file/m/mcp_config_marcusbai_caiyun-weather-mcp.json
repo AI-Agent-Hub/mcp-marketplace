@@ -1,0 +1,1 @@
+{"mcpServers": {"caiyun-weather": {"command": "node", "args": ["\u5b8c\u6574\u8def\u5f84/caiyun-weather-mcp/dist/index.js"], "env": {"CAIYUN_API_KEY": "\u60a8\u7684\u5f69\u4e91\u5929\u6c14API\u5bc6\u94a5", "AMAP_API_KEY": "\u60a8\u7684\u9ad8\u5fb7\u5730\u56feAPI\u5bc6\u94a5\uff08\u53ef\u9009\uff09"}, "disabled": false, "autoApprove": []}}}

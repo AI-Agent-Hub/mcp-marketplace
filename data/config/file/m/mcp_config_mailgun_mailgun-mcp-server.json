@@ -1,0 +1,1 @@
+{"mcpServers": {"mailgun": {"command": "node", "args": ["CHANGE/THIS/PATH/TO/mailgun-mcp-server/src/mailgun-mcp.js"], "env": {"MAILGUN_API_KEY": "YOUR-mailgun-api-key"}}}}

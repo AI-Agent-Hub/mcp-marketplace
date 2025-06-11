@@ -1,0 +1,1 @@
+{"mcpServers": {"farcaster": {"command": "node", "args": ["/absolute/path/to/farcaster-mcp/build/index.js"]}}}
