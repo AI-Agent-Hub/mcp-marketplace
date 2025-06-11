@@ -1,0 +1,1 @@
+{"mcpServers": {"revit": {"command": "python", "args": ["C:/path/to/revit_mcp_server.py"]}}}
