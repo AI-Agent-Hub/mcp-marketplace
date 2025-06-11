@@ -1,0 +1,1 @@
+{"mcpServers": {"asana": {"command": "npx", "args": ["-y", "@cristip73/mcp-server-asana"], "env": {"ASANA_ACCESS_TOKEN": "your-asana-access-token", "DEFAULT_WORKSPACE_ID": "your-default-workspace-id"}}}}

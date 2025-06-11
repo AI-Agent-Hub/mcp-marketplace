@@ -1,0 +1,1 @@
+{"mcpServers": {"crawl4ai-rag": {"command": "python", "args": ["path/to/crawl4ai-mcp/src/crawl4ai_mcp.py"], "env": {"TRANSPORT": "stdio", "OPENAI_API_KEY": "your_openai_api_key", "SUPABASE_URL": "your_supabase_url", "SUPABASE_SERVICE_KEY": "your_supabase_service_key"}}}}

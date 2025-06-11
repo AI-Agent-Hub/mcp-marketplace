@@ -1,0 +1,1 @@
+{"mcpServers": {"edu-data": {"command": "npx", "args": ["edu-data-mcp-server"], "disabled": false, "alwaysAllow": []}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"teamtailor": {"command": "npx", "args": ["-y", "@crunchloop/mcp-teamtailor"], "env": {"TEAMTAILOR_URL": "https://api.teamtailor.com/v1", "TEAMTAILOR_API_KEY": "XXXX"}}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"gpt-image-1": {"command": "npx", "args": ["-y", "@cloudwerxlab/gpt-image-1-mcp"], "env": {"OPENAI_API_KEY": "sk-your-openai-api-key", "GPT_IMAGE_OUTPUT_DIR": "/home/username/Pictures/ai-generated-images"}}}}

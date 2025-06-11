@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-unity": {"command": "node", "args": ["ABSOLUTE/PATH/TO/mcp-unity/Server/build/index.js"]}}}
