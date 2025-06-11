@@ -1,0 +1,1 @@
+{"mcpServers": {"defectdojo": {"command": "defectdojo-mcp", "args": [], "env": {"DEFECTDOJO_API_TOKEN": "YOUR_API_TOKEN_HERE", "DEFECTDOJO_API_BASE": "https://your-defectdojo-instance.com"}}}}

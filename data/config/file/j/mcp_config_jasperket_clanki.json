@@ -1,0 +1,1 @@
+{"mcpServers": {"clanki": {"command": "node", "args": ["/absolute/path/to/clanki/build/index.js"]}}}

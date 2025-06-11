@@ -1,0 +1,1 @@
+{"mcpServers": {"documents": {"command": "poetry", "args": ["-C", "path/to/mcp-document-reader", "run", "mcp-document-reader"]}}}

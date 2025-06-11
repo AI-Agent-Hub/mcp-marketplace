@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-tiggerbeetle": {"command": "[ABSOLUTE PATH TO]/java/current/bin/java", "args": ["-Dspring.ai.mcp.server.stdio=true", "-jar", "[ABSOLUTE PATH TO]/mcp-tiggerbeetle/target/mcp-tiggerbeetle-0.0.1-SNAPSHOT.jar"], "autoApprove": ["mcp-tiggerbeetle"]}}}

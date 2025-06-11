@@ -1,0 +1,1 @@
+{"mcpServers": {"shared-knowledge-base": {"command": "node", "args": ["/path/to/shared-knowledge-mcp/dist/index.js"], "env": {"KNOWLEDGE_BASE_PATH": "/path/to/your/rules", "OPENAI_API_KEY": "your-openai-api-key", "VECTOR_STORE_TYPE": "pinecone", "VECTOR_STORE_CONFIG": "{\"apiKey\":\"your-pinecone-api-key\",\"environment\":\"your-environment\",\"index\":\"your-index-name\"}"}}}}

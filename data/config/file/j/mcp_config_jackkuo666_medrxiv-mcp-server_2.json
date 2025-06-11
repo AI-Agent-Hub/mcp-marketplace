@@ -1,0 +1,1 @@
+{"mcpServers": {"medrxiv": {"command": "bash", "args": ["-c", "source /home/YOUR/PATH/mcp-server-medRxiv/.venv/bin/activate && python /home/YOUR/PATH/mcp-server-medRxiv/medrxiv_server.py"], "env": {}, "disabled": false, "autoApprove": []}}}

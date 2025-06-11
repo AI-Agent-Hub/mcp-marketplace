@@ -1,0 +1,1 @@
+{"mcpServers": {"solarwinds": {"command": "npx", "args": ["-y", "mcp-solarwinds"], "env": {"SOLARWINDS_API_TOKEN": "your-api-token"}}}}

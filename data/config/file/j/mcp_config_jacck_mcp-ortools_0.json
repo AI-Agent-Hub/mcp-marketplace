@@ -1,0 +1,1 @@
+{"mcpServers": {"ortools": {"command": "python", "args": ["-m", "mcp_ortools.server"]}}}

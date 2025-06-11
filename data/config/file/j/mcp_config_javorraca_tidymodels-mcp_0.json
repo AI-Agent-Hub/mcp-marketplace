@@ -1,0 +1,1 @@
+{"mcpServers": {"tidymodels": {"command": "node", "args": ["/path/to/tidymodels-mcp/js/index.js"], "env": {"GITHUB_TOKEN": "your-github-token"}, "disabled": false, "autoApprove": ["list_tidymodels_packages", "get_package_details", "search_r_functions", "generate_tidymodels_code", "search_issues"]}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"azure-cli": {"command": "docker", "args": ["run", "-i", "--rm", "-e", "AZURE_CREDENTIALS", "ghcr.io/jdubois/azure-cli-mcp:latest"], "env": {"AZURE_CREDENTIALS": "{\"clientId\":\"...\",\"clientSecret\":\"...\",..."}}}}
