@@ -1,0 +1,1 @@
+{"mcpServers": {"lemonade-stand": {"command": "wsl.exe", "args": ["/home/username/.nvm/versions/node/v20.11.1/bin/node", "/home/username/projects/Lemonade-Stand-MCP-Server/server.js"]}}}

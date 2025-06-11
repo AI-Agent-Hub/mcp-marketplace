@@ -1,0 +1,1 @@
+{"mcpServers": {"mcpSandbox": {"command": "npx", "args": ["-y", "supergateway", "--sse", "http://115.190.87.78/sse?api_key=<API_KEY>"]}}}

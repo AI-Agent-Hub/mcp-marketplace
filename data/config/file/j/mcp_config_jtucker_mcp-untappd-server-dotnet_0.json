@@ -1,0 +1,1 @@
+{"mcpServers": {"untappddotnet": {"command": "npx", "args": ["mcp-remote", "http://localhost:7071/runtime/webhooks/mcp/sse"]}}}

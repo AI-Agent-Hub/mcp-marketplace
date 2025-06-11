@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp4gql": {"command": "npx", "type": "stdio", "args": ["-y", "mcp4gql"], "env": {"GRAPHQL_ENDPOINT": "YOUR_GRAPHQL_ENDPOINT_URL", "AUTH_TOKEN": "YOUR_OPTIONAL_AUTH_TOKEN"}}}}

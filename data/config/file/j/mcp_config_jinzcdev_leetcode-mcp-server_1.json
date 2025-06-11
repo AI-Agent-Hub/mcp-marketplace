@@ -1,0 +1,1 @@
+{"mcp": {"servers": {"leetcode": {"type": "stdio", "command": "npx", "args": ["-y", "@jinzcdev/leetcode-mcp-server", "--site", "global", "--session", "<YOUR_LEETCODE_SESSION_COOKIE>"]}}}}

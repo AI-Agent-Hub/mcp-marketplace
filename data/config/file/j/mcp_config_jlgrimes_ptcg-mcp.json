@@ -1,0 +1,1 @@
+{"mcpServers": {"ptcg-mcp": {"command": "node", "args": ["ABSOLUTE_PATH_HERE/dist/index.js"]}}}

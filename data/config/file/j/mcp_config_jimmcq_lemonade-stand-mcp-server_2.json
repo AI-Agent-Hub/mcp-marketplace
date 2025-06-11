@@ -1,0 +1,1 @@
+{"mcpServers": {"lemonade-stand": {"command": "npx", "args": ["/path/to/Lemonade-Stand-MCP-Server/server.js"]}}}

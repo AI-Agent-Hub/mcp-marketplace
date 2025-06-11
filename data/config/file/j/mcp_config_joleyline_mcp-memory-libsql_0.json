@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-memory-libsql": {"command": "npx", "args": ["-y", "mcp-memory-libsql"], "env": {"LIBSQL_URL": "file:/path/to/your/database.db"}}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"mongodb": {"command": "node", "args": ["/path/to/mongodb-server/build/index.js"], "env": {"MONGODB_URI": "mongodb://username:password@hostname:port/database", "MONGODB_DEFAULT_DATABASE": "your_default_db"}}}}
