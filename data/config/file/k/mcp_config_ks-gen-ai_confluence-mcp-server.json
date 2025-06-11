@@ -1,0 +1,1 @@
+{"mcpServers": {"Confluence communication server": {"command": "node", "args": ["/PATH_TO_THE_PROJECT/build/index.js"], "env": {"CONFLUENCE_URL": "https://XXXXXXXX.atlassian.net/wiki", "CONFLUENCE_API_MAIL": "Your email", "CONFLUENCE_API_KEY": "KEY_FROM: https://id.atlassian.com/manage-profile/security/api-tokens"}}}}

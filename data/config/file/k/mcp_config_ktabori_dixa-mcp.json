@@ -1,0 +1,1 @@
+{"mcpServers": {"my-mcp-server": {"command": "npx", "args": ["tsx", "/PATH/TO/YOUR_PROJECT/src/index.ts"], "env": {"YOUR_ENV_VAR": "value"}}}}

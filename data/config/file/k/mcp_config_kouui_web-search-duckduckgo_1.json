@@ -1,0 +1,1 @@
+{"mcpServers": {"web-search-duckduckgo": {"command": "uv", "args": ["--directory", "/path/to/web-search-duckduckgo", "run", "main.py"]}}}

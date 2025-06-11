@@ -1,0 +1,1 @@
+{"mcpServers": {"image-tools": {"command": "npx", "args": ["image-tools-mcp"], "env": {"TINIFY_API_KEY": "<YOUR_TINIFY_API_KEY>", "FIGMA_API_TOKEN": "<YOUR_FIGMA_API_TOKEN>"}}}}

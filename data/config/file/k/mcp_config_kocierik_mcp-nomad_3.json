@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp_nomad": {"command": "docker", "args": ["run", "-i", "--rm", "-e", "NOMAD_ADDR=http://172.17.0.1:4646", "-e", "NOMAD_TOKEN=secret-token-acl-optional", "kocierik/mcpnomad-server:latest"]}}}

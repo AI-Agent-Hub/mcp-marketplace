@@ -1,0 +1,1 @@
+{"mcpServers": {"nearby-search": {"command": "uv", "args": ["--directory", "path/to/nearby-search-mcp", "run", "main.py"], "env": {"GOOGLE_API_KEY": "your google api key"}}}}
