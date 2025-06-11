@@ -1,0 +1,1 @@
+{"mcpServers": {"spotify": {"command": "node", "args": ["/full/path/to/spotify-mcp-server/build/spotify-mcp-server.js"]}}}

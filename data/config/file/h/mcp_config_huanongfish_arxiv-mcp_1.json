@@ -1,0 +1,1 @@
+{"mcpServers": {"arxiv-mcp-server": {"command": "uv", "args": ["--directory", "path/to/cloned/arxiv-mcp-server", "run", "arxiv-mcp-server", "--storage-path", "/path/to/paper/storage"]}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"google_search": {"command": "node", "args": ["C:\\absolute\\path\\to\\google-search-mcp\\dist\\index.js"], "env": {"GOOGLE_API_KEY": "your_api_key_here", "GOOGLE_CSE_ID": "your_search_engine_id_here"}}}}

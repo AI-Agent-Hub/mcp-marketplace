@@ -1,0 +1,1 @@
+{"mcpServers": {"music-analysis": {"command": "uvx", "args": ["-n", "mcp-music-analysis"]}}}
