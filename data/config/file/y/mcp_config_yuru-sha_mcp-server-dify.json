@@ -1,0 +1,1 @@
+{"mcpServers": {"dify": {"command": "npx", "args": ["-y", "@modelcontextprotocol/server-dify", "https://your-dify-api-endpoint", "your-dify-api-key"]}}}

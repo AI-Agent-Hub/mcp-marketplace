@@ -1,0 +1,1 @@
+{"mcpServers": {"multi-model-advisor": {"command": "node", "args": ["/absolute/path/to/multi-ai-advisor-mcp/build/index.js"]}}}

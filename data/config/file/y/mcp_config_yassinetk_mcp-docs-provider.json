@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-docs-provider": {"command": "npx", "args": ["-y", "mcp-docs-provider", "/path/to/your/documentation.md"]}}}

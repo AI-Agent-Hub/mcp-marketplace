@@ -1,0 +1,1 @@
+{"mcpServers": {"YingDao RPA MCP Server": {"command": "npx", "args": ["-y", "yingdao-mcp-server"], "env": {"RPA_MODEL": "openApi", "ACCESS_KEY_ID": "{your_access_key_id}", "ACCESS_KEY_SECRET": "{your_access_key_secret}"}}}}

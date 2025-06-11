@@ -1,0 +1,1 @@
+{"mcpServers": {"excalidraw": {"command": "docker", "args": ["run", "-i", "--rm", "mcp/excalidraw"], "env": {"LOG_LEVEL": "info", "DEBUG": "false"}}}}

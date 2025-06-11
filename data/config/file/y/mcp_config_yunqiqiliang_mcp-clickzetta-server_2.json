@@ -1,0 +1,1 @@
+{"mcpServers": {"clickzetta-mcp-server": {"command": "/Users/******/anaconda3/bin/uv", "args": ["--directory", "/Users/******/Documents/GitHub/mcp-clickzetta-server", "run", "mcp_clickzetta_server"]}}}

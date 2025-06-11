@@ -1,0 +1,1 @@
+{"mcpServers": {"mindmap-converter": {"command": "docker", "args": ["run", "--rm", "-i", "-v", "/path/to/output/folder:/output", "ychen94/mindmap-converter-mcp:latest"]}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"mindmap": {"command": "python", "args": ["/path/to/your/mindmap_mcp_server/server.py", "--return-type", "filePath"]}}}

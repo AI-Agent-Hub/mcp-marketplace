@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-server-openmetadata": {"command": "uvx", "args": ["mcp-server-openmetadata"], "env": {"OPENMETADATA_HOST": "https://your-openmetadata-host", "OPENMETADATA_JWT_TOKEN": "your-jwt-token"}}}}

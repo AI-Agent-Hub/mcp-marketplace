@@ -1,0 +1,1 @@
+{"mcpServers": {"quantum-simulator": {"command": "docker", "args": ["run", "-i", "--rm", "-v", "/tmp:/data/quantum_simulator_results", "-e", "HOST_OUTPUT_DIR=/tmp", "ychen94/quantum-simulator-mcp:latest"]}}}

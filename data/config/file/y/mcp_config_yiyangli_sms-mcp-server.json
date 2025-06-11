@@ -1,0 +1,1 @@
+{"mcpServers": {"twilio": {"command": "npx", "args": ["-y", "@yiyang.1i/sms-mcp-server"], "env": {"ACCOUNT_SID": "your_account_sid", "AUTH_TOKEN": "your_auth_token", "FROM_NUMBER": "your_twilio_number"}}}}

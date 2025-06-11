@@ -1,0 +1,1 @@
+{"mcpServers": {"cosense-mcp-server": {"command": "node", "args": ["/path/to/cosense-mcp-server/build/index.js"], "env": {"COSENSE_PROJECT_NAME": "your_project_name", "COSENSE_SID": "your_sid"}}}}

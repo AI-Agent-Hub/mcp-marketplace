@@ -1,0 +1,1 @@
+{"mcpServers": {"one-search-mcp": {"command": "npx", "args": ["-y", "one-search-mcp"], "env": {"SEARCH_PROVIDER": "searxng", "SEARCH_API_URL": "http://127.0.0.1:8080", "SEARCH_API_KEY": "YOUR_API_KEY", "FIRECRAWL_API_URL": "http://127.0.0.1:3002", "FIRECRAWL_API_KEY": "YOUR_API_KEY"}}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"gitlab": {"command": "npx", "args": ["-y", "@yoda.digital/gitlab-mcp-server"], "env": {"GITLAB_PERSONAL_ACCESS_TOKEN": "your_token_here", "GITLAB_API_URL": "https://gitlab.com/api/v4"}, "alwaysAllow": [], "disabled": false}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"ydb": {"command": "uvx", "args": ["ydb-mcp", "--ydb-endpoint", "grpc://localhost:2136/local", "--ydb-auth-mode", "login-password", "--ydb-login", "<your-username>", "--ydb-password", "<your-password>"]}}}

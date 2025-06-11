@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-server-apache-airflow": {"command": "uvx", "args": ["mcp-server-apache-airflow"], "env": {"AIRFLOW_HOST": "https://your-airflow-host", "AIRFLOW_USERNAME": "your-username", "AIRFLOW_PASSWORD": "your-password"}}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"cerebra-legal": {"command": "node", "args": ["/path/to/mcp-cerebra-legal-server/build/index.js"], "disabled": false, "alwaysAllow": []}}}

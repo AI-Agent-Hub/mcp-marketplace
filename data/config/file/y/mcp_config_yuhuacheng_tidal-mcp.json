@@ -1,0 +1,1 @@
+{"mcpServers": {"TIDAL Integration": {"command": "/path/to/your/uv", "env": {"TIDAL_MCP_PORT": "5100"}, "args": ["run", "--with", "requests", "--with", "mcp[cli]", "--with", "flask", "--with", "tidalapi", "mcp", "run", "/path/to/your/project/tidal-mcp/mcp_server/server.py"]}}}
