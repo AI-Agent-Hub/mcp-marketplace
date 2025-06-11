@@ -1,0 +1,1 @@
+{"mcpServers": {"duckduckgo": {"command": "docker", "args": ["run", "-i", "--rm", "ashdev/duckduckgo-mcp-server"]}}}

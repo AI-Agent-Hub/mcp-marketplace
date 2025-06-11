@@ -1,0 +1,1 @@
+{"mcpServers": {"Bitcoin SV": {"command": "npx", "args": ["bsv-mcp@latest"], "env": {"PRIVATE_KEY_WIF": "<your_private_key_wif>", "IDENTITY_KEY_WIF": "<your_identity_key_wif>"}}}}

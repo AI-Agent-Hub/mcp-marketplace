@@ -1,0 +1,1 @@
+{"mcpServers": {"logseq": {"command": "/opt/homebrew/bin/uvx", "args": ["logseq-mcp"], "env": {"LOGSEQ_API_URL": "http://localhost:12315", "LOGSEQ_TOKEN": "your-token-here"}}}}

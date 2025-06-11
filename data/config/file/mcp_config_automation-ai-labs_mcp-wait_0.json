@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-wait": {"command": "npx", "args": ["-y", "@automation-ai-labs/mcp-wait"], "env": {"TRANSPORT_TYPE": "stdio"}}}}

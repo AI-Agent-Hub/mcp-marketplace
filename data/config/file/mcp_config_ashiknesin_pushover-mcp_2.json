@@ -1,0 +1,1 @@
+{"mcpServers": {"pushover": {"command": "npx", "args": ["-y", "pushover-mcp@latest", "start", "--token", "YOUR_TOKEN", "--user", "YOUR_USER"]}}}
