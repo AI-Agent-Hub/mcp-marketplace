@@ -1,0 +1,1 @@
+{"mcpServers": {"youtube-summarizer": {"command": "docker", "args": ["run", "-i", "--rm", "youtube-summarizer-mcp"]}}}

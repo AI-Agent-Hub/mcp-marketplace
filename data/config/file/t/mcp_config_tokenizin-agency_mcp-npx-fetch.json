@@ -1,0 +1,1 @@
+{"mcpServers": {"fetch": {"command": "npx", "args": ["-y", "@tokenizin/mcp-npx-fetch"], "env": {}}}}

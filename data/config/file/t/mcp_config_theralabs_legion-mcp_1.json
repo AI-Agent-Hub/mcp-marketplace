@@ -1,0 +1,1 @@
+{"mcpServers": {"database": {"command": "python", "args": ["-m", "database_mcp", "--repository", "path/to/git/repo"], "env": {"DB_TYPE": "pg", "DB_CONFIG": "{\"host\":\"localhost\",\"port\":5432,\"user\":\"user\",\"password\":\"pw\",\"dbname\":\"dbname\"}"}}}}

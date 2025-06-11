@@ -1,0 +1,1 @@
+{"mcpServers": {"binance": {"command": "npx", "args": ["-y", "@snjyor/binance-mcp@latest"]}}}

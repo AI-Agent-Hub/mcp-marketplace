@@ -1,0 +1,1 @@
+{"mcpServers": {"lara-translate": {"command": "docker", "args": ["run", "-i", "--rm", "-e", "LARA_ACCESS_KEY_ID", "-e", "LARA_ACCESS_KEY_SECRET", "lara-mcp"], "env": {"LARA_ACCESS_KEY_ID": "<YOUR_ACCESS_KEY_ID>", "LARA_ACCESS_KEY_SECRET": "<YOUR_ACCESS_KEY_SECRET>"}}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"tldv": {"command": "node", "args": ["/absolute/path/to/tldv-mcp-server/dist/index.js"], "env": {"TLDV_API_KEY": "your_tldv_api_key"}}}}

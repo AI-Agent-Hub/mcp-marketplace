@@ -1,0 +1,1 @@
+{"mcpServers": {"azure-resource": {"command": "uv", "args": ["--directory", "/ABSOLUTE/PATH/TO/PARENT/FOLDER", "run", "-m", "azure_resource_mcp_server"], "env": {"AZURE_TENANT_ID": "your-tenant-id", "AZURE_CLIENT_ID": "your-client-id", "AZURE_CLIENT_SECRET": "your-client-secret", "AZURE_SUBSCRIPTION_ID": "your-subscription-id"}}}}

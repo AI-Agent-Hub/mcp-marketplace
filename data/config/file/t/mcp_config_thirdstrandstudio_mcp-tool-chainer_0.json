@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp_tool_chainer": {"command": "npx", "args": ["-y", "@thirdstrandstudio/mcp-tool-chainer", "`claude_desktop_config.json` or `mcp.json`"], "env": {}}}}

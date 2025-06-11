@@ -1,0 +1,1 @@
+{"mcpServers": {"find-files": {"command": "npx", "args": ["-y", "find-files-mcp", "/Users/kst/Downloads", "/Users/kst/Desktop", "/Users/kst/Documents"]}}}

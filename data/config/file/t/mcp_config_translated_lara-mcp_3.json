@@ -1,0 +1,1 @@
+{"mcpServers": {"lara-translate": {"command": "node", "args": ["<FULL_PATH_TO_PROJECT_FOLDER>/dist/index.js"], "env": {"LARA_ACCESS_KEY_ID": "<YOUR_ACCESS_KEY_ID>", "LARA_ACCESS_KEY_SECRET": "<YOUR_ACCESS_KEY_SECRET>"}}}}

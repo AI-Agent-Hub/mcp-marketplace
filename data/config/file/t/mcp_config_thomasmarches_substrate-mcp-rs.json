@@ -1,0 +1,1 @@
+{"mcpServers": {"substrate-mcp-rs": {"command": "$PROJECT_ROOT_ABSOLUTE_PATH/target/release/substrate-mcp-rs", "args": []}}}

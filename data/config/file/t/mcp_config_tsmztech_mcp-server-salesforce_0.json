@@ -1,0 +1,1 @@
+{"mcpServers": {"salesforce": {"command": "env", "args": ["SALESFORCE_USERNAME=your.actual.email@example.com", "SALESFORCE_PASSWORD=YourActualPassword123", "SALESFORCE_TOKEN=YourActualSecurityToken123", "SALESFORCE_INSTANCE_URL=https://login.salesforce.com", "npx", "-y", "@surajadsul02/mcp-server-salesforce"]}}}

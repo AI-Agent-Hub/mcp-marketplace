@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-crypto-price": {"command": "npx", "args": ["-y", "mcp-crypto-price"]}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"modex-datomic-mcp": {"command": "java", "args": ["-jar", "/Users/petrus/code/datomic-mcp/target/theronic-datomic-mcp-0.3.0.jar"], "env": {"DATOMIC_URI": "<your datomic URI here>"}}}, "globalShortcut": ""}

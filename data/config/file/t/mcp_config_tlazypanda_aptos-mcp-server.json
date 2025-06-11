@@ -1,0 +1,1 @@
+{"mcpServers": {"aptos-dev": {"command": "uv", "args": ["--directory", "/path/to/aptos-mcp-server", "run", "aptos_mcp_server.py"]}}}

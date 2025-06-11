@@ -1,0 +1,1 @@
+{"mcpServers": {"pdf2png": {"command": "uv", "args": ["--directory", "/absolute/path/to/mcp-Pdf2png", "run", "pdf2png"]}}}

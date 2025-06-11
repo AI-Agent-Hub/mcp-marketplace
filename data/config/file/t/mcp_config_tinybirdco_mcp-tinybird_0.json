@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-tinybird": {"command": "uvx", "args": ["mcp-tinybird", "stdio"], "env": {"TB_API_URL": "<TINYBIRD_API_URL>", "TB_ADMIN_TOKEN": "<TINYBIRD_ADMIN_TOKEN>"}}}}

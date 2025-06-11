@@ -1,0 +1,1 @@
+{"mcpServers": {"nativewind-transformer": {"command": "npx", "args": ["-y", "@modelcontextprotocol/server-nativewind"]}}}

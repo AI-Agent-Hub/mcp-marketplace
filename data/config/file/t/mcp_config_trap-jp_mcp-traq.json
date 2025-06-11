@@ -1,0 +1,1 @@
+{"mcpServers": {"slack": {"command": "mcp-traQ", "args": ["bot"], "env": {"MCP_TRAQ_BOT_TOKEN": "<Bot\u306eAccess Token>", "MCP_TRAQ_BASE_URL": "<traQ\u306e\u30d9\u30fc\u30b9URL(traP\u306e\u30b5\u30fc\u30d0\u30fc\u306e\u5834\u5408\u306f\u4e0d\u8981)>"}}}}

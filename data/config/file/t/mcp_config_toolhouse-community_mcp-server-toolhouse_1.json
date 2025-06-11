@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-server-toolhouse": {"command": "uv", "args": ["--directory", "/path/to/this/folder/mcp-server-toolhouse", "run", "mcp_server_toolhouse"], "env": {"TOOLHOUSE_API_KEY": "your_toolhouse_api_key", "TOOLHOUSE_BUNDLE": "a_bundle_name"}}}}

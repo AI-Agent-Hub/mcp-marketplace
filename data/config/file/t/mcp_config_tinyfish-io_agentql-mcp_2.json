@@ -1,0 +1,1 @@
+{"mcpServers": {"agentql": {"command": "/path/to/agentql-mcp/dist/index.js", "env": {"AGENTQL_API_KEY": "YOUR_API_KEY"}}}}

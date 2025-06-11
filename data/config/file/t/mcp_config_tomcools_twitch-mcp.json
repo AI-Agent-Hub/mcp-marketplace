@@ -1,0 +1,1 @@
+{"mcpServers": {"twitch-mcp-tomcools": {"command": "jbang", "args": ["--quiet", "-Dtwitch.channel=YOUR_CHANNEL_NAME", "-Dtwitch.auth=YOUR_API_KEY", "be.tomcools:twitch-mcp:1.0.0-SNAPSHOT:runner"]}}}

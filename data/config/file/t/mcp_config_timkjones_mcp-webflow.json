@@ -1,0 +1,1 @@
+{"mcpServers": {"webflow": {"command": "node", "args": ["/ABSOLUTE/PATH/TO/YOUR/build/index.js"], "env": {"WEBFLOW_API_TOKEN": "your-api-token"}}}}

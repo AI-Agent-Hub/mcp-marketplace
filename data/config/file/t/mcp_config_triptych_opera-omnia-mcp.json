@@ -1,0 +1,1 @@
+{"mcpServers": {"opera-omnia": {"command": "node", "args": ["path/to/opera-omnia-mcp/build/index.js"], "disabled": false, "autoApprove": []}}}

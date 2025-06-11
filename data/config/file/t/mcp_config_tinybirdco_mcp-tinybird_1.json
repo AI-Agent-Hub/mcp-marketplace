@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-tinybird_local": {"command": "uv", "args": ["--directory", "/path/to/your/mcp-tinybird", "run", "mcp-tinybird", "stdio"]}}}

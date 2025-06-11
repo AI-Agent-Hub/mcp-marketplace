@@ -1,0 +1,1 @@
+{"mcpServers": {"yaraflux-mcp-server": {"command": "docker", "args": ["run", "-i", "--rm", "--env", "JWT_SECRET_KEY=your-secret-key", "--env", "ADMIN_PASSWORD=your-admin-password", "--env", "DEBUG=true", "--env", "PYTHONUNBUFFERED=1", "threatflux/yaraflux-mcp-server:latest"], "disabled": false, "autoApprove": ["scan_url", "scan_data", "list_yara_rules", "get_yara_rule"]}}}

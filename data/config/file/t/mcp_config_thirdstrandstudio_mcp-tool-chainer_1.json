@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp_tool_chainer": {"command": "node", "args": ["/path/to/mcp-tool-chainer/dist/index.js", "`claude_desktop_config.json` or `mcp.json`"], "env": {}}}}

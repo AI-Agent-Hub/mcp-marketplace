@@ -1,0 +1,1 @@
+{"mcpServers": {"sandbox": {"command": "uv", "args": ["--directory", "/absolute/path/to/sandbox_server", "run", "sandbox_server.py"], "env": {"PYTHONPATH": "/absolute/path/to/sandbox_server"}}}}

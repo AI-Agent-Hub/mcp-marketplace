@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-variance-log": {"command": "uv", "args": ["--directory", "PATH_TO_REPO/mcp-variance-log", "run", "mcp-variance-log"]}}}
