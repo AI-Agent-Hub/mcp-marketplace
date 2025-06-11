@@ -1,0 +1,1 @@
+{"mcpServers": {"Biomart": {"command": "uv", "args": ["run", "--with", "mcp[cli]", "--with", "pybiomart", "mcp", "run", "/your/path/to/biomart-mcp.py"]}}}
