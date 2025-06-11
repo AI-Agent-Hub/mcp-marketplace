@@ -1,0 +1,1 @@
+{"mcpServers": {"obsidian-omnisearch": {"command": "uv", "args": ["--directory", "<dir_to>/mcp-server-obsidian-omnisearch", "run", "mcp-server-obsidian-omnisearch", "/path/to/your/obsidian/vault"]}}}

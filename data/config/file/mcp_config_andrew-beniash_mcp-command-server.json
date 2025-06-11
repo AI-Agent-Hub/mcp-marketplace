@@ -1,0 +1,1 @@
+{"mcpServers": {"command-server": {"command": "uv", "args": ["run", "python", "-m", "mcp_command_server"], "env": {"ALLOWED_COMMANDS": "ls,pwd,echo"}}}}

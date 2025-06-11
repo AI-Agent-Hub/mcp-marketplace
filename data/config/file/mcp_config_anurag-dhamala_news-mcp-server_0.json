@@ -1,0 +1,1 @@
+{"mcpServers": {"news": {"command": "path_to_your_node", "args": ["location_to_your_dist/index.js"], "env": {"NEWS_API_KEY": "API_KEY_FROM_NEWS_DATA", "NEWS_BASE_URL": "https://newsdata.io"}}}}

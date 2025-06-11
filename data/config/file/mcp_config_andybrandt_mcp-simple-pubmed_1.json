@@ -1,0 +1,1 @@
+{"mcpServers": {"simple-pubmed": {"command": "C:\\Users\\YOUR_USERNAME\\AppData\\Local\\Programs\\Python\\Python311\\python.exe", "args": ["-m", "mcp_simple_pubmed"], "env": {"PUBMED_EMAIL": "your-email@example.com", "PUBMED_API_KEY": "your-api-key"}}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"dbx": {"command": "node", "args": ["/path/to/dbx-mcp-server/build/index.js"]}}}

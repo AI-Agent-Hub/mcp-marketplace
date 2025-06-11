@@ -1,0 +1,1 @@
+{"mcpServers": {"deep-research": {"command": "node", "args": ["/absolute/path/to/your/deep-research-mcp/dist/index.js"], "env": {"FIRECRAWL_API_KEY": "your-firecrawler-api-key", "OPENAI_API_KEY": "your-openai-api-key"}}}}

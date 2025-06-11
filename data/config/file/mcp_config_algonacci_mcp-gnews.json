@@ -1,0 +1,1 @@
+{"mcpServers": {"gnews_search": {"command": "uv", "args": ["--directory", "%USERPROFILE%/Documents/GitHub/mcp-gnews", "run", "python", "main.py"]}}}

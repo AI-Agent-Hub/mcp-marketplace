@@ -1,0 +1,1 @@
+{"mcpServers": {"simple-arxiv": {"command": "python", "args": ["-m", "mcp_simple_arxiv"]}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"gcalendar": {"command": "YOUR_PYTHON_PATH", "args": ["YOUR_PATH/GCalendar/src/mcp_server.py"]}}}

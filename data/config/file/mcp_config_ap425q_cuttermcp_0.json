@@ -1,0 +1,1 @@
+{"mcpServers": {"cutter": {"command": "python", "args": ["/ABSOLUTE_PATH_TO/bridge_mcp_cutter.py"]}}}
