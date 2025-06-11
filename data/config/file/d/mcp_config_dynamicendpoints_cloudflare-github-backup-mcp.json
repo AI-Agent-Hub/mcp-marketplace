@@ -1,0 +1,1 @@
+{"mcpServers": {"cloudflare-backup": {"command": "node", "args": ["/path/to/cloudflare-github-backup/build/index.js"], "env": {"CLOUDFLARE_API_TOKEN": "your_cloudflare_api_token", "GITHUB_ACCESS_TOKEN": "your_github_access_token", "GITHUB_REPO_NAME": "your_github_repo_name"}}}}

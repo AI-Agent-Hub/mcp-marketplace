@@ -1,0 +1,1 @@
+{"mcpServers": {"workflows-mcp": {"command": "npx", "args": ["mcpn@latest server", "--config", "/path/to/.workflows", "--preset", "thinking,coding"]}}}

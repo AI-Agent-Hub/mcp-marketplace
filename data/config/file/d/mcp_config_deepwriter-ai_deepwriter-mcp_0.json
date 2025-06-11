@@ -1,0 +1,1 @@
+{"mcpServers": {"deepwriter": {"command": "node", "args": ["/ABSOLUTE/PATH/TO/deepwriter-mcp/build/index.js"], "env": {"DEEPWRITER_API_KEY": "your_api_key_here"}}}}

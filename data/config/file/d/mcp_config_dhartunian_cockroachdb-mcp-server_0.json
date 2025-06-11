@@ -1,0 +1,1 @@
+{"mcpServers": {"cockroachdb": {"command": "node", "args": ["/path/to/cockroachdb-mcp-server/dist/server.js", "postgres://user:password@host:port/database", "your_auth_token"]}}}

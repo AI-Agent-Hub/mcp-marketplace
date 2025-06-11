@@ -1,0 +1,1 @@
+{"mcpServers": {"scrapi": {"command": "npx", "args": ["-y", "@deventerprisesoftware/scrapi-mcp"], "env": {"SCRAPI_API_KEY": "<YOUR_API_KEY>"}}}}

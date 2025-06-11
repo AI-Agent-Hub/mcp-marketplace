@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-chrome-integration": {"command": "uv", "args": ["run", "--directory", "%LOCALAPPDATA%\\Programs\\mcp-chrome-integration\\src", "mcp-server"], "env": {"WEBSOCKET_PORT": "8012"}}}}

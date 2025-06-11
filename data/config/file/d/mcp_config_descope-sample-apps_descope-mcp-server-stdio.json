@@ -1,0 +1,1 @@
+{"mcpServers": {"descope": {"command": "node", "args": ["/path/to/descope-mcp-server/build/index.js"], "env": {"DESCOPE_PROJECT_ID": "your-descope-project-id-here", "DESCOPE_MANAGEMENT_KEY": "your-descope-management-key-here"}}}}

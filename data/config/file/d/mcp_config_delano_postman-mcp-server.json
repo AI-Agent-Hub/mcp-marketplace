@@ -1,0 +1,1 @@
+{"mcpServers": {"postman": {"command": "node", "args": ["/path/to/postman-api-server/build/index.js"], "env": {"POSTMAN_API_KEY": "CHANGEME"}}}}
