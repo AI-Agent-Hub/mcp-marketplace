@@ -1,0 +1,1 @@
+{"mcpServers": {"aws-security": {"command": "/path/to/aws-security-mcp/run_aws_security.sh"}}}

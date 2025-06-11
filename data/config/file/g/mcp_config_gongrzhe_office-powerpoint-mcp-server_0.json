@@ -1,0 +1,1 @@
+{"mcpServers": {"ppt": {"command": "python", "args": ["/path/to/ppt_mcp_server.py"], "env": {}}}}
