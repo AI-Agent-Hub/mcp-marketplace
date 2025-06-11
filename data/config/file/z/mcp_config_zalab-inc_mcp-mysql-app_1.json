@@ -1,0 +1,1 @@
+{"mcpServers": {"mysql": {"command": "C:\\nvm4w\\nodejs\\node.exe", "args": ["H:\\mcp\\my-mysql\\dist\\index.js"], "env": {"MYSQL_HOST": "localhost", "MYSQL_USER": "root", "MYSQL_PASSWORD": "password123", "MYSQL_DATABASE": "todo_app", "MYSQL_PORT": "3306"}}}}

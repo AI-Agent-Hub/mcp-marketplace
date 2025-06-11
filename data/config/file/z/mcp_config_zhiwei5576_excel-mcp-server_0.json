@@ -1,0 +1,1 @@
+{"mcpServers": {"excel": {"command": "cmd", "args": ["/c", "npx", "--yes", "@negokaz/excel-mcp-server"], "env": {"EXCEL_MCP_PAGING_CELLS_LIMIT": "4000"}}}}

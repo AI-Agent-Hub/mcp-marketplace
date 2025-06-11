@@ -1,0 +1,1 @@
+{"mcpServers": {"mysql": {"command": "<path-to-node>", "args": ["<path-to-project>/dist/index.js"], "env": {"MYSQL_HOST": "your_mysql_host", "MYSQL_USER": "your_mysql_username", "MYSQL_PASSWORD": "your_mysql_password", "MYSQL_DATABASE": "your_database_name", "MYSQL_PORT": "3306"}}}}

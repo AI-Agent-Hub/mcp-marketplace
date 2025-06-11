@@ -1,0 +1,1 @@
+{"mcpServers": {"personal-assistant": {"command": "/path/to/python", "args": ["/absolute/path/to/mcp-pa-ai-agent/mcp_server.py"]}}}

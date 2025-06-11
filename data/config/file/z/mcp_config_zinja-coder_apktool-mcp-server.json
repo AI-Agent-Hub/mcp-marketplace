@@ -1,0 +1,1 @@
+{"mcpServers": {"apktool-mcp-server": {"command": "/<path>/<to>/uv", "args": ["--directory", "</PATH/TO/>apktool-mcp-server/", "run", "apktool_mcp_server.py"]}}}

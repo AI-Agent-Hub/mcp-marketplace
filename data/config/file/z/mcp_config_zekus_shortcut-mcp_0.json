@@ -1,0 +1,1 @@
+{"mcpServers": {"shortcut": {"command": "python", "args": ["-m", "shortcut_mcp"], "env": {"SHORTCUT_API_TOKEN": "your_token_here"}}}}

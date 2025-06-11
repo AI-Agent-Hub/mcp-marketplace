@@ -1,0 +1,1 @@
+{"mcpServers": {"kite": {"command": "npx", "args": ["mcp-remote", "http://mcp.kite.trade/sse"]}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"code-indexer": {"command": "python", "args": ["-m", "server.app"], "cwd": "\u5b89\u88c5\u76ee\u5f55\u8def\u5f84", "env": {}, "disabled": false, "alwaysAllow": []}}}

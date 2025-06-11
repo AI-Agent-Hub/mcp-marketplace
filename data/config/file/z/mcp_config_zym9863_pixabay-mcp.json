@@ -1,0 +1,1 @@
+{"mcpServers": {"pixabay-mcp": {"command": "/path/to/pixabay-mcp/build/index.js", "env": {"PIXABAY_API_KEY": "your_api_key_here"}}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"pprof-analyzer-docker": {"command": "docker run -i --rm pprof-analyzer-mcp"}}}

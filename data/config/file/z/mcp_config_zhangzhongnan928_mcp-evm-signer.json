@@ -1,0 +1,1 @@
+{"mcpServers": {"evm-signer": {"command": "node", "args": ["/path/to/mcp-evm-signer/build/index.js"], "env": {"INFURA_API_KEY": "your_infura_api_key_here", "DEFAULT_NETWORK": "sepolia", "ENCRYPT_KEYS": "true", "KEY_PASSWORD": "your_secure_password_here"}}}}

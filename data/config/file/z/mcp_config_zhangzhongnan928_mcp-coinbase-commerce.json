@@ -1,0 +1,1 @@
+{"mcpServers": {"coinbase-commerce": {"command": "node", "args": ["/path/to/mcp-coinbase-commerce/dist/index.js"], "env": {"COINBASE_COMMERCE_API_KEY": "your_api_key_here"}}}}

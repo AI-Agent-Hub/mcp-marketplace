@@ -1,0 +1,1 @@
+{"mcpServers": {"linear": {"command": "C:\\nvm4w\\nodejs\\node.exe", "args": ["H:\\mcp\\linear\\dist\\index.js"], "env": {"LINEAR_API_KEY": "lin_api_xxxxxxxxxxxxxxxxxxxxx"}}}}

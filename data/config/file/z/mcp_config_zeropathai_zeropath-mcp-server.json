@@ -1,0 +1,1 @@
+{"mcpServers": {"zeropath-mcp-server": {"command": "uv", "args": ["run", "--project", "<absolute cloned directory path>/zeropath-mcp-server", "<absolute cloned directory path>/zeropath-mcp-server/main.py"]}}}

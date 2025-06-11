@@ -1,0 +1,1 @@
+{"mcpServers": {"gtasks": {"command": "/opt/homebrew/bin/node", "args": ["{ABSOLUTE PATH TO FILE HERE}/dist/index.js"]}}}

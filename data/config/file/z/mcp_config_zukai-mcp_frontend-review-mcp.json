@@ -1,0 +1,1 @@
+{"mcpServers": {"frontend-review": {"command": "npx", "args": ["frontend-review-mcp HYPERBOLIC_API_KEY=<YOUR_API_KEY>"]}}}
