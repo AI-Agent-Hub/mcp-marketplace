@@ -1,0 +1,1 @@
+{"mcpServers": {"osp_marketing_tools": {"command": "node", "args": ["path/to/osp-marketing-tools-mcp/dist/index.js"]}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"mysql": {"command": "/path/to/mysql-server/build/index.js", "env": {"MYSQL_HOST": "your-mysql-host", "MYSQL_USER": "your-mysql-user", "MYSQL_PASSWORD": "your-mysql-password", "MYSQL_DATABASE": "your-mysql-database"}}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"http-rquest": {"command": "python", "args": ["-m", "mcp_rquest"]}}}

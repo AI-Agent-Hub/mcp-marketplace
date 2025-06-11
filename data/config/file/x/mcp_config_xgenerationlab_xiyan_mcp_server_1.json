@@ -1,0 +1,1 @@
+{"mcpServers": {"xiyan-mcp-server": {"command": "/xxx/python", "args": ["-m", "xiyan_mcp_server"], "env": {"YML": "path/to/yml"}}}}

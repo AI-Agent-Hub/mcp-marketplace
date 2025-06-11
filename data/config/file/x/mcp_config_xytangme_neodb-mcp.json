@@ -1,0 +1,1 @@
+{"mcpServers": {"neodb": {"command": "uv", "args": ["--directory", "<PATH_TO_PROJECT_DIR>", "run", "<PATH_TO_SCRIPT>", "<API_BASE> e.g. https://neodb.social", "<ACCESS_TOKEN>"]}}}

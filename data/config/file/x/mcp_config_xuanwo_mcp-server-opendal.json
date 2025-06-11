@@ -1,0 +1,1 @@
+{"mcpServers": {"opendal": {"command": "uvx", "args": ["mcp-server-opendal"], "env": {"YOUR_ENV_VAR": "YOUR_ENV_VALUE"}}}}

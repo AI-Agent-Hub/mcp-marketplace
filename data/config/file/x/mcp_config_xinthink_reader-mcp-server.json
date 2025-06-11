@@ -1,0 +1,1 @@
+{"mcpServers": {"reader": {"command": "uv", "args": ["--directory", "/absolute/path/to/your/reader/server", "run", "main.py"], "env": {"ACCESS_TOKEN": "your_readwise_access_token"}}}}

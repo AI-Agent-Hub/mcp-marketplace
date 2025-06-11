@@ -1,0 +1,1 @@
+{"mcpServers": {"omgflux-mcp": {"command": "node", "args": ["/path/to/omgflux-mcp-server/build/index.js"], "env": {"OHMYGPT_API_KEY": "your-api-key-here"}}}}
