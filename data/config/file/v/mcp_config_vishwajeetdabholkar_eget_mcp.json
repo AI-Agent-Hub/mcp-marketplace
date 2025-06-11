@@ -1,0 +1,1 @@
+{"mcpServers": {"scrape-service": {"command": "/absolute/path/to/claude-scraper-mcp/.venv/bin/python", "args": ["/absolute/path/to/claude-scraper-mcp/scrape_mcp_server.py"]}}}

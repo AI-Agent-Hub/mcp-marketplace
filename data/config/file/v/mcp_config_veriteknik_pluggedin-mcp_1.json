@@ -1,0 +1,1 @@
+{"mcpServers": {"pluggedin": {"command": "npx", "args": ["-y", "@pluggedin/mcp-proxy@latest"], "env": {"PLUGGEDIN_API_KEY": "YOUR_API_KEY"}}}}

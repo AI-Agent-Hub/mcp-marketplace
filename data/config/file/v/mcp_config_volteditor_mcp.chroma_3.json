@@ -1,0 +1,1 @@
+{"mcp": {"inputs": [{"type": "promptString", "id": "chroma_api_key", "description": "ChromaDB API Key", "password": true}], "servers": {"chroma": {"command": "mcp-chroma", "args": ["--client-type", "http", "--host", "localhost", "--port", "8000"], "env": {"CHROMA_API_KEY": "${input:chroma_api_key}"}}}}}

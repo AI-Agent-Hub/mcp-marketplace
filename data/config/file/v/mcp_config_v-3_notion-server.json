@@ -1,0 +1,1 @@
+{"mcpServers": {"notion": {"command": "node", "args": ["/absolute/path/to/notion-server/build/index.js"], "env": {"NOTION_API_KEY": "your_notion_api_key_here"}}}}

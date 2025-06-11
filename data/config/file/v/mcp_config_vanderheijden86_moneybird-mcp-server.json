@@ -1,0 +1,1 @@
+{"mcpServers": {"moneybird": {"command": "npx", "args": ["-y", "moneybird-mcp-server"], "env": {"MONEYBIRD_API_TOKEN": "your_api_token_here", "MONEYBIRD_ADMINISTRATION_ID": "your_administration_id_here"}}}}

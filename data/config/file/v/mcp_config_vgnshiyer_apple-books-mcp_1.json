@@ -1,0 +1,1 @@
+{"mcpServers": {"apple-books-mcp": {"command": "python", "args": ["-m", "apple_books_mcp"]}}}

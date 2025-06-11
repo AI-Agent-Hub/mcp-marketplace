@@ -1,0 +1,1 @@
+{"mcpServers": {"Goodnews": {"command": "<absolute-path-to-bin>/uv", "args": ["--directory", "<absolute-path-to-cloned-repo>/mcp-goodnews/src/mcp_goodnews", "run", "server.py"], "env": {"NEWS_API_KEY": "<newsapi-api-key>", "COHERE_API_KEY": "<cohere-api-key>"}}}}

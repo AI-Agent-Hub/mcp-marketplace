@@ -1,0 +1,1 @@
+{"mcpServers": {"pymol": {"command": "[Full path to your venv python]", "args": ["[Full path to pymol_mcp_server.py]"]}}}

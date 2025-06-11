@@ -1,0 +1,1 @@
+{"mcpServers": {"dotnet-types-explorer": {"command": "/path/to/DotNetMetadataMcpServer", "args": ["--homeEnvVariable", "/home/user"], "disabled": false, "alwaysAllow": [], "timeout": 300}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"letta-memgpt": {"command": "/path/to/memgpt-server/build/index.js", "env": {"OPENAI_API_KEY": "your-openai-key", "ANTHROPIC_API_KEY": "your-anthropic-key", "OPENROUTER_API_KEY": "your-openrouter-key"}}}}

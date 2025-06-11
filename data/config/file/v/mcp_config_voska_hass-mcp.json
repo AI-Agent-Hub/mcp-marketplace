@@ -1,0 +1,1 @@
+{"mcpServers": {"hass-mcp": {"command": "docker", "args": ["run", "-i", "--rm", "-e", "HA_URL", "-e", "HA_TOKEN", "voska/hass-mcp"], "env": {"HA_URL": "http://homeassistant.local:8123", "HA_TOKEN": "YOUR_LONG_LIVED_TOKEN"}}}}

@@ -1,0 +1,1 @@
+{"mcp": {"servers": {"json-mcp-server": {"command": "npx", "args": ["json-mcp-server@latest"]}}}}

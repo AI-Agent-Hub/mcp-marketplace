@@ -1,0 +1,1 @@
+{"mcpServers": {"variflight": {"command": "npx", "args": ["-y", "@variflight-ai/variflight-mcp"], "env": {"VARIFLIGHT_API_KEY": "your_api_key_here"}}}}

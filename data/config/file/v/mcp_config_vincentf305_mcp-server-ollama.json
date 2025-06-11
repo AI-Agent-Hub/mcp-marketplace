@@ -1,0 +1,1 @@
+{"mcpServers": {"ollama-server": {"command": "python", "args": ["-m", "src.mcp_server.server"], "env": {"PYTHONPATH": "path-to-mcp-server"}}}}

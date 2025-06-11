@@ -1,0 +1,1 @@
+{"mcpServers": {"verodat-consume": {"command": "node", "args": ["path/to/verodat-mcp-server/build/src/consume.js"], "env": {"VERODAT_AI_API_KEY": "your-api-key", "VERODAT_API_BASE_URL": "https://verodat.io/api/v3"}}}}

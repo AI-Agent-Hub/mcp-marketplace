@@ -1,0 +1,1 @@
+{"mcpServers": {"k8s-mcp": {"command": "uv", "args": ["--directory", "/ABSOLUTE/PATH/TO/PARENT/FOLDER/k8s-mcp", "run", "server.py"]}}}
