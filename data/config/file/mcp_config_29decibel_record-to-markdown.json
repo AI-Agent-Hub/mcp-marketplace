@@ -1,0 +1,1 @@
+{"mcpServers": {"record-to-apple-notes": {"command": "uv", "args": ["--directory", "/FULL_PATH_TO/record-to-markdown", "run", "server.py"]}}}

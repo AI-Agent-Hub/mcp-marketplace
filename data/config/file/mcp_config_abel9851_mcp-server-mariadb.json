@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp_server_mariadb": {"command": "/PATH/TO/uv", "args": ["--directory", "/YOUR/SOURCE/PATH/mcp-server-mariadb/src/mcp_server_mariadb", "run", "server.py"], "env": {"MARIADB_HOST": "127.0.0.1", "MARIADB_USER": "USER", "MARIADB_PASSWORD": "PASSWORD", "MARIADB_DATABASE": "DATABASE", "MARIADB_PORT": "3306"}}}}
