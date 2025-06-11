@@ -1,0 +1,1 @@
+{"mcpServers": {"unraid": {"command": "/path/to/python", "args": ["/path/to/unraid-mcp/run_server.py"], "env": {"UNRAID_API_URL": "http://your-unraid-server:port/graphql", "UNRAID_API_KEY": "your-api-key", "LOG_LEVEL": "INFO", "CLAUDE_MCP_SERVER": "true"}, "disabled": false, "autoApprove": []}}}

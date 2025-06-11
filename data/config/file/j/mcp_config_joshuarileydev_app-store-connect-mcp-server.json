@@ -1,0 +1,1 @@
+{"mcpServers": {"app-store-connect": {"command": "npx", "args": ["-y", "@your-org/app-store-connect-mcp-server"], "env": {"APP_STORE_CONNECT_KEY_ID": "YOUR_KEY_ID", "APP_STORE_CONNECT_ISSUER_ID": "YOUR_ISSUER_ID", "APP_STORE_CONNECT_P8_PATH": "/path/to/your/auth-key.p8"}}}}

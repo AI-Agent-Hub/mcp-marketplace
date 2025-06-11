@@ -1,0 +1,1 @@
+{"mcpServers": {"qiniu_mcp": {"command": "python", "args": ["/path/to/qiniu_mcp_server/server.py"], "env": {"QINIU_ACCESS_KEY": "\u4f60\u7684AccessKey", "QINIU_SECRET_KEY": "\u4f60\u7684SecretKey", "QINIU_BUCKET_NAME": "\u4f60\u7684\u5b58\u50a8\u7a7a\u95f4\u540d\u79f0", "QINIU_DOMAIN": "https://\u4f60\u7684\u57df\u540d"}}}}

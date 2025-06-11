@@ -1,0 +1,1 @@
+{"mcpServers": {"ens": {"command": "node", "args": ["/path/to/your/server.js"], "env": {"PROVIDER_URL": "https://your-provider-url.com,https://your-backup-provider.com"}}}}

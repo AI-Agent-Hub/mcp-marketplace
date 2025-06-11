@@ -1,0 +1,1 @@
+{"mcpServers": {"Google Toolbox": {"command": "/path/to/bin/uv", "args": ["--directory", "/path/to/py-mcp-google-toolbox", "run", "server.py"]}}}

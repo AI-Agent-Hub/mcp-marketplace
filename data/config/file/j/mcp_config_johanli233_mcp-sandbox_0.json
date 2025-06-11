@@ -1,0 +1,1 @@
+{"mcpServers": {"mcpSandbox": {"command": "npx", "args": ["-y", "supergateway", "--sse", "http://localhost:8000/sse"]}}}

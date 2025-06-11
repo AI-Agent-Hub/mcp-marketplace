@@ -1,0 +1,1 @@
+{"mcpServers": {"MCPunk": {"command": "uvx", "args": ["mcpunk"], "env": {"MCPUNK_INCLUDE_CHARS_IN_RESPONSE": "false"}}}}

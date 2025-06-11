@@ -1,0 +1,1 @@
+{"mcpServers": {"qgis": {"command": "uv", "args": ["--directory", "/ABSOLUTE/PATH/TO/PARENT/REPO/FOLDER/qgis_mcp/src/qgis_mcp", "run", "qgis_mcp_server.py"]}}}
