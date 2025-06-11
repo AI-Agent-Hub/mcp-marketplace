@@ -1,0 +1,1 @@
+{"mcpServers": {"git-commit-aider": {"command": "node", "args": ["/path/to/git-commit-aider/build/index.js"]}}}

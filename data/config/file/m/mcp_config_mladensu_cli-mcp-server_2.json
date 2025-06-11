@@ -1,0 +1,1 @@
+{"mcpServers": {"cli-mcp-server": {"command": "uvx", "args": ["cli-mcp-server"], "env": {"ALLOWED_DIR": "</your/desired/dir>", "ALLOWED_COMMANDS": "ls,cat,pwd,echo", "ALLOWED_FLAGS": "-l,-a,--help,--version", "MAX_COMMAND_LENGTH": "1024", "COMMAND_TIMEOUT": "30", "ALLOW_SHELL_OPERATORS": "false"}}}}

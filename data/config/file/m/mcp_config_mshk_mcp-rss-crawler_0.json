@@ -1,0 +1,1 @@
+{"mcpServers": {"rss-crawler": {"command": "/path/to/bun", "args": ["run", "/path/to/mcp-rss-crawler/apps/mcp-server/src/mcp-cli.ts"], "cwd": "/path/to/mcp-rss-crawler", "env": {"PORT": "5556", "DB_DIR": "/path/to/mcp-rss-crawler", "FIRECRAWL_API_KEY": "fc-<YOUR_FIRECRAWL_API_KEY>"}}}}

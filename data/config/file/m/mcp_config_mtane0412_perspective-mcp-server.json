@@ -1,0 +1,1 @@
+{"mcpServers": {"perspective": {"command": "npx", "args": ["-y", "@mtane0412/perspective-mcp-server"], "env": {"PERSPECTIVE_API_KEY": "your-api-key"}}}}

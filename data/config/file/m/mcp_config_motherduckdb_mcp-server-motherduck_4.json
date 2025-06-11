@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-server-motherduck": {"command": "uvx", "args": ["mcp-server-motherduck", "--db-path", "md:", "--motherduck-token", "<YOUR_READ_SCALING_TOKEN_HERE>", "--saas-mode"]}}}

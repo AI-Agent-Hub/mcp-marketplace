@@ -1,0 +1,1 @@
+{"mcpServers": {"zulip": {"command": "docker", "args": ["run", "-i", "--rm", "-e", "ZULIP_EMAIL", "-e", "ZULIP_API_KEY", "-e", "ZULIP_URL", "mcp/zulip"], "env": {"ZULIP_EMAIL": "your-bot@example.zulipchat.com", "ZULIP_API_KEY": "your-bot-api-key", "ZULIP_URL": "https://example.zulipchat.com"}}}}

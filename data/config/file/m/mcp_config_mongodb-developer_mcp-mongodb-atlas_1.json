@@ -1,0 +1,1 @@
+{"mcpServers": {"atlas": {"command": "npx", "args": ["mcp-mongodb-atlas"], "env": {"ATLAS_PUBLIC_KEY": "your-public-key", "ATLAS_PRIVATE_KEY": "your-private-key"}}}}

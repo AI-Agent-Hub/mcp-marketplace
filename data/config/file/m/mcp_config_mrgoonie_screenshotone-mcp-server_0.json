@@ -1,0 +1,1 @@
+{"mcpServers": {"screenshotone": {"command": "node", "args": ["/path/to/screenshotone-mcp-server/dist/index.js"], "transportType": "stdio"}}}

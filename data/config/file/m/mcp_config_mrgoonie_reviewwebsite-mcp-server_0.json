@@ -1,0 +1,1 @@
+{"mcpServers": {"reviewwebsite": {"command": "node", "args": ["/path/to/reviewwebsite-mcp-server/dist/index.js"], "transportType": "stdio"}}}

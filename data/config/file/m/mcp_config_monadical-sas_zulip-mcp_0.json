@@ -1,0 +1,1 @@
+{"mcpServers": {"zulip": {"command": "npx", "args": ["-y", "@modelcontextprotocol/server-zulip"], "env": {"ZULIP_EMAIL": "your-bot@example.zulipchat.com", "ZULIP_API_KEY": "your-bot-api-key", "ZULIP_URL": "https://example.zulipchat.com"}}}}

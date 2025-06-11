@@ -1,0 +1,1 @@
+{"mcpServers": {"uno": {"command": "node", "args": ["/absolute/path/to/uno-mcp/dist/index.js"], "disabled": false, "autoApprove": []}}}

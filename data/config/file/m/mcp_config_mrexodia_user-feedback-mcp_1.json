@@ -1,0 +1,1 @@
+{"mcpServers": {"github.com/mrexodia/user-feedback-mcp": {"command": "uv", "args": ["--directory", "c:\\MCP\\user-feedback-mcp", "run", "server.py"], "timeout": 600, "autoApprove": ["user_feedback"]}}}

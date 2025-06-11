@@ -1,0 +1,1 @@
+{"mcpServers": {"aws-service-reference": {"command": "python", "args": ["/ABSOLUTE/PATH/TO/aws_service_reference.py"]}}}

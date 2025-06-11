@@ -1,0 +1,1 @@
+{"mcpServers": {"azure-devops": {"command": "node", "args": ["/path/to/azure-devops-mcp/build/index.js"], "env": {"AZURE_DEVOPS_ORG_URL": "your-org-url", "AZURE_DEVOPS_PAT": "your-pat", "AZURE_DEVOPS_PROJECT": "your-project", "AZURE_DEVOPS_REPOSITORY": "your-repo"}, "disabled": false, "autoApprove": []}}}

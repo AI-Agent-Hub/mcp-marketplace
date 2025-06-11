@@ -1,0 +1,1 @@
+{"mcpServers": {"rfc-server": {"command": "npx", "args": ["@mjpitz/mcp-rfc"], "disabled": false, "autoApprove": []}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"Asset Price MCP": {"command": "cmd", "args": ["/c", "npx", "-y", "asset-price-mcp"]}}}

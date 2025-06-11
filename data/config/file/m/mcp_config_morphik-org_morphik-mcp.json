@@ -1,0 +1,1 @@
+{"mcpServers": {"morphik-local": {"command": "npx", "args": ["-y", "morphik-mcp"]}, "morphik-cloud": {"command": "npx", "args": ["-y", "morphik-mcp", "--uri=https://api.morphik.ai"]}, "morphik-with-files": {"command": "npx", "args": ["-y", "morphik-mcp", "--allowed-dir=~/Documents,~/Downloads"]}}}

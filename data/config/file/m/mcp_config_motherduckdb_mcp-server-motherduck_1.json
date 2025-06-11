@@ -1,0 +1,1 @@
+{"mcp": {"inputs": [{"type": "promptString", "id": "motherduck_token", "description": "MotherDuck Token", "password": true}], "servers": {"motherduck": {"command": "uvx", "args": ["mcp-server-motherduck", "--db-path", "md:", "--motherduck-token", "${input:motherduck_token}"]}}}}

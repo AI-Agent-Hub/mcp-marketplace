@@ -1,0 +1,1 @@
+{"mcpServers": {"duckdb": {"command": "duckdb-mcp-server", "args": ["--db-path", "~/claude-duckdb/data.db"]}}}
