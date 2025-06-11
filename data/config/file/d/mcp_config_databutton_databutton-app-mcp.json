@@ -1,0 +1,1 @@
+{"mcpServers": {"myDatabuttonApp": {"command": "uvx", "args": ["databutton-app-mcp@latest"], "env": {"DATABUTTON_API_KEY": "YOUR-DATABUTTON-APP-KEY"}}}}

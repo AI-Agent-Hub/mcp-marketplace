@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-cryptowallet-evm": {"command": "node", "args": ["/path/to/your/mcp-cryptowallet-evm/build/index.js"]}}}

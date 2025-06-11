@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-proxy": {"command": "node", "args": ["/full/path/to/pocket-mcp/server/build/index.js"], "env": {"MCP_API_KEY": "api_key_from_client", "CLIENT_API_URL": "http://localhost:<port>/api"}}}}

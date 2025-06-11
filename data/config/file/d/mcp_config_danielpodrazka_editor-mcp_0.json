@@ -1,0 +1,1 @@
+{"mcpServers": {"text-editor": {"command": "editor-mcp", "env": {"MAX_SELECT_LINES": "100", "ENABLE_JS_SYNTAX_CHECK": "0", "FAIL_ON_PYTHON_SYNTAX_ERROR": "1", "FAIL_ON_JS_SYNTAX_ERROR": "0", "PROTECTED_PATHS": "*.env,.env*,config*.json,*secret*,/etc/passwd,/home/user/.ssh/id_rsa"}}}}

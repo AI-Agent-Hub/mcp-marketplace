@@ -1,0 +1,1 @@
+{"mcpServers": {"onos": {"command": "uv", "args": ["--directory", "parent_of_servers_repo/servers/src/onos-mcp-server", "run", "server.py"], "env": {"ONOS_API_BASE": "http://localhost:8181/onos/v1", "ONOS_USERNAME": "onos", "ONOS_PASSWORD": "rocks"}}}}

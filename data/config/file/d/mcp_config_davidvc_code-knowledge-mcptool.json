@@ -1,0 +1,1 @@
+{"mcpServers": {"code_knowledge": {"command": "python", "args": ["-m", "code_knowledge_tool.mcp_tool"], "env": {"PYTHONPATH": "${workspaceFolder}"}}}}

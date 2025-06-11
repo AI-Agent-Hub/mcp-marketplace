@@ -1,0 +1,1 @@
+{"mcpServers": {"quickbase": {"command": "/path/to/node", "args": ["/path/to/Quickbase-MCP-connector/src/quickbase/server.js"], "env": {"QUICKBASE_REALM_HOST": "your-realm", "QUICKBASE_USER_TOKEN": "your-user-token", "QUICKBASE_APP_ID": "your-app-id"}}}}

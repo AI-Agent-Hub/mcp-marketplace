@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-server-jupiter": {"command": "node", "args": ["/path/to/your/mcp-server-jupiter/build/index.js"]}}}
