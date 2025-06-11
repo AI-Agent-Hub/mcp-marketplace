@@ -1,0 +1,1 @@
+{"mcpServers": {"gitlab-kanban-mcp-server": {"command": "node", "args": ["path/to/gitlab-kanban-mcp-server/build/index.js"], "env": {"GITLAB_TOKEN": "your_gitlab_token", "GITLAB_URL": "your_gitlab_url"}}}}

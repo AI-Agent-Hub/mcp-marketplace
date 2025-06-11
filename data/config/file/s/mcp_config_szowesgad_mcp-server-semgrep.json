@@ -1,0 +1,1 @@
+{"mcpServers": {"semgrep": {"command": "node", "args": ["/your_path/mcp-server-semgrep/build/index.js"], "env": {"SEMGREP_APP_TOKEN": "your_semgrep_app_token"}}}}

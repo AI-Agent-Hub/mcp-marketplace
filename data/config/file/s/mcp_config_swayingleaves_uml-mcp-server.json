@@ -1,0 +1,1 @@
+{"mcpServers": {"UML-MCP-Server": {"command": "uv", "args": ["--directory", "/Users/yourpath/UML-MCP-Server", "run", "uml_mcp_server.py"], "output_dir": "/Users/yourpath/uml-output"}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"Bybit": {"command": "uv", "args": ["--directory", "{your_path}/crypto_exchange_mcp/crypto_exchange_mcp_python", "run", "bybit.py"]}}}

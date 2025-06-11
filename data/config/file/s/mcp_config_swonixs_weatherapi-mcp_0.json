@@ -1,0 +1,1 @@
+{"mcpServers": {"weather": {"command": "npx", "args": ["-y", "@swonixs/weatherapi-mcp"], "env": {"WEATHER_API_KEY": "YOUR_API_KEY_HERE"}}}}

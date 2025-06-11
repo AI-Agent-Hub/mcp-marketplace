@@ -1,0 +1,1 @@
+{"mcpServers": {"brave-deep-research": {"command": "npx", "args": ["@suthio/brave-deep-research-mcp"], "env": {"BRAVE_API_KEY": "your_brave_api_key_here", "PUPPETEER_HEADLESS": "true"}}}}

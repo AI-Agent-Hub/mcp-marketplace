@@ -1,0 +1,1 @@
+{"mcpServers": {"svg-converter": {"command": "npx", "args": ["mcp-svg-converter", "/Users/yourusername/Desktop/svg-output", "/Users/yourusername/Documents/svg-images", "/Users/yourusername/Downloads"]}}}

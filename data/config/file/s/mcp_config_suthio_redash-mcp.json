@@ -1,0 +1,1 @@
+{"mcpServers": {"redash": {"command": "npx", "args": ["-y", "@suthio/redash-mcp"], "env": {"REDASH_API_KEY": "your-api-key", "REDASH_URL": "https://your-redash-instance.com"}}}}

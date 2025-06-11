@@ -1,0 +1,1 @@
+{"mcpServers": {"salesforce": {"command": "npx", "args": ["-y", "@surajadsul02/mcp-server-salesforce"], "env": {"SALESFORCE_USERNAME": "your_username", "SALESFORCE_PASSWORD": "your_password", "SALESFORCE_CONSUMER_KEY": "your_consumer_key", "SALESFORCE_CONSUMER_SECRET": "your_consumer_secret", "SALESFORCE_INSTANCE_URL": "https://login.salesforce.com"}}}}

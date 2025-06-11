@@ -1,0 +1,1 @@
+{"mcpServers": {"docker-sandbox": {"command": "python", "args": ["/absolute/path/to/your/main.py"], "env": {"DOCKER_HOST": "unix:///path/to/your/docker.sock"}}}}

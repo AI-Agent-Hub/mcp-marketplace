@@ -1,0 +1,1 @@
+{"mcpServers": {"zotero-mcp-server": {"command": "uv", "args": ["--directory", "/Users/swairshah/work/research/zotero-mcp", "run", "python", "-m", "zotero_mcp.server"]}}}

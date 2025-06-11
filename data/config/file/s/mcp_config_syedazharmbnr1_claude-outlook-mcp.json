@@ -1,0 +1,1 @@
+{"mcpServers": {"outlook-mcp": {"command": "/Users/YOURUSERNAME/.bun/bin/bun", "args": ["run", "/path/to/claude-outlook-mcp/index.ts"]}}}

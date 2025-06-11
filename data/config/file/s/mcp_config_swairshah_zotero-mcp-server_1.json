@@ -1,0 +1,1 @@
+{"mcpServers": {"zotero-mcp-server": {"command": "bash", "args": ["-c", "cd /Users/shahswai/personal/zotero-mcp-server && source .venv/bin/activate && python -m zotero_mcp.server"]}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"qgis": {"command": "uv", "args": ["--directory", "#change this line to your directory#", "run", "qgis_mcp_server.py"]}}}

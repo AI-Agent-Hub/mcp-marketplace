@@ -1,0 +1,1 @@
+{"mcpServers": {"paradex": {"command": "uvx", "args": ["--with-editable", ".", "mcp-paradex"], "env": {"PARADEX_ENVIRONMENT": "testnet", "PARADEX_ACCOUNT_PRIVATE_KEY": "your_private_key"}}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"filesystem": {"command": "npx", "args": ["-y", "@modelcontextprotocol/server-filesystem", "<your-paths-here>"]}, "duckdb": {"command": "/path/to/python", "args": ["/path/to/fastapi/duckdb/main.py"], "cwd": "/path/to/fastapi/duckdb", "env": {"PYTHONPATH": "/path/to/mcp-server-py", "PORT": "8010"}}}}

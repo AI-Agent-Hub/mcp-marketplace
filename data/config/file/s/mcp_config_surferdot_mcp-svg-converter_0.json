@@ -1,0 +1,1 @@
+{"mcpServers": {"svg-converter": {"command": "npx", "args": ["mcp-svg-converter", "/absolute/path/to/output/directory"]}}}
