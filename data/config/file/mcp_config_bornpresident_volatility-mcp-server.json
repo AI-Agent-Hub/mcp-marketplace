@@ -1,0 +1,1 @@
+{"mcpServers": {"volatility": {"command": "python", "args": ["/path/to/volatility_mcp_server.py"], "env": {"PYTHONPATH": "/path/to/volatility3"}}}}

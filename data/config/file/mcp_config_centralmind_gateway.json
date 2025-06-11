@@ -1,0 +1,1 @@
+{"mcpServers": {"gateway": {"command": "PATH_TO_GATEWAY_BINARY", "args": ["start", "--config", "PATH_TO_GATEWAY_YAML_CONFIG", "mcp-stdio"]}}}

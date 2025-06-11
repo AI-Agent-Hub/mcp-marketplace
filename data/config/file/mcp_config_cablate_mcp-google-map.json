@@ -1,0 +1,1 @@
+{"mcpServers": {"google-map": {"command": "npx", "args": ["-y", "@cablate/mcp-google-map"], "env": {"GOOGLE_MAPS_API_KEY": "your_api_key"}, "enabled": true}}}

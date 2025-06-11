@@ -1,0 +1,1 @@
+{"mcpServers": {"MUST_USE_summarization": {"command": "node", "args": ["path/to/summarization-functions/build/index.js"], "env": {"PROVIDER": "ANTHROPIC", "API_KEY": "your-api-key", "MODEL_ID": "claude-3-5-sonnet-20241022", "MCP_WORKING_DIR": "default_working_directory"}}}}

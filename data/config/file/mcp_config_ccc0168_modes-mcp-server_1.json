@@ -1,0 +1,1 @@
+{"mcpServers": {"modes": {"command": "node", "args": ["/path/to/modes-mcp-server/build/index.js"], "env": {"MODES_CONFIG_PATH": "/path/to/custom/modes.json"}, "disabled": false, "alwaysAllow": []}}}

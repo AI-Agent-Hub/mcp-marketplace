@@ -1,0 +1,1 @@
+{"mcpServers": {"searxng": {"command": "npx", "args": ["-y", "@cablate/mcp-doc-forge"], "enabled": true}}}

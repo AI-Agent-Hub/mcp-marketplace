@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-maker": {"command": "node", "args": ["/absolute/path/to/mcp-maker/build/index.js"]}}}

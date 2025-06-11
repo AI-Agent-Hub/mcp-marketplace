@@ -1,0 +1,1 @@
+{"mcpServers": {"browsercat": {"command": "npx", "args": ["-y", "@browsercatco/mcp-server"], "env": {"BROWSERCAT_API_KEY": "your-api-key-here"}}}}

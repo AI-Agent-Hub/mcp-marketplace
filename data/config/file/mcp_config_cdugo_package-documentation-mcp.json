@@ -1,0 +1,1 @@
+{"mcpServers": {"docsFetcher": {"command": "npx", "args": ["-y", "@smithery/cli@latest", "run", "@cdugo/mcp-get-docs", "--config", "'{}'"]}}}
