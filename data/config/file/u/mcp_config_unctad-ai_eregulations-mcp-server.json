@@ -1,0 +1,1 @@
+{"mcpServers": {"eregulations": {"command": "docker", "args": ["run", "-i", "--rm", "-e", "EREGULATIONS_API_URL", "ghcr.io/unctad-ai/eregulations-mcp-server:latest"], "env": {"EREGULATIONS_API_URL": "https://your-eregulations-api.com"}}}}

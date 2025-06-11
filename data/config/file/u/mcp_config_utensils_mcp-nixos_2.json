@@ -1,0 +1,1 @@
+{"mcpServers": {"nixos": {"command": "uv", "args": ["run", "-m", "mcp_nixos.__main__"], "env": {"PYTHONPATH": "."}}}}

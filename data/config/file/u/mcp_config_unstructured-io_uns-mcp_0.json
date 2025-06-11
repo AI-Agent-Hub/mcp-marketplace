@@ -1,0 +1,1 @@
+{"mcpServers": {"UNS_MCP": {"command": "uvx", "args": ["uns_mcp"], "env": {"UNSTRUCTURED_API_KEY": "<your-key>"}}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"PremAI": {"command": "node", "args": ["/path/to/your/prem-mcp/build/index.js", "--stdio"], "env": {"PREM_API_KEY": "your_api_key_here", "PREM_PROJECT_ID": "your_project_id_here"}}}}

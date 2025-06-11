@@ -1,0 +1,1 @@
+{"mcpServers": {"unifuncs": {"command": "npx", "args": ["-y", "@unifuncs/ufn-mcp-server"], "env": {"UNIFUNCS_API_KEY": "sk-**********"}}}}

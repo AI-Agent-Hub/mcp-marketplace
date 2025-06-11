@@ -1,0 +1,1 @@
+{"mcpServers": {"imdb_server": {"command": "docker", "args": ["exec", "-i", "imdb_server", "imdb-mcp-server"], "env": {"RAPID_API_KEY_IMDB": "your_api_key_here"}}}}

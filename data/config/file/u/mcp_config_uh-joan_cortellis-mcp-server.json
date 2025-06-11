@@ -1,0 +1,1 @@
+{"mcpServers": {"cortellis": {"command": "npx", "args": ["-y", "@uh-joan/cortellis-mcp-server"], "env": {"CORTELLIS_USERNAME": "your_username", "CORTELLIS_PASSWORD": "your_password"}}}}

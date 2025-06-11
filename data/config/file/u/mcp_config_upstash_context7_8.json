@@ -1,0 +1,1 @@
+{"mcpServers": {"\u0421ontext7": {"autoApprove": [], "disabled": false, "timeout": 60, "command": "docker", "args": ["run", "-i", "--rm", "context7-mcp"], "transportType": "stdio"}}}

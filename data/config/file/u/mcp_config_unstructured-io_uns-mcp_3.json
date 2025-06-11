@@ -1,0 +1,1 @@
+{"mcpServers": {"UNS_MCP": {"command": "ABSOLUTE/PATH/TO/.local/bin/uv", "args": ["--directory", "ABSOLUTE/PATH/TO/YOUR-UNS-MCP-REPO/uns_mcp", "run", "server.py"]}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"Union MCP": {"command": "uv", "args": ["run", "--with", "mcp[cli]", "--with-editable", "/Users/username/union-mcp", "mcp", "run", "/Users/username/union-mcp/examples/server.py"]}}}
