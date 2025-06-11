@@ -1,0 +1,1 @@
+{"mcpServers": {"windows_hardening_agent": {"command": "python", "args": ["C:\\Path\\to\\hardening_server.py"]}}}

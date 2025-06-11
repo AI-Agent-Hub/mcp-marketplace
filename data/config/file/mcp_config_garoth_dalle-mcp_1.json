@@ -1,0 +1,1 @@
+{"mcpServers": {"dalle-mcp": {"command": "node", "args": ["/path/to/dalle-mcp-server/build/index.js"], "env": {"OPENAI_API_KEY": "your-api-key-here", "SAVE_DIR": "/path/to/save/directory"}, "disabled": false, "autoApprove": []}}}

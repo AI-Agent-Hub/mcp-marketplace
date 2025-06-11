@@ -1,0 +1,1 @@
+{"mcpServers": {"aws-cognito-mcp-server": {"command": "/path/to/mcp-server-aws-cognito/build/index.js", "env": {"AWS_COGNITO_USER_POOL_ID": "your-user-pool-id", "AWS_COGNITO_USER_POOL_CLIENT_ID": "your-app-client-id"}}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"calendar": {"command": "npx", "args": ["@gongrzhe/server-calendar-autoauth-mcp"]}}}
