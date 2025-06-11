@@ -1,0 +1,1 @@
+{"mcpServers": {"searxng": {"command": "npx", "args": ["-y", "mcp-searxng"], "env": {"SEARXNG_URL": "YOUR_SEARXNG_INSTANCE_URL"}}}}

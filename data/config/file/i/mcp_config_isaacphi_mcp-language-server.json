@@ -1,0 +1,1 @@
+{"mcpServers": {"language-server": {"command": "/full/path/to/your/clone/mcp-language-server/mcp-language-server", "args": ["--workspace", "/path/to/workspace", "--lsp", "language-server-executable"], "env": {"LOG_LEVEL": "DEBUG"}}}}

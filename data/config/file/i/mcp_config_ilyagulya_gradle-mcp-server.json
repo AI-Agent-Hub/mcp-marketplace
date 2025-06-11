@@ -1,0 +1,1 @@
+{"mcpServers": {"gradle-mcp-server": {"command": "java", "args": ["-jar", "<absolute_path_to_home>/mcp-servers/gradle-mcp-server/gradle-mcp-server-all.jar"], "env": {}, "disabled": false, "autoApprove": []}}}

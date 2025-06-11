@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-kakao": {"command": "uv", "args": ["--directory", "your-project-path/kakao-bot-mcp-server", "run", "mcp-kakao"]}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"searxng": {"command": "docker", "args": ["run", "-i", "--rm", "-e", "SEARXNG_URL", "mcp-searxng:latest"], "env": {"SEARXNG_URL": "YOUR_SEARXNG_INSTANCE_URL"}}}}

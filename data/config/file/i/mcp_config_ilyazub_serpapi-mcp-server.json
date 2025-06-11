@@ -1,0 +1,1 @@
+{"mcpServers": {"serpapi": {"command": "python", "args": ["path/to/server.py"]}}}

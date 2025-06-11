@@ -1,0 +1,1 @@
+{"mcpServers": {"openapi": {"command": "npx", "args": ["-y", "@ivotoby/openapi-mcp-server"], "env": {"API_BASE_URL": "https://api.example.com", "OPENAPI_SPEC_PATH": "https://api.example.com/openapi.json", "API_HEADERS": "Authorization:Bearer token123,X-API-Key:your-api-key"}}}}

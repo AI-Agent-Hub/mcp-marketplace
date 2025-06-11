@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-internet-speed-test": {"command": "uv", "args": ["--directory", "/ABSOLUTE/PATH/TO/mcp-internet-speed-test", "run", "main.py"]}}}

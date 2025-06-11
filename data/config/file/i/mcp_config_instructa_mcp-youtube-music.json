@@ -1,0 +1,1 @@
+{"mcpServers": {"youtube-music-mcp": {"command": "npx", "args": ["-y", "@instructa/mcp-youtube-music"], "env": {"YOUTUBE_API_KEY": "<INSERT_API_KEY_HERE>"}}}}

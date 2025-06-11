@@ -1,0 +1,1 @@
+{"mcpServers": {"datadog": {"command": "npx", "args": ["datadog-mcp-server", "--apiKey", "<YOUR_API_KEY>", "--appKey", "<YOUR_APP_KEY>", "--site", "<YOUR_DD_SITE>", "--logsSite", "<YOUR_LOGS_SITE>", "--metricsSite", "<YOUR_METRICS_SITE>"]}}}
