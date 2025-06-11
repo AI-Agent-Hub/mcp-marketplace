@@ -1,0 +1,1 @@
+{"mcpServers": {"blogger": {"command": "npx", "args": ["-y", "@mcproadev/blogger-mcp-server"], "env": {"BLOGGER_API_KEY": "VOTRE_CLE_API_ICI"}}}}

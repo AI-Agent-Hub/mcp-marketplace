@@ -1,0 +1,1 @@
+{"mcpServers": {"render": {"command": "node", "args": ["/path/to/render-mcp/bin/render-mcp.js", "start"], "env": {"RENDER_API_KEY": "your-render-api-key"}, "disabled": false, "autoApprove": []}}}

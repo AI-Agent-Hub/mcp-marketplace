@@ -1,0 +1,1 @@
+{"mcpServers": {"nostr-code-snippet-mcp": {"command": "node", "args": ["/Users/<path to>/nostr-code-snippet-mcp/dist/index.js"], "env": {"NSEC": "<some nsec>", "RELAYS": "wss://relay.damus.io,wss://relay.snort.social"}}}}

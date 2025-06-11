@@ -1,0 +1,1 @@
+{"mcpServers": {"npm-sentinel-mcp": {"command": "npx", "args": ["-y", "@nekzus/mcp-server"]}}}

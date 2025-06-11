@@ -1,0 +1,1 @@
+{"mcpServers": {"release-notes": {"command": "node", "args": ["/path/to/release-notes-server/build/index.js"], "env": {"GITHUB_TOKEN": "your-github-token"}}}}

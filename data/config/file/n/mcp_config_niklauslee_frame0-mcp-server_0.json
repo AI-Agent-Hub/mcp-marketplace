@@ -1,0 +1,1 @@
+{"mcpServers": {"frame0-mcp-server": {"command": "npx", "args": ["-y", "frame0-mcp-server"]}}}

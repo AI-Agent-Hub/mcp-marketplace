@@ -1,0 +1,1 @@
+{"mcpServers": {"near-mcp": {"command": "npx", "args": ["-y", "@nearai/near-mcp@latest", "run"], "env": {}}}}

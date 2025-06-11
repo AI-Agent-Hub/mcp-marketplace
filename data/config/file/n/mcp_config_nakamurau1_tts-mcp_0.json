@@ -1,0 +1,1 @@
+{"mcpServers": {"tts-mcp": {"command": "node", "args": ["full/path/to/bin/tts-mcp-server.js", "--voice", "nova", "--api-key", "your-openai-api-key"], "env": {"OPENAI_API_KEY": "your-openai-api-key"}}}}

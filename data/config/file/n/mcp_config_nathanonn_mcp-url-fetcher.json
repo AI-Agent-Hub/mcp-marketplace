@@ -1,0 +1,1 @@
+{"mcpServers": {"url-converter": {"command": "node", "args": ["/absolute/path/to/mcp-url-converter/build/index.js"]}}}

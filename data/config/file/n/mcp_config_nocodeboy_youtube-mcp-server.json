@@ -1,0 +1,1 @@
+{"mcpServers": {"youtube": {"command": "node", "args": ["path/to/youtube-mcp-server/index.js"], "env": {"YOUTUBE_API_KEY": "your_api_key_here"}}}}

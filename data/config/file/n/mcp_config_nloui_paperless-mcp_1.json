@@ -1,0 +1,1 @@
+{"mcpServers": {"paperless": {"command": "npx", "args": ["paperless-mcp", "http://your-paperless-instance:8000", "your-api-token"]}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"github-action-trigger-mcp": {"command": "npx", "args": ["-y", "@nextdrive/github-action-trigger-mcp"], "env": {"GITHUB_PERSONAL_ACCESS_TOKEN": "your_github_token_here"}}}}

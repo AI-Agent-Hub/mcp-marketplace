@@ -1,0 +1,1 @@
+{"mcpServers": {"memex": {"command": "uv", "args": ["--directory", "PATH_TO_LOCAL_MEMEX_REPO", "run", "mcp-memex", "--index", "PATH_TO_MEMEX_INDEX", "--workspace", "PATH_TO_OBSIDIAN_VAULT"], "env": {"ANTHROPIC_API_KEY": "YOUR-API-KEY", "FIRECRAWL_API_KEY": "YOUR-API-KEY", "VOYAGE_API_KEY": "YOUR-API-KEY"}}}}

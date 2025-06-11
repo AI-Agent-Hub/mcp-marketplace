@@ -1,0 +1,1 @@
+{"mcpServers": {"notes-server": {"command": "python", "args": ["main.py"], "env": {"PYTHONIOENCODING": "utf-8"}}}}

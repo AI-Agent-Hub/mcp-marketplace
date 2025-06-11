@@ -1,0 +1,1 @@
+{"mcpServers": {"neon": {"command": "wsl", "args": ["npx", "-y", "@neondatabase/mcp-server-neon", "start", "<YOUR_NEON_API_KEY>"]}}}

@@ -1,0 +1,1 @@
+{"version": 1, "mcpServers": {"pippa-memory": {"command": "python", "args": ["-m", "mcp_pippa_memory"], "env": {"OPENAI_API_KEY": "your_openai_api_key_here"}}}}

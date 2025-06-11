@@ -1,0 +1,1 @@
+{"mcpServers": {"nefino": {"command": "python", "args": ["-m", "mcp_nefino"], "env": {"NEFINO_USERNAME": "your_username", "NEFINO_PASSWORD": "your_password", "NEFINO_JWT_SECRET": "your_jwt_secret", "NEFINO_BASE_URL": "http://api_endpoint"}}}}

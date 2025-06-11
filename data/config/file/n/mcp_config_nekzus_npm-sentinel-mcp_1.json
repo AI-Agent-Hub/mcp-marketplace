@@ -1,0 +1,1 @@
+{"mcpServers": {"npm-sentinel-mcp": {"command": "docker", "args": ["run", "-i", "--rm", "-w", "/projects", "--mount", "type=bind,src=${PWD},dst=/projects", "nekzus/npm-sentinel-mcp", "node", "dist/index.js"]}}}

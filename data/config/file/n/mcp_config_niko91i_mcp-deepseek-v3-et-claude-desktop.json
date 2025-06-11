@@ -1,0 +1,1 @@
+{"mcpServers": {"deepseek-claude": {"command": "/path/to/node", "args": ["/path/to/Deepseek-Thinking-Claude-3.5-Sonnet-CLINE-MCP/build/index.js"], "env": {"OPENROUTER_API_KEY": "your_key_here"}, "disabled": false, "autoApprove": []}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-android": {"type": "stdio", "command": "bash", "args": ["-c", "cd /path/to/mcp-adb && source .venv/bin/activate && python -m server"]}}}

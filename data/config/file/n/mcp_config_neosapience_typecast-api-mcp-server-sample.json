@@ -1,0 +1,1 @@
+{"mcpServers": {"typecast-api-mcp-server": {"command": "uv", "args": ["--directory", "/PATH/TO/YOUR/PROJECT", "run", "typecast-api-mcp-server"], "env": {"TYPECAST_API_HOST": "https://api.typecast.ai", "TYPECAST_API_KEY": "YOUR_API_KEY", "TYPECAST_OUTPUT_DIR": "PATH/TO/YOUR/OUTPUT/DIR"}}}}

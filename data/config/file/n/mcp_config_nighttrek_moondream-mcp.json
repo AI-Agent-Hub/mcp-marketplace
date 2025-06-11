@@ -1,0 +1,1 @@
+{"mcpServers": {"moondream": {"command": "node", "args": ["/path/to/moondream-server/build/index.js"]}}}

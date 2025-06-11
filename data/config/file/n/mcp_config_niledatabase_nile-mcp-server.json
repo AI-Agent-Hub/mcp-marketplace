@@ -1,0 +1,1 @@
+{"mcpServers": {"nile-database": {"command": "node", "args": ["/path/to/your/nile-mcp-server/dist/index.js"], "env": {"NILE_API_KEY": "your_api_key_here", "NILE_WORKSPACE_SLUG": "your_workspace_slug"}}}}

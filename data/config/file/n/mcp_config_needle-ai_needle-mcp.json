@@ -1,0 +1,1 @@
+{"mcpServers": {"needle_mcp": {"command": "uv", "args": ["--directory", "/path/to/needle-mcp", "run", "needle-mcp"], "env": {"NEEDLE_API_KEY": "your_needle_api_key"}}}}

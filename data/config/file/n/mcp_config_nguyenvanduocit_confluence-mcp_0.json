@@ -1,0 +1,1 @@
+{"mcpServers": {"confluence": {"command": "bun", "args": ["/absolute/path/to/confluence-mcp/dist/index.js"], "env": {"CONFLUENCE_API_TOKEN": "your_api_token", "CONFLUENCE_BASE_URL": "your_confluence_instance_url/wiki", "CONFLUENCE_USER_EMAIL": "your_email"}}}}

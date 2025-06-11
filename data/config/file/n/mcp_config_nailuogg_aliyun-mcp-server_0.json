@@ -1,0 +1,1 @@
+{"mcpServers": {"aliyun": {"command": "node", "args": ["/path/to/aliyun-mcp-server/build/index.js"], "env": {"ALIYUN_ACCESS_KEY_ID": "your-access-key-id", "ALIYUN_ACCESS_KEY_SECRET": "your-access-key-secret", "SLS_ENDPOINT": "cn-hangzhou.log.aliyuncs.com"}, "disabled": false, "autoApprove": []}}}

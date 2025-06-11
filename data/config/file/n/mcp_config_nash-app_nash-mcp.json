@@ -1,0 +1,1 @@
+{"mcpServers": {"Nash": {"command": "/Users/john-nash/code/nash-mcp/.venv/bin/mcp", "args": ["run", "/Users/john-nash/code/nash-mcp/src/nash_mcp/server.py"]}}}
