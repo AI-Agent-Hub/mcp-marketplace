@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-wordcounter": {"command": "npx", "args": ["-y", "mcp-wordcounter"], "alwaysAllow": ["analyze_text"]}}}

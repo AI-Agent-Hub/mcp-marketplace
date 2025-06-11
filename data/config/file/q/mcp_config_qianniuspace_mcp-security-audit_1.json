@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-security-audit": {"command": "npx", "args": ["-y", "/path/to/mcp-security-audit/build/index.js"]}}}

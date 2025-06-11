@@ -1,0 +1,1 @@
+{"mcpServers": {"unity-mcp-server": {"command": "node", "args": ["path-to-project>\\Library\\PackageCache\\com.quaza.unitymcp@d2b8f1260bca\\mcpServer\\mcpServer\\build\\index.js"], "env": {"MCP_WEBSOCKET_PORT": "5010"}}}}

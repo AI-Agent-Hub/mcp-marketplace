@@ -1,0 +1,1 @@
+{"mcpServers": {"image-downloader": {"command": "node", "args": ["/path/to/mcp-image-downloader/build/index.js"]}}}

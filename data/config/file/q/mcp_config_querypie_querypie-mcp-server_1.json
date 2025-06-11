@@ -1,0 +1,1 @@
+{"mcpServers": {"querypie": {"command": "docker", "type": "stdio", "args": ["run", "--rm", "-e", "QUERYPIE_API_KEY=${QUERYPIE_API_KEY}", "-it", "ghcr.io/querypie/querypie-mcp-server", "https://your_querypie_url"], "env": {"QUERYPIE_API_KEY": "your_token"}}}}

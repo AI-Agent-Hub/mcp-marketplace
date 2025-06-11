@@ -1,0 +1,1 @@
+{"mcpServers": {"gemini-image-generator": {"command": "uv", "args": ["--directory", "/absolute/path/to/gemini-image-generator", "run", "server.py"], "env": {"GEMINI_API_KEY": "GEMINI_API_KEY", "OUTPUT_IMAGE_PATH": "OUTPUT_IMAGE_PATH"}}}}

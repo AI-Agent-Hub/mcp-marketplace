@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-communicator-telegram": {"command": "node", "args": ["path/to/mcp-communicator-telegram/build/index.js"], "env": {"TELEGRAM_TOKEN": "your_bot_token_here", "CHAT_ID": "your_chat_id_here"}}}}

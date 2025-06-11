@@ -1,0 +1,1 @@
+{"mcpServers": {"runbook": {"command": "npx", "args": ["-y", "@runbook-docs/mcp-server"], "env": {"RUNBOOK_BASE_URL": "https://<YOUR_SUBDOMAIN>.runbook.jp", "RUNBOOK_API_TOKEN": "your-api-token"}}}}

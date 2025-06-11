@@ -1,0 +1,1 @@
+{"mcpServers": {"spring-ai-chrome-mcp-server": {"command": "/Users/baetaehyeon/Library/Java/JavaVirtualMachines/corretto-21.0.5-1/Contents/Home/bin/java", "args": ["-Dspring.ai.mcp.server.stdio=true", "-jar", "/Users/baetaehyeon/dev/chrome-mcp-server/build/libs/chrome-mcp-server-0.0.1.jar"]}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"alpha-vantage": {"command": "node", "args": ["/absolute/path/to/dist/index.js"], "env": {"ALPHA_VANTAGE_API_KEY": "YOUR_API_KEY"}}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"filesystem": {"command": "node", "args": ["path/to/filesystem-server/build/index.js"]}}}

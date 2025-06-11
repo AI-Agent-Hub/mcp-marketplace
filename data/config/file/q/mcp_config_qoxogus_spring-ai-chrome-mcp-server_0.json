@@ -1,0 +1,1 @@
+{"mcpServers": {"spring-ai-chrome-mcp-server": {"command": "{JAVA_PATH}", "args": ["-Dspring.ai.mcp.server.stdio=true", "-jar", "{JAR_PATH}"]}}}
