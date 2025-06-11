@@ -1,0 +1,1 @@
+{"mcpServers": {"mlflow": {"command": "node", "args": ["<absolute-path-to-this-repository>/dist/index.js"], "env": {"MLFLOW_TRACKING_URI": "http://localhost:5000"}}}}

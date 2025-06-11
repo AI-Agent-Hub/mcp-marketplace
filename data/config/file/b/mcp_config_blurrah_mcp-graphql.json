@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-graphql": {"command": "npx", "args": ["mcp-graphql"], "env": {"ENDPOINT": "http://localhost:3000/graphql"}}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp_server_mysql": {"command": "/full/path/to/node", "args": ["/full/path/to/mcp-server-mysql/dist/index.js"], "env": {"MYSQL_HOST": "127.0.0.1", "MYSQL_PORT": "3306", "MYSQL_USER": "root", "MYSQL_PASS": "your_password", "MYSQL_DB": "your_database"}}}}

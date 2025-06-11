@@ -1,0 +1,1 @@
+{"mcpServers": {"clj-kondo": {"command": "node", "args": ["build/index.js"], "disabled": false, "autoApprove": []}}}

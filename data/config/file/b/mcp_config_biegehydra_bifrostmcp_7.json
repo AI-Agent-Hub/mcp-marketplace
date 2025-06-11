@@ -1,0 +1,1 @@
+{"mcpServers": {"BackendAPI": {"url": "http://localhost:5643/backend-api/sse"}, "FrontendApp": {"url": "http://localhost:5644/frontend-app/sse"}}}

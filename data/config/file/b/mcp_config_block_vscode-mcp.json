@@ -1,0 +1,1 @@
+{"mcpServers": {"vscode-mcp-server": {"command": "npx", "args": ["vscode-mcp-server"], "env": {}}}}

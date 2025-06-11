@@ -1,0 +1,1 @@
+{"mcpServers": {"aws-resources": {"command": "docker", "args": ["run", "-i", "--rm", "-e", "AWS_ACCESS_KEY_ID=your_access_key_id_here", "-e", "AWS_SECRET_ACCESS_KEY=your_secret_access_key_here", "-e", "AWS_DEFAULT_REGION=us-east-1", "buryhuang/mcp-server-aws-resources:latest"]}}}

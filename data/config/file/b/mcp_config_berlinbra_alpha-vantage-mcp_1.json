@@ -1,0 +1,1 @@
+{"mcpServers": {"alpha-vantage-mcp": {"args": ["--directory", "/Users/{INSERT_USER}/YOUR/PATH/TO/alpha-vantage-mcp", "run", "alpha-vantage-mcp"], "command": "uv", "env": {"ALPHA_VANTAGE_API_KEY": "<insert api key>"}}}}

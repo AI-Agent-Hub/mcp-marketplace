@@ -1,0 +1,1 @@
+{"mcpServers": {"aws-resources": {"command": "docker", "args": ["run", "-i", "--rm", "-e", "AWS_PROFILE=default", "-v", "~/.aws:/root/.aws", "buryhuang/mcp-server-aws-resources:latest"]}}}

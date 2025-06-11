@@ -1,0 +1,1 @@
+{"mcpServers": {"alphavantage": {"command": "docker", "args": ["run", "-i", "-e", "ALPHA_VANTAGE_API_KEY", "mcp/alpha-vantage"], "env": {"ALPHA_VANTAGE_API_KEY": "REPLACE_API_KEY"}}}}

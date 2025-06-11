@@ -1,0 +1,1 @@
+{"mcpServers": {"instantly": {"command": "npx", "args": ["-y", "@modelcontextprotocol/server-instantly"], "env": {"INSTANTLY_API_KEY": "<YOUR_API_KEY>"}}}}

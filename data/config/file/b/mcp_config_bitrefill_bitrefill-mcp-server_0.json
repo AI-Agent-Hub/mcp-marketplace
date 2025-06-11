@@ -1,0 +1,1 @@
+{"mcpServers": {"bitrefill": {"command": "npx", "args": ["-y", "bitrefill-mcp-server"], "env": {"BITREFILL_API_SECRET": "your_api_key_here", "BITREFILL_API_ID": "your_api_id_here"}}}}
