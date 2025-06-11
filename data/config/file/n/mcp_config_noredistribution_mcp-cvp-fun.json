@@ -1,0 +1,1 @@
+{"mcpServers": {"CVP MCP Server": {"command": "uv", "args": ["run", "--with", "fastmcp", "fastmcp", "run", "/home/ansible/mcp-cvp-fun/mcp_server_rest.py"]}}}

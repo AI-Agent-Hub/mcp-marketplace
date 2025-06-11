@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-installer": {"command": "npx", "args": ["@anaisbetts/mcp-installer"]}, "mcp-server-restart": {"command": "uvx", "args": ["mcp-server-restart"]}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"tfmcp": {"command": "docker", "args": ["run", "--rm", "-v", "/path/to/your/terraform:/app/terraform", "tfmcp", "mcp"], "env": {"TERRAFORM_DIR": "/app/terraform"}}}}

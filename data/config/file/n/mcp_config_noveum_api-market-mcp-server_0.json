@@ -1,0 +1,1 @@
+{"mcpServers": {"api-market": {"command": "npx", "args": ["-y", "@noveum-ai/mcp-server"], "env": {"API_HEADERS": "x-magicapi-key:your-api-key"}}}}

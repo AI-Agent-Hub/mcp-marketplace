@@ -1,0 +1,1 @@
+{"mcpServers": {"nia-codebase": {"command": "npx", "args": ["-y", "nia-codebase-mcp@1.0.1", "--api-key=YOUR_NIA_API_KEY"]}}}

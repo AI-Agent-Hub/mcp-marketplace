@@ -1,0 +1,1 @@
+{"mcpServers": {"gyazo-mcp-server": {"command": "npx", "args": ["@notainc/gyazo-mcp-server"], "env": {"GYAZO_ACCESS_TOKEN": "your-access-token-here"}}}}

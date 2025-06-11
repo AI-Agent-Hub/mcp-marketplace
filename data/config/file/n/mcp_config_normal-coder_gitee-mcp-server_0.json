@@ -1,0 +1,1 @@
+{"mcpServers": {"Gitee": {"command": "npx", "args": ["-y", "gitee-mcp-server"], "env": {"GITEE_PERSONAL_ACCESS_TOKEN": "<YOUR_TOKEN>"}}}}

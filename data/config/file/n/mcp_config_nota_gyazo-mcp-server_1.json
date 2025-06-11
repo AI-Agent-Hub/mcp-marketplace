@@ -1,0 +1,1 @@
+{"mcpServers": {"gyazo-mcp-server": {"command": "docker", "args": ["run", "-i", "--rm", "-e", "GYAZO_ACCESS_TOKEN", "gyazo-mcp-server"], "env": {"GYAZO_ACCESS_TOKEN": "your-access-token-here"}}}}

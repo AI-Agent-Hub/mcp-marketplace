@@ -1,0 +1,1 @@
+{"mcpServers": {"Gitee": {"command": "docker", "args": ["run", "-i", "--rm", "-e", "GITEE_PERSONAL_ACCESS_TOKEN", "normalcoder/gitee-mcp-server"], "env": {"GITEE_PERSONAL_ACCESS_TOKEN": "<YOUR_TOKEN>"}}}}

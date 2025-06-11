@@ -1,0 +1,1 @@
+{"mcpServers": {"norman-mcp-server": {"command": "<path_to_your_python>/python", "args": ["-m", "norman_mcp"], "env": {"NORMAN_EMAIL": "your-email@example.com", "NORMAN_PASSWORD": "your-password", "NORMAN_ENVIRONMENT": "production"}}}}
