@@ -1,0 +1,1 @@
+{"mcpServers": {"FileScopeMCP": {"command": "node", "args": ["<build script sets this>/mcp-server.js", "--base-dir=C:/Users/admica/my/project/base"], "transport": "stdio", "disabled": false, "alwaysAllow": []}}}

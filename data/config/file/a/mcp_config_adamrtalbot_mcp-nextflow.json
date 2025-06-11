@@ -1,0 +1,1 @@
+{"mcpServers": {"server-name": {"command": "/path/to/your/.venv/bin/python", "args": ["/path/to/your/mcp-nextflow/mcp-nextflow.py"], "env": {"NEXTFLOW_DIR": "/path/to/your/nextflow"}}}}

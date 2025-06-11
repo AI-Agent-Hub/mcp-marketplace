@@ -1,0 +1,1 @@
+{"mcpServers": {"airflow-mcp-server": {"command": "uvx", "args": ["airflow-mcp-server", "--base-url", "http://localhost:8080", "--auth-token", "<jwt_token>"]}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"puppeteer": {"command": "npx", "args": ["-y", "github:afshawnlotfi/mcp-configurable-puppeteer"], "env": {"PUPPETEER_ARGS": "{\"defaultViewport\": {\"width\": 1280, \"height\": 800}}"}}}}
