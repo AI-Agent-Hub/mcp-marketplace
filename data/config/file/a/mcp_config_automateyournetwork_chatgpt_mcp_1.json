@@ -1,0 +1,1 @@
+{"mcpServers": {"chatgpt": {"command": "python3", "args": ["server.py", "--oneshot"], "env": {"OPENAI_API_KEY": "<YOUR_OPENAI_API_KEY>"}}}}

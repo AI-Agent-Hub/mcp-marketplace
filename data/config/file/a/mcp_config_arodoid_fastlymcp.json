@@ -1,0 +1,1 @@
+{"mcpServers": {"fastly": {"command": "node", "args": ["path/to/fastly-mcp.mjs"], "env": {"FASTLY_API_KEY": "your_fastly_api_key"}}}}

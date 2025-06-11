@@ -1,0 +1,1 @@
+{"mcpServers": {"outlook-meetings-scheduler": {"command": "node", "args": ["/path/to/outlook-meetings-scheduler-mcp-server/build/index.js"], "env": {"CLIENT_ID": "<YOUR_CLIENT_ID>", "CLIENT_SECRET": "<YOUR_CLIENT_SECRET>", "TENANT_ID": "<YOUR_TENANT_ID>", "USER_EMAIL": "<YOUR_EMAIL>"}}}}

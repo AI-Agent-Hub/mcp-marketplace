@@ -1,0 +1,1 @@
+{"mcpServers": {"discourse": {"command": "docker", "args": ["run", "-i", "--rm", "-e", "DISCOURSE_API_URL=https://try.discourse.org", "-e", "DISCOURSE_API_KEY=1234", "-e", "DISCOURSE_API_USERNAME=ash", "ashdev/discourse-mcp-server"]}}}

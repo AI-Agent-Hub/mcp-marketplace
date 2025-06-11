@@ -1,0 +1,1 @@
+{"mcpServers": {"iotdb": {"command": "uv", "args": ["--directory", "YOUR_REPO_PATH/src/iotdb_mcp_server", "run", "server.py"], "env": {"IOTDB_HOST": "127.0.0.1", "IOTDB_PORT": "6667", "IOTDB_USER": "root", "IOTDB_PASSWORD": "root", "IOTDB_DATABASE": "test", "IOTDB_SQL_DIALECT": "table"}}}}

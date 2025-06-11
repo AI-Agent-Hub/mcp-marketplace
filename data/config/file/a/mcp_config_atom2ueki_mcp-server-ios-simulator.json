@@ -1,0 +1,1 @@
+{"mcpServers": {"simulator": {"command": "node", "args": ["/path/to/your/mcp-server-ios-simulator/dist/index.js"]}}}

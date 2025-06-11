@@ -1,0 +1,1 @@
+{"mcpServers": {"discourse": {"command": "npx", "args": ["-y", "@ashdev/discourse-mcp-server"], "env": {"DISCOURSE_API_URL": "https://try.discourse.org", "DISCOURSE_API_KEY": "1234", "DISCOURSE_API_USERNAME": "ash"}}}}

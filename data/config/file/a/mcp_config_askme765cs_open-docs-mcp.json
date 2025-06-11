@@ -1,0 +1,1 @@
+{"mcpServers": {"open-docs-mcp": {"command": "npx", "args": ["-y", "open-docs-mcp", "--docsDir", "/path/to/docs"]}}}

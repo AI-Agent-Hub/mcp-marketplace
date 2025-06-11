@@ -1,0 +1,1 @@
+{"mcpServers": {"tavily-search": {"command": "uv", "args": ["--directory", "/path/to/mcp-tavily-search/mcp_tavily_search", "run", "server.py"], "env": {"TAVILY_API_KEY": "YOUR-API-KEY"}}}}

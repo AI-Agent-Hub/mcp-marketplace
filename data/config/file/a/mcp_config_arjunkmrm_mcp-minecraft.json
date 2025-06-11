@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-minecraft": {"command": "npx", "args": ["-y", "mcp-minecraft@latest", "--server-jar", "/absolute/path/to/minecraft-server/server.jar"]}}}

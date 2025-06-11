@@ -1,0 +1,1 @@
+{"mcpServers": {"@service-name": {"url": "http://localhost:8080/sse?s=[OpenAPI-Spec-URL]&u=[API-Base-URL]&h=[Auth-Header]:[Value-Prefix]"}}}

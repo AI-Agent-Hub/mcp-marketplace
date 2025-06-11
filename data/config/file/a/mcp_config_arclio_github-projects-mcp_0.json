@@ -1,0 +1,1 @@
+{"mcpServers": {"github-projects": {"command": "uvx", "args": ["mcp-github-projects"], "env": {"GITHUB_TOKEN": "your_pat_here"}}}}

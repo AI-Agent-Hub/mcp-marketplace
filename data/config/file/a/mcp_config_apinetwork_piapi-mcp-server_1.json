@@ -1,0 +1,1 @@
+{"mcpServers": {"piapi": {"command": "node", "args": ["/absolute/path/to/piapi-mcp-server/dist/index.js"], "env": {"PIAPI_API_KEY": "your_api_key_here"}}}}

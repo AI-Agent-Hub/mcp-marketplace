@@ -1,0 +1,1 @@
+{"mcpServers": {"brave-search": {"command": "uv", "args": ["--directory", "path-to\\mcp-python\\brave-mcp-search\\src", "run", "server.py"], "env": {"BRAVE_API_KEY": "YOUR_BRAVE_API_KEY_HERE"}}}}
