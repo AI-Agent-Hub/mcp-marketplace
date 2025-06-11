@@ -1,0 +1,1 @@
+{"mcpServers": {"aws-cli": {"command": "node", "args": ["/path/to/aws-cli-mcp-server/dist/index.js"]}}}

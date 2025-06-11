@@ -1,0 +1,1 @@
+{"mcpServers": {"redmine-server": {"command": "node", "args": ["C:\\Users\\yourusername\\path\\to\\Redmine-MCP\\server.js"], "disabled": false, "autoApprove": []}}}

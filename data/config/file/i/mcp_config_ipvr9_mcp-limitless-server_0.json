@@ -1,0 +1,1 @@
+{"mcpServers": {"limitless": {"command": "node", "args": ["<FULL_FILE_PATH_TO_DIST_SERVER.js>"], "env": {"LIMITLESS_API_KEY": "<YOUR_LIMITLESS_API_KEY_HERE>"}}}}

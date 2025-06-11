@@ -1,0 +1,1 @@
+{"mcpServers": {"emojikey": {"command": "npx", "args": ["@identimoji/mcp-server-emojikey"], "env": {"EMOJIKEYIO_API_KEY": "your-api-key-from-emojikey.io", "MODEL_ID": "Claude-3-5-Sonnet-20241022"}}}}

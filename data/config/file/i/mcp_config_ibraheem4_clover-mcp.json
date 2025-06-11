@@ -1,0 +1,1 @@
+{"mcpServers": {"clover": {"command": "npx", "args": ["-y", "@ibraheem4/clover-mcp"], "env": {"CLOVER_CLIENT_ID": "your-clover-client-id", "CLOVER_CLIENT_SECRET": "your-clover-client-secret", "CLOVER_BASE_URL": "https://apisandbox.dev.clover.com"}, "disabled": false, "autoApprove": ["initiate_oauth_flow", "get_merchant_info", "list_inventory", "list_orders"]}}}

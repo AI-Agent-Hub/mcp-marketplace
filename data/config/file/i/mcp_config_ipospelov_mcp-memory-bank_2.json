@@ -1,0 +1,1 @@
+{"mcpServers": {"memory-bank": {"command": "docker", "args": ["run", "-i", "--rm", "19283744/mcp-memory-bank:latest"]}}}

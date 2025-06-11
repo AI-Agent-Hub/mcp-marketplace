@@ -1,0 +1,1 @@
+{"mcpServers": {"newrelic": {"command": "uv", "args": ["--directory", "/absolute/path/to/newrelic-mcp", "run", "newrelic_logs_server.py"], "env": {"NEW_RELIC_API_KEY": "your-api-key-here", "NEW_RELIC_ACCOUNT_ID": "your-account-id-here"}}}}
