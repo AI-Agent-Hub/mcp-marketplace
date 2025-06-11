@@ -1,1 +1,0 @@
-{"mcpServers": {"gmail": {"command": "/path/to/conda/envs/mcp-gmail/bin/python", "args": ["-m", "gmail_mcp_server.server"], "env": {"PYTHONPATH": "/path/to/gmail-mcp-server/src", "GMAIL_CREDENTIALS_FILE": "/path/to/credentials.json", "GMAIL_TOKEN_FILE": "/path/to/token.json"}}}}

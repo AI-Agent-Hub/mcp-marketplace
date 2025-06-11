@@ -1,1 +1,0 @@
-{"mcpServers": {"fhir": {"command": "/path/to/@flexpa/mcp-fhir/build/index.js"}, "env": {"FHIR_BASE_URL": "<FHIR_BASE_URL>", "FHIR_ACCESS_TOKEN": "<FHIR_ACCESS_TOKEN>"}}}

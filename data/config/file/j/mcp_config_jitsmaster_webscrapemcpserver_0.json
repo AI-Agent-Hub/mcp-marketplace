@@ -1,1 +1,0 @@
-{"mcpServers": {"web-crawler": {"command": "node", "args": ["/path/to/web-crawler/build/index.js"], "env": {"CRAWL_LINKS": "false", "MAX_DEPTH": "3", "REQUEST_DELAY": "1000", "TIMEOUT": "5000", "MAX_CONCURRENT": "5"}}}}

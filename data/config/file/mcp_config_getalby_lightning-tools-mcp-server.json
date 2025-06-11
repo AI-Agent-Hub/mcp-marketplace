@@ -1,1 +1,0 @@
-{"mcpServers": {"lightning-tools": {"command": "npx", "args": ["-y", "@getalby/lightning-tools-mcp-server"], "env": {}}}}

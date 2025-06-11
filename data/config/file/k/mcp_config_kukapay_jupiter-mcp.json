@@ -1,1 +1,0 @@
-{"mcpServers": {"Jupiter-MCP": {"command": "node", "args": ["path/to/jupiter-mcp/server/index.js"], "env": {"SOLANA_RPC_URL": "solana rpc url you can access", "PRIVATE_KEY": "your private key"}}}}

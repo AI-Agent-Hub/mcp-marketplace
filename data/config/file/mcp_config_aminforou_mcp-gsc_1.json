@@ -1,1 +1,0 @@
-{"mcpServers": {"gscServer": {"command": "/FULL/PATH/TO/-main/.venv/bin/python", "args": ["/FULL/PATH/TO/mcp-gsc-main/gsc_server.py"], "env": {"GSC_CREDENTIALS_PATH": "/FULL/PATH/TO/service_account_credentials.json", "GSC_SKIP_OAUTH": "true"}}}}

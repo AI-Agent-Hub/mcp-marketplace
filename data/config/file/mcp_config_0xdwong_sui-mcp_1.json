@@ -1,1 +1,0 @@
-{"mcpServers": {"sui-tools": {"command": "node", "args": ["<absolute-path-to-your-project>/build/index.js"]}}}

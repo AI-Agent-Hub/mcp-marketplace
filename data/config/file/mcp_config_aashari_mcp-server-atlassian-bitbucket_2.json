@@ -1,1 +1,0 @@
-{"mcpServers": {"bitbucket": {"command": "npx", "args": ["-y", "@aashari/mcp-server-atlassian-bitbucket"]}}}

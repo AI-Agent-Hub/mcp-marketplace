@@ -1,1 +1,0 @@
-{"mcpServers": {"think-tool": {"command": "npx", "args": ["-y", "@cgize/mcp-think-tool"], "type": "stdio", "pollingInterval": 30000, "startupTimeout": 30000, "restartOnFailure": true}}}

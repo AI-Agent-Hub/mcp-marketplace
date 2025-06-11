@@ -1,1 +1,0 @@
-{"mcpServers": {"figma": {"command": "node", "args": ["path/to/figma-server/build/index.js"], "env": {"FIGMA_ACCESS_TOKEN": "your-access-token-here"}, "disabled": false, "alwaysAllow": []}}}

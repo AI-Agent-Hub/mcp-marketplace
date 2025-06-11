@@ -1,1 +1,0 @@
-{"mcpServers": {"FileScopeMCP": {"command": "wsl", "args": ["-d", "Ubuntu-24.04", "/home/admica/FileScopeMCP/run.sh"], "transport": "stdio", "disabled": false, "alwaysAllow": []}}}

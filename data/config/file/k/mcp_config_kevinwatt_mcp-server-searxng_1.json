@@ -1,1 +1,0 @@
-{"mcpServers": {"searxng": {"name": "searxng", "command": "npx", "args": ["-y", "@kevinwatt/mcp-server-searxng"], "env": {"SEARXNG_INSTANCES": "http://localhost:8080,https://searx.example.com", "SEARXNG_USER_AGENT": "CustomBot/1.0", "NODE_TLS_REJECT_UNAUTHORIZED": "0"}}}}

@@ -1,1 +1,0 @@
-{"mcpServers": {"ida-pro": {"command": "node", "args": ["path/to/ida-server/dist/index.js"], "env": {}}}}

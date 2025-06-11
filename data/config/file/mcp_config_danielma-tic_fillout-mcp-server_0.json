@@ -1,1 +1,0 @@
-{"mcpServers": {"fillout": {"command": "docker", "args": ["run", "-i", "--rm", "-e", "FILLOUT_API_KEY", "mcp/fillout"], "env": {"FILLOUT_API_KEY": "your-fillout-api-key"}}}}

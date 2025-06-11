@@ -1,1 +1,0 @@
-{"mcpServers": {"memory": {"command": "node", "args": ["/path/to/mcp-memory-pouchdb/dist/index.js"], "env": {"MEMORY_FILE_PATH": "/path/to/custom/memory.json", "POUCHDB_PATH": "/path/to/custom/pouchdb_directory", "DISABLE_MEMORY_FILE": "true"}}}}

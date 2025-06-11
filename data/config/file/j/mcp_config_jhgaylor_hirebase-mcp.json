@@ -1,1 +1,0 @@
-{"mcpServers": {"hirebase": {"command": "uvx", "args": ["hirebase-mcp"], "env": {"HIREBASE_API_KEY": ""}}}}

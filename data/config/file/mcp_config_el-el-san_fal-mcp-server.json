@@ -1,1 +1,0 @@
-{"mcpServers": {"video-generator": {"command": "node", "args": ["your_install_path/fal-mcp-server/build/index.js"], "env": {"FAL_KEY": "your_fal_key_here"}}}}

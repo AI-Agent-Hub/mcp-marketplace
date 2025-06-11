@@ -1,1 +1,0 @@
-{"mcp": {"inputs": [{"type": "promptString", "id": "apiKey", "description": "21st.dev Magic API Key", "password": true}], "servers": {"@21st-dev/magic": {"command": "npx", "args": ["-y", "@21st-dev/magic@latest"], "env": {"API_KEY": "${input:apiKey}"}}}}}

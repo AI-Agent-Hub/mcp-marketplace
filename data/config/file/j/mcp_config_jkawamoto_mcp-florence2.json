@@ -1,1 +1,0 @@
-{"mcpServers": {"florence-2": {"command": "uvx", "args": ["--from", "git+https://github.com/jkawamoto/mcp-florence2", "mcp-florence2"]}}}

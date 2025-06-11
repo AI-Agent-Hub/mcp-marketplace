@@ -1,1 +1,0 @@
-{"mcpServers": {"academic-search": {"command": "uv", "args": ["run ", "/path/to/server/server.py"], "env": {"SEMANTIC_SCHOLAR_API_KEY": "your_key_here", "CROSSREF_API_KEY": "your_key_here"}}}}

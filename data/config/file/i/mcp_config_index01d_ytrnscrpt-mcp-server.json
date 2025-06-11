@@ -1,1 +1,0 @@
-{"mcpServers": {"youtube-transcript": {"command": "node", "args": ["/ABSOLUTE/PATH/TO/ytrnscrpt-mcp-server/dist/index.js"]}}}

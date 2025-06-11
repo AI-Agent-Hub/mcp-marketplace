@@ -1,1 +1,0 @@
-{"mcpServers": {"bitcoin-mcp": {"command": "npx", "args": ["-y", "bitcoin-mcp@latest"]}}}

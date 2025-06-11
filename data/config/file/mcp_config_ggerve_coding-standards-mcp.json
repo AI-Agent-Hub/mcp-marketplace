@@ -1,1 +1,0 @@
-{"mcpServers": {"nortal_coding_standards": {"command": "uv", "args": ["run", "--with", "mcp[cli]", "mcp", "run", "/absolute/path/to/coding-standards-mcp/server.py"]}}}

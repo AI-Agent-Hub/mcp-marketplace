@@ -1,1 +1,0 @@
-{"mcpServers": {"log-reader": {"command": "node", "args": ["/absolute/path/MCP-Analyzer/build"]}}}

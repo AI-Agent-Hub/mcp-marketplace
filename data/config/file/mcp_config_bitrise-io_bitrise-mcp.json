@@ -1,1 +1,0 @@
-{"mcpServers": {"bitrise": {"command": "uvx", "env": {"BITRISE_TOKEN": "<YOUR_TOKEN>"}, "args": ["--from", "git+https://github.com/bitrise-io/bitrise-mcp@v1.1.0", "bitrise-mcp"]}}}

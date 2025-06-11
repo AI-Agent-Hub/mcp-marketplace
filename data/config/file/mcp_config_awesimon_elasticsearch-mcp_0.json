@@ -1,1 +1,0 @@
-{"mcpServers": {"elasticsearch-mcp": {"command": "npx", "args": ["-y", "@awesome-ai/elasticsearch-mcp"], "env": {"ES_HOST": "your-elasticsearch-host", "ES_API_KEY": "your-api-key"}}}}

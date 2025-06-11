@@ -1,1 +1,0 @@
-{"mcpServers": {"rdf_explorer": {"command": "C:\\path\\to\\venv\\Scripts\\python.exe", "args": ["C:\\path\\to\\server.py", "--triple-file", "your_file.ttl"]}}}

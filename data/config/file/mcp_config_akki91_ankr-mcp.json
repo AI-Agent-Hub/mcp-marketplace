@@ -1,1 +1,0 @@
-{"mcpServers": {"ankr-mcp": {"command": "npx", "args": ["@akki91/ankr-mcp"], "env": {"ANKR_API_TOKEN": "your_api_token_here"}}}}

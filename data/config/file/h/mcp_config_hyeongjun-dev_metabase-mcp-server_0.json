@@ -1,1 +1,0 @@
-{"mcpServers": {"metabase-mcp-server": {"command": "npx", "args": ["-y", "@smithery/cli@latest", "run", "@hyeongjun-dev/metabase-mcp-server", "--config", "{\"metabaseUrl\":\"https://your-metabase-instance.com\",\"metabaseApiKey\":\"your_api_key\",\"metabasePassword\":\"\",\"metabaseUserEmail\":\"\"}"]}}}

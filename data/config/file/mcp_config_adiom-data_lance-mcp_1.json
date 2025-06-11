@@ -1,1 +1,0 @@
-{"mcpServers": {"lancedb": {"command": "node", "args": ["PATH_TO_LANCE_MCP/dist/index.js", "PATH_TO_LOCAL_INDEX_DIR"]}}}

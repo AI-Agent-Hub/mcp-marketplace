@@ -1,1 +1,0 @@
-{"mcpServers": {"memory-cache": {"command": "node", "args": ["/path/to/ib-mcp-cache-server/build/index.js"]}}}

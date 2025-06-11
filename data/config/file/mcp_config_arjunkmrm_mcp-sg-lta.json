@@ -1,1 +1,0 @@
-{"mcpServers": {"lta": {"command": "npx", "args": ["-y", "arjunkmrm/mcp-sg-lta"], "env": {"LTA_API_KEY": "YOUR-API-KEY"}}}}

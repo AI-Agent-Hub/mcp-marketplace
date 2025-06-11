@@ -1,1 +1,0 @@
-{"mcpServers": {"x-tools": {"command": "node", "args": ["YOUR_ABSOLUTE_PATH_TO/main.js"], "env": {"RAPIDAPI_KEY": "your_rapidapi_key"}}}}

@@ -1,1 +1,0 @@
-{"mcpServers": {"mcp-cryptowallet-evm": {"command": "npx", "args": ["@mcp-dockmaster/mcp-cryptowallet-evm"]}}}

@@ -1,1 +1,0 @@
-{"mcpServers": {"serper": {"command": "python3", "args": ["-m", "serper_mcp_server"], "env": {"SERPER_API_KEY": "<Your Serper API key>"}}}}

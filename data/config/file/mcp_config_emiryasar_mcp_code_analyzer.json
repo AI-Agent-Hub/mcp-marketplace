@@ -1,1 +1,0 @@
-{"globalShortcut": "Ctrl+Space", "mcpServers": {"code-analyzer": {"command": "python", "args": ["-m", "mcp_code_analyzer", "--analyze-paths", "C:\\Projects\\path1"], "type": "module"}}}

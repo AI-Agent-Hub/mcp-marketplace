@@ -1,1 +1,0 @@
-{"mcpServers": {"gentoro": {"command": "npx", "args": ["-y", "@gentoro/mcp-nodejs-server"], "env": {"GENTORO_API_KEY": "<your api key>", "GENTORO_BRIDGE_UID": "<your bridge uid>", "GENTORO_BASE_URL": "<url where gentoro is hosted>"}}}}

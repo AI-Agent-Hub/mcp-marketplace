@@ -1,1 +1,0 @@
-{"mcpServers": {"atla-mcp-server": {"command": "uvx", "args": ["atla-mcp-server"], "env": {"ATLA_API_KEY": "<your-atla-api-key>"}}}}

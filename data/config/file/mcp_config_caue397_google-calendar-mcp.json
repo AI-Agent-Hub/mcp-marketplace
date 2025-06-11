@@ -1,1 +1,0 @@
-{"mcpServers": {"google-calendar": {"command": "node", "args": ["path/to/build/index.js"]}}}

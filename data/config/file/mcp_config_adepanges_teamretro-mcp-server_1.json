@@ -1,1 +1,0 @@
-{"mcpServers": {"teamretro-mcp-server": {"command": "node", "args": ["/path/to/teamretro-mcp-server/dist/index.js"], "env": {"TEAMRETRO_AUTH_TYPE": "apiKey", "TEAMRETRO_API_KEY": "your-api-key"}}}}

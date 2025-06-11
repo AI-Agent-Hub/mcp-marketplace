@@ -1,1 +1,0 @@
-{"mcpServers": {"box": {"command": "npx", "args": ["box-mcp-server"], "env": {"BOX_DEV_TOKEN": "YOUR_DEV_TOKEN_GOES_HERE"}}}}

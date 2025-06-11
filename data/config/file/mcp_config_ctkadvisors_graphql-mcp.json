@@ -1,1 +1,0 @@
-{"mcpServers": {"graphql": {"command": "node", "args": ["/absolute/path/to/dist/graphql-mcp-server.js"], "env": {"GRAPHQL_API_ENDPOINT": "https://your-graphql-api.com/graphql", "GRAPHQL_API_KEY": "your-api-key-if-needed", "WHITELISTED_QUERIES": "[\"countries\",\"continent\",\"languages\"]"}}}}

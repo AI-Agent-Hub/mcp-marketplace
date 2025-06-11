@@ -1,1 +1,0 @@
-{"mcpServers": {"imagegenerator": {"command": "pnpx", "args": ["-y", "tsx", "/path/to/mcp-imagegen/src/index.ts"], "env": {"PROVIDER": "replicate", "REPLICATE_API_TOKEN": "your-replicate-api-token"}}}}

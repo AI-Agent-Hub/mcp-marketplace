@@ -1,1 +1,0 @@
-{"mcpServers": {"mcp-server-helius": {"command": "npx", "args": ["@dcspark/mcp-server-helius"], "env": {"HELIUS_API_KEY": "your-helius-api-key"}}}}

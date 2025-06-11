@@ -1,1 +1,0 @@
-{"mcpServers": {"b12": {"command": "npx", "args": ["-y", "@b12/website-generator-mcp-server"]}}}

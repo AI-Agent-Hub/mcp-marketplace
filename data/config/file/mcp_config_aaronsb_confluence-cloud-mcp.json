@@ -1,1 +1,0 @@
-{"mcpServers": {"confluence": {"command": "docker", "args": ["run", "--rm", "-i", "ghcr.io/aaronsb/confluence-cloud-mcp:latest"], "env": {"CONFLUENCE_DOMAIN": "your-domain.atlassian.net", "CONFLUENCE_EMAIL": "your-email@domain.com", "CONFLUENCE_API_TOKEN": "your-api-token"}, "disabled": false, "autoApprove": []}}}

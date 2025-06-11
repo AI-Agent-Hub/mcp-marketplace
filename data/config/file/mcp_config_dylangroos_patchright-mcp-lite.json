@@ -1,1 +1,0 @@
-{"mcpServers": {"patchright": {"command": "node", "args": ["path/to/patchright-lite-mcp-server/dist/index.js"]}}}

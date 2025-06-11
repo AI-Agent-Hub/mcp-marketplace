@@ -1,1 +1,0 @@
-{"mcpServers": {"gscServer": {"command": "/FULL/PATH/TO/-main/.venv/bin/python", "args": ["/FULL/PATH/TO/mcp-gsc-main/gsc_server.py"], "env": {"GSC_OAUTH_CLIENT_SECRETS_FILE": "/FULL/PATH/TO/client_secrets.json"}}}}

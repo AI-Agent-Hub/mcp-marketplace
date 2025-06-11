@@ -1,1 +1,0 @@
-{"mcpServers": {"Gemini Data Analysis": {"command": "node", "args": ["path/to/gemini-data-analysis-email-generator/dist/index.js"], "cwd": "path/to/gemini-data-analysis-email-generator", "env": {"GEMINI_API_KEY": "your_api_key_here", "NODEMAILER_EMAIL": "your.email@gmail.com", "NODEMAILER_PASSWORD": "your_app_password_here"}}}}

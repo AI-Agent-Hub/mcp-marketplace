@@ -1,1 +1,0 @@
-{"mcpServers": {"transistor": {"command": "node", "args": ["path/to/Transistor-MCP/build/index.js"], "env": {"TRANSISTOR_API_KEY": "your-api-key-here"}}}}

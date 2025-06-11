@@ -1,1 +1,0 @@
-{"mcpServers": {"zerolib-email": {"command": "docker", "args": ["run", "-it", "ghcr.io/ai-zerolab/mcp-email-server:latest"]}}}

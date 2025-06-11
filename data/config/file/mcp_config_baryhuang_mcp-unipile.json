@@ -1,1 +1,0 @@
-{"mcpServers": {"unipile": {"command": "docker", "args": ["run", "-i", "--rm", "-e", "UNIPILE_DSN=your_dsn_here", "-e", "UNIPILE_API_KEY=your_api_key_here", "buryhuang/mcp-unipile:latest"]}}}

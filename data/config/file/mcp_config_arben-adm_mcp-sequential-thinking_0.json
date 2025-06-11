@@ -1,1 +1,0 @@
-{"mcpServers": {"sequential-thinking": {"command": "uv", "args": ["--directory", "C:\\path\\to\\your\\mcp-sequential-thinking\\run_server.py", "run", "server.py"]}}}

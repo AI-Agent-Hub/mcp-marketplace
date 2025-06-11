@@ -1,1 +1,0 @@
-{"mcpServers": {"outlook-meetings-scheduler": {"command": "docker", "args": ["run", "-i", "--rm", "-e", "CLIENT_ID", "-e", "CLIENT_SECRET", "-e", "TENANT_ID", "-e", "USER_EMAIL", "mcp/outlook-meetings-scheduler"], "env": {"CLIENT_ID": "<YOUR_CLIENT_ID>", "CLIENT_SECRET": "<YOUR_CLIENT_SECRET>", "TENANT_ID": "<YOUR_TENANT_ID>", "USER_EMAIL": "<YOUR_EMAIL>"}}}}

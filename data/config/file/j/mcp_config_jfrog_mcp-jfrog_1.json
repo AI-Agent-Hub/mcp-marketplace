@@ -1,1 +1,0 @@
-{"mcpServers": {"MCP-JFrog": {"command": "npm", "args": ["exec", "-y", "github:jfrog/mcp-jfrog"], "env": {"JFROG_ACCESS_TOKEN": "ACCESS_TOKEN", "JFROG_URL": "https://<YOUR_JFROG_INSTANCE_URL>"}}}}

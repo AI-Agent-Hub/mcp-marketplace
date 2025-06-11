@@ -1,1 +1,0 @@
-{"mcpServers": {"clickhouse": {"command": "/path/to/clickhouse-mcp", "args": ["-url", "localhost:9000/default", "-user", "default", "-password", "yourpassword"], "disabled": false, "alwaysAllow": []}}}

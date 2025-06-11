@@ -1,1 +1,0 @@
-{"mcpServers": {"gemini-image": {"command": "/bin/bash", "args": ["-c", "/path/to/your/gemini-mcp-wrapper.sh"], "env": {"GEMINI_API_KEY": "YOUR_GEMINI_API_KEY_HERE", "DEBUG": "true"}}}}

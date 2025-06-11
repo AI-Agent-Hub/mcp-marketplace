@@ -1,1 +1,0 @@
-{"mcpServers": {"supos": {"command": "node", "args": ["<local project path>//dist//index.js"], "env": {"SUPOS_API_KEY": "<API_KEY>", "SUPOS_API_URL": "<API_URL>", "SUPOS_MQTT_URL": "<MQTT_URL>"}}}}

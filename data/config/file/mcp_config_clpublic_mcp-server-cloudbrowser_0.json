@@ -1,1 +1,0 @@
-{"mcpServers": {"cloudbrowser": {"command": "node", "args": ["path/to/mcp-server-cloudbrowser/cloudbrowser/dist/index.js"], "env": {"API_KEY": "<YOUR_BROWSERBASE_API_KEY>"}, "transportType": "stdio"}}}

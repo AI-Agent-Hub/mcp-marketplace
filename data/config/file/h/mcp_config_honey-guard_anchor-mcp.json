@@ -1,1 +1,0 @@
-{"mcpServers": {"security_check_program": {"command": "security_check_program", "args": ["--mcp"]}, "security_check_file": {"command": "security_check_file", "args": ["--mcp"]}}}

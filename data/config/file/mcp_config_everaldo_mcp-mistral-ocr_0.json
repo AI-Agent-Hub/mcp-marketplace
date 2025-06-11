@@ -1,1 +1,0 @@
-{"mcpServers": {"mistral-ocr": {"command": "docker", "args": ["run", "-i", "--rm", "-e", "MISTRAL_API_KEY", "-e", "OCR_DIR", "-v", "C:/path/to/your/files:/data/ocr", "mcp-mistral-ocr:latest"], "env": {"MISTRAL_API_KEY": "<YOUR_MISTRAL_API_KEY>", "OCR_DIR": "C:/path/to/your/files"}}}}

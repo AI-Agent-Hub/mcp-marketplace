@@ -1,1 +1,0 @@
-{"mcpServers": {"sqlite": {"command": "C:\\Program Files\\nodejs\\npx.cmd", "args": ["-y", "mcp-server-sqlite-npx", "C:\\Users\\{username}\\projects\\database.db"], "env": {"PATH": "C:\\Program Files\\nodejs;%PATH%", "NODE_PATH": "C:\\Program Files\\nodejs\\node_modules"}}}}

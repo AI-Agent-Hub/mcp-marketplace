@@ -1,1 +1,0 @@
-{"mcpServers": {"heybeauty-mcp": {"command": "node", "args": ["/path/to/heybeauty-mcp/build/index.js"]}, "env": {"HEYBEAUTY_API_KEY": "your_heybeauty_api_key"}}}

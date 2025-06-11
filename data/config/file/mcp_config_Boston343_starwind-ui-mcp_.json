@@ -1,1 +1,0 @@
-{"mcpServers": {"starwind ui": {"command": "node", "args": ["c:\\path\\to\\folder\\starwind-ui-mcp\\dist\\server.js"], "env": {}}}}

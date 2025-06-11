@@ -1,1 +1,0 @@
-{"mcpServers": {"think-tool": {"command": "claude-mcp-think-tool", "args": [], "type": "stdio", "pollingInterval": 30000, "startupTimeout": 30000, "restartOnFailure": true}}}

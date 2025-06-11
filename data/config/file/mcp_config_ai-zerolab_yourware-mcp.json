@@ -1,1 +1,0 @@
-{"mcpServers": {"yourware-mcp": {"command": "uvx", "args": ["yourware-mcp@latest", "stdio"], "env": {}}}}

@@ -1,1 +1,0 @@
-{"mcpServers": {"nationalparks": {"command": "npx", "args": ["-y", "mcp-server-nationalparks"], "env": {"NPS_API_KEY": "YOUR_NPS_API_KEY"}}}}

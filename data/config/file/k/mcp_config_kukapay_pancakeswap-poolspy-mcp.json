@@ -1,1 +1,0 @@
-{"mcpServers": {"PancakeSwap-PoolSpy": {"command": "uv", "args": ["--directory", "path/to/pancakeswap-poolspy-mcp", "run", "main.py"], "env": {"THEGRAPH_API_KEY": "your api key from The Graph"}}}}

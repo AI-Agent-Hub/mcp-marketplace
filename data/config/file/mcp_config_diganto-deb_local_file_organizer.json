@@ -1,1 +1,0 @@
-{"mcpServers": {"filesystem": {"command": "npx", "args": ["-y", "@modelcontextprotocol/server-filesystem", "/path/to/organize/dir1", "/path/to/organize/dir2"]}}}

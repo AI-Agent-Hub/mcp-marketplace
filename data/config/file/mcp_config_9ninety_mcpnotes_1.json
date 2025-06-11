@@ -1,1 +1,0 @@
-{"mcpServers": {"mcp-notes": {"command": "node", "args": ["file://path/to/notes-mcp-server.js", "--dynamodb", "dynamodb://access_key:secret_key@region/table"]}}}

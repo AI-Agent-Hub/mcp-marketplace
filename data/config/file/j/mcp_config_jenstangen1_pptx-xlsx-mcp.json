@@ -1,1 +1,0 @@
-{"mcpServers": {"powerpoint_mcp_win32": {"command": "uv", "args": ["run", "mcp_powerpoint_server_win32.py"], "cwd": "C:\\path\\to\\your\\workspace"}, "excel_mcp_win32": {"command": "uv", "args": ["run", "mcp_excel_server_win32.py"], "cwd": "C:\\path\\to\\your\\workspace"}}}

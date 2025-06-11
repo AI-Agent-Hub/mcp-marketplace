@@ -1,1 +1,0 @@
-{"mcpServers": {"analytics_service": {"command": "uv", "args": ["--directory", "/path/to/analytics_service", "run", "analytics-service"], "env": {"UMAMI_API_URL": "https://example.com", "UMAMI_USERNAME": "yourUmamiUsername", "UMAMI_PASSWORD": "yourUmamiPassword", "UMAMI_TEAM_ID": "yourUmamiTeamId"}}}}

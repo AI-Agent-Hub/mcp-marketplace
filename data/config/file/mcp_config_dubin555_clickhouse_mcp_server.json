@@ -1,1 +1,0 @@
-{"mcpServers": {"clickhouse": {"command": "uv", "args": ["--directory", "/path/to/clickhouse_mcp_server", "run", "-m", "clickhouse_mcp_server.server"], "env": {"CLICKHOUSE_HOST": "localhost", "CLICKHOUSE_PORT": "8123", "CLICKHOUSE_USER": "default", "CLICKHOUSE_PASSWORD": "CHANGE_TO_YOUR_PASSWORD", "CLICKHOUSE_DATABASE": "default"}}}}

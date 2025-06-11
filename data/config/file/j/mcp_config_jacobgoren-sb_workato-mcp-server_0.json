@@ -1,1 +1,0 @@
-{"mcpServers": {"workato-tools": {"command": "node", "args": ["/path/to/your/project/dist/server.js"], "env": {"WORKATO_API_TOKEN": "your_token_here"}}}}

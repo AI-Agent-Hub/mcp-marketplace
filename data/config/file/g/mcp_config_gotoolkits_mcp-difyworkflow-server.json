@@ -1,1 +1,0 @@
-{"mcpServers": {"mcp-difyworkflow-server": {"command": "mcp-difyworkflow-server", "args": ["-base-url", "http://localhost/v1"], "env": {"DIFY_WORKFLOW_NAME": "workflow-translator\u201c,workflow-genImag", "DIFY_API_KEYS": "appkey-xxxxxxxxxxxa,appkey-xxxxxxxxxxxb"}}}}

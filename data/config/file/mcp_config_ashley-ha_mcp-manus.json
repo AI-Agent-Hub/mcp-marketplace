@@ -1,1 +1,0 @@
-{"mcpServers": {"browser-use": {"command": "uv", "args": ["--directory", "/ABSOLUTE/PATH/TO/mcp", "run", "browser-use.py"]}}}

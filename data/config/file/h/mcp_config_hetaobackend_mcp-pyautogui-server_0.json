@@ -1,1 +1,0 @@
-{"mcpServers": {"mcp-pyautogui-server": {"command": "uv", "args": ["--directory", "/path/to/mcp-pyautogui-server", "run", "mcp-pyautogui-server"]}}}

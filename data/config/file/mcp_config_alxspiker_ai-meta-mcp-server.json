@@ -1,1 +1,0 @@
-{"mcpServers": {"ai-meta-mcp": {"command": "npx", "args": ["-y", "ai-meta-mcp-server"], "env": {"ALLOW_JS_EXECUTION": "true", "ALLOW_PYTHON_EXECUTION": "false", "ALLOW_SHELL_EXECUTION": "false"}}}}

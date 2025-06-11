@@ -1,1 +1,0 @@
-{"mcpServers": {"redis": {"command": "node", "args": ["path/to/build/index.js", "redis://10.1.210.223:6379"]}}}

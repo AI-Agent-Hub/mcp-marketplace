@@ -1,1 +1,0 @@
-{"mcpServers": {"bunnyshell-mcp": {"command": "docker", "args": ["exec", "-i", "bns-mcp-server", "node", "dist/index.js"], "env": {"BNS_API_KEY": "YOUR_API_TOKEN_HERE"}}}}

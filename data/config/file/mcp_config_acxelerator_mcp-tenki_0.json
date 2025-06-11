@@ -1,1 +1,0 @@
-{"mcpServers": {"tenki": {"command": "uvx", "args": ["--from", "git+https://github.com/acxelerator/mcp-tenki.git", "mcp-tenki"]}}}

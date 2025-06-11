@@ -1,1 +1,0 @@
-{"mcp": {"inputs": [{"type": "promptString", "id": "vaultPath", "description": "Path to Obsidian vault"}], "servers": {"obsidian": {"command": "npx", "args": ["-y", "mcp-obsidian", "${input:vaultPath}"]}}}}

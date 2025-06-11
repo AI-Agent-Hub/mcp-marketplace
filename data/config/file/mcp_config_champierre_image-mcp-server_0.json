@@ -1,1 +1,0 @@
-{"mcpServers": {"image-analysis": {"command": "node", "args": ["/path/to/image-mcp-server/dist/index.js"], "env": {"OPENAI_API_KEY": "your_openai_api_key"}}}}

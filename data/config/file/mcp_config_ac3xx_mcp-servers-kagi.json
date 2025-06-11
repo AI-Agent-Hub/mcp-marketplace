@@ -1,1 +1,0 @@
-{"mcpServers": {"kagi-server": {"command": "/path/to/kagi-server/build/index.js", "env": {"KAGI_API_KEY": "your_api_key_here"}}}}

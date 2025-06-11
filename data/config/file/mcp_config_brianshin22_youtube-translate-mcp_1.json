@@ -1,1 +1,0 @@
-{"mcpServers": {"youtube-translate": {"command": "docker", "args": ["run", "-i", "--rm", "-e", "YOUTUBE_TRANSLATE_API_KEY", "youtube-translate-mcp"], "env": {"YOUTUBE_TRANSLATE_API_KEY": "YOUR_API_KEY"}}}}

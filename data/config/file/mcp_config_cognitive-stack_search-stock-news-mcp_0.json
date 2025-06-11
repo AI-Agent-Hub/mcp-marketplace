@@ -1,1 +1,0 @@
-{"mcpServers": {"search-stock-news-mcp": {"command": "npx", "args": ["-y", "search-stock-news-mcp@latest"], "env": {"TAVILY_API_KEY": "your-api-key-here"}, "disabled": false, "autoApprove": []}}}

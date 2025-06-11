@@ -1,1 +1,0 @@
-{"mcpServers": {"your-mcp-server-name": {"command": "/path/to/workers-mcp", "args": ["run", "your-mcp-server-name", "https://your-server-url.workers.dev", "/path/to/your/project"], "env": {}}}}

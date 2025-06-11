@@ -1,1 +1,0 @@
-{"mcpServers": {"linear": {"command": "npx", "args": ["-y", "@modelcontextprotocol/server-linear"], "env": {"LINEAR_API_KEY": "your_linear_api_key_here"}}}}

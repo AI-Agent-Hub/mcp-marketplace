@@ -1,1 +1,0 @@
-{"mcpServers": {"mcp-flux-schnell": {"command": "node", "args": ["/path/to/mcp-flux-schnell/build/index.js"], "env": {"FLUX_API_URL": "your flux api url", "FLUX_API_TOKEN": "your flux api token", "WORKING_DIR": "your working directory"}}}}

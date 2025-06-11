@@ -1,1 +1,0 @@
-{"mcpServers": {"influxdb": {"command": "npx", "args": ["influxdb-mcp-server"], "env": {"INFLUXDB_TOKEN": "your_token", "INFLUXDB_URL": "http://localhost:8086", "INFLUXDB_ORG": "your_org"}}}}

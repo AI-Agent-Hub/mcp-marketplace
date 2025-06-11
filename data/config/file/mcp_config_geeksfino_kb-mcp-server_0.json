@@ -1,1 +1,0 @@
-{"mcpServers": {"kb-server": {"command": "/your/home/project/.venv/bin/kb-mcp-server", "args": ["--embeddings", "/path/to/knowledge_base.tar.gz"], "cwd": "/path/to/working/directory"}}}

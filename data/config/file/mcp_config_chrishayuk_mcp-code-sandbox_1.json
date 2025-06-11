@@ -1,1 +1,0 @@
-{"mcpServers": {"code-sandbox": {"command": "uv", "args": ["--directory", "/ABSOLUTE/PATH/TO/PROJECT_DIRECTORY", "run", "main.py"]}}}

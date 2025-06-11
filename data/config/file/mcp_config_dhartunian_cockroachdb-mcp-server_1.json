@@ -1,1 +1,0 @@
-{"mcpServers": {"crdb": {"command": "node", "args": ["/path/to/cockroachdb-mcp-server/dist/server.js", "postgres://root@127.0.0.1:26257/testdb", "your_auth_token"]}}}

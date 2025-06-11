@@ -1,1 +1,0 @@
-{"mcpServers": {"github.com/modelcontextprotocol/servers/tree/main/src/gitlab": {"command": "node", "args": ["/path/to/custom-gitlab-server/index.js"], "env": {"GITLAB_PERSONAL_ACCESS_TOKEN": "your-gitlab-token", "GITLAB_API_URL": "https://your-gitlab-instance/api/v4"}}}}

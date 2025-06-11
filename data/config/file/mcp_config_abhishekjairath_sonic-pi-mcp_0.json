@@ -1,1 +1,0 @@
-{"mcpServers": {"sonic_pi_mcp": {"name": "Sonic Pi MCP", "command": "bunx", "args": ["sonic-pi-mcp"], "transport": {"type": "stdio"}}}}

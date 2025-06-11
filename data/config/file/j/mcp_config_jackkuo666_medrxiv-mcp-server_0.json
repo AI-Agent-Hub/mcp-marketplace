@@ -1,1 +1,0 @@
-{"mcpServers": {"medrxiv": {"command": "python", "args": ["-m", "medrxiv-mcp-server"]}}}

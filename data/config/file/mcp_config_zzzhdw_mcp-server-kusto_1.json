@@ -1,1 +1,0 @@
-{"mcpServers": {"kusto": {"command": "uv", "args": ["--directory", "{{PATH_TO_PROJECT}}\\mcp-server-kusto\\src\\mcp_server_kusto", "run", "mcp-server-kusto", "--cluster", "{{ADX_CLUSTER_URL}}"]}}}

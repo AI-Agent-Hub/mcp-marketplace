@@ -1,1 +1,0 @@
-{"mcpServers": {"Token-Minter-MCP": {"command": "node", "args": ["path/to/token-minter-mcp/server/index.js"], "env": {"INFURA_KEY": "your infura key", "PRIVATE_KEY": "your private key"}}}}

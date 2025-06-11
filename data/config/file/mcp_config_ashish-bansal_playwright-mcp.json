@@ -1,1 +1,0 @@
-{"mcpServers": {"cloudflare-playwright-mcp": {"command": "npx", "args": ["mcp-remote", "https://[my-mcp-url].workers.dev/sse"]}}}

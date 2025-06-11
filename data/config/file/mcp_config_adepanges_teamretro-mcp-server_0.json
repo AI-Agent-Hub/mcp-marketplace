@@ -1,1 +1,0 @@
-{"mcpServers": {"teamretro-mcp-server": {"command": "npx", "args": ["-y", "teamretro-mcp-server"], "env": {"TEAMRETRO_AUTH_TYPE": "apiKey", "TEAMRETRO_API_KEY": "your-api-key"}}}}

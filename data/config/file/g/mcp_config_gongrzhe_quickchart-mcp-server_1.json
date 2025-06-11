@@ -1,1 +1,0 @@
-{"mcpServers": {"quickchart-server": {"command": "npx", "args": ["-y", "@gongrzhe/quickchart-mcp-server"]}}}

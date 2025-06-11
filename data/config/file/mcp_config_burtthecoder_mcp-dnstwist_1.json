@@ -1,1 +1,0 @@
-{"mcpServers": {"dnstwist": {"command": "node", "args": ["/absolute/path/to/mcp-dnstwist/build/index.js"]}}}

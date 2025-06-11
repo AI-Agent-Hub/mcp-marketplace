@@ -1,1 +1,0 @@
-{"mcpServers": {"unlock_pdf": {"command": "uv", "args": ["--directory", "%USERPROFILE%/Documents/GitHub/mcp-unlock-pdf", "run", "python", "main.py"]}}}

@@ -1,1 +1,0 @@
-{"mcpServers": {"jira": {"command": "npx", "args": ["-y", "jira-mcp"], "env": {"JIRA_INSTANCE_URL": "https://your-instance.atlassian.net", "JIRA_USER_EMAIL": "your-email@company.com", "JIRA_API_KEY": "your-api-token"}}}}

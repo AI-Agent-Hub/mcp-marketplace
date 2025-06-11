@@ -1,1 +1,0 @@
-{"mcpServers": {"mcp-browser-automation": {"command": "node", "args": ["/path/to/mcp-browser-automation/dist/index.js"]}}}

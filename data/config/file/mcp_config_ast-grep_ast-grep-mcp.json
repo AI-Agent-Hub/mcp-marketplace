@@ -1,1 +1,0 @@
-{"mcpServers": {"server-name": {"command": "uv", "args": ["--directory", "/path/to/repo", "run", "main.py"], "env": {}}}}

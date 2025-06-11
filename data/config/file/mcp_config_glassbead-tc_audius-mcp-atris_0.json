@@ -1,1 +1,0 @@
-{"mcpServers": {"audius": {"command": "npx", "args": ["audius-mcp-atris"], "env": {"AUDIUS_API_KEY": "your_api_key_here", "AUDIUS_API_SECRET": "your_api_secret_here"}}}}

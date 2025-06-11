@@ -1,1 +1,0 @@
-{"mcpServers": {"coding-assistant": {"command": "node", "args": ["/path/to/coding-assistant-server/build/index.js"], "env": {"OPENAI_API_KEY": "your_openai_api_key_here"}}}}

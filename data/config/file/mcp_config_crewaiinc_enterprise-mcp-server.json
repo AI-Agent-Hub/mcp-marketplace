@@ -1,1 +1,0 @@
-{"mcpServers": {"crewai_enterprise_server": {"command": "uv", "args": ["run", "--with", "mcp[cli]", "mcp", "run", "<filepath of cloned repo>", "/crewai_enterprise_server.py"], "env": {"MCP_CREWAI_ENTERPRISE_SERVER_URL": "<>", "MCP_CREWAI_ENTERPRISE_BEARER_TOKEN": "<>"}}}}

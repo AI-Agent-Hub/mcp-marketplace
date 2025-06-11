@@ -1,1 +1,0 @@
-{"mcpServers": {"mcp-logic": {"command": "uv", "args": ["--directory", "/path/to/mcp-logic/src/mcp_logic", "run", "mcp_logic", "--prover-path", "/path/to/mcp-logic/ladr/bin"]}}}

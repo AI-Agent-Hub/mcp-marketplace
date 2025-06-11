@@ -1,1 +1,0 @@
-{"mcpServers": {"github.com/capecoma/winterm-mcp": {"command": "node", "args": ["path/to/build/index.js"], "disabled": false, "autoApprove": []}}}

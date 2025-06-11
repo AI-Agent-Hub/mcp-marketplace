@@ -1,1 +1,0 @@
-{"mcpServers": {"cisa-m365": {"command": "node", "args": ["path/to/cisa-m365/build/index.js"], "env": {"TENANT_ID": "your-tenant-id", "CLIENT_ID": "your-client-id", "CLIENT_SECRET": "your-client-secret"}}}}

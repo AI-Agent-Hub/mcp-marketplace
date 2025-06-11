@@ -1,1 +1,0 @@
-{"mcpServers": {"phone-mcp": {"command": "/usr/local/bin/python", "args": ["-m", "phone_mcp"]}}}

@@ -1,1 +1,0 @@
-{"mcpServers": {"3dprint": {"command": "mcp-3d-printer-server", "env": {"PRINTER_HOST": "your_printer_ip", "PRINTER_TYPE": "bambu", "BAMBU_SERIAL": "your_printer_serial", "BAMBU_TOKEN": "your_access_token"}}}}

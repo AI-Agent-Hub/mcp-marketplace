@@ -1,1 +1,0 @@
-{"mcpServers": {"clicksend": {"command": "node", "args": ["/directory/to/build/folder/clicksend-mcp/build/index.js"], "env": {"CLICKSEND_USERNAME": "example@droove.net", "CLICKSEND_API_KEY": "ZZZZZZZZ-YYYY-YYYY-YYYY-XXXXXXXXXXXX"}}}}

@@ -1,1 +1,0 @@
-{"mcpServers": {"ida": {"command": "/path/to/uv", "args": ["--directory", "path/to/headless-ida-mcp-server", "run", "headless_ida_mcp_server"]}}}

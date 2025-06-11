@@ -1,1 +1,0 @@
-{"mcpServers": {"mcp_google_spreadsheet": {"command": "mcp-google-spreadsheet", "args": [], "env": {"MCPGS_CLIENT_SECRET_PATH": "/path/to/client_secret.json", "MCPGS_TOKEN_PATH": "/path/to/token.json", "MCPGS_FOLDER_ID": "your_folder_id"}}}}

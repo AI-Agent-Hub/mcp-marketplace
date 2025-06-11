@@ -1,1 +1,0 @@
-{"mcpServers": {"git-file-forensics": {"command": "/opt/homebrew/bin/node", "args": ["/path/to/git-file-forensics/build/index.js"], "alwaysAllow": []}}}

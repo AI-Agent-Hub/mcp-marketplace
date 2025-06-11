@@ -1,1 +1,0 @@
-{"mcpServers": {"typesense": {"command": "uv", "args": ["--directory", "~/typesense-mcp-server", "run", "mcp", "run", "main.py"], "env": {"TYPESENSE_HOST": "", "TYPESENSE_PORT": "", "TYPESENSE_PROTOCOL": "", "TYPESENSE_API_KEY": ""}}}}

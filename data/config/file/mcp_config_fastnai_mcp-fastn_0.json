@@ -1,1 +1,0 @@
-{"mcpServers": {"fastn": {"command": "/path/to/fastn-mcp-server", "args": ["--api_key", "YOUR_API_KEY", "--space_id", "YOUR_WORKSPACE_ID"]}}}

@@ -1,1 +1,0 @@
-{"mcpServers": {"mcp-atlassian": {"command": "uvx", "args": ["mcp-atlassian", "--confluence-url=https://confluence.your-company.com", "--confluence-personal-token=your_token", "--jira-url=https://jira.your-company.com", "--jira-personal-token=your_token"]}}}

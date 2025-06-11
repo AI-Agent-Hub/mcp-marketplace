@@ -1,1 +1,0 @@
-{"mcpServers": {"mcp-dingdingbot-server": {"command": "mcp-dingdingbot-server", "env": {"DINGDING_BOT_WEBHOOK_KEY": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx", "DINGDING_BOT_SIGN_KEY": "SECxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"}}}}

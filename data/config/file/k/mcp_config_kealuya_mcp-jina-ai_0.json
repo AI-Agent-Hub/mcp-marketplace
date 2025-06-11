@@ -1,1 +1,0 @@
-{"mcpServers": {"jina-ai-mcp-server": {"command": "npx", "args": ["-y", "jina-ai-mcp-server"], "env": {"JINA_API_KEY": "<YOUR_KEY>"}}}}

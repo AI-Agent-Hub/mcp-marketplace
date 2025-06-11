@@ -1,1 +1,0 @@
-{"mcpServers": {"postgres": {"command": "go-mcp-postgres", "args": ["--dsn", "postgresql://user:pass@host:port/db"]}}}

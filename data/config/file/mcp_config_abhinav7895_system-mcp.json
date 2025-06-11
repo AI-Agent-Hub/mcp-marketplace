@@ -1,1 +1,0 @@
-{"mcpServers": {"system-resource-monitor": {"command": "node", "args": ["/absolute/path/to/dist/index.js"]}}}

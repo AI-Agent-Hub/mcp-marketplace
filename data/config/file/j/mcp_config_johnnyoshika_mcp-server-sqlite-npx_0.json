@@ -1,1 +1,0 @@
-{"mcpServers": {"sqlite": {"command": "/absolute/path/to/npx", "args": ["-y", "mcp-server-sqlite-npx", "/absolute/path/to/database.db"], "env": {"PATH": "/absolute/path/to/executables", "NODE_PATH": "/absolute/path/to/node_modules"}}}}

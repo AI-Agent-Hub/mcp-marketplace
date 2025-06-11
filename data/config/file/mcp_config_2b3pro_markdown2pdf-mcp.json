@@ -1,1 +1,0 @@
-{"mcpServers": {"markdown2pdf": {"command": "node", "args": ["path/to/markdown2pdf-mcp/build/index.js"], "env": {"M2P_OUTPUT_DIR": "/path/to/output/directory"}}}}

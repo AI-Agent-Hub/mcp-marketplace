@@ -1,1 +1,0 @@
-{"mcpServers": {"FRED Macroeconomic Data Server": {"command": "/path/to/your/.local/bin/uv", "args": ["--directory", "/path/to/your/WM_mcp", "run", "fred_macroeco_server.py"]}}}

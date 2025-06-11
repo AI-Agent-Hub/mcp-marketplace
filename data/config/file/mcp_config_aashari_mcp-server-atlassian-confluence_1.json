@@ -1,1 +1,0 @@
-{"mcpServers": {"confluence": {"command": "npx", "args": ["-y", "@aashari/mcp-server-atlassian-confluence"]}}}

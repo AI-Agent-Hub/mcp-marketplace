@@ -1,1 +1,0 @@
-{"mcpServers": {"f2c-mcp": {"command": "cmd", "args": ["/c", "npx", "-y", "@f2c/mcp"], "env": {"personalToken": ""}}}}

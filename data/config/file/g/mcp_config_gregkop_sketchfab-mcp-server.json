@@ -1,1 +1,0 @@
-{"mcpServers": {"sketchfab": {"command": "node", "args": ["/path/to/build/index.js", "--api-key", "YOUR_API_KEY"]}}}

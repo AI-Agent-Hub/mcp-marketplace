@@ -1,1 +1,0 @@
-{"mcpServers": {"baidu-search": {"command": "node", "args": ["/path/to/baidu-search-mcp/build/index.js"], "env": {"BAIDU_API_KEY": "your_api_key_here"}, "disabled": false, "autoApprove": []}}}

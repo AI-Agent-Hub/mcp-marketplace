@@ -1,1 +1,0 @@
-{"mcpServers": {"joplin": {"command": "/PATH/TO/UV/uv", "args": ["--directory", "/PATH/TO/YOUR/PROJECT/joplin_mcp", "run", "src/mcp/joplin_mcp.py"]}}}

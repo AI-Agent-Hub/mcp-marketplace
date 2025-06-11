@@ -1,1 +1,0 @@
-{"mcpServers": {"filesystem": {"command": "/path/to/filesys", "env": {"MCP_ALLOWED_DIRS": "/path1,/path2,/path with spaces/dir3"}}}}

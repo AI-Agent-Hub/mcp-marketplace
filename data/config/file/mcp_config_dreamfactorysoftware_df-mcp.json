@@ -1,1 +1,0 @@
-{"mcpServers": {"add": {"command": "node", "args": ["/Users/dreamfactory/Documents/df-mcp/build/index.js"], "env": {"DREAMFACTORY_URL": "https://example.dreamfactory.com/api/v2/<service-name>", "DREAMFACTORY_API_KEY": ""}}}}

@@ -1,1 +1,0 @@
-{"mcpServers": {"stdio-db-mcp-server": {"command": "/path/to/db-mcp-server/server", "args": ["-t", "stdio", "-c", "/path/to/config.json"]}}}

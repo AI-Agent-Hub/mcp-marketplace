@@ -1,1 +1,0 @@
-{"mcpServers": {"MCTSServer": {"command": "uv", "args": ["run", "--directory", "/home/ty/Repositories/ai_workspace/mcts-mcp-server/src/mcts_mcp_server", "server.py"], "env": {"PYTHONPATH": "/home/ty/Repositories/ai_workspace/mcts-mcp-server"}}}}

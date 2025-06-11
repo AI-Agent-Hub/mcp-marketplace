@@ -1,1 +1,0 @@
-{"mcpServers": {"couchbase": {"command": "npx", "args": ["-y", "@couchbasedatabase/couchbase-mcp"], "env": {"COUCHBASE_URL": "<COUCHBASE CONNECTION STRING>", "COUCHBASE_BUCKET": "<BUCKET NAME>", "COUCHBASE_USERNAME": "<COUCHBASE USERNAME>", "COUCHBASE_PASSWORD": "<COUCHBASE PASSWORD>"}}}}

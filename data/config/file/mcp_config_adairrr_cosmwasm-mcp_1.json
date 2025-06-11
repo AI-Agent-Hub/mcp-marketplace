@@ -1,1 +1,0 @@
-{"mcpServers": {"cosmwasm-mcp": {"command": "PATH-TO/rust-sdk/target/release/examples/cw-orch-mcp", "args": [], "env": {"TEST_MNEMONIC": "<24 word mnemonic>", "RUST_LOG": "info"}}}}

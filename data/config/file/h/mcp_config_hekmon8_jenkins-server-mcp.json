@@ -1,1 +1,0 @@
-{"mcpServers": {"jenkins-server": {"command": "node", "args": ["/path/to/jenkins-server-mcp/build/index.js"], "env": {"JENKINS_URL": "https://your-jenkins-server.com", "JENKINS_USER": "your-username", "JENKINS_TOKEN": "your-api-token"}}}}

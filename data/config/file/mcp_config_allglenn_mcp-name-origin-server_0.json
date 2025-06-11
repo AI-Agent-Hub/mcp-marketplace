@@ -1,1 +1,0 @@
-{"mcpServers": {"origin": {"command": "source", "args": ["venv/bin/activate", "&&", "python3", "-u", "mcp-server.py"], "shell": true, "env": {"PYTHONPATH": ".", "PYTHONUNBUFFERED": "1"}}}, "defaultServer": "origin", "version": "0.1.0"}

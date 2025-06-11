@@ -1,1 +1,0 @@
-{"mcpServers": {"malaysia-prayer-time": {"command": "/absolute/path/to/your/.venv/bin/python", "args": ["main.py"], "cwd": "/absolute/path/to/mcp-server-malaysia-prayer-time"}}}

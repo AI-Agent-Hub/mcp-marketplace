@@ -1,1 +1,0 @@
-{"mcp": {"inputs": [], "servers": {"msbuild": {"command": "<repo root>\\msbuild.mcp\\bin\\Debug\\net9.0\\msbuild.mcp.exe", "args": [], "env": {}}}}}

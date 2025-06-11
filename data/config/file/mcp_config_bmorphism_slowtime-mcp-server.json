@@ -1,1 +1,0 @@
-{"mcpServers": {"slowtime": {"command": "node", "args": ["/path/to/slowtime-mcp-server/build/index.js"]}}}

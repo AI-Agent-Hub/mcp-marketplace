@@ -1,1 +1,0 @@
-{"mcpServers": {"readability": {"command": "fastmcp", "args": ["run", "server.py"], "env": {}}}}

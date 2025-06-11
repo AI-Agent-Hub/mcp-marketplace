@@ -1,1 +1,0 @@
-{"mcpServers": {"bus_service": {"command": "path/to/uv.exe", "args": ["--directory", "path/to/kmb_bus", "run", "kmb_mcp.py"], "background": true}}}

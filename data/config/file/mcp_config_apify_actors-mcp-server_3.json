@@ -1,1 +1,0 @@
-{"mcpServers": {"actors-mcp-server": {"command": "npx", "args": ["-y", "@apify/actors-mcp-server", "--actors", "lukaskrivka/google-maps-with-contact-details,apify/instagram-scraper"], "env": {"APIFY_TOKEN": "your-apify-token"}}}}

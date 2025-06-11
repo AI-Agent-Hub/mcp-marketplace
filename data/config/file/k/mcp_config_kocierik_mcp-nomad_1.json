@@ -1,1 +1,0 @@
-{"mcpServers": {"mcp_nomad": {"command": "mcp-nomad", "args": [], "env": {"NOMAD_TOKEN": "${NOMAD_TOKEN}", "NOMAD_ADDR": "${NOMAD_ADDR}"}}}}

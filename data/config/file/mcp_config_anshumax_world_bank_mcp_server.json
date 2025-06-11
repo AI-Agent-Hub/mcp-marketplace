@@ -1,1 +1,0 @@
-{"mcpServers": {"world_bank": {"command": "uv", "args": ["--directory", "path/to/world_bank_mcp_server", "run", "world_bank_mcp_server"]}}}

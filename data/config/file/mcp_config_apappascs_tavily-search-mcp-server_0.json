@@ -1,1 +1,0 @@
-{"mcpServers": {"tavily-search-server": {"command": "node", "args": ["/Users/<username>/<FULL_PATH...>/tavily-search-mcp-server/dist/index.js"], "env": {"TAVILY_API_KEY": "your_api_key_here"}}}}

@@ -1,1 +1,0 @@
-{"mcpServers": {"linode": {"command": "linode-mcp", "args": ["--api-key", "your_api_key_here"]}}}

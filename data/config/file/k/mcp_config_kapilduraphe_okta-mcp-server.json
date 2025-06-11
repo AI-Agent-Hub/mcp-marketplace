@@ -1,1 +1,0 @@
-{"mcpServers": {"okta": {"command": "node", "args": ["PATH_TO_PROJECT_DIRECTORY/dist/index.js"], "env": {"OKTA_ORG_URL": "https://your-domain.okta.com", "OKTA_API_TOKEN": "your-api-token"}}}}

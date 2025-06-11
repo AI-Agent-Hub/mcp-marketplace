@@ -1,1 +1,0 @@
-{"mcpServers": {"Bonsai-mcp": {"command": "uv", "args": ["--directory", "\\your\\path\\to\\Bonsai_mcp", "run", "tools.py"]}}}

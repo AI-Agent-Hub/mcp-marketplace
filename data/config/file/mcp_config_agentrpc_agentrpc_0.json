@@ -1,1 +1,0 @@
-{"mcpServers": {"agentrpc": {"command": "npx", "args": ["-y", "agentrpc", "mcp"], "env": {"AGENTRPC_API_SECRET": "<YOUR_API_SECRET>"}}}}

@@ -1,1 +1,0 @@
-{"mcpServers": {"mcp-gsuite": {"command": "uv", "args": ["--directory", "<dir_to>/mcp-gsuite", "run", "mcp-gsuite"]}}}

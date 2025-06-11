@@ -1,1 +1,0 @@
-{"mcpServers": {"netskope-mcp": {"command": "wsl.exe", "args": ["bash", "-c", "cd /path/to/netskope-mcp && NETSKOPE_BASE_URL=https://your-tenant.goskope.com NETSKOPE_API_KEY=your-token node dist/cli.js"]}}}

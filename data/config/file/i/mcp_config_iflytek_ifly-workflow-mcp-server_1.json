@@ -1,1 +1,0 @@
-{"mcpServers": {"ifly-workflow-mcp-server": {"command": "uvx", "args": ["--from", "git+https://github.com/iflytek/ifly-workflow-mcp-server", "ifly_workflow_mcp_server"], "env": {"CONFIG_PATH": "/Users/hygao1024/Projects/config.yaml"}}}}

@@ -1,1 +1,0 @@
-{"mcpServers": {"searxng": {"command": "mcp-searxng", "env": {"SEARXNG_URL": "YOUR_SEARXNG_INSTANCE_URL"}}}}

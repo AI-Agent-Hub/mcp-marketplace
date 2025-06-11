@@ -1,1 +1,0 @@
-{"mcpServers": {"payman": {"command": "node", "args": ["/ABSOLUTE/PATH/TO/payman-mcp-server/build/payman-server.js"]}}}

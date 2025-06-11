@@ -1,1 +1,0 @@
-{"mcpServers": {"zerolab-toolbox": {"command": "uvx", "args": ["--prerelease=allow", "mcp-toolbox@latest", "stdio"], "env": {"FIGMA_API_KEY": "your-figma-api-key", "TAVILY_API_KEY": "your-tavily-api-key", "DUCKDUCKGO_API_KEY": "your-duckduckgo-api-key", "BFL_API_KEY": "your-bfl-api-key"}}}}

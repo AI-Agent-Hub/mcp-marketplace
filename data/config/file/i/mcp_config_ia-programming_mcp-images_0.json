@@ -1,1 +1,0 @@
-{"mcpServers": {"image": {"command": "uv", "args": ["--directory", "/path/to/mcp-image", "run", "mcp_image.py"]}}}

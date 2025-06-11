@@ -1,1 +1,0 @@
-{"mcpServers": {"selenium": {"command": "npx", "args": ["-y", "@angiejones/mcp-selenium"]}}}

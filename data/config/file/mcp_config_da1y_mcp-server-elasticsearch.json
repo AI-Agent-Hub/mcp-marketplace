@@ -1,1 +1,0 @@
-{"mcpServers": {"elasticsearch": {"command": "npx", "args": ["-y", "@modelcontextprotocol/server-elasticsearch", "http://localhost:9200"]}}}

@@ -1,1 +1,0 @@
-{"mcpServers": {"Adfin": {"command": "<home_path>/.local/bin/uv", "args": ["--directory", "<absolute_path_to_adfin_mcp_folder>", "run", "main_adfin_mcp.py"], "env": {"ADFIN_EMAIL": "<email>", "ADFIN_PASSWORD": "<password>"}}, "filesystem": {"command": "<home_path>/.local/bin/uv", "args": ["--directory", "<absolute_path_to_adfin_mcp_folder>", "run", "filesystem.py"]}}}

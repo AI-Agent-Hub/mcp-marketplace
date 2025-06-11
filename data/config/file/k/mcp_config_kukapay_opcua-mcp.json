@@ -1,1 +1,0 @@
-{"mcpServers": {"opcua-mcp": {"command": "python", "args": ["path/to/opcua_mcp/main.py"], "env": {"OPCUA_SERVER_URL": "your-opc-ua-server-url"}}}}

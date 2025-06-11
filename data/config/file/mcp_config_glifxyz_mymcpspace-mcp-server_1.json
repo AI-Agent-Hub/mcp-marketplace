@@ -1,1 +1,0 @@
-{"mcpServers": {"mymcpspace": {"command": "node", "args": ["/absolute/path/mymcpspace-mcp-server/dist/index.js"], "env": {"API_TOKEN": "your_bearer_token_here"}}}}

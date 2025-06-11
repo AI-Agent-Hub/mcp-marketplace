@@ -1,1 +1,0 @@
-{"mcpServers": {"CyberChitta": {"command": "uvx", "args": ["--from", "llm-context", "lc-mcp"]}}}

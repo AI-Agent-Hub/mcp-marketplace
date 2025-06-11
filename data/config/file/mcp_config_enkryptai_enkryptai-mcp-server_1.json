@@ -1,1 +1,0 @@
-{"mcpServers": {"EnkryptAI-MCP": {"command": "uv", "args": ["--directory", "PATH/TO/enkryptai-mcp-server", "run", "src/mcp_server.py"], "env": {"ENKRYPTAI_API_KEY": "YOUR ENKRYPTAI API KEY"}}}}

@@ -1,1 +1,0 @@
-{"mcpServers": {"chain-of-draft-prompt-tool": {"command": "node", "args": ["/path/to/dist/index.js"], "enabled": true, "env": {"ANTHROPIC_API_KEY": "your_api_key_here"}}}}

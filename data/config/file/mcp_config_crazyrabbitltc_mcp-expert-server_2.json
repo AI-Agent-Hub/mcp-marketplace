@@ -1,1 +1,0 @@
-{"mcpServers": {"expert": {"command": "node", "args": ["/ABSOLUTE/PATH/TO/expert-server/build/index.js"], "env": {"ANTHROPIC_API_KEY": "your_api_key_here"}}}}

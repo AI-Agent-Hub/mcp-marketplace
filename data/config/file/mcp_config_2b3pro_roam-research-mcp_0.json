@@ -1,1 +1,0 @@
-{"mcpServers": {"roam-research": {"command": "node", "args": ["/path/to/roam-research-mcp/build/index.js"], "env": {"ROAM_API_TOKEN": "your-api-token", "ROAM_GRAPH_NAME": "your-graph-name", "MEMORIES_TAG": "#[[LLM/Memories]]"}}}}

@@ -1,1 +1,0 @@
-{"mcpServers": {"PubDev MCP": {"command": "dart [path-to-repo]/bin/pubdev_mcp.dart", "workingDirectory": "[path-to-repo]"}}}

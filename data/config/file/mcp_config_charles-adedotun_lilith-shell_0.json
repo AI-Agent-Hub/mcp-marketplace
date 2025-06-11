@@ -1,1 +1,0 @@
-{"mcpServers": {"lilith-shell": {"command": "C:/path/to/cloned/Lilith-Shell/venv/Scripts/python.exe", "args": ["C:/path/to/cloned/Lilith-Shell/src/lilith_shell/executor.py"], "env": {"PYTHONPATH": "C:/path/to/cloned/Lilith-Shell/src"}}}}

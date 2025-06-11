@@ -1,1 +1,0 @@
-{"mcpServers": {"clickhouse-mcp-server": {"command": "uvx", "args": ["clickhouse-mcp-server"], "env": {"CLICKHOUSE_HOST": "localhost", "CLICKHOUSE_USER": "root", "CLICKHOUSE_PASSWORD": "password", "CLICKHOUSE_DATABASE": "[optional]", "CLICKHOUSE_READONLY": "true"}}}}

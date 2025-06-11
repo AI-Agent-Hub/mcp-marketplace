@@ -1,1 +1,0 @@
-{"mcpServers": {"mcp-cloud-pc": {"command": "uv", "args": ["run", "--directory", "/ABSOLUTE/PATH/TO/PARENT/FOLDER/mcp-cloud-pc", "mcp-cloud-pc.py"], "env": {"MSGRAPH_TENANT_ID": "<YOUR GRAPH API TENANT ID>", "MSGRAPH_CLIENT_ID": "<YOUR GRAPH API CLIENT ID>", "MSGRAPH_CLIENT_SECRET": "<YOUR GRAPH API CLIENT SECRET>"}}}}

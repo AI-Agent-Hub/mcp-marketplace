@@ -1,1 +1,0 @@
-{"mcpServers": {"memory": {"command": "node", "args": ["/path/to/mcp-memory-server/build/index.js", "/path/to/storage/directory"]}}}

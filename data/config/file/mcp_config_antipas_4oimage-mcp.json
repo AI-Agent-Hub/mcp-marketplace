@@ -1,1 +1,0 @@
-{"mcpServers": {"4o-image": {"command": "npx", "args": ["-y", "4oimage-mcp"], "env": {"API_KEY": "YOUR_API_KEY_HERE"}}}}

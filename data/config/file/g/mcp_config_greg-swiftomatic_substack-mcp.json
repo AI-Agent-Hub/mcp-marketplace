@@ -1,1 +1,0 @@
-{"mcpServers": {"substack": {"command": "uv", "args": ["--directory", "/ABSOLUTE/PATH/TO/substack-mcp", "run", "substack_mcp.py"]}}}

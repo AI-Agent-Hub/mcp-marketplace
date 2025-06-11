@@ -1,1 +1,0 @@
-{"mcpServers": {"jsoncanvas": {"command": "uv", "args": ["--directory", "/path/to/jsoncanvas", "run", "mcp-server-jsoncanvas"], "env": {"OUTPUT_PATH": "./output"}}}}

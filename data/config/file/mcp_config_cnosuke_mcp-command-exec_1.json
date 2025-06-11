@@ -1,1 +1,0 @@
-{"mcpServers": {"command": {"command": "./bin/mcp-command-exec", "args": ["server"], "env": {"LOG_PATH": "mcp-command-exec.log", "DEBUG": "false", "ALLOWED_COMMANDS": "git,ls,cat,echo,find"}}}}

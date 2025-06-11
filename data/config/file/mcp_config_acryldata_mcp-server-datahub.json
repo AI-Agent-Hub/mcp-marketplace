@@ -1,1 +1,0 @@
-{"mcpServers": {"datahub": {"command": "uvx", "args": ["mcp-server-datahub"], "env": {"DATAHUB_GMS_URL": "<your-datahub-url>", "DATAHUB_GMS_TOKEN": "<your-datahub-token>"}}}}

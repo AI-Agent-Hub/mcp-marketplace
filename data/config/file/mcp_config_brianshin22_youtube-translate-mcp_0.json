@@ -1,1 +1,0 @@
-{"mcpServers": {"youtube-translate": {"command": "uv", "args": ["--directory", "/ABSOLUTE/PATH/TO/youtube-translate-mcp", "run", "-m", "youtube_translate_mcp"], "env": {"YOUTUBE_TRANSLATE_API_KEY": "YOUR_API_KEY"}}}}

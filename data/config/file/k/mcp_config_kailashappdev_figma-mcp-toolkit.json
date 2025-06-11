@@ -1,1 +1,0 @@
-{"mcpServers": {"figma-to-code": {"command": "node", "args": ["PATH_TO_REPO/build/index.js"], "env": {"FIGMA_TOKEN": "your_figma_token", "FIGMA_FILE": "your_figma_file_id", "PROJECT_DIR": "your_project_directory"}}}}

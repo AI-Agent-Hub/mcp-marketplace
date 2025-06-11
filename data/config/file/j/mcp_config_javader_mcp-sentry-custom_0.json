@@ -1,1 +1,0 @@
-{"mcpServers": {"sentry": {"command": "uvx", "args": ["mcp-sentry-custom", "--auth-token", "YOUR_SENTRY_TOKEN", "--project-slug", "YOUR_PROJECT_SLUG", "--organization-slug", "YOUR_ORGANIZATION_SLUG", "--sentry-url", "YOUR_SENTRY_URL"]}}}

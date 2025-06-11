@@ -1,1 +1,0 @@
-{"mcpServers": {"notion-todo": {"command": "/path/to/your/.venv/bin/python", "args": ["-m", "notion_mcp"], "cwd": "/path/to/notion-mcp"}}}

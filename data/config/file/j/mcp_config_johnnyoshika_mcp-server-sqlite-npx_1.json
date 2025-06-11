@@ -1,1 +1,0 @@
-{"mcpServers": {"sqlite": {"command": "/Users/{username}/.nvm/versions/node/v22.12.0/bin/npx", "args": ["-y", "mcp-server-sqlite-npx", "/Users/{username}/projects/database.db"], "env": {"PATH": "/Users/{username}/.nvm/versions/node/v22.12.0/bin:/usr/local/bin:/usr/bin:/bin", "NODE_PATH": "/Users/{username}/.nvm/versions/node/v22.12.0/lib/node_modules"}}}}

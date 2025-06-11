@@ -1,1 +1,0 @@
-{"mcpServers": {"clockify-time-entries": {"command": "ts-node", "args": ["ABSOLUTE_PATH/src/index.ts"], "env": {"CLOCKIFY_API_URL": "https://api.clockify.me/api/v1", "CLOCKIFY_API_TOKEN": "YOUR_CLOCKIFY_API_TOKEN_HERE"}}}}

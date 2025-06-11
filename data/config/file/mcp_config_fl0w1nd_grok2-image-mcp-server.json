@@ -1,1 +1,0 @@
-{"mcpServers": {"grok2_image": {"command": "npx", "args": ["grok2-image-mcp-server"], "env": {"XAIAPI_KEY": "xAI Key"}}}}

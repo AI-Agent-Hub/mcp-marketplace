@@ -1,1 +1,0 @@
-{"mcpServers": {"audio-interface": {"command": "/path/to/your/.venv/bin/python", "args": ["/path/to/your/audio_server.py"], "env": {"PYTHONPATH": "/path/to/your/audio-mcp-server"}}}}

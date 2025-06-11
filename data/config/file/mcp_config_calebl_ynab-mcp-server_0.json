@@ -1,1 +1,0 @@
-{"mcpServers": {"ynab-mcp-server": {"command": "node", "args": ["/absolute/path/to/ynab-mcp-server/dist/index.js"]}}}

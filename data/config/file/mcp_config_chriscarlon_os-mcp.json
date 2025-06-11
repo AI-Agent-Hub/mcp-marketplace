@@ -1,1 +1,0 @@
-{"mcpServers": {"os-ngd-api": {"command": "/Users/username/.local/bin/uv", "args": ["--directory", "src/", "run", "server.py"], "env": {"OS_API_KEY": "your_api_key_here"}}}}

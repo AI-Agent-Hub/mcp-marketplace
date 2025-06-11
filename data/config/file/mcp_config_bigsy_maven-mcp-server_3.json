@@ -1,1 +1,0 @@
-{"mcpServers": {"maven-deps-server": {"command": "npx", "args": ["mcp-maven-deps", "--host=your-server-ip", "--port=3000"]}}}

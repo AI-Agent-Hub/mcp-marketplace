@@ -1,1 +1,0 @@
-{"mcpServers": {"Authenticator App MCP": {"command": "cmd", "args": ["/c", "npx", "-y", "authenticator-mcp", "--access-token=YOUR-KEY"]}}}

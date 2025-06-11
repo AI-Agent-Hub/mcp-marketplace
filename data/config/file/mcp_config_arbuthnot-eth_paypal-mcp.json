@@ -1,1 +1,0 @@
-{"mcpServers": {"paypal": {"command": "node", "args": ["path/to/paypal-server/build/index.js"], "env": {"PAYPAL_CLIENT_ID": "your_client_id", "PAYPAL_CLIENT_SECRET": "your_client_secret"}, "disabled": false, "autoApprove": []}}}

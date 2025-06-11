@@ -1,1 +1,0 @@
-{"mcpServers": {"OpenAPI Schema": {"command": "npx", "args": ["-y", "mcp-openapi-schema", "/ABSOLUTE/PATH/TO/openapi.yaml"]}}}

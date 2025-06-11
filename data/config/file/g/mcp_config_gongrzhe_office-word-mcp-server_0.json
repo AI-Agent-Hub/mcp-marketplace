@@ -1,1 +1,0 @@
-{"mcpServers": {"word-document-server": {"command": "python", "args": ["/path/to/word_mcp_server.py"]}}}

@@ -1,1 +1,0 @@
-{"mcpServers": {"huntress": {"command": "node", "args": ["path/to/huntress-server/build/index.js"], "env": {"HUNTRESS_API_KEY": "your_api_key_here", "HUNTRESS_API_SECRET": "your_api_secret_here"}}}}

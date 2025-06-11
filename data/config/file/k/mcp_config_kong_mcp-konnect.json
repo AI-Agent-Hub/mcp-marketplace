@@ -1,1 +1,0 @@
-{"mcpServers": {"kong-konnect": {"command": "node", "args": ["/absolute/path/to/mcp-konnect/build/index.js"], "env": {"KONNECT_ACCESS_TOKEN": "kpat_api_key_here", "KONNECT_REGION": "us"}}}}

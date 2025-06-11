@@ -1,1 +1,0 @@
-{"mcpServers": {"pubmedmcp": {"command": "uvx", "args": ["pubmedmcp@latest"], "env": {"UV_PRERELEASE": "allow", "UV_PYTHON": "3.12"}}}}

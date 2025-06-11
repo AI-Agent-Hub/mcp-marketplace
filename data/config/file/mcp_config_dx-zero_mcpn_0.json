@@ -1,1 +1,0 @@
-{"mcpServers": {"workflows-mcp": {"command": "npx", "args": ["-y", "mcpn@latest server"]}}}

@@ -1,1 +1,0 @@
-{"mcpServers": {"google-search": {"command": "npx", "args": ["-y", "@adenot/mcp-google-search"], "env": {"GOOGLE_API_KEY": "your-api-key-here", "GOOGLE_SEARCH_ENGINE_ID": "your-search-engine-id-here"}}}}

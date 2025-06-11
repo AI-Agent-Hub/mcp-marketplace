@@ -1,1 +1,0 @@
-{"mcpServers": {"filesystem": {"command": "mcp-filesystem", "args": ["--workspace", "/path/to/your/repository"]}}}

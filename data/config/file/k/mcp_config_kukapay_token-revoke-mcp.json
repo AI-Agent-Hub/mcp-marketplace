@@ -1,1 +1,0 @@
-{"mcpServers": {"token-revoke-mcp": {"command": "node", "args": ["path/to/token-revoke-mcp/index.js"], "env": {"MORALIS_API_KEY": "your moralis api key", "PRIVATE_KEY": "your wallet private key"}}}}

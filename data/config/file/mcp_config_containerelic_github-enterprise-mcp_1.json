@@ -1,1 +1,0 @@
-{"mcpServers": {"github-enterprise": {"command": "npx", "args": ["-y", "@ddukbg/github-enterprise-mcp", "--token=YOUR_GITHUB_TOKEN", "--github-enterprise-url=YOUR_GITHUB_ENTERPRISE_URL"]}}}

@@ -1,1 +1,0 @@
-{"mcpServers": {"@greyhack-mcp-server": {"command": "npx", "args": ["-y", "@smithery/cli@latest", "run", "@chromewillow/greyhack-mcp-server", "--config", "{\"GITHUB_TOKEN\":\"your-github-token-here\"}"]}}}

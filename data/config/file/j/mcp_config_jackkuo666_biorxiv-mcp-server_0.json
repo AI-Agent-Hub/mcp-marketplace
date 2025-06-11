@@ -1,1 +1,0 @@
-{"mcpServers": {"biorxiv": {"command": "python", "args": ["-m", "biorxiv-mcp-server"]}}}

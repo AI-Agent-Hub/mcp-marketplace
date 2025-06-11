@@ -1,1 +1,0 @@
-{"mcpServers": {"openai": {"command": "openai-server", "env": {"OPENAI_API_KEY": "apikey"}}}}

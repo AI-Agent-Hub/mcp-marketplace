@@ -1,1 +1,0 @@
-{"mcpServers": {"replicate-flux-mcp": {"command": "npx", "args": ["-y", "replicate-flux-mcp"], "env": {"REPLICATE_API_TOKEN": "YOUR TOKEN"}}}}

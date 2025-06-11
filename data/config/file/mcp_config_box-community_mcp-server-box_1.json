@@ -1,1 +1,0 @@
-{"mcpServers": {"box": {"command": "uv", "args": ["--directory", "/Users/shurrey/local/mcp-server-box", "run", "src/mcp_server_box.py"]}}}

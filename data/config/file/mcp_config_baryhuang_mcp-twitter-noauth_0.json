@@ -1,1 +1,0 @@
-{"mcpServers": {"twitter": {"command": "docker", "args": ["run", "-i", "--rm", "buryhuang/mcp-twitter-noauth:latest"]}}}

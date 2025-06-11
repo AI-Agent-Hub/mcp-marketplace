@@ -1,1 +1,0 @@
-{"mcpServers": {"tpapi": {"command": "/path/to/java", "args": ["-jar", "/path/to/project/build/libs/tpapi-mcp-server-0.0.1-SNAPSHOT.jar"]}}}

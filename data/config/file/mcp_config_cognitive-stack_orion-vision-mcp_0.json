@@ -1,1 +1,0 @@
-{"mcpServers": {"orion-vision-mcp": {"command": "npx", "args": ["-y", "orion-vision-mcp@latest"], "env": {"AZURE_FORM_RECOGNIZER_ENDPOINT": "your-endpoint-here", "AZURE_FORM_RECOGNIZER_KEY": "your-key-here"}, "disabled": false, "autoApprove": []}}}

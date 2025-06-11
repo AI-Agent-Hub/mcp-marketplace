@@ -1,1 +1,0 @@
-{"chat.mcp.discovery.enabled": true, "chat.mcp.enabled": true, "mcp": {"servers": {"kollektiv": {"type": "stdio", "command": "npx", "args": ["-y", "mcp-remote", "https://mcp.thekollektiv.ai/mcp"]}}}}

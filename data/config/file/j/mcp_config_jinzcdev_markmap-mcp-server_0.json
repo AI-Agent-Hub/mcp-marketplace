@@ -1,1 +1,0 @@
-{"mcpServers": {"markmap": {"type": "stdio", "command": "npx", "args": ["-y", "@jinzcdev/markmap-mcp-server", "--output", "/path/to/output/directory"]}}}

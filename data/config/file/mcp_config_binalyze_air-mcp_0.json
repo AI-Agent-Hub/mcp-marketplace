@@ -1,1 +1,0 @@
-{"mcpServers": {"air-mcp": {"command": "npx", "args": ["-y", "@binalyze/air-mcp"], "env": {"AIR_HOST": "your-api-host.com", "AIR_API_TOKEN": "your-api-token"}}}}

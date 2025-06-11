@@ -1,1 +1,0 @@
-{"mcpServers": {"greptimedb": {"command": "uv", "args": ["--directory", "/path/to/greptimedb-mcp-server", "run", "-m", "greptimedb_mcp_server.server"], "env": {"GREPTIMEDB_HOST": "localhost", "GREPTIMEDB_PORT": "4002", "GREPTIMEDB_USER": "root", "GREPTIMEDB_PASSWORD": "", "GREPTIMEDB_DATABASE": "public"}}}}

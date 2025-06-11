@@ -1,1 +1,0 @@
-{"mcpServers": {"nwc": {"command": "npx", "args": ["-y", "@getalby/nwc-mcp-server"], "env": {"NWC_CONNECTION_STRING": "YOUR NWC CONNECTION STRING HERE"}}}}

@@ -1,1 +1,0 @@
-{"mcpServers": {"image-placeholder": {"command": "uv", "args": ["--directory", "/ABSOLUTE/PATH/TO/PROJECT", "run", "main.py"]}}}

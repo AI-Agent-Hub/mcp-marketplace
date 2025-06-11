@@ -1,1 +1,0 @@
-{"mcpServers": {"Osmosis": {"command": "npx", "args": ["-y", "@osmosis-agent-toolkit/mcp"], "env": {"OSMOSIS_MNEMONIC": "<your mnemonic here>"}}}}

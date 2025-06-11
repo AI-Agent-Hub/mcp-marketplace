@@ -1,1 +1,0 @@
-{"mcpServers": {"solarwinds": {"command": "C:\\Users\\[username]\\AppData\\Roaming\\nvm\\[node-version]\\node.exe", "args": ["C:\\Users\\[username]\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npx-cli.js", "-y", "mcp-solarwinds"], "env": {"SOLARWINDS_API_TOKEN": "your-api-token"}}}}

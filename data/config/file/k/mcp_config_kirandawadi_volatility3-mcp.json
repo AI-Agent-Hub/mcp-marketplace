@@ -1,1 +1,0 @@
-{"mcpServers": {"volatility3": {"command": "absolute/path/to/virtual/environment/bin/python3", "args": ["absolute/path/to/bridge_mcp_volatility.py"]}}}

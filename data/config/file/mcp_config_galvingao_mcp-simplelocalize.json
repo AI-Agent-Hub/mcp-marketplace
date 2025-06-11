@@ -1,1 +1,0 @@
-{"mcpServers": {"simplelocalize": {"command": "uv", "args": ["run", "--project", "/path/to/mcp-simplelocalize/", "/path/to/mcp-simplelocalize/main.py"], "env": {"SIMPLELOCALIZE_API_KEY": "your-api-key-here"}}}}

@@ -1,1 +1,0 @@
-{"mcpServers": {"travel-planner": {"command": "node", "args": ["path/to/dist/index.js"], "env": {"GOOGLE_MAPS_API_KEY": "your_google_maps_api_key"}}}}

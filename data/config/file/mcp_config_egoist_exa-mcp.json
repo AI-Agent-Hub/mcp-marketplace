@@ -1,1 +1,0 @@
-{"mcpServers": {"exa": {"command": "npx", "args": ["-y", "exa-mcp"], "env": {"EXA_API_KEY": "<your-api-key>"}}}}

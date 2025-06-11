@@ -1,1 +1,0 @@
-{"mcpServers": {"tavily-search-server": {"command": "docker", "args": ["run", "-i", "--rm", "-e", "TAVILY_API_KEY", "-v", "/Users/<username>/<FULL_PATH...>/tavily-search-mcp-server:/app", "tavily-search-mcp-server"], "env": {"TAVILY_API_KEY": "your_api_key_here"}}}}

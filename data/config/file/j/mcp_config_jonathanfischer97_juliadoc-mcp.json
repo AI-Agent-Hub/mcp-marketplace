@@ -1,1 +1,0 @@
-{"mcpServers": {"juliadoc": {"command": "npx", "args": ["-y", "@jonathanfischer97/server-juliadoc"], "env": {"JULIA_PROJECT": "/path/to/your/julia/project"}}}}

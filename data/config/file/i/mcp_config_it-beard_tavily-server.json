@@ -1,1 +1,0 @@
-{"mcpServers": {"tavily": {"command": "node", "args": ["/path/to/tavily-server/build/index.js"], "env": {"TAVILY_API_KEY": "your-api-key-here"}}}}

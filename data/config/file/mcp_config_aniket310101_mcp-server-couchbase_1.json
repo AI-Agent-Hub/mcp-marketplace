@@ -1,1 +1,0 @@
-{"mcpServers": {"couchbase": {"command": "node", "args": ["path/to/MCP-Server-Couchbase/dist/index.js"], "env": {"COUCHBASE_URL": "<COUCHBASE CONNECTION STRING>", "COUCHBASE_BUCKET": "<BUCKET NAME>", "COUCHBASE_USERNAME": "<COUCHBASE USERNAME>", "COUCHBASE_PASSWORD": "<COUCHBASE PASSWORD>"}}}}

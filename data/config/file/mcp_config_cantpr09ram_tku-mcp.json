@@ -1,1 +1,0 @@
-{"mcpServers": {"tku-mcp": {"command": "uv", "args": ["--directory", "ABSOLUTE PATH TO FOLDER", "run", "server.py"]}}}

@@ -1,1 +1,0 @@
-{"mcpServers": {"shell-command": {"command": "npx", "args": ["-y", "shell-command-mcp"], "env": {"ALLOWED_COMMANDS": "cat,ls,echo"}}}}

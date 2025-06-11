@@ -1,1 +1,0 @@
-{"mcpServers": {"metabase-server": {"command": "/path/to/metabase-server/build/index.js", "env": {"METABASE_URL": "https://your-metabase-instance.com", "METABASE_USERNAME": "your_username", "METABASE_PASSWORD": "your_password"}}}}

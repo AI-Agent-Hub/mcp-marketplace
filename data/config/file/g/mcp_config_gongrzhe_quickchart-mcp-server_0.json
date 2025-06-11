@@ -1,1 +1,0 @@
-{"mcpServers": {"quickchart-server": {"command": "node", "args": ["/path/to/quickchart-server/build/index.js"]}}}

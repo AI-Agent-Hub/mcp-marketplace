@@ -1,1 +1,0 @@
-{"mcpServers": {"image-extractor": {"command": "node", "args": ["/full/path/to/mcp-image-extractor/dist/index.js"], "disabled": false}}}

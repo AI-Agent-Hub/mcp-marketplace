@@ -1,1 +1,0 @@
-{"mcpServers": {"myai-memory-sync": {"command": "npx", "args": ["-y", "myai"], "env": {"TEMPLATE_PATH": "/path/to/custom/template.md", "ENABLE_ANTHROPIC": "true", "ANTHROPIC_API_KEY": "your-api-key-here"}}}}

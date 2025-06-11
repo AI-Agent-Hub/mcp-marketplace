@@ -1,1 +1,0 @@
-{"mcpServers": {"lancedb": {"command": "npx", "args": ["lance-mcp", "PATH_TO_LOCAL_INDEX_DIR"]}}}

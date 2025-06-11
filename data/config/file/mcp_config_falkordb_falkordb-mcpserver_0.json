@@ -1,1 +1,0 @@
-{"mcpServers": {"falkordb": {"command": "docker", "args": ["run", "-i", "--rm", "-p", "3000:3000", "--env-file", ".env", "falkordb-mcpserver", "falkordb://host.docker.internal:6379"]}}}

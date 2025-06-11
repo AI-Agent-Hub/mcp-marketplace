@@ -1,1 +1,0 @@
-{"mcpServers": {"replicate": {"command": "mcp-replicate", "env": {"REPLICATE_API_TOKEN": "your_token_here"}}}}

@@ -1,1 +1,0 @@
-{"mcpServers": {"instagram-engagement": {"command": "node", "args": ["/path/to/instagram-engagement-mcp/build/index.js"], "env": {"INSTAGRAM_USERNAME": "your_instagram_username", "INSTAGRAM_PASSWORD": "your_instagram_password"}, "disabled": false, "autoApprove": []}}}

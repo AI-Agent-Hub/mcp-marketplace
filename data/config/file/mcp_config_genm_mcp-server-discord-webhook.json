@@ -1,1 +1,0 @@
-{"mcpServers": {"discord-webhook": {"command": "npx", "args": ["-y", "@genpm/mcp-server-discord-webhook"], "env": {"DISCORD_WEBHOOK_URL": "your-discord-webhook-url"}, "alwaysAllow": ["send_message"]}}}

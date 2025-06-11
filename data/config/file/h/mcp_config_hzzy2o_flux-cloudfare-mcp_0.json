@@ -1,1 +1,0 @@
-{"mcpServers": {"flux-cloudflare-mcp": {"command": "env FLUX_API_TOKEN=YOUR_TOKEN FLUX_API_URL=YOUR_API_URL npx", "args": ["-y", "flux-cloudflare-mcp"]}}}

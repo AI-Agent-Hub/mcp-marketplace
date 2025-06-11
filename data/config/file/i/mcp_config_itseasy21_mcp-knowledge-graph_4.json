@@ -1,1 +1,0 @@
-{"mcpServers": {"memory": {"command": "npx", "args": ["-y", "@itseasy21/mcp-knowledge-graph", "--memory-path", "/path/to/your/memory.jsonl"]}}}

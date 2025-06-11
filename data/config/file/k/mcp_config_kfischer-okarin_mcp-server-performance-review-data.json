@@ -1,1 +1,0 @@
-{"mcpServers": {"performance_review_data": {"command": "just", "args": ["-f", "/absolute/path/to/mcp-server-performance-review-data/Justfile", "run"]}}}

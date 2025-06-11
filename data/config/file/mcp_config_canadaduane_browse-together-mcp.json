@@ -1,1 +1,0 @@
-{"mcpServers": {"browse-together": {"command": "/path/to/deno", "args": ["run", "--allow-read", "--allow-net", "--allow-env", "--allow-sys", "/path/to/browse-together-mcp/mcp.ts"], "env": {"PORT": "8888"}}}}

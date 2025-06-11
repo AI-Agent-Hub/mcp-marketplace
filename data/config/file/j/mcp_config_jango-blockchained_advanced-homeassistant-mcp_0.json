@@ -1,1 +1,0 @@
-{"mcpServers": {"homeassistant-mcp": {"command": "bash", "args": ["-c", "cd ${workspaceRoot} && bun run dist/index.js --stdio 2>/dev/null | grep -E '\\{\"jsonrpc\":\"2\\.0\"'"], "env": {"NODE_ENV": "development", "USE_STDIO_TRANSPORT": "true", "DEBUG_STDIO": "true"}}}}

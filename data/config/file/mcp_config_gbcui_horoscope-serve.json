@@ -1,1 +1,0 @@
-{"mcpServers": {"horoscope": {"command": "node", "args": ["/path/to/horoscope-serve/build/index.js"]}}}

@@ -1,1 +1,0 @@
-{"mcpServers": {"rootdata": {"command": "/path/to/uv", "args": ["--directory", "/absolute/path/to/rootdata-mcp-server", "run", "server.py"]}}}

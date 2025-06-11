@@ -1,1 +1,0 @@
-{"mcpServers": {"mathcad": {"command": "python", "args": ["path/to/mathcad-mcp/standalone.py"], "env": {"MATHCAD_VISIBLE": "true"}}}}

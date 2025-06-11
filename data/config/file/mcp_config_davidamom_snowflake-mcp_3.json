@@ -1,1 +1,0 @@
-{"mcpServers": {"snowflake-docker": {"command": "docker", "args": ["run", "-i", "snowflake-mcp"], "env": {"SNOWFLAKE_USER": "your_username", "SNOWFLAKE_ACCOUNT": "your_account", "SNOWFLAKE_DATABASE": "your_database", "SNOWFLAKE_WAREHOUSE": "your_warehouse", "SNOWFLAKE_PASSWORD": "your_password"}}}}

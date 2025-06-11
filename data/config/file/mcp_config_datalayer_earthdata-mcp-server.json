@@ -1,1 +1,0 @@
-{"mcpServers": {"earthdata": {"command": "docker", "args": ["run", "-i", "--rm", "datalayer/earthdata-mcp-server:latest"]}}}

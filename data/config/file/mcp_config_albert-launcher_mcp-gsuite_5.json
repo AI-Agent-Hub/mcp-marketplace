@@ -1,1 +1,0 @@
-{"mcpServers": {"mcp-gsuite": {"command": "uvx", "args": ["mcp-gsuite", "--accounts-file", "/path/to/custom/.accounts.json", "--credentials-dir", "/path/to/custom/credentials"]}}}

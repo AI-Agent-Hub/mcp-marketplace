@@ -1,1 +1,0 @@
-{"mcpServers": {"beyond-social": {"command": "/usr/local/bin/node", "args": ["/full/path/to/beyond-mcp-server/dist/index.js", "--stdio"]}}}

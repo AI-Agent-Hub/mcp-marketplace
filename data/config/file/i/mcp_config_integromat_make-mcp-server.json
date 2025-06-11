@@ -1,1 +1,0 @@
-{"mcpServers": {"make": {"command": "npx", "args": ["-y", "@makehq/mcp-server"], "env": {"MAKE_API_KEY": "<your-api-key>", "MAKE_ZONE": "<your-zone>", "MAKE_TEAM": "<your-team-id>"}}}}

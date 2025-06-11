@@ -1,1 +1,0 @@
-{"mcpServers": {"word-mcp-server": {"command": "/path/to/word-mcp-server/.venv/bin/python3", "args": ["/path/to/word-mcp-server/server.py"]}}}

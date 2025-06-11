@@ -1,1 +1,0 @@
-{"mcpServers": {"image-generation-mcp": {"command": "npx", "args": ["/Users/{USERNAME}/{PATH_TO}/replicate-flux-mcp/build/index.js"], "env": {"REPLICATE_API_TOKEN": "YOUR REPLICATE API TOKEN"}}}}

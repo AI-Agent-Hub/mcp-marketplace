@@ -1,1 +1,0 @@
-{"mcpServers": {"KubeSphere": {"args": ["stdio", "--ksconfig", "<ksconfig file absolute path>", "--ks-apiserver", "<KubeSphere Address>"], "command": "ks-mcp-server"}}}

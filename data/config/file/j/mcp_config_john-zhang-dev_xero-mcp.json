@@ -1,1 +1,0 @@
-{"mcpServers": {"xero-mcp": {"command": "npx", "args": ["-y", "xero-mcp@latest"], "env": {"XERO_CLIENT_ID": "YOUR_CLIENT_ID", "XERO_CLIENT_SECRET": "YOUR_CLIENT_SECRET", "XERO_REDIRECT_URI": "http://localhost:5000/callback"}}}}

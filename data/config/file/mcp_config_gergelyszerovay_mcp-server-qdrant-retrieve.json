@@ -1,1 +1,0 @@
-{"mcpServers": {"qdrant": {"command": "npx", "args": ["-y", "@gergelyszerovay/mcp-server-qdrant-retrive"], "env": {"QDRANT_API_KEY": "your_api_key_here"}}}}

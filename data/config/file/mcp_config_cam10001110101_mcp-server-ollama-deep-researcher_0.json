@@ -1,1 +1,0 @@
-{"mcpServers": {"ollama-deep-researcher": {"command": "docker", "args": ["exec", "-i", "ollama-deep-researcher-mcp", "node", "build/index.js"], "env": {}}}}

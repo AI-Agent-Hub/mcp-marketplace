@@ -1,1 +1,0 @@
-{"mcpServers": {"Web-QA": {"command": "uv", "args": ["--directory", "path/to/cloned_repo", "run", "mcp_server.py"]}}}

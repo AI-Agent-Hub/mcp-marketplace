@@ -1,1 +1,0 @@
-{"mcpServers": {"beyond-social": {"command": "/usr/local/bin/node", "args": ["/full/path/to/beyond-mcp-server/dist/index.js", "--stdio"], "env": {"NEYNAR_API_KEY": "YOUR_API_KEY_HERE", "ENABLE_FARCASTER": "true", "ENABLE_TWITTER": "false"}}}}

@@ -1,1 +1,0 @@
-{"mcpServers": {"jotai-mcp-server": {"command": "deno", "args": ["run", "--allow-env", "--allow-net", "npm:jotai-mcp-server"], "env": {"GITHUB_PERSONAL_ACCESS_TOKEN": "your_github_token"}}}}

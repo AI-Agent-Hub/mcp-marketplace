@@ -1,1 +1,0 @@
-{"mcpServers": {"airbnb": {"command": "npx", "args": ["-y", "@Domoteek/mcp-server-airbnb", "--ignore-robots-txt"]}}}

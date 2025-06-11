@@ -1,1 +1,0 @@
-{"mcpServers": {"discogs": {"command": "npx", "args": ["tsx", "/PATH/TO/YOUR/PROJECT/FOLDER/src/index.ts"], "env": {"DISCOGS_PERSONAL_ACCESS_TOKEN": "<YOUR_TOKEN>"}}}}

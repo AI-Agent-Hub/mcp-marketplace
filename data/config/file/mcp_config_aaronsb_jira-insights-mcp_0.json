@@ -1,1 +1,0 @@
-{"mcpServers": {"jira-insights": {"command": "node", "args": ["/path/to/jira-insights-mcp/build/index.js"], "env": {"JIRA_API_TOKEN": "your-api-token", "JIRA_EMAIL": "your-email@example.com", "JIRA_HOST": "https://your-domain.atlassian.net", "LOG_MODE": "strict"}}}}

@@ -1,1 +1,0 @@
-{"mcpServers": {"hypernym": {"type": "stdio", "command": "cd /path/to/hypernym-mcp-server && npm run start:stdio", "description": "Hypernym semantic analysis and compression tool", "tools": ["analyze_text", "semantic_compression"]}}}

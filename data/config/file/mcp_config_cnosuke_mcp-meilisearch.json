@@ -1,1 +1,0 @@
-{"mcpServers": {"sqlite": {"command": "./bin/mcp-meilisearch", "args": ["server", "--no-logs", "--log", "path_to_log_file"], "env": {"MEILISEARCH_HOST": "http://localhost:7700", "MEILISEARCH_API_KEY": "api_key"}}}}

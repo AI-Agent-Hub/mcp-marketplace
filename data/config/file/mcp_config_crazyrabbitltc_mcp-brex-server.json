@@ -1,1 +1,0 @@
-{"mcpServers": {"brex-server": {"command": "node", "args": ["/path/to/brex-mcp-server/build/index.js"], "env": {"BREX_API_KEY": "your_brex_api_key_here", "BREX_API_URL": "https://platform.brexapis.com", "PORT": "3000", "NODE_ENV": "development", "RATE_LIMIT_REQUESTS": "1000", "RATE_LIMIT_WINDOW_MS": "60000", "LOG_LEVEL": "info"}}}}

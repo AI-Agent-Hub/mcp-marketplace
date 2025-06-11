@@ -1,1 +1,0 @@
-{"mcpServers": {"cmd-line": {"command": "/path/to/venv/bin/cmd-line-mcp", "args": ["--config", "/path/to/config.json"], "env": {"CMD_LINE_MCP_SECURITY_REQUIRE_SESSION_ID": "false", "CMD_LINE_MCP_SECURITY_AUTO_APPROVE_DIRECTORIES_IN_DESKTOP_MODE": "true"}}}}

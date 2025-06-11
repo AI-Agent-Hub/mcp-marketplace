@@ -1,1 +1,0 @@
-{"mcpServers": {"perplexity-search": {"command": "/path/to/perplexity-search-mcp", "env": {"PERPLEXITY_API_KEY": "your-api-key-here"}}}}

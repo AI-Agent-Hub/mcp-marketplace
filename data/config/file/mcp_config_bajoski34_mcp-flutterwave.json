@@ -1,1 +1,0 @@
-{"mcpServers": {"flutterwave": {"command": "npx", "args": ["-y", "mcp-flutterwave", "--tools=checkout.create", "--secret-key=FLW_SECRET_KEY"]}}}

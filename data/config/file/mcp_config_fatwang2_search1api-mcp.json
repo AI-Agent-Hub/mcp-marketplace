@@ -1,1 +1,0 @@
-{"mcpServers": {"search1api": {"command": "npx", "args": ["-y", "search1api-mcp"], "env": {"SEARCH1API_KEY": "YOUR_SEARCH1API_KEY"}}}}

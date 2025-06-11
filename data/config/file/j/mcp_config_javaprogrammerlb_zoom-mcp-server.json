@@ -1,1 +1,0 @@
-{"mcpServers": {"zoom-mcp-server": {"command": "npx", "args": ["-y", "@yitianyigexiangfa/zoom-mcp-server@latest"], "env": {"ZOOM_ACCOUNT_ID": "${ZOOM_ACCOUNT_ID}", "ZOOM_CLIENT_ID": "${ZOOM_CLIENT_ID}", "ZOOM_CLIENT_SECRET": "${ZOOM_CLIENT_SECRET}"}}}}

@@ -1,1 +1,0 @@
-{"mcpServers": {"terragrunt_docs": {"command": "deno", "args": ["run", "-A", "jsr:@excoriate/mcp-terragrunt-docs@0.1.0"], "env": {"GITHUB_TOKEN": "<YOUR_TOKEN>"}}}}

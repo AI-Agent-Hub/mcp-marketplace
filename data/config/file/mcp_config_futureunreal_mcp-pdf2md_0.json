@@ -1,1 +1,0 @@
-{"mcpServers": {"pdf2md": {"command": "uv", "args": ["--directory", "C:\\path\\to\\mcp-pdf2md", "run", "pdf2md", "--output-dir", "C:\\path\\to\\output"], "env": {"MINERU_API_KEY": "your_api_key_here"}}}}

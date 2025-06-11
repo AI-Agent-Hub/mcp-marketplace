@@ -1,1 +1,0 @@
-{"mcpServers": {"memory-bank": {"command": "npx", "args": ["-y", "@smithery/cli@latest", "run", "@ipospelov/mcp-memory-bank", "--key", "your_smithery_key"]}}}

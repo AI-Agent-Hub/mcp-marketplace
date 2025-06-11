@@ -1,1 +1,0 @@
-{"mcpServers": {"zerolib-email": {"command": "{{ ENTRYPOINT }}", "args": ["stdio"]}}}

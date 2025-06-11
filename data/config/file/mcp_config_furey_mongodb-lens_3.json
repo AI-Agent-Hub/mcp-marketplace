@@ -1,1 +1,0 @@
-{"mcpServers": {"mongodb-lens": {"command": "/path/to/npx", "args": ["-y", "mongodb-lens@latest", "mongodb://your-connection-string"]}}}

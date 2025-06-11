@@ -1,1 +1,0 @@
-{"mcpServers": {"edgeone-geo-mcp-server": {"command": "tsx", "args": ["path/to/mcp-server/index.ts"]}}}

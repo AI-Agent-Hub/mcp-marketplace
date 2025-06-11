@@ -1,1 +1,0 @@
-{"mcpServers": {"github": {"command": "/path/to/repo/.venv/bin/python", "args": ["-m", "pygithub_mcp_server"], "env": {"GITHUB_PERSONAL_ACCESS_TOKEN": "your-token-here"}}}}

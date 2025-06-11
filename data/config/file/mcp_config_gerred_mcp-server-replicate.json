@@ -1,1 +1,0 @@
-{"globalShortcut": "Shift+Alt+A", "mcpServers": {"replicate": {"command": "uv", "args": ["tool", "run", "mcp-server-replicate"], "env": {"REPLICATE_API_TOKEN": "APITOKEN"}, "cwd": "$PATH_TO_REPO"}}}

@@ -1,1 +1,0 @@
-{"globalShortcut": "Ctrl+Q", "mcpServers": {"qb-time-tools": {"command": "python", "args": ["./qb-time-mcp-server/main.py"], "env": {"QB_TIME_ACCESS_TOKEN": "your_quickbooks_time_access_token_here"}}}}

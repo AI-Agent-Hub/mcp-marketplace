@@ -1,1 +1,0 @@
-{"mcpServers": {"netbird": {"command": "mcp-netbird", "args": [], "env": {"NETBIRD_API_TOKEN": "<your-api-token>"}}}}

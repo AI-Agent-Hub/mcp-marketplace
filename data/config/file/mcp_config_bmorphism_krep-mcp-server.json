@@ -1,1 +1,0 @@
-{"mcpServers": {"krep": {"command": "node", "args": ["/path/to/krep-mcp-server/src/index.js"], "env": {"CLAUDE_MCP": "true", "KREP_PATH": "/path/to/krep-native/krep", "DEBUG": "true"}, "description": "High-performance string search utility with unified interface", "disabled": false, "autoApprove": ["krep"]}}}

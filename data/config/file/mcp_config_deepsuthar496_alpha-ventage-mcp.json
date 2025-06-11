@@ -1,1 +1,0 @@
-{"mcpServers": {"alpha-vantage": {"command": "node", "args": ["path/to/alpha-vantage-server/build/index.js"], "env": {"ALPHA_VANTAGE_API_KEY": "your-api-key-here"}, "disabled": false, "alwaysAllow": []}}}

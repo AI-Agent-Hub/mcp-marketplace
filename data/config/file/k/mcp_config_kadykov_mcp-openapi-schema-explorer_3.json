@@ -1,1 +1,0 @@
-{"mcpServers": {"My API Spec (Global)": {"command": "mcp-openapi-schema-explorer", "args": ["<path-or-url-to-spec>", "--output-format", "yaml"], "env": {}}}}

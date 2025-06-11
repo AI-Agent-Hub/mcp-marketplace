@@ -1,1 +1,0 @@
-{"mcpServers": {"yt-dlp": {"command": "npx", "args": ["-y", "@kevinwatt/yt-dlp-mcp"]}}}

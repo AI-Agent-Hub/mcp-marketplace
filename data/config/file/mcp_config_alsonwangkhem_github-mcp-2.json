@@ -1,1 +1,0 @@
-{"mcpServers": {"gh": {"command": "node", "args": ["absolute\\path\\to\\your\\index.js\\file"], "env": {"GITHUB_TOKEN": "your-github-personal-access-token"}}}}

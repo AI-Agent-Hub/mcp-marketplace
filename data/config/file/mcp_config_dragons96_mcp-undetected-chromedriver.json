@@ -1,1 +1,0 @@
-{"mcpServers": {"mcp-undetected-chromedriver": {"command": "npx", "args": ["-y", "@smithery/cli@latest", "run", "@dragons96/mcp-undetected-chromedriver", "--config", "{}"]}}}

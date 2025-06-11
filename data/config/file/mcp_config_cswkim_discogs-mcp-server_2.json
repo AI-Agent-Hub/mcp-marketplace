@@ -1,1 +1,0 @@
-{"mcpServers": {"discogs": {"command": "docker", "args": ["run", "--rm", "-i", "--env-file", "/PATH/TO/YOUR/PROJECT/FOLDER/.env", "discogs-mcp-server:latest"]}}}

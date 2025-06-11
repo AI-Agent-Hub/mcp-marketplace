@@ -1,1 +1,0 @@
-{"mcpServers": {"mcp-backlog-server": {"command": "/path/to/mcp-backlog-server/build/index.js", "env": {"BACKLOG_API_KEY": "your-api-key", "BACKLOG_SPACE_URL": "https://your-space.backlog.com"}}}}

@@ -1,1 +1,0 @@
-{"mcpServers": {"ffmpeg": {"command": "npx", "args": ["--yes", "/absolute/path/to/mcp-ffmpeg"]}}}

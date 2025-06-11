@@ -1,1 +1,0 @@
-{"mcpServers": {"perplexity": {"command": "node", "args": ["path/to/build/index.js"], "env": {"PERPLEXITY_API_KEY": "your-api-key"}, "disabled": false, "alwaysAllow": []}}}

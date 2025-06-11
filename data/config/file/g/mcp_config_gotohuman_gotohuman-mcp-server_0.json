@@ -1,1 +1,0 @@
-{"mcpServers": {"gotoHuman": {"command": "npx", "args": ["-y", "@gotohuman/mcp-server"], "env": {"GOTOHUMAN_API_KEY": "your-api-key"}}}}

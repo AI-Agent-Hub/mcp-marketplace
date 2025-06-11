@@ -1,1 +1,0 @@
-{"mcpServers": {"shopify": {"command": "npx", "args": ["shopify-mcp", "--accessToken", "<YOUR_ACCESS_TOKEN>", "--domain", "<YOUR_SHOP>.myshopify.com"]}}}

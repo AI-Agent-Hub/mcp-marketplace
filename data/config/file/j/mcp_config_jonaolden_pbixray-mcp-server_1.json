@@ -1,1 +1,0 @@
-{"mcpServers": {"pbixray": {"command": "wsl.exe", "args": ["bash", "-c", "source ~/dev/pbixray-mcp/venv/bin/activate && python ~/dev/pbixray-mcp/src/pbixray_server.py --max-rows 100 --page-size 50 --disallow get_power_query"], "env": {}}}}

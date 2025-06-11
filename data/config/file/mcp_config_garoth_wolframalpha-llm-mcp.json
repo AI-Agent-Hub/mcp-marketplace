@@ -1,1 +1,0 @@
-{"mcpServers": {"wolframalpha": {"command": "node", "args": ["/path/to/wolframalpha-mcp-server/build/index.js"], "env": {"WOLFRAM_LLM_APP_ID": "your-api-key-here"}, "disabled": false, "autoApprove": ["ask_llm", "get_simple_answer", "validate_key"]}}}

@@ -1,1 +1,0 @@
-{"mcp": {"inputs": [{"type": "promptString", "id": "apify_token", "description": "Apify API Token", "password": true}], "servers": {"actors-mcp-server": {"command": "npx", "args": ["-y", "@apify/actors-mcp-server"], "env": {"APIFY_TOKEN": "${input:apify_token}"}}}}}

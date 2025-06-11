@@ -1,1 +1,0 @@
-{"mcpServers": {"kb-server": {"command": "uvx", "args": ["kb-mcp-server@0.2.6", "--embeddings", "/path/to/knowledge_base", "--host", "localhost", "--port", "8000"], "cwd": "/path/to/working/directory"}}}

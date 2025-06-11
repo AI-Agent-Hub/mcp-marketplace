@@ -1,1 +1,0 @@
-{"mcpServers": {"notion": {"command": "node", "args": ["C:\\path\\to\\notion-mcp-server\\server.js"], "env": {"NOTION_API_KEY": "your_notion_api_key_here"}}}}

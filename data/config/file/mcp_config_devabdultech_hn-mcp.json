@@ -1,1 +1,0 @@
-{"mcpServers": {"hackernews": {"command": "npx", "args": ["-y", "@devabdultech/hn-mcp-server"]}}}

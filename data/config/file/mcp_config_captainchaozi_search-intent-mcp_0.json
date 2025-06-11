@@ -1,1 +1,0 @@
-{"mcpServers": {"search_intent": {"command": "npx", "args": ["-y", "@search-intent/mcp"], "env": {"SEARCH_INTENT_API_KEY": "xxx"}}}}

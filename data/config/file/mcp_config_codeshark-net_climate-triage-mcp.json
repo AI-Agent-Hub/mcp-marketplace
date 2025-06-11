@@ -1,1 +1,0 @@
-{"mcpServers": {"climate-triage": {"command": "npx", "args": ["-y", "git+https://github.com/Codeshark-NET/climate-triage-mcp.git"]}}}

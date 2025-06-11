@@ -1,1 +1,0 @@
-{"mcpServers": {"metasploit": {"command": "uv", "args": ["--directory", "C:\\path\\to\\MetasploitMCP", "run", "MetasploitMCP.py", "--transport", "stdio"], "env": {"MSF_PASSWORD": "yourpassword"}}}}

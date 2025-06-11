@@ -1,1 +1,0 @@
-{"mcpServers": {"mongodb": {"command": "npx", "args": ["mongo-mcp", "mongodb://<username>:<password>@<host>:<port>/<database>?authSource=admin"]}}}

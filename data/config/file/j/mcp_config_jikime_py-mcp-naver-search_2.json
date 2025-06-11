@@ -1,1 +1,0 @@
-{"mcpServers": {"Google Toolbox": {"command": "docker", "args": ["run", "-i", "--rm", "py-mcp-naver-search"]}}}

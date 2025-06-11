@@ -1,1 +1,0 @@
-{"mcpServers": {"canvas": {"command": "python", "args": ["ABSOLUTE_PATH_TO/src/canvas-student/main.py"], "env": {"CANVAS_API_TOKEN": "your_canvas_api_token", "CANVAS_BASE_URL": "https://your-institution.instructure.com"}}}}

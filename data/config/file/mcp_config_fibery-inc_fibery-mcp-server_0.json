@@ -1,1 +1,0 @@
-{"mcpServers": {"fibery-mcp-server": {"command": "uv", "args": ["tool", "run", "fibery-mcp-server", "--fibery-host", "your-domain.fibery.io", "--fibery-api-token", "your-api-token"]}}}

@@ -1,1 +1,0 @@
-{"mcpServers": {"zotero": {"command": "uvx", "args": ["--upgrade", "zotero-mcp"], "env": {"ZOTERO_LOCAL": "true", "ZOTERO_API_KEY": "", "ZOTERO_LIBRARY_ID": ""}}}}

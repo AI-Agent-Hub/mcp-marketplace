@@ -1,1 +1,0 @@
-{"mcpServers": {"mcp-google-suite": {"command": "python", "args": ["-m", "mcp_google_suite"], "env": {"GOOGLE_APPLICATION_CREDENTIALS": "~/.google/server-creds.json", "GOOGLE_OAUTH_CREDENTIALS": "~/.google/oauth.keys.json"}}}}

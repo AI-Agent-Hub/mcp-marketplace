@@ -1,1 +1,0 @@
-{"mcpServers": {"clj-kondo": {"command": "npx", "args": ["clj-kondo-mcp"], "disabled": false, "autoApprove": []}}}

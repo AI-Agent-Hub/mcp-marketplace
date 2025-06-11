@@ -1,1 +1,0 @@
-{"mcpServers": {"hh-jira-mcp-server": {"command": "uvx", "args": ["hh-jira-mcp-server"], "env": {"HH_JIRA_MCP_USER": "v.pupkin", "HH_JIRA_MCP_TEAM": "some-team", "HH_JIRA_MCP_SEARCH_FILTER": "status in (\"Development: In progress\")"}}}}

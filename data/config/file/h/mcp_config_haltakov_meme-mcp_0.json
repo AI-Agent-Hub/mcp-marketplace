@@ -1,1 +1,0 @@
-{"mcpServers": {"meme": {"command": "npx", "args": ["-y", "meme-mcp"], "env": {"IMGFLIP_USERNAME": "<IMGFLIP USERNAME>", "IMGFLIP_PASSWORD": "<IMGFLIP PASSWORD>"}}}}

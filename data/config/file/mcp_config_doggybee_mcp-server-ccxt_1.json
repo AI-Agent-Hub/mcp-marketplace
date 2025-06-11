@@ -1,1 +1,0 @@
-{"mcpServers": {"ccxt": {"command": "node", "args": ["/path/to/mcp-server-ccxt/build/index.js"]}}}

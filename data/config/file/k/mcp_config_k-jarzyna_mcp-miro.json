@@ -1,1 +1,0 @@
-{"mcpServers": {"mcp-miro": {"command": "/path/to/node-or-npx", "arguments": ["/path/to/mcp-miro/build/index.js", "--token", "MIRO-OAUTH-KEY"]}}}

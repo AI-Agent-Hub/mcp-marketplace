@@ -1,1 +1,0 @@
-{"mcpServers": {"my-wazuh-agent": {"command": "/full/path/to/python", "args": ["mcp_wazuh_server.py"]}}}

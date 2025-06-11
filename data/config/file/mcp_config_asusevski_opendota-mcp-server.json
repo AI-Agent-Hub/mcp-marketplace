@@ -1,1 +1,0 @@
-{"mcpServers": {"opendota": {"command": "wsl.exe", "args": ["--", "bash", "-c", "cd ~/opendota-mcp-server && source .venv/bin/activate && python src/opendota_server/server.py"]}}}

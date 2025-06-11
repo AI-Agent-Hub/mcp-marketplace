@@ -1,1 +1,0 @@
-{"mcpServers": {"notion": {"command": "npx", "args": ["systemprompt-mcp-notion"], "env": {"SYSTEMPROMPT_API_KEY": "your_systemprompt_api_key", "NOTION_API_KEY": "your_notion_integration_token"}}}}

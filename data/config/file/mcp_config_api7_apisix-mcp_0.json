@@ -1,1 +1,0 @@
-{"mcpServers": {"apisix-mcp": {"command": "npx", "args": ["-y", "apisix-mcp"], "env": {"APISIX_SERVER_HOST": "your-apisix-server-host", "APISIX_SERVER_PORT": "your-apisix-server-port", "APISIX_ADMIN_API_PORT": "your-apisix-admin-api-port", "APISIX_ADMIN_API_PREFIX": "your-apisix-admin-api-prefix", "APISIX_ADMIN_KEY": "your-apisix-api-key"}}}}

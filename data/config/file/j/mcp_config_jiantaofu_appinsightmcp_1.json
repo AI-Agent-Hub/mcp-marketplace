@@ -1,1 +1,0 @@
-{"mcpServers": {"app-insight-mcp": {"command": "npx", "args": ["-y", "@jeromyfu/app-insight-mcp"]}}}

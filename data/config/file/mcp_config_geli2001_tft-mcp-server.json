@@ -1,1 +1,0 @@
-{"mcpServers": {"tft-mcp": {"command": "npx", "args": ["mcp-server-tft", "--apiKey", "<YOUR_RIOT_API_KEY>", "--gameName", "<YOUR_GAME_NAME>", "--tagLine", "<YOUR_TAG_LINE>"]}}}

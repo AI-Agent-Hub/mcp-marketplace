@@ -1,1 +1,0 @@
-{"mcpServers": {"mcp-server-weread": {"command": "node", "args": ["/path/to/mcp-server-weread/build/index.js"], "env": {"WEREAD_COOKIE": "\u4f60\u7684\u5fae\u4fe1\u8bfb\u4e66cookie"}}}}

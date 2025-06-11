@@ -1,1 +1,0 @@
-{"mcpServers": {"mcp2lambda": {"command": "uv", "args": ["--directory", "<full path to the mcp2lambda directory>", "run", "main.py"]}}}

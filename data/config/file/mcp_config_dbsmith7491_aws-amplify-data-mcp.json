@@ -1,1 +1,0 @@
-{"mcpServers": {"amplify-data-api": {"command": "node", "args": ["/ABSOLUTE/PATH/TO/aws-amplify-data-mcp/build/index.js", "--amplify-outputs", "/ABSOLUTE/PATH/TO/YOUR/amplify_outputs.json"], "env": {"AMPLIFY_USERNAME": "your-admin-username", "AMPLIFY_PASSWORD": "your-admin-password"}}}}

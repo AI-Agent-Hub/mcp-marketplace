@@ -1,1 +1,0 @@
-{"mcpServers": {"portfolio-manager": {"command": "/path/to/portfolio-manager-mcp/venv/bin/python", "args": ["/path/to/portfolio-manager-mcp/main.py"], "env": {"PYTHONPATH": "/path/to/portfolio-manager-mcp", "ALPHA_VANTAGE_API_KEY": "your_key_here", "NEWS_API_KEY": "your_key_here"}}}}

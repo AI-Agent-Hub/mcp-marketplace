@@ -1,1 +1,0 @@
-{"mcpServers": {"grafana": {"command": "mcp-grafana", "args": [], "env": {"GRAFANA_URL": "http://localhost:3000", "GRAFANA_API_KEY": "<your service account token>"}}}}

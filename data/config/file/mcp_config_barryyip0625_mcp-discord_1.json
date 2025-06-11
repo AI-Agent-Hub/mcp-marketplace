@@ -1,1 +1,0 @@
-{"mcpServers": {"discord": {"command": "node", "args": ["path/to/mcp-discord/build/index.js", "--transport", "http", "--port", "3000", "--config", "your_discord_bot_token"]}}}

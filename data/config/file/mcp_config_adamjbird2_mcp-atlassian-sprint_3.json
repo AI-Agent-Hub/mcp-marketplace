@@ -1,1 +1,0 @@
-{"mcpServers": {"mcp-atlassian": {"command": "docker", "args": ["run", "--rm", "-i", "mcp/atlassian", "--confluence-url=https://your-company.atlassian.net/wiki", "--confluence-username=your.email@company.com", "--confluence-token=your_api_token", "--jira-url=https://your-company.atlassian.net", "--jira-username=your.email@company.com", "--jira-token=your_api_token"]}}}

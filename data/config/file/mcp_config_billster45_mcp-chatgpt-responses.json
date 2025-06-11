@@ -1,1 +1,0 @@
-{"mcpServers": {"chatgpt": {"command": "uv", "args": ["--directory", "\\path\\to\\mcp-chatgpt-responses", "run", "chatgpt_server.py"], "env": {"OPENAI_API_KEY": "your-api-key-here", "DEFAULT_MODEL": "gpt-4o", "DEFAULT_TEMPERATURE": "0.7", "MAX_TOKENS": "1000"}}}}

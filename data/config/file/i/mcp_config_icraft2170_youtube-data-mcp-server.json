@@ -1,1 +1,0 @@
-{"mcpServers": {"youtube": {"command": "npx", "args": ["-y", "youtube-data-mcp-server"], "env": {"YOUTUBE_API_KEY": "YOUR_API_KEY_HERE", "YOUTUBE_TRANSCRIPT_LANG": "ko"}}}}

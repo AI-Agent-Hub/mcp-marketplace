@@ -1,1 +1,0 @@
-{"mcpServers": {"github-projects": {"command": "uv", "args": ["--directory", "/path/to/github-projects-mcp", "run", "mcp-github-projects"], "env": {"GITHUB_TOKEN": "your_pat_here"}}}}

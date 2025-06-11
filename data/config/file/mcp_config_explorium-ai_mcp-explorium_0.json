@@ -1,1 +1,0 @@
-{"mcpServers": {"Explorium": {"command": "<PATH_TO_UVX>", "args": ["explorium-mcp-server"], "env": {"EXPLORIUM_API_KEY": "<YOUR_API_KEY>"}}}}

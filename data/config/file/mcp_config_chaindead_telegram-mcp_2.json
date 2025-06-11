@@ -1,1 +1,0 @@
-{"mcpServers": {"telegram-mcp": {"command": "telegram-mcp", "env": {"TG_APP_ID": "<your-app-id>", "TG_API_HASH": "<your-api-hash>"}}}}

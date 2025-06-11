@@ -1,1 +1,0 @@
-{"mcpServers": {"node-omnibus": {"command": "node", "args": ["path/to/node-omnibus-server/dist/index.js"]}}}

@@ -1,1 +1,0 @@
-{"mcpServers": {"pymol": {"command": "/path/to/mcp", "args": ["run", "/path/to/molecule-mcp/pymol_server.py"]}, "chimerax": {"command": "/path/to/mcp", "args": ["run", "/path/to/molecule-mcp/ChimeraX_server.py"]}, "gromacs_copilot": {"command": "/path/to/mcp", "args": ["run", "/path/to/molecule-mcp/mcp_server.py"]}}}

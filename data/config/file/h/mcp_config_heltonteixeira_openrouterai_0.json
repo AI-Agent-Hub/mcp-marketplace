@@ -1,1 +1,0 @@
-{"mcpServers": {"openrouterai": {"command": "npx", "args": ["@mcpservers/openrouterai"], "env": {"OPENROUTER_API_KEY": "your-api-key-here", "OPENROUTER_DEFAULT_MODEL": "optional-default-model"}}}}

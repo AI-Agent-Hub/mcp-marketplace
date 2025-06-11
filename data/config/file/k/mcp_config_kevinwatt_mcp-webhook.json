@@ -1,1 +1,0 @@
-{"mcpServers": {"webhook": {"command": "npx", "args": ["-y", "@kevinwatt/mcp-webhook"], "env": {"WEBHOOK_URL": "your-webhook-url"}, "alwaysAllow": ["send_message"]}}}

@@ -1,1 +1,0 @@
-{"mcpServers": {"azure-search": {"command": "C:\\path\\to\\.venv\\Scripts\\python.exe", "args": ["C:\\path\\to\\azure_search_server.py"], "env": {"AZURE_SEARCH_SERVICE_ENDPOINT": "https://your-service-name.search.windows.net", "AZURE_SEARCH_INDEX_NAME": "your-index-name", "AZURE_SEARCH_API_KEY": "your-api-key"}}}}

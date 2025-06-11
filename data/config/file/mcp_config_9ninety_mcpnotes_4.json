@@ -1,1 +1,0 @@
-{"mcpServers": {"mcp-notes": {"command": "npx", "args": ["-y", "-p", "mcp-notes", "mcp-notes-server", "--dynamodb", "dynamodb://access_key:secret_key@region/table"]}}}

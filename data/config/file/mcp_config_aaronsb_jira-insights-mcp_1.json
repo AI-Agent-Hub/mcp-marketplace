@@ -1,1 +1,0 @@
-{"mcpServers": {"jira-insights": {"command": "docker", "args": ["run", "--rm", "-i", "-e", "JIRA_API_TOKEN", "-e", "JIRA_EMAIL", "-e", "JIRA_HOST", "ghcr.io/aaronsb/jira-insights-mcp:latest"], "env": {"JIRA_API_TOKEN": "your-api-token", "JIRA_EMAIL": "your-email@example.com", "JIRA_HOST": "https://your-domain.atlassian.net"}}}}

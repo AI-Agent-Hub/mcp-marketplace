@@ -1,1 +1,0 @@
-{"mcpServers": {"memory-bank": {"command": "python", "args": ["src/mcp_memory_bank/main.py"]}}}

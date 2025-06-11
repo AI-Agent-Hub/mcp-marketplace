@@ -1,1 +1,0 @@
-{"mcp": {"inputs": [{"type": "promptString", "id": "kubeconfig_path", "description": "Path to kubeconfig file", "default": "${env:HOME}/.kube/config"}], "servers": {"kubernetes": {"command": "path/to/k8smcp", "args": ["stdio", "--kubeconfig=/path/to/your/kubeconfig"]}}}}

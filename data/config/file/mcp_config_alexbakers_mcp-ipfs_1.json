@@ -1,1 +1,0 @@
-{"mcpServers": {"mcp-ipfs": {"command": "docker", "args": ["run", "-i", "--rm", "-v", "/path/to/your/project:/path/to/your/project", "-e", "W3_LOGIN_EMAIL", "alexbakers/mcp-ipfs"], "env": {"W3_LOGIN_EMAIL": "your-email@example.com"}}}}

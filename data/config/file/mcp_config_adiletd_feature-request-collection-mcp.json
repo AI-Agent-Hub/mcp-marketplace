@@ -1,1 +1,0 @@
-{"mcpServers": {"supabase": {"command": "npx", "args": ["tsx", "/path/to/mcp-server.ts"]}}}

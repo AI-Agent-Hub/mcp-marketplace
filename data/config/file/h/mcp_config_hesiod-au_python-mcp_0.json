@@ -1,1 +1,0 @@
-{"mcpServers": {"python-code-explorer": {"command": "python", "args": ["/path/to/python-mcp-new/server.py"], "env": {"TOKEN_LIMIT": "8000"}}}}

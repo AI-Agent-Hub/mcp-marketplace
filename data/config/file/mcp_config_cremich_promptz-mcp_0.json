@@ -1,1 +1,0 @@
-{"mcpServers": {"promptz.dev": {"command": "npx", "args": ["-y", "@promptz/mcp"], "env": {"PROMPTZ_API_URL": "your-api-url-from-promptz.dev", "PROMPTZ_API_KEY": "your-api-key-from-promptz.dev"}, "disabled": false, "autoApprove": []}}}

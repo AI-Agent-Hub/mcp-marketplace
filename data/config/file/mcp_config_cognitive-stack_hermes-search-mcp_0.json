@@ -1,1 +1,0 @@
-{"mcpServers": {"hermes-search-mcp": {"command": "npx", "args": ["-y", "hermes-search-mcp@latest"], "env": {"AZURE_SEARCH_ENDPOINT": "your-search-endpoint", "AZURE_SEARCH_API_KEY": "your-api-key", "AZURE_SEARCH_INDEX_NAME": "your-index-name"}, "disabled": false, "autoApprove": []}}}

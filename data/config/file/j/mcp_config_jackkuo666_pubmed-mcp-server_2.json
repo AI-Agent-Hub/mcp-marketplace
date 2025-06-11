@@ -1,1 +1,0 @@
-{"mcpServers": {"pubmed": {"command": "bash", "args": ["-c", "source /home/YOUR/PATH/mcp-server-pubmed/.venv/bin/activate && python /home/YOUR/PATH/pubmed-mcp-server.py"], "env": {}, "disabled": false, "autoApprove": []}}}

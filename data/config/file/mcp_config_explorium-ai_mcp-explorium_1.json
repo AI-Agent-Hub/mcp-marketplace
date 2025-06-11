@@ -1,1 +1,0 @@
-{"mcpServers": {"Explorium": {"command": "<UV_INSTALL_PATH>", "args": ["run", "--directory", "<REPOSITORY_PATH>", "mcp", "run", "local_dev_server.py"], "env": {"EXPLORIUM_API_KEY": "<YOUR_API_KEY>"}}}}

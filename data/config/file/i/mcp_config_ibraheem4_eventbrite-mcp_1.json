@@ -1,1 +1,0 @@
-{"mcpServers": {"eventbrite": {"command": "npx", "args": ["-y", "@ibraheem4/eventbrite-mcp"], "env": {"EVENTBRITE_API_KEY": "your-eventbrite-api-key"}, "disabled": false, "autoApprove": []}}}

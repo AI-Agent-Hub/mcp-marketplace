@@ -1,1 +1,0 @@
-{"mcpServers": {"ethereum-tools": {"command": "node", "args": ["YOUR_ABSOLUTE_PATH_TO/main.js"], "env": {"ETH_RPC_URL": "https://eth.llamarpc.com", "MORALIS_API_KEY": "your_moralis_api_key", "ETHERSCAN_API_KEY": "your_etherscan_api_key", "CODEX_API_KEY": "your_codex_api_key", "RAPIDAPI_KEY": "your_rapidapi_key"}}}}

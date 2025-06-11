@@ -1,1 +1,0 @@
-{"mcpServers": [{"name": "whatsapp-mcp", "transport": {"command": "node", "args": ["path/to/your/index.js"]}}]}

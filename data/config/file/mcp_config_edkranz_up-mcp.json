@@ -1,1 +1,0 @@
-{"mcpServers": {"up-mcp": {"command": "/ABSOLUTE/PATH/TO/uv", "args": ["--directory", "/ABSOLUTE/PATH/TO/up-mcp", "run", "up_mcp.py"], "env": {"UP_TOKEN": "up:yeah:your-token-here"}}}}

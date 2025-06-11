@@ -1,1 +1,0 @@
-{"mcpServers": {"stock-market": {"command": "node", "args": ["/ABSOLUTE/PATH/TO/PARENT/FOLDER/mcp-stock-market/build/index.js"]}}}

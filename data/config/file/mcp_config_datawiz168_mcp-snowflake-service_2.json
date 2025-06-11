@@ -1,1 +1,0 @@
-{"mcpServers": {"snowflake": {"command": "/usr/bin/python3", "args": ["/path/to/mcp-snowflake/server.py"]}}}

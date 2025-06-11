@@ -1,1 +1,0 @@
-{"mcpServers": {"bigquery": {"command": "node", "args": ["/path/to/your/clone/mcp-bigquery-server/dist/index.js", "--project-id", "your-project-id", "--location", "us-central1", "--key-file", "/path/to/service-account-key.json"]}}}

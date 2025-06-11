@@ -1,1 +1,0 @@
-{"mcpServers": {"langflow-doc-qa-server": {"command": "node", "args": ["/path/to/doc-qa-server/build/index.js"], "env": {"API_ENDPOINT": "http://127.0.0.1:7860/api/v1/run/480ec7b3-29d2-4caa-b03b-e74118f35fac"}}}}

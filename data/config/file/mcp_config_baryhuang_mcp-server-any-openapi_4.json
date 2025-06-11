@@ -1,1 +1,0 @@
-{"mcpServers": {"any_openapi": {"command": "docker", "args": ["run", "-i", "--rm", "-e", "OPENAPI_JSON_DOCS_URL=https://api.example.com/openapi.json", "-e", "MCP_API_PREFIX=finance", "-e", "GLOBAL_TOOL_PROMPT='Access to insights apis for ACME Financial Services abc.com .", "buryhuang/mcp-server-any-openapi:latest"]}}}

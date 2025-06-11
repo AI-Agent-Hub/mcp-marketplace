@@ -1,1 +1,0 @@
-{"mcpServers": {"mongodb-lens": {"command": "docker", "args": ["run", "--rm", "-i", "--network=host", "mongodb-lens", "mongodb://your-connection-string"]}}}

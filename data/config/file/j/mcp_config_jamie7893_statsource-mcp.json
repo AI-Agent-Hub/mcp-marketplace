@@ -1,1 +1,0 @@
-{"mcpServers": {"statsource": {"command": "docker", "args": ["run", "-i", "--rm", "-e", "API_KEY=YOUR_STATSOURCE_API_KEY", "-e", "DB_CONNECTION_STRING=postgresql://your_db_user:your_db_password@your_db_host:5432/your_db_name", "-e", "DB_SOURCE_TYPE=database", "jamie78933/statsource-mcp"], "protocolVersion": "2024-11-05"}}}

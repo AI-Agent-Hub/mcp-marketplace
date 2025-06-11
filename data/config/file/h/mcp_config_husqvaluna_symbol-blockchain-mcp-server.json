@@ -1,1 +1,0 @@
-{"mcpServers": {"symbol": {"command": "npx", "args": ["-y", "tsx", "/path/to/your/mcp/symbol-mcp-server/src/index.ts"]}}}

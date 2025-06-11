@@ -1,1 +1,0 @@
-{"mcpServers": {"claudeus-plane-mcp": {"command": "docker", "args": ["run", "-i", "--rm", "--network=host", "--mount", "type=bind,src=/absolute/path/to/your/plane-instances.json,dst=/app/plane-instances.json", "--mount", "type=bind,src=/absolute/path/to/your/.env,dst=/app/.env", "mcp/plane", "--config", "/app/plane-instances.json"]}}}

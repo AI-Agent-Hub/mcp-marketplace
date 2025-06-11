@@ -1,1 +1,0 @@
-{"mcpServers": {"gsc": {"command": "npx", "args": ["-y", "mcp-server-gsc"], "env": {"GOOGLE_APPLICATION_CREDENTIALS": "/path/to/credentials.json"}}}}

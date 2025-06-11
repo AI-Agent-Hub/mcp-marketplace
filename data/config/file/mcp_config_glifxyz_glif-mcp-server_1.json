@@ -1,1 +1,0 @@
-{"mcpServers": {"glif": {"command": "node", "args": ["/path/to/glif-mcp/build/index.js"], "env": {"GLIF_API_TOKEN": "your-token-here"}}}}

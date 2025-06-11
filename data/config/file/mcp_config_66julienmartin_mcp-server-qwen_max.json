@@ -1,1 +1,0 @@
-{"mcpServers": {"qwen_max": {"command": "node", "args": ["/path/to/Qwen_Max/build/index.js"], "env": {"DASHSCOPE_API_KEY": "your-api-key-here"}}}}

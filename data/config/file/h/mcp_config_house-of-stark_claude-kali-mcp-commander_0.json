@@ -1,1 +1,0 @@
-{"mcpServers": {"kali-mcp": {"command": "docker", "args": ["exec", "-i", "kali-mcp-commander-minimal", "npx", "@wonderwhy-er/desktop-commander"], "name": "Kali Linux MCP", "description": "Access Kali Linux security tools via MCP"}}, "defaultMcpServerId": "kali-mcp"}

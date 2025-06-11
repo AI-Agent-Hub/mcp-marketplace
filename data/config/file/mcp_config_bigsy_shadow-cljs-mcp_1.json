@@ -1,1 +1,0 @@
-{"mcpServers": {"shadow-cljs-mcp": {"command": "npx", "args": ["shadow-cljs-mcp", "--host", "localhost", "--port", "9630"], "disabled": false, "autoApprove": [], "timeout": 60}}}

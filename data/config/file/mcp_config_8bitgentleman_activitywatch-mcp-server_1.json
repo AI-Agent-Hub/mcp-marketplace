@@ -1,1 +1,0 @@
-{"mcpServers": {"activitywatch": {"command": "node", "args": ["/path/to/activitywatch-mcp-server/dist/index.js"]}}}

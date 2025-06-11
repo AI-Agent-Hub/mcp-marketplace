@@ -1,1 +1,0 @@
-{"mcpServers": {"aws-mcp-server": {"command": "docker", "args": ["run", "-i", "--rm", "-v", "/Users/YOUR_USER_NAME/.aws:/home/appuser/.aws:ro", "ghcr.io/alexei-led/aws-mcp-server:latest"]}}}

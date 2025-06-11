@@ -1,1 +1,0 @@
-{"mcpServers": {"scrapi": {"command": "docker", "args": ["run", "-i", "--rm", "-e", "SCRAPI_API_KEY", "deventerprisesoftware/scrapi-mcp"], "env": {"SCRAPI_API_KEY": "<YOUR_API_KEY>"}}}}

@@ -1,1 +1,0 @@
-{"mcpServers": {"VideoCapture ": {"command": "uv", "args": ["run", "--with", "mcp[cli]", "--with", "numpy", "--with", "opencv-python", "mcp", "run", "/ABSOLUTE_PATH/videocapture_mcp.py"]}}}

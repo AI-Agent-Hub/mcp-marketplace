@@ -1,1 +1,0 @@
-{"mcpServers": {"instantdb-server": {"command": "node", "args": ["/path/to/instantdb-server/build/index.js"], "env": {"INSTANT_APP_ID": "your_app_id", "INSTANT_APP_ADMIN_TOKEN": "your_admin_token"}, "disabled": false, "autoApprove": []}}}

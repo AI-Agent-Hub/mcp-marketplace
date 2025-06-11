@@ -1,1 +1,0 @@
-{"mcpServers": {"backlog": {"command": "npx", "args": ["-y", "backlog-mcp-server"], "env": {"BACKLOG_API_KEY": "YOUR_API_KEY_HERE", "BACKLOG_SPACE_ID": "YOUR_SPACE_ID_HERE"}}}}

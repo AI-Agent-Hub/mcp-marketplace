@@ -1,1 +1,0 @@
-{"mcpServers": {"tavily_search": {"command": "uv", "args": ["--directory", "%USERPROFILE%/Documents/GitHub/mcp-tavily-search", "run", "python", "main.py"]}}}

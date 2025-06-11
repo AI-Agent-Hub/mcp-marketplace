@@ -1,1 +1,0 @@
-{"mcpServers": {"jira": {"command": "node", "args": ["/path/to/jira-server/build/index.js"], "env": {"JIRA_EMAIL": "your-email@example.com", "JIRA_API_TOKEN": "your-api-token", "JIRA_DOMAIN": "your-domain"}}}}

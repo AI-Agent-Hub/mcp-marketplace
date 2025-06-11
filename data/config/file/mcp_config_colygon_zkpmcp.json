@@ -1,1 +1,0 @@
-{"mcpServers": {"zkproof": {"command": "node", "args": ["/path/to/zkMCP/server/build/index.js"], "env": {"ZKINTRO_DIR": "/path/to/circom/projects"}, "disabled": false, "autoApprove": []}}}

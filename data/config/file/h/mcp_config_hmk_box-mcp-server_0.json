@@ -1,1 +1,0 @@
-{"mcpServers": {"box": {"command": "npx", "args": ["box-mcp-server"], "env": {"BOX_JWT_BASE64": "YOUR_BASE64_ENCODED_JWT", "BOX_USER_ID": "123456"}}}}

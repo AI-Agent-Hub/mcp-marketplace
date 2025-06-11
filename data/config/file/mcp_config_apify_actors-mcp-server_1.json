@@ -1,1 +1,0 @@
-{"mcpServers": {"apify": {"type": "sse", "url": "https://actors-mcp-server.apify.actor/sse", "env": {"APIFY_TOKEN": "your-apify-token"}}}}

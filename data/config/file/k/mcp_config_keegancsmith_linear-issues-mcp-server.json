@@ -1,1 +1,0 @@
-{"mcpServers": {"linear-issues": {"command": "npx", "args": ["-y", "@keegancsmith/linear-issues-mcp-server"], "env": {"LINEAR_API_TOKEN": "your_linear_api_token_here"}}}}

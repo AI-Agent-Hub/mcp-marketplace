@@ -1,1 +1,0 @@
-{"mcpServers": {"ens": {"command": "npx", "args": ["-y", "mcp-server-ens"], "env": {"PROVIDER_URL": "https://your-provider-url.com,https://your-backup-provider.com"}}}}

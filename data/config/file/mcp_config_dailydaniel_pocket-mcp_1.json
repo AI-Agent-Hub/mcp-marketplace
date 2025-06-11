@@ -1,1 +1,0 @@
-{"mcpServers": {"jetbrains": {"command": "npx", "args": ["-y", "@jetbrains/mcp-proxy"]}, "logseq": {"command": "uvx", "args": ["mcp-server-logseq"], "env": {"LOGSEQ_API_TOKEN": "API_KEY", "LOGSEQ_API_URL": "http://127.0.0.1:<port>"}}, "brave-search": {"command": "npx", "args": ["-y", "@modelcontextprotocol/server-brave-search"], "env": {"BRAVE_API_KEY": "API_KEY"}}}}

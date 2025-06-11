@@ -1,1 +1,0 @@
-{"mcpServers": {"postgres": {"type": "sse", "serverUrl": "http://localhost:8000/sse"}}}

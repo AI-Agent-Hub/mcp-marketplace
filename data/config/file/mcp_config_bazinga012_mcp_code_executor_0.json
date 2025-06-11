@@ -1,1 +1,0 @@
-{"mcpServers": {"mcp-code-executor": {"command": "node", "args": ["/path/to/mcp_code_executor/build/index.js"], "env": {"CODE_STORAGE_DIR": "/path/to/code/storage", "ENV_TYPE": "conda", "CONDA_ENV_NAME": "your-conda-env"}}}}

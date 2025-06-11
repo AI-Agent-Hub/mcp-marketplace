@@ -1,1 +1,0 @@
-{"mcpServers": {"spotify": {"command": "node", "args": ["/absolute/path/to/vulpes-spotify-mcp/dist/index.js"], "env": {"SPOTIFY_CLIENT_ID": "your_client_id", "SPOTIFY_CLIENT_SECRET": "your_client_secret", "SPOTIFY_REDIRECT_URI": "http://localhost:8888", "SPOTIFY_REFRESH_TOKEN": "your_refresh_token"}}}}

@@ -1,1 +1,0 @@
-{"mcpServers": {"nrepl-mcp-server": {"command": "npx", "args": ["nrepl-mcp-server"], "disabled": false, "autoApprove": []}}}

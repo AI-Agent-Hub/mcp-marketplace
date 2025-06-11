@@ -1,1 +1,0 @@
-{"mcpServers": {"exa": {"command": "npx", "args": ["/path/to/exa-mcp-server/build/index.js"], "env": {"EXA_API_KEY": "your-api-key-here"}}}}

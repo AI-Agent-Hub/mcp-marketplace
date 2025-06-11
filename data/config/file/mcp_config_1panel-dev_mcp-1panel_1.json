@@ -1,1 +1,0 @@
-{"mcpServers": {"mcp-1panel": {"command": "docker", "args": ["run", "-i", "--rm", "-e", "PANEL_HOST", "-e", "PANEL_ACCESS_TOKEN", "1panel/1panel-mcp-server"], "env": {"PANEL_HOST": "such as http://localhost:8080", "PANEL_ACCESS_TOKEN": "<your 1Panel access token>"}}}}

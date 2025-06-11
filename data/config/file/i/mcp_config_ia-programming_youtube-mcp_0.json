@@ -1,1 +1,0 @@
-{"mcpServers": {"youtube": {"command": "node", "args": ["path/to/youtube-mcp/build/index.js"], "env": {"YOUTUBE_API_KEY": "your_api_key", "YOUTUBE_CLIENT_ID": "your_client_id", "YOUTUBE_CLIENT_SECRET": "your_client_secret"}, "disabled": false, "alwaysAllow": []}}}

@@ -1,1 +1,0 @@
-{"mcpServers": {"whattimeisit": {"command": "uv", "args": ["--directory", "path/to/whattimeisit-mcp", "run", "main.py"]}}}

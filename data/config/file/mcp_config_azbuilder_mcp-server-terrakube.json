@@ -1,1 +1,0 @@
-{"mcpServers": {"terrakube": {"command": "npx", "args": ["-y", "@terrakube/mcp-server"], "env": {"TERRAKUBE_API_URL": "<YOUR_API_URL>", "TERRAKUBE_PAT_TOKEN": "<YOUR_PAT_TOKEN>"}}}}

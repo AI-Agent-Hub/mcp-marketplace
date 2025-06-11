@@ -1,1 +1,0 @@
-{"mcpServers": {"claudeus-plane-mcp": {"command": "npx", "args": ["-y", "claudeus-plane-mcp"], "env": {"PLANE_INSTANCES_PATH": "/absolute/path/to/your/plane-instances.json"}}}}

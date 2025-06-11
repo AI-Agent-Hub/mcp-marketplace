@@ -1,1 +1,0 @@
-{"mcpServers": {"AUM5itYnoMcxPiU2vFa3Z": {"name": "Excel\u64cd\u4f5c", "type": "stdio", "description": "", "isActive": true, "command": "java", "args": ["-Dspring.ai.mcp.server.stdio=true", "-Dspring.main.web-application-type=none", "-Dfile.encoding=UTF-8", "-jar", "{your_path}/mcp-excel-server-0.0.1-SNAPSHOT.jar"]}}}

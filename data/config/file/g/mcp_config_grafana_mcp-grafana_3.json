@@ -1,1 +1,0 @@
-{"mcpServers": {"grafana": {"command": "docker", "args": ["run", "--rm", "-p", "8000:8000", "-e", "GRAFANA_URL", "-e", "GRAFANA_API_KEY", "mcp/grafana", "-debug"], "env": {"GRAFANA_URL": "http://localhost:3000", "GRAFANA_API_KEY": "<your service account token>"}}}}

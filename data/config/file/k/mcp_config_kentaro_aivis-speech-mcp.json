@@ -1,1 +1,0 @@
-{"mcpServers": {"AivisSpeech-MCP": {"command": "node", "args": ["/path/to/aivis-speech-mcp/dist/index.js"]}}}

@@ -1,1 +1,0 @@
-{"mcpServers": {"ai-agent-marketplace-index-mcp": {"command": "uv", "args": ["--directory", "/ABSOLUTE/PATH/TO/PARENT/FOLDER/ai-agent-marketplace-index-mcp/src/ai-agent-marketplace-index", "run", "server.py"]}}}

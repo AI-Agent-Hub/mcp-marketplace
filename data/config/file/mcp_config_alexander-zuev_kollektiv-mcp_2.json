@@ -1,1 +1,0 @@
-{"mcpServers": {"kollektiv": {"timeout": 60, "command": "npx", "args": ["-y", "mcp-remote", "https://mcp.thekollektiv.ai/mcp"], "transportType": "stdio", "disabled": false}}}

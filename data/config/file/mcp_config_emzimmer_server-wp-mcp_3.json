@@ -1,1 +1,0 @@
-{"mcpServers": {"wordpress": {"command": "node", "args": ["path/to/server/dist/index.js"], "env": {"WP_SITES_PATH": "/absolute/path/to/wp-sites.json"}}}}

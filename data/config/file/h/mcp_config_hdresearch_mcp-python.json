@@ -1,1 +1,0 @@
-{"mcpServers": {"my_database": {"command": "uv", "args": ["--directory", "/directory/where/this/app/is/located/app/", "run", "server.py"], "env": {"DB_URL": "postgresql://postgres:password@localhost:5432/mydatabase"}}}}

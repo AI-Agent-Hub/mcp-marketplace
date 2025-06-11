@@ -1,1 +1,0 @@
-{"mcpServers": {"clojars-deps-server": {"command": "node", "args": ["/path/to/clojars-deps-server/build/index.js"]}}}

@@ -1,1 +1,0 @@
-{"mcpServers": {"statusObserver": {"command": "node", "args": ["ABSOLUTE_PATH_TO_DIRECTORY/mcp-status-observer/build/index.js"]}}}

@@ -1,1 +1,0 @@
-{"mcpServers": {"headline-vibes": {"command": "node", "args": ["/path/to/headline-vibes/build/index.mjs"], "env": {"NEWS_API_KEY": "your-api-key-here"}, "disabled": false, "autoApprove": []}}}

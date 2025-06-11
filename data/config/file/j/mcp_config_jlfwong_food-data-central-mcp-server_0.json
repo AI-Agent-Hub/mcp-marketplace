@@ -1,1 +1,0 @@
-{"mcpServers": {"food-data-central": {"command": "npx", "args": ["tsx", "/path/to/food-data-central-mcp-server/src/index.ts"], "env": {"PATH": "/opt/homebrew/bin", "USDA_API_KEY": "<INSERT KEY HERE>"}}}}

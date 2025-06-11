@@ -1,1 +1,0 @@
-{"mcpServers": {"gmail": {"command": "npx", "args": ["-y", "@cablate/mcp-gmail"], "env": {"GMAIL_CLIENT_ID": "your_client_id", "GMAIL_CLIENT_SECRET": "your_client_secret", "GMAIL_REFRESH_TOKEN": "your_refresh_token"}, "enabled": true}}}

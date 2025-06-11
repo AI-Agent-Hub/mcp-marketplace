@@ -1,1 +1,0 @@
-{"mcpServers": {"spreadsheet": {"command": "node", "args": ["<absolute-path-to-project>/build/index.js"]}}}

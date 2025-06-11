@@ -1,1 +1,0 @@
-{"mcpServers": {"mcp-server-fetch": {"command": "uvx", "args": ["mcp-server-fetch"], "disabled": false}, "server-memory": {"command": "npx", "args": ["-y", "@modelcontextprotocol/server-memory"], "disabled": false}}}

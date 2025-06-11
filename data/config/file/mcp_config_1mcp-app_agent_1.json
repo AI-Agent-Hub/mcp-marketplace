@@ -1,1 +1,0 @@
-{"mcpServers": {"web-server": {"command": "uvx", "args": ["mcp-server-fetch"], "tags": ["network", "web"], "disabled": false}, "file-server": {"command": "npx", "args": ["-y", "@modelcontextprotocol/server-filesystem", "~/Downloads"], "tags": ["filesystem"], "disabled": false}}}

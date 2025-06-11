@@ -1,1 +1,0 @@
-{"mcpServers": {"GraphQL Schema": {"command": "npx", "args": ["-y", "mcp-graphql-schema", "/ABSOLUTE/PATH/TO/schema.graphqls"]}}}

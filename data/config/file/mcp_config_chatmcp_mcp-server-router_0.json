@@ -1,1 +1,0 @@
-{"mcpServers": {"fetch": {"command": "npx", "args": ["-y", "mcprouter"], "env": {"SERVER_KEY": "xxx"}}}}

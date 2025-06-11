@@ -1,1 +1,0 @@
-{"mcpServers": {"semanticscholar": {"command": "bash", "args": ["-c", "source /home/YOUR/PATH/.venv/bin/activate && python /home/YOUR/PATH/semanticscholar_mcp_server.py"], "env": {}, "disabled": false, "autoApprove": []}}}

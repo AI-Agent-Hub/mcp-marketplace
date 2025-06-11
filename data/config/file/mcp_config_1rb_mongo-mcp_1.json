@@ -1,1 +1,0 @@
-{"mcpServers": {"mongodb": {"command": "node", "args": ["dist/index.js", "mongodb://root:example@localhost:27017/test?authSource=admin"]}}}

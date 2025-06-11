@@ -1,1 +1,0 @@
-{"mcpServers": {"things": {"command": "uv", "args": ["--directory", "/ABSOLUTE/PATH/TO/PARENT/FOLDER/things-mcp", "run", "things_server.py"]}}}

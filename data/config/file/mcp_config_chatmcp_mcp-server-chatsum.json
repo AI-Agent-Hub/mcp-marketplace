@@ -1,1 +1,0 @@
-{"mcpServers": {"mcp-server-chatsum": {"command": "path-to/bin/node", "args": ["path-to/mcp-server-chatsum/build/index.js"], "env": {"CHAT_DB_PATH": "path-to/mcp-server-chatsum/chatbot/data/chat.db"}}}}

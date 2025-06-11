@@ -1,1 +1,0 @@
-{"mcpServers": {"eol": {"command": "npx", "args": ["/path/to/eol-mcp-server/build/index.js"]}}}
