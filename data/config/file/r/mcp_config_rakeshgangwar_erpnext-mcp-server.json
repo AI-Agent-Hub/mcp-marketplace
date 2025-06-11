@@ -1,0 +1,1 @@
+{"mcpServers": {"erpnext": {"command": "node", "args": ["/path/to/erpnext-server/build/index.js"], "env": {"ERPNEXT_URL": "http://your-erpnext-instance.com", "ERPNEXT_API_KEY": "your-api-key", "ERPNEXT_API_SECRET": "your-api-secret"}}}}

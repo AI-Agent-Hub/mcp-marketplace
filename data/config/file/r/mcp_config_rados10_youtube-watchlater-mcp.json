@@ -1,0 +1,1 @@
+{"mcpServers": {"youtube-watchlater": {"command": "node", "args": ["/path/to/youtube-watchlater/build/index.js"], "env": {"OAUTH_CLIENT_ID": "your_client_id", "OAUTH_CLIENT_SECRET": "your_client_secret", "OAUTH_REFRESH_TOKEN": "your_refresh_token"}}}}

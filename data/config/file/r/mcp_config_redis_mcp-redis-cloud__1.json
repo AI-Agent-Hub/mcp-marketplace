@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-redis-cloud": {"command": "node", "args": ["--experimental-fetch", "<absolute_path_to_project_root>/dist/index.js"], "env": {"API_KEY": "<redis_cloud_api_key>", "SECRET_KEY": "<redis_cloud_api_secret_key>"}}}}

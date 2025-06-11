@@ -1,0 +1,1 @@
+{"mcpServers": {"todo": {"command": "node", "args": ["/absolute/path/to/todo-list-mcp/dist/index.js"]}}}

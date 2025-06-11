@@ -1,0 +1,1 @@
+{"mcpServers": {"postgres-query": {"command": "node", "args": ["/path/to/your/mcp-postgres-query-server/dist/index.js", "postgresql://username:password@hostname:port/database"]}}}

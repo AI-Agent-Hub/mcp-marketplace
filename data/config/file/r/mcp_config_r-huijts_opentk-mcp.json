@@ -1,0 +1,1 @@
+{"mcpServers": {"opentk-mcp-local": {"command": "node", "args": ["/absolute/path/to/your/opentk-mcp/dist/index.js"]}}}

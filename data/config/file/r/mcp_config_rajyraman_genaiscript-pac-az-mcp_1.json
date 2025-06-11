@@ -1,0 +1,1 @@
+{"globalShortcut": "Ctrl+Space", "mcpServers": {"genaiscript-mcp": {"type": "stdio", "command": "npx", "args": ["genaiscript", "mcp", "--remote", "https://github.com/rajyraman/genaiscript-pac-az-mcp/", "--remote-branch", "main", "--groups", "mcp", "--startup", "mcp_resources"], "env": {"DEBUG": "*"}}}}

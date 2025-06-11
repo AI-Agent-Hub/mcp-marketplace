@@ -1,0 +1,1 @@
+{"mcpServers": {"oura": {"command": "uvx", "args": ["oura-mcp-server"], "env": {"OURA_API_TOKEN": "YOUR_OURA_API_TOKEN"}}}}

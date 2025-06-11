@@ -1,0 +1,1 @@
+{"mcpServers": {"deriv-api-mcp": {"command": "docker", "args": ["run", "--rm", "-i", "deriv-api-mcp"]}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"arango": {"command": "node", "args": ["/path/to/arango-server/build/index.js"], "env": {"ARANGO_URL": "your_database_url", "ARANGO_DB": "your_database_name", "ARANGO_USERNAME": "your_username", "ARANGO_PASSWORD": "your_password"}}}}

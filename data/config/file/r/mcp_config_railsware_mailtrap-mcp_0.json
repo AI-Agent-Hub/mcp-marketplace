@@ -1,0 +1,1 @@
+{"mcpServers": {"mailtrap": {"command": "npx", "args": ["-y", "mcp-mailtrap"], "env": {"MAILTRAP_API_TOKEN": "your_mailtrap_api_token", "DEFAULT_FROM_EMAIL": "your_sender@example.com"}}}}

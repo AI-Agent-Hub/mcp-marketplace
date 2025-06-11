@@ -1,0 +1,1 @@
+{"mcpServers": {"cryptocurrency": {"command": "npx", "args": ["-y", "@raw391/coin-daemon-mcp"], "env": {"CONFIG_PATH": "path/to/your/config.json"}}}}

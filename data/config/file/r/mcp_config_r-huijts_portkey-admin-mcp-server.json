@@ -1,0 +1,1 @@
+{"mcpServers": {"portkey-server": {"command": "node", "args": ["/path/to/portkey-server/build/index.js"], "env": {"PORTKEY_API_KEY": "your_portkey_api_key_here"}}}}

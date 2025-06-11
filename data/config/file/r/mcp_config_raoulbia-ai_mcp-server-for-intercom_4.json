@@ -1,0 +1,1 @@
+{"mcpServers": {"intercom-mcp": {"command": "intercom-mcp", "args": [], "env": {"INTERCOM_ACCESS_TOKEN": "your_intercom_api_token"}}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"zendesk": {"command": "uv", "args": ["--directory", "/path/to/zendesk-mcp-server", "run", "zendesk"]}}}

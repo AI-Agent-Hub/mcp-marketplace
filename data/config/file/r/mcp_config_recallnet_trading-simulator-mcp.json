@@ -1,0 +1,1 @@
+{"mcpServers": {"trading-simulator-mcp": {"command": "npx", "args": ["-y", "github:recallnet/trading-simulator-mcp"], "env": {"TRADING_SIM_API_KEY": "your-api-key", "TRADING_SIM_API_URL": "api-url"}}}}

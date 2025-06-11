@@ -1,0 +1,1 @@
+{"mcpServers": {"redis-cloud": {"command": "docker", "args": ["run", "-i", "--rm", "-e", "API_KEY=<your_redis_cloud_api_key>", "-e", "SECRET_KEY=<your_redis_cloud_api_secret_key>", "mcp/redis-cloud"]}}}

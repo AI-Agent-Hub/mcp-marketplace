@@ -1,0 +1,1 @@
+{"mcpServers": {"rijksmuseum-server": {"command": "node", "args": ["/path/to/rijksmuseum-server/build/index.js"], "env": {"RIJKSMUSEUM_API_KEY": "your_api_key_here"}}}}

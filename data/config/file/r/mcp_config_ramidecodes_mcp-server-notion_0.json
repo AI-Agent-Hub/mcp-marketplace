@@ -1,0 +1,1 @@
+{"mcpServers": {"Notion": {"command": "npx", "args": ["@ramidecodes/mcp-server-notion@latest", "-y", "--api-key=your-notion-integration-key"]}}}

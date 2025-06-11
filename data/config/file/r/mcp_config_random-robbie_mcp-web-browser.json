@@ -1,0 +1,1 @@
+{"mcpServers": {"web-browser": {"command": "python", "args": ["/path/to/your/server.py"]}}}

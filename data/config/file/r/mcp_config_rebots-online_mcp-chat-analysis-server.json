@@ -1,0 +1,1 @@
+{"mcpServers": {"chat-analysis": {"command": "python", "args": ["-m", "mcp_chat_analysis.server"], "env": {"QDRANT_URL": "http://localhost:6333", "NEO4J_URL": "bolt://localhost:7687", "NEO4J_USER": "neo4j", "NEO4J_PASSWORD": "your-password"}}}}

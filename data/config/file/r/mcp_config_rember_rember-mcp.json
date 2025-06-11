@@ -1,0 +1,1 @@
+{"mcpServers": {"rember": {"command": "npx", "args": ["-y", "@getrember/mcp", "--api-key=YOUR_REMBER_API_KEY"]}}}

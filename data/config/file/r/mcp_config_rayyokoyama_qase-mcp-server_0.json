@@ -1,0 +1,1 @@
+{"mcpServers": {"qase": {"command": "node", "args": ["path/to/qase-mcp-server/build/index.js"], "env": {"QASE_API_TOKEN": "your-api-token"}, "disabled": false, "autoApprove": []}}}

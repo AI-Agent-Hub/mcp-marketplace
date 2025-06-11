@@ -1,0 +1,1 @@
+{"mcpServers": {"tmdb": {"command": "node", "args": ["/path/to/tmdb-mcp-server/dist/index.js"], "env": {"TMDB_API_KEY": "your-api-key-here"}, "disabled": false, "autoApprove": []}}}

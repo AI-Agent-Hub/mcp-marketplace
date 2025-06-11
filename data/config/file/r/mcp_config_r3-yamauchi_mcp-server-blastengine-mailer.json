@@ -1,0 +1,1 @@
+{"mcpServers": {"blastengine-mailer": {"command": "node", "env": {"BLASTENGINE_USER_ID": "userid-of-blastengine", "BLASTENGINE_API_KEY": "apikey-of-blastengine"}, "args": ["/path/to/blastengine-mailer/server.js"]}}}

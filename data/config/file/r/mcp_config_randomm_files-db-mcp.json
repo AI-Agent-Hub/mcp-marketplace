@@ -1,0 +1,1 @@
+{"mcpServers": {"files-db-mcp": {"command": "python", "args": ["/path/to/src/claude_mcp_server.py", "--host", "localhost", "--port", "6333"]}}}

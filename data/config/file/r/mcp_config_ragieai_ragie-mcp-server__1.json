@@ -1,0 +1,1 @@
+{"mcpServers": {"ragie": {"command": "npx", "args": ["-y", "@ragieai/mcp-server", "--partition", "optional_partition_id"], "env": {"RAGIE_API_KEY": "your_api_key"}}}}
