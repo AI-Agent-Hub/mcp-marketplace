@@ -1,0 +1,1 @@
+{"mcpServers": {"shodan": {"command": "node", "args": ["/path/to/shodan-mcp-server/build/index.js"], "env": {"SHODAN_API_KEY": "your-api-key-here"}}}}

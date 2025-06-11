@@ -1,0 +1,1 @@
+{"mcpServers": {"toolkit": {"command": "node", "args": ["node_modules/@cyanheads/toolkit-mcp-server/build/index.js"], "env": {"NODE_ENV": "production"}}}}
