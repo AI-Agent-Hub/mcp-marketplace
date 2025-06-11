@@ -1,0 +1,1 @@
+{"mcpServers": {"coolify": {"command": "npx", "args": ["-y", "coolify-mcp-server"], "env": {"COOLIFY_BASE_URL": "your-coolify-url", "COOLIFY_TOKEN": "your-api-token"}, "disabled": false, "autoApprove": []}}}

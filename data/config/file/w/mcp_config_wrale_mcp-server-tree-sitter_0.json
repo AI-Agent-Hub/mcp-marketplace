@@ -1,0 +1,1 @@
+{"mcpServers": {"tree_sitter": {"command": "python", "args": ["-m", "mcp_server_tree_sitter.server"]}}}

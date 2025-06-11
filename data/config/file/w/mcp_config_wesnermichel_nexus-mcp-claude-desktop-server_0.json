@@ -1,0 +1,1 @@
+{"mcpServers": {"nexus-bridge": {"url": "http://localhost:3000/mcp", "disabled": false, "alwaysAllow": ["get_system_info", "read_file", "write_file", "create_directory", "list_directory", "get_project_status"]}}}

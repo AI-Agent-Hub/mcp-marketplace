@@ -1,0 +1,1 @@
+{"mcpServers": {"jfk-mcp": {"command": "npx", "args": ["-y", "jfk-mcp"], "env": {"ARCHIVES_API_KEY": "your-api-key-here"}}}}

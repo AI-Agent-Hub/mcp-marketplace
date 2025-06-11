@@ -1,0 +1,1 @@
+{"mcpServers": {"github_mcp": {"command": "<your Python interpreter path>", "args": ["--directory", "<project path>", "run", "github_graphql_api_mcp_server.py"]}}}

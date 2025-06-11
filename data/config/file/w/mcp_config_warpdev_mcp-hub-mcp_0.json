@@ -1,0 +1,1 @@
+{"mcpServers": {"other-tools": {"command": "npx", "args": ["-y", "mcp-hub-mcp", "--config-path", "/Users/username/mcp.json"]}}}

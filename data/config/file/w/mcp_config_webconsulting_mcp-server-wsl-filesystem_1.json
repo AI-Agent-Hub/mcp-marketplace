@@ -1,0 +1,1 @@
+{"mcpServers": {"wsl-filesystem": {"command": "npx", "args": ["-y", "mcp-server-wsl-filesystem", "/home/user/documents"]}}}

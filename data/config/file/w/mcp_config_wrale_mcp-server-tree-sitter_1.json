@@ -1,0 +1,1 @@
+{"mcpServers": {"tree_sitter": {"command": "uv", "args": ["--directory", "/ABSOLUTE/PATH/TO/YOUR/PROJECT", "run", "-m", "mcp_server_tree_sitter.server"]}}}

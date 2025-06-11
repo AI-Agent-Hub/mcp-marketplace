@@ -1,0 +1,1 @@
+{"mcpServers": {"docs-fetch": {"command": "node", "args": ["/path/to/docs-fetch-mcp/build/index.js"], "env": {"MCP_TRANSPORT": "pipe"}}}}

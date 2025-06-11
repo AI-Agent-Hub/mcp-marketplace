@@ -1,0 +1,1 @@
+{"mcpServers": {"pipecd": {"command": "/Users/sawada/go/bin/mcp-server-pipecd", "args": [], "env": {"PIPECD_HOST": "demo.pipecd.dev:443", "PIPECD_API_KEY_FILE": "/Users/sawada/.config/mcp-server-pipecd/api_key", "PIPECD_INSECURE": "false"}}}}

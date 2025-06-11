@@ -1,0 +1,1 @@
+{"mcpServers": {"waldur-mcp-server": {"command": "uvx", "args": ["waldur-mcp-server"], "env": {"WALDUR_API_URL": "https://your-waldur-instance", "WALDUR_TOKEN": "your-token"}}}}

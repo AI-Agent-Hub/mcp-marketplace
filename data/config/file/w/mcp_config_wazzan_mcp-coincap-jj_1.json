@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-coincap-jj": {"command": "cmd.exe", "args": ["/c", "C:\\Program Files\\nodejs\\npx.cmd", "C:\\Users\\YOUR-WINDOWS-USERNAME\\repos\\github\\mcp-coincap-jj"], "env": {"COINCAP_API_KEY": "YOUR_API_KEY_HERE"}, "disabled": false, "alwaysAllow": []}}}

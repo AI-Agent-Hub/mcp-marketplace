@@ -1,0 +1,1 @@
+{"mcpServers": {"outlook": {"command": "python", "args": ["Your path\\outlook_mcp_server.py"], "env": {}}}}

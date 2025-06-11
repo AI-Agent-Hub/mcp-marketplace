@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-server-webscraping-ai": {"command": "npx", "args": ["-y", "webscraping-ai-mcp"], "env": {"WEBSCRAPING_AI_API_KEY": "YOUR_API_KEY_HERE", "WEBSCRAPING_AI_CONCURRENCY_LIMIT": "5"}}}}

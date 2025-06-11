@@ -1,0 +1,1 @@
+{"mcpServers": {"airylark-translation": {"command": "docker", "args": ["run", "-i", "--rm", "-e", "TRANSLATION_API_KEY", "-e", "TRANSLATION_MODEL", "-e", "TRANSLATION_BASE_URL", "wizdy/airylark-mcp-server"], "env": {"TRANSLATION_API_KEY": "<YOUR_API_KEY>", "TRANSLATION_MODEL": "<YOUR_MODEL>", "TRANSLATION_BASE_URL": "<YOUR_API_URL>"}}}}

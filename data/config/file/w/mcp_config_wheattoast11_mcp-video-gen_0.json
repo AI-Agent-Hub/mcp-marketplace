@@ -1,0 +1,1 @@
+{"mcpServers": {"runway-luma-server": {"command": "node", "args": ["/full/path/to/runwayml-mcp-server/build/server-index.js"], "env": {"RUNWAYML_API_SECRET": "your_runwayml_api_secret_here", "LUMAAI_API_KEY": "your_luma_api_key_here", "OPENROUTER_API_KEY": "your_openrouter_api_key_here"}, "disabled": false, "autoApprove": []}}}

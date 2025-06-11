@@ -1,0 +1,1 @@
+{"mcpServers": {"kaiafun": {"command": "node", "args": ["/path/to/dist/kaiafun-mcp-server.js"], "env": {"PRIVATE_KEY": "0x"}}, "puppeteer": {"command": "npx", "args": ["-y", "@modelcontextprotocol/server-puppeteer"]}}}

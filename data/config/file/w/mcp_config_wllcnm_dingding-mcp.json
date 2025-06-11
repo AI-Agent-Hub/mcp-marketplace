@@ -1,0 +1,1 @@
+{"mcpServers": {"dingding": {"command": "docker", "args": ["run", "-i", "--rm", "-e", "DINGDING_APP_KEY=\u4f60\u7684AppKey", "-e", "DINGDING_APP_SECRET=\u4f60\u7684AppSecret", "ghcr.io/\u4f60\u7684\u7528\u6237\u540d/dingding-mcp:latest"]}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"OSM PostgreSQL Server": {"command": "/Users/wiseman/.local/bin/uv", "args": ["run", "--env-file", ".env", "--with", "mcp[cli]", "--with", "psycopg2", "--with-editable", "/Users/wiseman/src/mcp-osm", "--directory", "/Users/wiseman/src/mcp-osm", "mcp", "run", "mcp.py"]}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"claude-tools": {"command": "/path/to/conda/envs/mcp-tools/bin/python", "args": ["-m", "claude_tools.main"]}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-coincap-jj": {"command": "npx", "args": ["-y", "@bujaayjaay/mcp-coincap-jj"], "env": {"COINCAP_API_KEY": "INPUT_YOUR_API_KEY_HERE"}}}}

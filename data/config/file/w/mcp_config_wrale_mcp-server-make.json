@@ -1,0 +1,1 @@
+{"mcpServers": {"make": {"command": "uvx", "args": ["mcp-server-make", "--make-path", "/absolute/path/to/Makefile", "--working-dir", "/absolute/path/to/working/dir"]}}}

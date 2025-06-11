@@ -1,0 +1,1 @@
+{"mcpServers": {"weatherxm-pro": {"command": "npx", "args": ["-y", "path to mcp"], "env": {"WEATHERXMPRO_API_KEY": "your-api-key"}}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"wsl-filesystem": {"command": "npx", "args": ["-y", "mcp-server-wsl-filesystem", "--distro=Ubuntu-20.04", "/home/user/documents"]}}}

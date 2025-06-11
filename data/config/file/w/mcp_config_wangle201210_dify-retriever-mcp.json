@@ -1,0 +1,1 @@
+{"mcpServers": {"dify-retriever-mcp": {"command": "dify-retriever-mcp", "args": [], "env": {"DIFY_DATASET_API_KEY": "dataset-iDBz1qVkmI2dU6KnirLCxO9K", "DIFY_ENDPOINT": "http://127.0.0.1/v1", "DIFY_DATASET_ID": "b667a65b-f40f-4dd0-8b34-8406dc8be96e", "DIFY_DATASET_NAME": "\u8fd9\u91cc\u5199\u77e5\u8bc6\u5e93\u540d\u5b57"}, "descriptions": "***\u77e5\u8bc6\u5e93\u68c0\u7d22"}}}

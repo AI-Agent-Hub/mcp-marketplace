@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-server-hotnews": {"command": "npx", "args": ["-y", "@wopal/mcp-server-hotnews"]}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-server-hotnews": {"command": "docker", "args": ["run", "-i", "--rm", "wopal/mcp-server-hotnews"]}}}
