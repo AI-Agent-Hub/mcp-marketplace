@@ -1,0 +1,1 @@
+{"mcpServers": {"discord-relay": {"command": "node", "args": ["/ABSOLUTE/PATH/TO/MCP Relay/build/index.js"], "env": {"DISCORD_TOKEN": "your_bot_token_here", "DISCORD_CHANNEL_ID": "your_channel_id_here"}}}}

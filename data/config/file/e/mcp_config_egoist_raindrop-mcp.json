@@ -1,0 +1,1 @@
+{"mcpServers": {"raindrop": {"command": "npx", "args": ["-y", "raindrop-mcp"], "env": {"RAINDROP_ACCESS_TOKEN": "<your-token>"}}}}

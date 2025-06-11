@@ -1,0 +1,1 @@
+{"mcpServers": {"ollama": {"command": "uvx", "args": ["mcp-ollama"]}}}

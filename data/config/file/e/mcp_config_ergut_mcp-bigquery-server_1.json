@@ -1,0 +1,1 @@
+{"mcpServers": {"bigquery": {"command": "npx", "args": ["-y", "@ergut/mcp-bigquery-server", "--project-id", "your-project-id", "--location", "us-central1", "--key-file", "/path/to/service-account-key.json"]}}}

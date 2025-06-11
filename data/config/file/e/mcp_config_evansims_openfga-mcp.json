@@ -1,0 +1,1 @@
+{"mcpServers": {"openfga-mcp": {"command": "uvx", "args": ["openfga-mcp@latest"]}}}

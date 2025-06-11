@@ -1,0 +1,1 @@
+{"mcpServers": {"flux": {"command": "flux-server", "env": {"REPLICATE_API_TOKEN": "your-replicate-token"}}}}
