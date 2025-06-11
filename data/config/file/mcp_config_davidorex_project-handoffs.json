@@ -1,0 +1,1 @@
+{"mcpServers": {"project-handoffs": {"command": "/opt/homebrew/bin/node", "args": ["/path/to/project-handoffs/build/index.js"], "alwaysAllow": []}}}

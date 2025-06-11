@@ -1,0 +1,1 @@
+{"mcpServers": {"ticketmaster": {"command": "npx", "args": ["-y", "@delorenj/mcp-server-ticketmaster"], "env": {"TICKETMASTER_API_KEY": "your-api-key-here"}}}}

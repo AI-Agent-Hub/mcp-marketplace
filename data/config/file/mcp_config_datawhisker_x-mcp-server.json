@@ -1,0 +1,1 @@
+{"mcpServers": {"x": {"command": "node", "args": ["%USERPROFILE%/Projects/MCP Basket/x-server/build/index.js"], "env": {"TWITTER_API_KEY": "paste-your-api-key-here", "TWITTER_API_SECRET": "paste-your-api-key-secret-here", "TWITTER_ACCESS_TOKEN": "paste-your-access-token-here", "TWITTER_ACCESS_SECRET": "paste-your-access-token-secret-here"}}}}

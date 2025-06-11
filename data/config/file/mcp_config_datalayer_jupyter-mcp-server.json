@@ -1,0 +1,1 @@
+{"mcpServers": {"jupyter": {"command": "docker", "args": ["run", "-i", "--rm", "-e", "SERVER_URL", "-e", "TOKEN", "-e", "NOTEBOOK_PATH", "datalayer/jupyter-mcp-server:latest"], "env": {"SERVER_URL": "http://host.docker.internal:8888", "TOKEN": "MY_TOKEN", "NOTEBOOK_PATH": "notebook.ipynb"}}}}

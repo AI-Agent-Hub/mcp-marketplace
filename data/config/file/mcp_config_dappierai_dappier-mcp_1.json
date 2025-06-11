@@ -1,0 +1,1 @@
+{"mcpServers": {"dappier": {"command": "uvx", "args": ["dappier-mcp"], "env": {"DAPPIER_API_KEY": "YOUR_API_KEY_HERE"}}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"remote-command": {"command": "node", "args": ["path/to/remote-command-server/build/index.js"], "disabled": false, "autoApprove": []}}}

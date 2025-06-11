@@ -1,0 +1,1 @@
+{"mcpServers": {"parquet-mcp-server": {"command": "uv", "args": ["--directory", "/home/${USER}/workspace/parquet_mcp_server/src/parquet_mcp_server", "run", "main.py"]}}}

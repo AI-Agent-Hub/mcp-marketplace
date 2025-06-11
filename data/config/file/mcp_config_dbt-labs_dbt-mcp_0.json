@@ -1,0 +1,1 @@
+{"mcpServers": {"dbt-mcp": {"command": "<path-to-mcp-executable>", "args": ["run", "<path-to-this-directory>/src/dbt_mcp/main.py"]}}}

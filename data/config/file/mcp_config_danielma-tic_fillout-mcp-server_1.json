@@ -1,0 +1,1 @@
+{"mcpServers": {"fillout": {"command": "npx", "args": ["-y", "@modelcontextprotocol/server-fillout"], "env": {"FILLOUT_API_KEY": "your-fillout-api-key"}}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"polygon": {"command": "node", "args": ["/path/to/polygon-mcp/build/index.js"], "env": {"SEED_PHRASE": "your twelve word seed phrase here"}, "disabled": false, "autoApprove": []}}}

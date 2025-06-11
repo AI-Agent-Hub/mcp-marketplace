@@ -1,0 +1,1 @@
+{"mcpServers": {"cw-graph": {"command": "node", "args": ["PATH_TO_YOUR_PROJECT/dist/index.js"], "env": {"NODE_URL": "http://localhost:26657", "WALLET_MNEMONIC": "your wallet mnemonic phrase", "CONTRACT_ADDRESS": "your contract address", "DENOM": "stake", "BENCH32_PREFIX": "cyber"}}}}
