@@ -1,0 +1,1 @@
+{"mcpServers": {"llmling": {"command": "uvx", "args": ["mcp-server-llmling", "start", "path/to/your/config.yml"], "env": {}}}}

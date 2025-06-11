@@ -1,0 +1,1 @@
+{"mcpServers": {"voyp": {"command": "npx", "args": ["/path/to/voyp-mcp/build/index.js"], "env": {"VOYP_API_KEY": "your-VOYP-api-key"}}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"port": {"command": "docker", "args": ["run", "-i", "--rm", "-e", "PORT_CLIENT_ID", "-e", "PORT_CLIENT_SECRET", "-e", "PORT_REGION", "-e", "PORT_LOG_LEVEL", "ivan/test-port-mcp-no-prompt"], "env": {"PORT_CLIENT_ID": "<PORT_CLIENT_ID>", "PORT_CLIENT_SECRET": "<PORT_CLIENT_SECRET>", "PORT_REGION": "<PORT_REGION>", "PORT_LOG_LEVEL": "<PORT_LOG_LEVEL>"}}}}

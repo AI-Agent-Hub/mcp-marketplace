@@ -1,0 +1,1 @@
+{"mcpServers": {"whatsapp": {"command": "docker", "args": ["run", "-i", "--rm", "wweb-mcp:latest", "-m", "mcp", "-s", "local", "-c", "api", "-t", "command", "--api-base-url", "http://host.docker.internal:3001/api", "--api-key", "1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef"]}}}

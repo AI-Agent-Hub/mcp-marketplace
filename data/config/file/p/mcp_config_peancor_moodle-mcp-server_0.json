@@ -1,0 +1,1 @@
+{"mcpServers": {"moodle-mcp-server": {"command": "/path/to/node", "args": ["/path/to/moodle-mcp-server/build/index.js"], "env": {"MOODLE_API_URL": "https://your-moodle.com/webservice/rest/server.php", "MOODLE_API_TOKEN": "your_moodle_api_token", "MOODLE_COURSE_ID": "your_course_id"}, "disabled": false, "autoApprove": []}}}

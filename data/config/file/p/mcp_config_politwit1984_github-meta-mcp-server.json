@@ -1,0 +1,1 @@
+{"mcpServers": {"github": {"command": "node", "args": ["path/to/github-server/build/index.js"], "env": {"GITHUB_TOKEN": "your-github-token"}}}}

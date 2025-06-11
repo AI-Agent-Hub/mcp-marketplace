@@ -1,0 +1,1 @@
+{"mcpServers": {"prysm-scraper": {"command": "npx", "args": ["-y", "@pinkpixel/prysm-mcp"], "env": {"PRYSM_OUTPUT_DIR": "${workspaceFolder}/scrape_results", "PRYSM_IMAGE_OUTPUT_DIR": "${workspaceFolder}/scrape_results/images"}}}}

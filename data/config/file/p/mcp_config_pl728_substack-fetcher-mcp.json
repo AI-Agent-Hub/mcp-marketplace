@@ -1,0 +1,1 @@
+{"mcpServers": {"substack_reader": {"command": "uv", "args": ["--directory", "/path/to/substack_reader", "run", "substack_reader.py"]}}, "globalShortcut": "Ctrl+Space"}

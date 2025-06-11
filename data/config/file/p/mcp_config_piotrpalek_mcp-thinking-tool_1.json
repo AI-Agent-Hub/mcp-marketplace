@@ -1,0 +1,1 @@
+{"mcpServers": {"think-tool": {"command": "node", "args": ["/path/to/mcp-think-tool/build/index.js"]}}}

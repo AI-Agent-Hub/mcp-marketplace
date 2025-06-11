@@ -1,0 +1,1 @@
+{"mcpServers": {"paddle": {"command": "node", "args": ["path/to/paddle-mcp-server/build/index.js"], "env": {"PADDLE_API_KEY": "your_api_key", "PADDLE_ENVIRONMENT": "sandbox"}}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"adx": {"command": "uv", "args": ["--directory", "<full path to adx-mcp-server directory>", "run", "src/adx_mcp_server/main.py"], "env": {"ADX_CLUSTER_URL": "https://yourcluster.region.kusto.windows.net", "ADX_DATABASE": "your_database"}}}}

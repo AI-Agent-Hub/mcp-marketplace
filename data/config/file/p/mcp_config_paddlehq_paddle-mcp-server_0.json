@@ -1,0 +1,1 @@
+{"mcpServers": {"paddle": {"command": "npx", "args": ["-y", "@paddle/paddle-mcp", "--api-key=PADDLE_API_KEY", "--environment=(sandbox|production)"]}}}

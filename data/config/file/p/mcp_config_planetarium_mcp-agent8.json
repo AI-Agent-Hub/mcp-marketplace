@@ -1,0 +1,1 @@
+{"mcpServers": {"Agent8": {"command": "npx", "args": ["--yes", "agent8-mcp-server"]}}}

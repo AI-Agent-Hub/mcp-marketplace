@@ -1,0 +1,1 @@
+{"mcpServers": {"voyp-mcp": {"command": "npx", "args": ["-y", "voyp-mcp"], "env": {"VOYP_API_KEY": "your-VOYP-api-key"}}}}

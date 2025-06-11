@@ -1,0 +1,1 @@
+{"mcpServers": {"mem0-mcp": {"command": "npx", "args": ["-y", "@pinkpixel/mem0-mcp"], "env": {"OPENAI_API_KEY": "YOUR_OPENAI_API_KEY_HERE", "DEFAULT_USER_ID": "user123"}, "disabled": false, "alwaysAllow": ["add_memory", "search_memory"]}}}

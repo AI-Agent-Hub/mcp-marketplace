@@ -1,0 +1,1 @@
+{"mcpServers": {"playcanvas": {"command": "cmd", "args": ["/c", "npx", "tsx", "C:\\path\\to\\mcp-editor\\src\\server.ts"], "env": {"PORT": "52000"}}}}

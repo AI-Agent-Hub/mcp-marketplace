@@ -1,0 +1,1 @@
+{"mcpServers": {"applescript-mcp-server": {"command": "node", "args": ["/path/to/applescript-mcp/dist/index.js"]}}}

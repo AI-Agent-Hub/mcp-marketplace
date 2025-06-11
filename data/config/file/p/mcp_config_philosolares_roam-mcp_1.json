@@ -1,0 +1,1 @@
+{"mcpServers": {"roam-helper": {"command": "docker", "args": ["run", "--rm", "-p", "3000:3000", "-e", "ROAM_API_TOKEN=your_token", "-e", "ROAM_GRAPH_NAME=your_graph", "roam-mcp"], "env": {}}}}

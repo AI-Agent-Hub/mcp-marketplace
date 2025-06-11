@@ -1,0 +1,1 @@
+{"mcpServers": {"voice-call": {"command": "node", "args": ["/path/to/your/mcp-new/dist/start-all.cjs"], "env": {"TWILIO_ACCOUNT_SID": "your_account_sid", "TWILIO_AUTH_TOKEN": "your_auth_token", "TWILIO_NUMBER": "your_e.164_format_number", "OPENAI_API_KEY": "your_openai_api_key", "NGROK_AUTHTOKEN": "your_ngrok_authtoken"}}}}

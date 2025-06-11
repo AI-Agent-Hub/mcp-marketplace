@@ -1,0 +1,1 @@
+{"mcpServers": {"pica-mcp-server": {"command": "node", "args": ["/path/to/pica-mcp-server/build/index.js"], "env": {"PICA_SECRET": "YOUR_PICA_SECRET_KEY"}}}}

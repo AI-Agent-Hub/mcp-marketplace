@@ -1,0 +1,1 @@
+{"mcpServers": {"autodesk-platform-services": {"command": "node", "args": ["/absolute/path/to/aps-mcp-server/build/server.js"]}}}

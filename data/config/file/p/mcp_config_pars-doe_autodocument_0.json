@@ -1,0 +1,1 @@
+{"mcpServers": {"autodocument": {"command": "node", "args": ["/path/to/autodocument/build/index.js"], "env": {"OPENROUTER_API_KEY": "your-api-key-here"}, "disabled": false, "alwaysAllow": []}}}

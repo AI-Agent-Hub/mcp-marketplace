@@ -1,0 +1,1 @@
+{"mcpServers": {"tripadvisor": {"command": "uv", "args": ["--directory", "<full path to tripadvisor-mcp directory>", "run", "src/tripadvisor_mcp/main.py"], "env": {"TRIPADVISOR_API_KEY": "your_api_key_here"}}}}

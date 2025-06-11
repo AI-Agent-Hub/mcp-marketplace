@@ -1,0 +1,1 @@
+{"mcpServers": {"github": {"command": "node", "args": ["/path/to/github-enterprise-mcp/dist/index.js"], "env": {"GITHUB_PERSONAL_ACCESS_TOKEN": "<YOUR_TOKEN>"}}}}

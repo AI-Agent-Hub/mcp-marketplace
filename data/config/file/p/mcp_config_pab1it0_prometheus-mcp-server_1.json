@@ -1,0 +1,1 @@
+{"mcpServers": {"prometheus": {"command": "docker", "args": ["run", "--rm", "-i", "-e", "PROMETHEUS_URL", "-e", "PROMETHEUS_USERNAME", "-e", "PROMETHEUS_PASSWORD", "ghcr.io/pab1it0/prometheus-mcp-server:latest"], "env": {"PROMETHEUS_URL": "http://your-prometheus-server:9090", "PROMETHEUS_USERNAME": "your_username", "PROMETHEUS_PASSWORD": "your_password"}}}}

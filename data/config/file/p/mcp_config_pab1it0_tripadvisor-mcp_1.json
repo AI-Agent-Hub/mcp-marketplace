@@ -1,0 +1,1 @@
+{"mcpServers": {"tripadvisor": {"command": "docker", "args": ["run", "--rm", "-i", "-e", "TRIPADVISOR_API_KEY", "tripadvisor-mcp-server"], "env": {"TRIPADVISOR_API_KEY": "your_api_key_here"}}}}

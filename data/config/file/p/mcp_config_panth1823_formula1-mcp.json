@@ -1,0 +1,1 @@
+{"mcpServers": {"formula1": {"command": "node", "args": ["<path-to-your-cloned-repo>/build/index.js"], "cwd": "<path-to-your-cloned-repo>", "enabled": true}}}

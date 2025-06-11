@@ -1,0 +1,1 @@
+{"mcpServers": {"pinecone-assistant": {"command": "docker", "args": ["run", "-i", "--rm", "-e", "PINECONE_API_KEY", "-e", "PINECONE_ASSISTANT_HOST", "pinecone/assistant-mcp"], "env": {"PINECONE_API_KEY": "<YOUR_PINECONE_API_KEY_HERE>", "PINECONE_ASSISTANT_HOST": "<YOUR_PINECONE_ASSISTANT_HOST_HERE>"}}}}

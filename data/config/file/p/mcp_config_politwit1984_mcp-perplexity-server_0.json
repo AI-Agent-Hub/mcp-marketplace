@@ -1,0 +1,1 @@
+{"mcpServers": {"perplexity": {"command": "perplexity-mcp", "args": [], "env": {"PERPLEXITY_API_KEY": "your-api-key-here"}}}}

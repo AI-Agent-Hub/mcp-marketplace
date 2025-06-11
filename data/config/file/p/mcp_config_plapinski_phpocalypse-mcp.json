@@ -1,0 +1,1 @@
+{"mcpServers": {"phpocalypse-mcp": {"command": "npx", "args": ["tsx", "/Absolute/Path/To/PHPocalypse-MCP/src/index.ts", "--config", "/Absolute/Path/To/Your/PHP/Based/Project/phpocalypse-mcp.yaml"]}}}

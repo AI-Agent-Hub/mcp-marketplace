@@ -1,0 +1,1 @@
+{"mcpServers": {"nina_advanced_mcp_api": {"command": "uv", "args": ["run", "--with", "fastmcp,fastapi,uvicorn,pydantic,aiohttp,requests,python-dotenv", "fastmcp", "run", "path/nina_advanced_mcp.py"], "env": {"NINA_HOST": "NINA_IP", "NINA_PORT": "1888", "LOG_LEVEL": "INFO", "IMAGE_SAVE_DIR": "~/Desktop/NINA_Images"}}}}

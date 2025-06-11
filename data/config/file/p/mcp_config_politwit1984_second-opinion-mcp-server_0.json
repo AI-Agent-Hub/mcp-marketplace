@@ -1,0 +1,1 @@
+{"mcpServers": {"second-opinion": {"command": "node", "args": ["/path/to/second-opinion-server/build/index.js"], "env": {"GEMINI_API_KEY": "your-gemini-api-key", "PERPLEXITY_API_KEY": "your-perplexity-api-key", "STACK_EXCHANGE_KEY": "your-stack-exchange-key"}}}}
