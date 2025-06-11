@@ -1,0 +1,1 @@
+{"mcpServers": {"coda": {"command": "npx", "args": ["-y", "coda-mcp@latest"], "env": {"API_KEY": "...", "DOC_ID": "..."}}}}

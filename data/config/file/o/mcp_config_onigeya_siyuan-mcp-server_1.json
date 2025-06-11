@@ -1,0 +1,1 @@
+{"mcpServers": {"siyuan": {"command": "npx", "args": ["-y", "@onigeya/siyuan-mcp-server"], "env": {"SIYUAN_TOKEN": "your-siyuan-token"}}}}

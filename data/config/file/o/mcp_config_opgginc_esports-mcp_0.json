@@ -1,0 +1,1 @@
+{"mcpServers": {"opgg-esports": {"command": "node", "args": ["/path/to/esports-mcp/dist/index.js"]}}}

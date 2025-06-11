@@ -1,0 +1,1 @@
+{"mcpServers": {"octomind-mcp": {"name": "Octomind MCP Server", "command": "npx", "args": ["-y", "@octomind/octomind-mcp@latest"], "env": {"APIKEY": "your-api-key-here"}}}}

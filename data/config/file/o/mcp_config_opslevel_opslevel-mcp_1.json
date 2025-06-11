@@ -1,0 +1,1 @@
+{"chat.agent.enabled": true, "chat.mcp.discovery.enabled": true, "mcp": {"inputs": [{"type": "promptString", "id": "opslevel_token", "description": "OpsLevel API Token", "password": true}], "servers": {"opslevel": {"type": "stdio", "command": "opslevel-mcp", "env": {"OPSLEVEL_API_TOKEN": "${input:opslevel_token}"}}}}}

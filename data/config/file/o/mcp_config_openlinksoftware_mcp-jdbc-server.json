@@ -1,0 +1,1 @@
+{"mcpServers": {"my_database": {"command": "java", "args": ["-jar", "/path/to/mcp-jdbc-server/MCPServer-1.0.0-runner.jar"], "env": {"jdbc.url": "jdbc:virtuoso://localhost:1111", "jdbc.user": "username", "jdbc.password": "password", "jdbc.api_key": "sk-xxx"}}}}

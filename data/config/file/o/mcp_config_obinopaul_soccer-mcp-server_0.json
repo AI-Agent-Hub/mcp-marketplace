@@ -1,0 +1,1 @@
+{"mcpServers": {"soccer_server": {"command": "docker", "args": ["exec", "-i", "soccer_server", "python", "soccer_server.py"], "env": {"RAPID_API_KEY_FOOTBALL": "your_api_key_here"}}}}

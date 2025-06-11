@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-server-drupal": {"command": "docker", "args": ["run", "-i", "--rm", "ghcr.io/omedia/mcp-server-drupal", "--drupal-url=__DRUPAL_BASE_URL_"], "env": {}}}}

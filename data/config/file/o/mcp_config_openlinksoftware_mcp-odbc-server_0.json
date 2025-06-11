@@ -1,0 +1,1 @@
+{"mcpServers": {"ODBC": {"command": "/path/to/.nvm/versions/node/v21.1.0/bin/node", "args": ["/path/to/mcp-odbc-server/node_modules/.bin/tsx", "/path/to/mcp-odbc-server/src/main.ts"], "env": {"ODBCINI": "/Library/ODBC/odbc.ini", "NODE_VERSION": "v21.1.0", "PATH": "~/.nvm/versions/node/v21.1.0/bin:${PATH}"}, "disabled": false, "autoApprove": []}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"resemble-ai": {"command": "python", "args": ["-m", "src.cli", "--implementation", "stdio"], "env": {"RESEMBLE_API_KEY": "your_api_key_here"}, "disabled": false, "autoApprove": []}}}

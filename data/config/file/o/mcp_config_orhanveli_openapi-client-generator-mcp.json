@@ -1,0 +1,1 @@
+{"mcpServers": {"openapi-client-generator": {"command": "node", "args": ["< PATH TO >/openapi-client-generator/build/index.js"]}}}

@@ -1,0 +1,1 @@
+{"mcp": {"servers": {"pacman": {"command": "uvx", "args": ["mcp-server-pacman"]}}}}

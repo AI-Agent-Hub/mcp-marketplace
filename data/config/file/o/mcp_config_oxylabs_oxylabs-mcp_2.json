@@ -1,0 +1,1 @@
+{"mcpServers": {"oxylabs_scraper": {"command": "uv", "args": ["--directory", "/<Absolute-path-to-folder>/oxylabs-mcp", "run", "oxylabs-mcp"], "env": {"OXYLABS_USERNAME": "OXYLABS_USERNAME", "OXYLABS_PASSWORD": "OXYLABS_PASSWORD"}}}}

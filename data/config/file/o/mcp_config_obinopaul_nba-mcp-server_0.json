@@ -1,0 +1,1 @@
+{"mcpServers": {"nba_mcp_server": {"command": "docker", "args": ["exec", "-i", "nba_mcp_server", "python", "nba_server.py"]}}}

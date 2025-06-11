@@ -1,0 +1,1 @@
+{"mcpServers": {"shannon-thinking": {"command": "npx", "args": ["-y", "server-shannon-thinking@latest"]}}}

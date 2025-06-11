@@ -1,0 +1,1 @@
+{"mcpServers": {"unitycatalog": {"command": "docker", "args": ["run", "--rm", "-i", "mcp/unitycatalog", "--uc_server", "<your unity catalog url>", "--uc_catalog", "<your catalog name>", "--uc_schema", "<your schema name>"]}}}

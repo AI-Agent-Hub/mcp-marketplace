@@ -1,0 +1,1 @@
+{"mcpServers": {"serena": {"command": "/abs/path/to/uv", "args": ["run", "--directory", "/abs/path/to/serena", "serena-mcp-server", "--project-file", "/abs/path/to/myproject.yml"]}}}

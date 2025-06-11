@@ -1,0 +1,1 @@
+{"mcpServers": {"n8n-asistans": {"command": "uv", "args": ["--directory", "/n8n-assistant", "run", "main.py"], "env": {"SERPER_API_KEY": "*********"}}}}

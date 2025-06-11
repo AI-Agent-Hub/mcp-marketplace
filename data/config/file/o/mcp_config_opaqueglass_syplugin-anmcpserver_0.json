@@ -1,0 +1,1 @@
+{"mcpServers": {"siyuan": {"type": "sse", "command": "http://127.0.0.1:16806/sse", "args": [""], "env": {}, "auto_approve": false}}}

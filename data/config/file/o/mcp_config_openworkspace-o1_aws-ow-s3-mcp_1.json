@@ -1,0 +1,1 @@
+{"mcpServers": {"aws-ow-s3-mcp": {"command": "npx", "args": ["-y", "@modelcontextprotocol/server-aws-ow-s3-mcp"], "env": {"BUCKET_NAME": "<YOUR_BUCKET_NAME>", "REGION": "<AWS_REGION>", "AWS_ACCESS_KEY_ID": "<YOUR_ACCESS_KEY>", "AWS_SECRET_ACCESS_KEY": "<YOUR_SECRET_KEY>"}}}}

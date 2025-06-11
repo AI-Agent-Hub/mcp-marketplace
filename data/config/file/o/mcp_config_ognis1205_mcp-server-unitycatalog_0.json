@@ -1,0 +1,1 @@
+{"mcpServers": {"unitycatalog": {"command": "uv", "args": ["--directory", "/<path to your local git repository>/mcp-server-unitycatalog", "run", "mcp-server-unitycatalog", "--uc_server", "<your unity catalog url>", "--uc_catalog", "<your catalog name>", "--uc_schema", "<your schema name>"]}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"oxylabs-mcp": {"command": "npx", "args": ["-y", "@smithery/cli@latest", "run", "@oxylabs/oxylabs-mcp", "--config", "\"{\\\"oxylabsUsername\\\":\\\"OXYLABS_USERNAME\\\",\\\"oxylabsPassword\\\":\\\"OXYLABS_PASSWORD\\\"}\""]}}}

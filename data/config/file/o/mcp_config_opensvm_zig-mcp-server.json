@@ -1,0 +1,1 @@
+{"mcpServers": {"zig": {"command": "node", "args": ["/path/to/zig-mcp-server/build/index.js"], "env": {"GITHUB_TOKEN": "your_token_here", "NODE_OPTIONS": "--experimental-vm-modules"}, "restart": true}}}

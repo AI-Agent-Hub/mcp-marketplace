@@ -1,0 +1,1 @@
+{"mcpServers": {"eagle": {"command": "node", "args": ["/path/to/mcp-eagle/build/index.js"]}}}

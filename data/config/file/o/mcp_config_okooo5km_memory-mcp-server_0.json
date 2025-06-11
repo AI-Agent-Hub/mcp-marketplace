@@ -1,0 +1,1 @@
+{"mcpServers": {"memory": {"command": "memory-mcp-server", "env": {"MEMORY_FILE_PATH": "/path/to/your/memory.json"}}}}

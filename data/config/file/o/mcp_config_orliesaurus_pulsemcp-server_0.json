@@ -1,0 +1,1 @@
+{"mcpServers": {"pulsemcp": {"command": "npx", "args": ["-y", "pulsemcp-server"]}}}
