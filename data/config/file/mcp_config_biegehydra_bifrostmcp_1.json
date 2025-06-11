@@ -1,0 +1,1 @@
+{"mcpServers": {"Bifrost": {"command": "npx", "args": ["-y", "supergateway", "--sse", "http://localhost:8008/sse"], "disabled": false, "autoApprove": [], "timeout": 600}}}

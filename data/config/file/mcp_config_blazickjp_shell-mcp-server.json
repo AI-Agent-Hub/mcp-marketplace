@@ -1,0 +1,1 @@
+{"mcpServers": {"shell-mcp-server": {"command": "uv", "args": ["--directory", "/path/to/shell-mcp-server", "run", "shell-mcp-server", "/path/to/allowed/dir1", "/path/to/allowed/dir2", "--shell", "bash", "/bin/bash", "--shell", "zsh", "/bin/zsh"]}}}

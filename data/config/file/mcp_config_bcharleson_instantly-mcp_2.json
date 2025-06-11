@@ -1,0 +1,1 @@
+{"mcpServers": {"instantly": {"command": "docker", "args": ["run", "-i", "--rm", "-e", "INSTANTLY_API_KEY", "mcp/instantly"], "env": {"INSTANTLY_API_KEY": "<YOUR_API_KEY>"}}}}

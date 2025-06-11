@@ -1,0 +1,1 @@
+{"mcpServers": {"speckle": {"command": "uv", "args": ["--directory", "/path/to/speckle-mcp", "run", "speckle_server.py"], "env": {"SPECKLE_TOKEN": "YOUR_SPECKLE_API_TOKEN_HERE", "SPECKLE_SERVER": "https://app.speckle.systems"}}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"bear": {"command": "npx", "args": ["github:bart6114/my-bear-mcp-server"], "env": {}, "disabled": false, "autoApprove": []}}}
