@@ -1,0 +1,1 @@
+{"mcpServers": {"autocad-lisp": {"command": "path\\to\\autocad-mcp\\venv\\Scripts\\python.exe", "args": ["path\\to\\autocad-mcp\\server_lisp.py"]}}}
