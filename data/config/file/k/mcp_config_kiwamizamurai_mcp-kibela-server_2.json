@@ -1,0 +1,1 @@
+{"mcpServers": {"kibela": {"command": "node", "args": ["path/to/mcp-kibela-server/dist/src/index.js"], "env": {"KIBELA_TEAM": "YOUR_TEAM_NAME", "KIBELA_TOKEN": "YOUR_TOKEN"}}}}

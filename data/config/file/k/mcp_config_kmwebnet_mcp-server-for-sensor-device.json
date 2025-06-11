@@ -1,0 +1,1 @@
+{"mcpServers": {"CO2 sensor": {"command": "node", "args": ["...mcp-server-for-sensor-device/index.js"], "env": {}}}}

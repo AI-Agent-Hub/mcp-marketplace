@@ -1,0 +1,1 @@
+{"mcpServers": {"mongodb": {"command": "npx", "args": ["-y", "mcp-mongo-server"], "env": {"MCP_MONGODB_URI": "mongodb://muhammed:kilic@localhost:27017/database"}}, "mongodb-readonly": {"command": "npx", "args": ["-y", "mcp-mongo-server"], "env": {"MCP_MONGODB_URI": "mongodb://muhammed:kilic@localhost:27017/database", "MCP_MONGODB_READONLY": "true"}}}}

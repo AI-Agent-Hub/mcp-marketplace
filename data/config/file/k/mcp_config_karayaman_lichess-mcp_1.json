@@ -1,0 +1,1 @@
+{"mcpServers": {"filesystem": {"command": "npx", "args": ["-y", "@modelcontextprotocol/server-filesystem", "/Users/username/Desktop", "/Users/username/Downloads"]}, "lichess": {"command": "lichess-mcp", "env": {"LICHESS_TOKEN": "your-lichess-api-token"}}}}

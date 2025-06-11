@@ -1,0 +1,1 @@
+{"mcpServers": {"My API Spec (Docker Remote)": {"command": "docker", "args": ["run", "--rm", "-i", "kadykov/mcp-openapi-schema-explorer:latest", "<remote-url-to-spec>"], "env": {}}}}

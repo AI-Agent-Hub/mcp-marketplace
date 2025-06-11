@@ -1,0 +1,1 @@
+{"mcpServers": {"pocket": {"command": "npx", "args": ["tsx", "/path/to/mcp-pocket/index.ts"], "env": {"POCKET_CONSUMER_KEY": "your-pocket-consumer-key", "POCKET_ACCESS_TOKEN": "your-pocket-access-token"}}}}

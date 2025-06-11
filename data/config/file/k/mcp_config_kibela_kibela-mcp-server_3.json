@@ -1,0 +1,1 @@
+{"mcpServers": {"kibela": {"command": "docker", "args": ["run", "-i", "-e", "KIBELA_ORIGIN", "-e", "KIBELA_ACCESS_TOKEN", "-v", "/path/to/kibela-mcp-server-config.json:/usr/src/app/kibela-mcp-server-config.json", "ghcr.io/kibela/kibela-mcp-server"], "env": {"KIBELA_ORIGIN": "https://your-subdomain.kibe.la", "KIBELA_ACCESS_TOKEN": "***"}}}}

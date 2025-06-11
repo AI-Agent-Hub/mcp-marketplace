@@ -1,0 +1,1 @@
+{"mcpServers": {"pocket": {"command": "npx", "args": ["-y", "@kazuph/mcp-pocket"], "env": {"POCKET_CONSUMER_KEY": "your-pocket-consumer-key", "POCKET_ACCESS_TOKEN": "your-pocket-access-token"}}}}

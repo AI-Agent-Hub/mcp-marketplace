@@ -1,0 +1,1 @@
+{"mcpServers": {"graphdb": {"command": "node", "args": ["/path/to/mcp-server-graphdb/dist/index.js"], "env": {"GRAPHDB_ENDPOINT": "http://localhost:7200", "GRAPHDB_REPOSITORY": "myRepository", "GRAPHDB_USERNAME": "username", "GRAPHDB_PASSWORD": "password"}}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"kibela": {"command": "/path/to/kibela-mcp-server/bin/cli.mjs", "env": {"KIBELA_ORIGIN": "https://your-subdomain.kibe.la", "KIBELA_ACCESS_TOKEN": "***"}}}}

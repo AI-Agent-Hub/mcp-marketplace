@@ -1,0 +1,1 @@
+{"mcpServers": {"crypto_mcp": {"command": "uv", "args": ["run", "-m", "crypto_mcp"]}}}

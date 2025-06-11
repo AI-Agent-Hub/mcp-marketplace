@@ -1,0 +1,1 @@
+{"mcpServers": {"My API Spec (Local Dev)": {"command": "node", "args": ["/full/path/to/cloned/mcp-openapi-schema-explorer/dist/src/index.js", "<path-or-url-to-spec>", "--output-format", "yaml"], "env": {}}}}

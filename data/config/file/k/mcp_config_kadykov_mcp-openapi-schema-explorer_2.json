@@ -1,0 +1,1 @@
+{"mcpServers": {"My API Spec (Docker Local)": {"command": "docker", "args": ["run", "--rm", "-i", "-v", "/full/host/path/to/spec.yaml:/spec/api.yaml", "kadykov/mcp-openapi-schema-explorer:latest", "/spec/api.yaml", "--output-format", "yaml"], "env": {}}}}
