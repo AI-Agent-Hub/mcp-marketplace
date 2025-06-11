@@ -1,0 +1,1 @@
+{"mcpServers": {"fegis": {"command": "uv", "args": ["--directory", "<FEGIS_PATH>", "run", "fegis"], "env": {"QDRANT_URL": "http://localhost:6333", "QDRANT_API_KEY": "", "COLLECTION_NAME": "knowledge_store", "FAST_EMBED_MODEL": "nomic-ai/nomic-embed-text-v1.5", "CONFIG_PATH": "<FEGIS_PATH>/archetypes/example.yaml"}}}}
