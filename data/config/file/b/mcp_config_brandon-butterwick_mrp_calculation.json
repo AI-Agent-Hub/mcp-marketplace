@@ -1,0 +1,1 @@
+{"mcpServers": {"mrp": {"command": "node", "args": ["/path/to/mrp-calculator/dist/index.js"], "env": {}}}}

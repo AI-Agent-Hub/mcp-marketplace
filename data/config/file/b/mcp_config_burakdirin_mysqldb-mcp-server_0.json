@@ -1,0 +1,1 @@
+{"mcpServers": {"mysqldb-mcp-server": {"command": "uv", "args": ["--directory", "/Users/burakdirin/Projects/mysqldb-mcp-server", "run", "mysqldb-mcp-server"], "env": {"MYSQL_HOST": "localhost", "MYSQL_USER": "root", "MYSQL_PASSWORD": "password", "MYSQL_DATABASE": "[optional]", "MYSQL_READONLY": "true"}}}}

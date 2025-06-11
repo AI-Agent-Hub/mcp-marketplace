@@ -1,0 +1,1 @@
+{"mcpServers": {"k8s_pilot": {"command": "uv", "args": ["--directory", "<path-to-cloned-repo>/k8s-pilot", "run", "--with", "mcp[cli]", "mcp", "run", "k8s_pilot.py"]}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"say": {"command": "node", "args": ["/path/to/say-mcp-server/build/index.js"]}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"maigret": {"command": "mcp-maigret", "env": {"MAIGRET_REPORTS_DIR": "/path/to/reports/directory"}}}}

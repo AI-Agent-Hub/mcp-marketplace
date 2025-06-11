@@ -1,0 +1,1 @@
+{"mcpServers": {"virustotal": {"command": "mcp-virustotal", "env": {"VIRUSTOTAL_API_KEY": "your-virustotal-api-key"}}}}

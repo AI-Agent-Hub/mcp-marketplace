@@ -1,0 +1,1 @@
+{"mcpServers": {"deltatask": {"command": "uv", "args": ["--directory", "/ABSOLUTE/PATH/TO/DeltaTask", "run", "server.py"]}}}
