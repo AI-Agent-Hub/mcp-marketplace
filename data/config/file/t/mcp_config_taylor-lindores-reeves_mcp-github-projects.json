@@ -1,0 +1,1 @@
+{"mcpServers": {"GitHubProjects": {"command": "bun", "args": ["/path/to/your/directory/mcp-github-projects-main/build/index.js"], "env": {"GITHUB_TOKEN": "your_github_personal_access_token", "GITHUB_OWNER": "your_github_username_or_org"}}}}

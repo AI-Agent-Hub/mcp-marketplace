@@ -1,0 +1,1 @@
+{"mcpServers": {"sysoperator": {"command": "node", "args": ["/absolute/path/to/mcp-sysoperator/build/index.js"], "env": {}}}}

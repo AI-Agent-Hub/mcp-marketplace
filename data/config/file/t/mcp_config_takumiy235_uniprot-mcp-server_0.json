@@ -1,0 +1,1 @@
+{"mcpServers": {"uniprot": {"command": "uv", "args": ["--directory", "path/to/uniprot-mcp-server", "run", "uniprot-mcp-server"]}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"cos-mcp": {"command": "node", "args": ["${your work space}/dist/index.js"]}}}

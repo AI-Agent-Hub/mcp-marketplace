@@ -1,0 +1,1 @@
+{"mcpServers": {"rs_filesystem": {"command": "/path/to/rs_filesystem", "args": ["--mcp"], "env": {"MCP_RS_FILESYSTEM_ALLOWED_DIRECTORIES": "/path/number/one:/path/number/two"}}}}

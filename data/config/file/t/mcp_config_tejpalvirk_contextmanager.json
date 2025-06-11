@@ -1,0 +1,1 @@
+{"mcpServers": {"contextmanager": {"command": "npx", "args": ["-y", "github:tejpalvirk/contextmanager"], "options": {"port": 3000, "domains": ["developer", "project", "student"]}}}}

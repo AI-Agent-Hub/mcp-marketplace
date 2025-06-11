@@ -1,0 +1,1 @@
+{"mcpServers": {"usescraper-server": {"command": "node", "args": ["/path/to/usescraper-server/build/index.js"], "env": {"USESCRAPER_API_KEY": "your-api-key-here"}}}}

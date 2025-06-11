@@ -1,0 +1,1 @@
+{"mcpServers": {"openai-server": {"command": "python", "args": ["-m", "src.mcp_server_openai.server"], "env": {"PYTHONPATH": "C:/path/to/your/mcp-server-openai", "OPENAI_API_KEY": "your-key-here"}}}}

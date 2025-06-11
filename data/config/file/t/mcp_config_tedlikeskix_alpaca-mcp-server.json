@@ -1,0 +1,1 @@
+{"mcpServers": {"alpaca": {"command": "python", "args": ["/path/to/alpaca_mcp_server.py"], "env": {"API_KEY_ID": "your_alpaca_api_key", "API_SECRET_KEY": "your_alpaca_secret_key"}}}}

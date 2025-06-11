@@ -1,0 +1,1 @@
+{"mcpServers": {"think": {"command": "/full/path/to/python", "args": ["/full/path/to/main.py"]}}}

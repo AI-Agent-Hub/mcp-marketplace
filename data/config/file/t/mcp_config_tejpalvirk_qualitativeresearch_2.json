@@ -1,0 +1,1 @@
+{"mcpServers": {"qualitativeresearch": {"command": "docker", "args": ["run", "--rm", "-i", "mcp/qualitativeresearch"]}}}

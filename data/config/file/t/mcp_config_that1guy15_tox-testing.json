@@ -1,0 +1,1 @@
+{"mcpServers": {"tox-testing": {"command": "node", "args": ["/path/to/tox-testing/build/index.js"], "env": {"TOX_APP_DIR": "/path/to/your/python/project", "TOX_TIMEOUT": "600"}}}}

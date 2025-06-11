@@ -1,0 +1,1 @@
+{"mcpServers": {"nba_mcp_server": {"command": "/path/to/your/python", "args": ["/path/to/nba_server.py"]}}}

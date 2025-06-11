@@ -1,0 +1,1 @@
+{"mcpServers": {"TVRecommender": {"command": "env", "args": ["TMDB_API_KEY=your_api_key_here", "npx", "tv-recommender-mcp-server"]}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"BigQuery": {"command": "/path/to/dist/bigquery-mcp-server", "args": ["--project-id", "your-project-id", "--location", "asia-northeast1", "--max-results", "1000", "--max-bytes-billed", "500000000000"], "env": {"GOOGLE_APPLICATION_CREDENTIALS": "/path/to/service-account-key.json"}}}}

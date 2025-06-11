@@ -1,0 +1,1 @@
+{"mcpServers": {"slack": {"command": "/path/to/dist/slack_search_function_mcp", "env": {"SLACK_TOKEN": "xoxb-your-token-here"}}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"a2a-client": {"command": "docker", "args": ["run", "-i", "--rm", "-e", "A2A_ENDPOINT_URL", "a2a-client-mcp-server"], "env": {"A2A_ENDPOINT_URL": "http://localhost:41241"}}}}

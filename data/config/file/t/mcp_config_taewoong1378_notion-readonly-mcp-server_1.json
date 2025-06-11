@@ -1,0 +1,1 @@
+{"mcpServers": {"notionApi": {"command": "docker", "args": ["run", "--rm", "-i", "-e", "OPENAPI_MCP_HEADERS", "taewoong1378/notion-readonly-mcp-server"], "env": {"OPENAPI_MCP_HEADERS": "{\"Authorization\":\"Bearer ntn_****\",\"Notion-Version\":\"2022-06-28\"}"}}}}

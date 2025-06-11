@@ -1,0 +1,1 @@
+{"mcpServers": {"uuid-provider": {"command": "node", "args": ["/absolute/path/to/uuid-mcp/build/index.js"]}}}

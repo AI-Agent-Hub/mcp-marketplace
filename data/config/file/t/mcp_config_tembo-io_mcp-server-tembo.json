@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-server-tembo": {"command": "node", "env": {"TEMBO_API_KEY": "your_tembo_api_key"}, "args": ["/absolute/path/to/cloned/repo/mcp-server-tembo/dist/index.js"]}}}

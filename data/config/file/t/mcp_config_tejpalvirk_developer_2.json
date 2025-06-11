@@ -1,0 +1,1 @@
+{"mcpServers": {"developer": {"command": "docker", "args": ["run", "--rm", "-i", "mcp/developer"]}}}
