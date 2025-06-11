@@ -1,0 +1,1 @@
+{"mcpServers": {"sui-tools": {"command": "npx", "args": ["-y", "sui-mcp@latest"]}}}
