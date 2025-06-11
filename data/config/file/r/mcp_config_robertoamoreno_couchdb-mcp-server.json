@@ -1,0 +1,1 @@
+{"mcpServers": {"couchdb-mcp-server": {"command": "/path/to/couchdb-mcp-server/build/index.js", "env": {"COUCHDB_URL": "http://username:password@localhost:5984"}}}}

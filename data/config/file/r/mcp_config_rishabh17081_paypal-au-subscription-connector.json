@@ -1,0 +1,1 @@
+{"mcpServers": {"paypal-au": {"command": "python", "args": ["-m", "fastmcp", "run", "/path/to/paypal_au_subscription_mcp.py"], "env": {"PAYPAL_CLIENT_ID": "your_client_id", "PAYPAL_CLIENT_SECRET": "your_client_secret", "PAYPAL_ENVIRONMENT": "SANDBOX"}}}}

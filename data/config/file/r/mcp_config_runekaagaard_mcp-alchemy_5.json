@@ -1,0 +1,1 @@
+{"mcpServers": {"my_cratedb": {"command": "uvx", "args": ["--from", "mcp-alchemy==2025.5.2.210242", "--with", "sqlalchemy-cratedb>=0.42.0.dev1", "--refresh-package", "mcp-alchemy", "mcp-alchemy"], "env": {"DB_URL": "crate://user:password@localhost:4200/?schema=testdrive"}}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"kontxt-server": {"serverType": "stdio", "command": "python", "args": ["/absolute/path/to/kontxt_server.py", "--repo-path", "/absolute/path/to/your/codebase", "--transport", "stdio"], "env": {"GEMINI_API_KEY": "your-api-key-here"}}}}

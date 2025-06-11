@@ -1,0 +1,1 @@
+{"mcpServers": {"1panel-mcp": {"command": "npx", "args": ["-y", "1panel-mcp"], "env": {"ONEPANEL_BASE_URL": "<your 1Panel base URL>", "ONEPANEL_API_KEY": "<your 1Panel API key>"}}}}

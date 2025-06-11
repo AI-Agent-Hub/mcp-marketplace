@@ -1,0 +1,1 @@
+{"mcpServers": {"\u6587\u6863 MCP \u670d\u52a1\u5668": {"command": "node", "args": ["/\u7edd\u5bf9\u8def\u5f84/server.js"], "env": {"NODE_ENV": "development"}}}}

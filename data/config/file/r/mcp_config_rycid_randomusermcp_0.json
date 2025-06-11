@@ -1,0 +1,1 @@
+{"mcpServers": {"randomuser": {"command": "node", "args": ["path/to/randomuserMCP/build/index.js"]}}}

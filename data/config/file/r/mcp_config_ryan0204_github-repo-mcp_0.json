@@ -1,0 +1,1 @@
+{"mcpServers": {"github-repo-mcp": {"command": "wsl", "args": ["bash", "-c", "cmd /c npx -y github-repo-mcp"], "enabled": true}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"directus": {"command": "directus-mcp-server", "env": {"DIRECTUS_URL": "<your Directus instance URL>", "DIRECTUS_TOKEN": "<your Directus user token>"}}}}

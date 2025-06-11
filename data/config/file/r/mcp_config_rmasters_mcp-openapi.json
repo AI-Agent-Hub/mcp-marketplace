@@ -1,0 +1,1 @@
+{"mcpServers": {"todos": {"command": "uvx", "args": ["mcp-openapi", "--openapi-url=http://localhost:8000/openapi.json", "stdio"]}}}

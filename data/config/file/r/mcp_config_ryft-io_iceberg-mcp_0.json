@@ -1,0 +1,1 @@
+{"mcpServers": {"iceberg-mcp": {"command": "PATH-TO-BINARY/iceberg-mcp", "env": {"CATALOG_KIND": "rest", "REST_URI": "http://localhost:8080", "LOG_LEVEL": "info"}}}}

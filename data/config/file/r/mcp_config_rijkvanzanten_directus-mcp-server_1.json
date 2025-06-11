@@ -1,0 +1,1 @@
+{"mcpServers": {"directus": {"command": "node", "args": ["/path/to/directus-mcp-server/dist/index.js"]}}}

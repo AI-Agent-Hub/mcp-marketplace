@@ -1,0 +1,1 @@
+{"mcpServers": {"my_mssql_db": {"command": "uvx", "args": ["--from", "mcp-alchemy==2025.5.2.210242", "--with", "pymssql", "--refresh-package", "mcp-alchemy", "mcp-alchemy"], "env": {"DB_URL": "mssql+pymssql://user:password@localhost/dbname"}}}}

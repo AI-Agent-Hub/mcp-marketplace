@@ -1,0 +1,1 @@
+{"mcpServers": {"gitlab": {"command": "node", "args": ["/path/to/mcp-gitlab/build/index.js"], "env": {"GITLAB_API_TOKEN": "YOUR_GITLAB_API_TOKEN", "GITLAB_API_URL": "https://gitlab.com/api/v4"}}}}

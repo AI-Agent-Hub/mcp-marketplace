@@ -1,0 +1,1 @@
+{"mcpServers": {"chrome-debug": {"command": "node", "args": ["path/to/chrome-debug-mcp/build/index.js"], "disabled": false, "alwaysAllow": []}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"github-repo-mcp": {"command": "wsl", "args": ["bash", "-c", "'/home/[username]/.nvm/versions/node/v20.18.0/bin/npx github-repo-mcp'"], "enabled": true}}}

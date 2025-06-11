@@ -1,0 +1,1 @@
+{"mcpServers": {"llama_index_docs_server": {"command": "poetry", "args": ["--directory", "$YOURPATH/llamacloud-mcp", "run", "python", "$YOURPATH/llamacloud-mcp/mcp-server.py"]}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"iceberg-mcp": {"command": "PATH-TO-BINARY/iceberg-mcp", "env": {"CATALOG_KIND": "glue", "AWS_CONFIG_FILE": "/Users/{your_username}/.aws/config", "AWS_SHARED_CREDENTIALS_FILE": "/Users/{your_username}/.aws/credentials", "PROFILE_NAME": "default", "WAREHOUSE": "s3://{bucket_name}/{namespace}/{table}", "LOG_LEVEL": "info"}}}}

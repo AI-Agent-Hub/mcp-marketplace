@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-rtfm": {"command": "node", "args": ["<path-to-mcp-rtfm>/build/index.js"], "disabled": false, "alwaysAllow": []}}}

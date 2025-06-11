@@ -1,0 +1,1 @@
+{"mcpServers": {"svm-mcp": {"command": "bun", "args": ["/path/to/svm-mcp/build/index.js"]}}}

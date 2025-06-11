@@ -1,0 +1,1 @@
+{"mcpServers": {"kubernetes": {"command": "python", "args": ["-m", "kubectl_mcp_tool.minimal_wrapper"], "env": {"KUBECONFIG": "/path/to/your/.kube/config", "PATH": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/bin"}}}}

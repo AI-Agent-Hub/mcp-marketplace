@@ -1,0 +1,1 @@
+{"mcpServers": {"deepseek-thinker": {"command": "node", "args": ["/your-path/deepseek-thinker-mcp/build/index.js"], "env": {"API_KEY": "<Your API Key>", "BASE_URL": "<Your Base URL>"}}}}

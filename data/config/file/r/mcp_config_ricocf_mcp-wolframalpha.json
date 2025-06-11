@@ -1,0 +1,1 @@
+{"mcpServers": {"WolframAlphaServer": {"command": "python3", "args": ["/path/to/src/core/server.py"]}}}

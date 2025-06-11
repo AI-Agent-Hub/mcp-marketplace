@@ -1,0 +1,1 @@
+{"mcpServers": {"my_postgres_db": {"command": "uvx", "args": ["--from", "mcp-alchemy==2025.5.2.210242", "--with", "psycopg2-binary", "--refresh-package", "mcp-alchemy", "mcp-alchemy"], "env": {"DB_URL": "postgresql://user:password@localhost/dbname"}}}}

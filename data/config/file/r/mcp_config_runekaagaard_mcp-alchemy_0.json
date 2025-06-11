@@ -1,0 +1,1 @@
+{"mcpServers": {"my_sqlite_db": {"command": "uvx", "args": ["--from", "mcp-alchemy==2025.5.2.210242", "--refresh-package", "mcp-alchemy", "mcp-alchemy"], "env": {"DB_URL": "sqlite:////absolute/path/to/database.db"}}}}

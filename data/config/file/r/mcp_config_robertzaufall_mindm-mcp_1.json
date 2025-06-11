@@ -1,0 +1,1 @@
+{"mcpServers": {"mindm (MindManager)": {"command": "uv", "args": ["run", "--with", "mindm>=0.0.4.6", "--with", "mindm-mcp>=0.0.1.50", "--with", "fastmcp", "--with", "markdown-it-py", "-m", "mindm_mcp.server"], "env": {"VIRTUAL_ENV": "/Users/master/git/mindm-mcp/.venv"}}}}

@@ -1,0 +1,1 @@
+{"mcp": {"inputs": [], "servers": {"age-manager": {"command": "/Users/your_user_name/.local/bin/uv", "args": ["--directory", "/path/to/your_project", "run", "age-mcp-server", "--pg-con-str", "host=your_server.postgres.database.azure.com port=5432 dbname=postgres user=your_username password=your_password", "--debug"]}}}}

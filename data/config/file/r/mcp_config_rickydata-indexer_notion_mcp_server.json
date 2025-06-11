@@ -1,0 +1,1 @@
+{"mcpServers": {"notion-kb": {"command": "uv", "args": ["run", "--with", "fastmcp", "--with", "python-dotenv", "--with", "requests", "fastmcp", "run", "/absolute/path/to/notion_mcp_server.py"], "env": {"DIFY_API_BACKEND_KEY": "your-api-key"}}}}

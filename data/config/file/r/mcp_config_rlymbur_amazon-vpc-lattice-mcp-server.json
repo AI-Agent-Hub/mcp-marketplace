@@ -1,0 +1,1 @@
+{"mcpServers": {"amazon-vpc-lattice": {"command": "node", "args": ["/path/to/amazon-vpc-lattice-mcp-server/build/index.js"], "disabled": false, "autoApprove": [], "env": {}}}}

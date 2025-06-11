@@ -1,0 +1,1 @@
+{"mcpServers": {"age-manager": {"command": "age-mcp-server", "args": ["--pg-con-str", "host=your_server.postgres.database.azure.com port=5432 dbname=postgres user=your_username password=your_password", "--allow-write"]}}}
