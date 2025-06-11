@@ -1,0 +1,1 @@
+{"mcpServers": {"app-insight-mcp": {"command": "docker", "args": ["run", "-i", "--rm", "app-insight-mcp"]}}}

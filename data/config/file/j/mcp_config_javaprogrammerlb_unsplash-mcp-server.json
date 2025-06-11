@@ -1,0 +1,1 @@
+{"mcpServers": {"unsplash": {"command": "<source_dir>/cmd/server/unsplash-mcp-server", "args": [], "env": {"UNSPLASH_ACCESS_KEY": "<your_unsplash_access_key>"}}}}

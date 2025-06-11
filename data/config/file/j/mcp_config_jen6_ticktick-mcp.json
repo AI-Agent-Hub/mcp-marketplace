@@ -1,0 +1,1 @@
+{"mcpServers": {"ticktick": {"command": "<absolute path to uv>", "args": ["run", "--directory", "<absolute path to ticktick-mcp directory>", "-m", "ticktick_mcp.cli", "run"]}}}

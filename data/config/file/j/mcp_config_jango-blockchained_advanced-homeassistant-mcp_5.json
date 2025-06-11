@@ -1,0 +1,1 @@
+{"mcpServers": {"homeassistant-mcp": {"command": "npx", "args": ["homeassistant-mcp"], "env": {"HASS_TOKEN": "your_home_assistant_token_here", "HASS_HOST": "http://your_home_assistant_host:8123"}}}}

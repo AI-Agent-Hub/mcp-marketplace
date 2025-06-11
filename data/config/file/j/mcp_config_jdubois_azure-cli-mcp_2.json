@@ -1,0 +1,1 @@
+{"mcpServers": {"azure-cli": {"command": "java", "args": ["-jar", "~/Downloads/azure-cli-mcp.jar"]}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-gatherer": {"command": "php", "args": ["C:\\mcp-gatherer\\mcp_server.php"], "disabled": false, "alwaysAllow": []}}}

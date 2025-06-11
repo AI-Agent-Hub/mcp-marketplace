@@ -1,0 +1,1 @@
+{"mcpServers": {"pubmed": {"command": "python", "args": ["-m", "pubmed-mcp-server"]}}}

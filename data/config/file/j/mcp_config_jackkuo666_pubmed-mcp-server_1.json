@@ -1,0 +1,1 @@
+{"mcpServers": {"pubmed": {"command": "C:\\Users\\YOUR\\PATH\\miniconda3\\envs\\mcp_server\\python.exe", "args": ["D:\\code\\YOUR\\PATH\\PubMed-MCP-Server\\pubmed_server.py"], "env": {}, "disabled": false, "autoApprove": []}}}

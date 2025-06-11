@@ -1,0 +1,1 @@
+{"mcpServers": {"DarajaMCP": {"command": "/ABSOLUTE/PATH/TO/PARENT/.local/bin/uv", "args": ["--directory", "/ABSOLUTE/PATH/TO/PARENT/FOLDER/DarajaMCP", "run", "main.py"]}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"homeassistant-mcp": {"command": "bun", "args": ["run", "start", "--port", "8080"], "env": {"NODE_ENV": "production"}}}}
