@@ -1,0 +1,1 @@
+{"mcpServers": {"clickhouse": {"url": "http://localhost:8080/sse", "env": {"API_KEY": ""}}}}

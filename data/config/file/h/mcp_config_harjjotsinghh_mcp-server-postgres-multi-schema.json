@@ -1,0 +1,1 @@
+{"mcpServers": {"postgres": {"command": "npx", "args": ["-y", "mcp-server-postgres-multi-schema", "postgresql://localhost/mydb", "public,audit"]}}}

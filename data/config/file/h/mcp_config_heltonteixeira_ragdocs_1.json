@@ -1,0 +1,1 @@
+{"mcpServers": {"ragdocs": {"command": "node", "args": ["@mcpservers/ragdocs"], "env": {"QDRANT_URL": "https://your-cluster-url.qdrant.tech", "QDRANT_API_KEY": "your-qdrant-api-key", "EMBEDDING_PROVIDER": "ollama"}}}}

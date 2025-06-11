@@ -1,0 +1,1 @@
+{"mcpServers": {"aligo-sms-mcp": {"command": "npx", "args": ["-y", "github:hongsw/aligo-sms-mcp-server", "mcp-server"]}}}

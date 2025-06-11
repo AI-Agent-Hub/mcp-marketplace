@@ -1,0 +1,1 @@
+{"mcpServers": {"wagyu-sports": {"command": "python", "args": ["/absolute/path/to/wagyu_mcp_hackathon/wagyu_sports/mcp_server/test_server.py", "--test-mode"], "env": {"ODDS_API_KEY": "your_api_key_here"}, "disabled": false, "autoApprove": []}}}

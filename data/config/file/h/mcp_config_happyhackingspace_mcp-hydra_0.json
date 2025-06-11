@@ -1,0 +1,1 @@
+{"mcpServers": {"hydramcp": {"command": "docker", "args": ["run", "--rm", "-i", "--name", "hydramcp", "hydramcp"]}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"resend-mcp": {"command": "npx", "args": ["-y", "resend-mcp"], "env": {"RESEND_API_KEY": "YOUR_RESEND_API_KEY_HERE (string, required)", "SENDER_EMAIL_ADDRESS": "YOUR_SENDER_EMAIL_ADDRESS_HERE (string, required)", "REPLY_TO_EMAIL_ADDRESSES": "YOUR_REPLY_TO_EMAIL_ADDRESSES_HERE (string, optional, comma delimited)"}}}}

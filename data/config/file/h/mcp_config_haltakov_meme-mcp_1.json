@@ -1,0 +1,1 @@
+{"mcpServers": {"meme": {"command": "/Users/<USERNAME>/.nvm/versions/node/v20.18.2/bin/node", "args": ["/Users/<USERNAME>/.nvm/versions/node/v20.18.2/lib/node_modules/meme-mcp/dist/index.js"], "env": {"IMGFLIP_USERNAME": "<IMGFLIP USERNAME>", "IMGFLIP_PASSWORD": "<IMGFLIP PASSWORD>"}}}}
