@@ -1,0 +1,1 @@
+{"mcpServers": {"android": {"command": "path/to/uv", "args": ["--directory", "path/to/android-mcp-server", "run", "server.py"]}}}

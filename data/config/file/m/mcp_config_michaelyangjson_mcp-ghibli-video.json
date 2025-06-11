@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-server-ghibli-video": {"command": "npx", "args": ["-y", "@openmcprouter/mcp-server-ghibli-video"], "env": {"Ghibli_API_URL": "https://www.gpt4oimg.com"}}}}

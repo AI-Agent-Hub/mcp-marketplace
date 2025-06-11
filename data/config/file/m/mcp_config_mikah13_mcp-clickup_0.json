@@ -1,0 +1,1 @@
+{"mcpServers": {"clickup": {"command": "npx", "args": ["-y", "mcp-clickup"], "env": {"CLICKUP_API_TOKEN": "your-api-token", "CLICKUP_WORKSPACE_ID": "your-workspace-id"}}}}

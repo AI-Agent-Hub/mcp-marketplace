@@ -1,0 +1,1 @@
+{"mcpServers": {"raygun": {"command": "/path/to/server-raygun/build/index.js", "env": {"RAYGUN_PAT_TOKEN": "your-pat-token-ken"}}}}

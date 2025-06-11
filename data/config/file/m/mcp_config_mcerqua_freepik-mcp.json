@@ -1,0 +1,1 @@
+{"mcpServers": {"freepik": {"command": "node", "args": ["path/to/freepik-mcp/build/index.js"], "env": {"FREEPIK_API_KEY": "your-api-key-here"}, "disabled": false, "autoApprove": []}}}

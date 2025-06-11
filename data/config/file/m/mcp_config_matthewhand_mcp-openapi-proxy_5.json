@@ -1,0 +1,1 @@
+{"mcpServers": {"getzep": {"command": "uvx", "args": ["mcp-openapi-proxy"], "env": {"OPENAPI_SPEC_URL": "https://raw.githubusercontent.com/matthewhand/mcp-openapi-proxy/refs/heads/main/examples/getzep.swagger.json", "TOOL_WHITELIST": "/sessions", "API_KEY": "<your_getzep_api_key>", "API_AUTH_TYPE": "Api-Key", "TOOL_NAME_PREFIX": "zep_"}}}}

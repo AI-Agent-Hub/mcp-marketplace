@@ -1,0 +1,1 @@
+{"mcpServers": {"Lokka-Microsoft": {"command": "npx", "args": ["-y", "@merill/lokka"], "env": {"TENANT_ID": "<tenant-id>", "CLIENT_ID": "<client-id>", "CLIENT_SECRET": "<client-secret>"}}}}

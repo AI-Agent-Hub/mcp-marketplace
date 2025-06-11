@@ -1,0 +1,1 @@
+{"mcpServers": {"outlook-calendar": {"command": "node", "args": ["path/to/outlook-calendar-mcp/src/index.js"], "env": {}}}}

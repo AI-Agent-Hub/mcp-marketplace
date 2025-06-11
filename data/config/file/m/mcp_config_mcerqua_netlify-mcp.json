@@ -1,0 +1,1 @@
+{"mcpServers": {"netlify": {"command": "node", "args": ["path/to/netlify-mcp/build/index.js"], "env": {"NETLIFY_ACCESS_TOKEN": "your_token_here"}, "disabled": false, "autoApprove": []}}}

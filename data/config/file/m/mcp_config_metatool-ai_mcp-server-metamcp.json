@@ -1,0 +1,1 @@
+{"mcpServers": {"MetaMCP": {"command": "npx", "args": ["-y", "@metamcp/mcp-server-metamcp@latest"], "env": {"METAMCP_API_KEY": "<your api key>"}}}}

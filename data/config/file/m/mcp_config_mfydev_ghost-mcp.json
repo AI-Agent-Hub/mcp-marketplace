@@ -1,0 +1,1 @@
+{"mcpServers": {"ghost-mcp": {"command": "npx", "args": ["-y", "@fanyangmeng/ghost-mcp"], "env": {"GHOST_API_URL": "https://yourblog.com", "GHOST_ADMIN_API_KEY": "your_admin_api_key", "GHOST_API_VERSION": "v5.0"}}}}

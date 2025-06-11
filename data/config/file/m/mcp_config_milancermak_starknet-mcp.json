@@ -1,0 +1,1 @@
+{"mcpServers": {"starknet": {"command": "bun", "args": ["/PATH/TO/THIS/REPO/starknet-mcp/index.ts"], "env": {"STARKNET_RPC_URL": "https://starknet-mainnet.public.blastapi.io/rpc/v0_7"}}}}

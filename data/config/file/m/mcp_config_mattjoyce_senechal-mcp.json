@@ -1,0 +1,1 @@
+{"mcpServers": {"senechal-health": {"command": "C:\\path\\to\\venv\\Scripts\\python.exe", "args": ["C:\\path\\to\\senechal_mcp_server.py"], "env": {"SENECHAL_API_KEY": "your_api_key_here"}}}}

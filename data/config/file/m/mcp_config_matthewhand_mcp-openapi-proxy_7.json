@@ -1,0 +1,1 @@
+{"mcpServers": {"notion": {"command": "uvx", "args": ["mcp-openapi-proxy"], "env": {"API_KEY": "ntn_<your_key>", "OPENAPI_SPEC_URL": "https://storage.googleapis.com/versori-assets/public-specs/20240214/NotionAPI.yml", "SERVER_URL_OVERRIDE": "https://api.notion.com", "EXTRA_HEADERS": "Notion-Version: 2022-06-28"}}}}

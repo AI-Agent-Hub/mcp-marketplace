@@ -1,0 +1,1 @@
+{"mcpServers": {"metoro-mcp-server": {"command": "<your path to Metoro MCP server go executable>/metoro-mcp-server", "args": [], "env": {"METORO_AUTH_TOKEN": "<your auth token>", "METORO_API_URL": "https://us-east.metoro.io"}}}}

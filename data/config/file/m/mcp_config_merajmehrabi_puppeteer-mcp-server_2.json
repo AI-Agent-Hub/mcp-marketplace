@@ -1,0 +1,1 @@
+{"mcpServers": {"puppeteer": {"command": "node", "args": ["path/to/puppeteer-mcp-server/dist/index.js"], "env": {"NODE_OPTIONS": "--experimental-modules"}}}}

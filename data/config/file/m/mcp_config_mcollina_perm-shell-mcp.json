@@ -1,0 +1,1 @@
+{"mcpServers": {"permshell": {"command": "node", "args": ["/path/to/perm-shell-mcp/dist/index.js"]}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"virustotal": {"command": "uvx", "args": ["mcp-openapi-proxy"], "env": {"OPENAPI_SPEC_URL": "https://raw.githubusercontent.com/matthewhand/mcp-openapi-proxy/refs/heads/main/examples/virustotal.openapi.yml", "EXTRA_HEADERS": "x-apikey: ${VIRUSTOTAL_API_KEY}", "OPENAPI_SPEC_FORMAT": "yaml"}}}}

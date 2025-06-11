@@ -1,0 +1,1 @@
+{"mcpServers": {"claude-prompts-mcp": {"command": "node", "args": ["E:\\path\\to\\claude-prompts-mcp\\server\\dist\\index.js"], "env": {"MCP_PROMPTS_CONFIG_PATH": "E:\\path\\to\\claude-prompts-mcp\\server\\promptsConfig.json"}}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"meilisearch": {"command": "uvx", "args": ["-n", "meilisearch-mcp"]}}}

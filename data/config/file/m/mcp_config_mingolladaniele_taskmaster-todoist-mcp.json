@@ -1,0 +1,1 @@
+{"mcpServers": {"todoist-mcp": {"command": "C:/Users/<username>/path/to/todoist-mcp/.venv/Scripts/python.exe", "args": ["C:/Users/<username>/path/to/todoist-mcp/server.py"], "env": {"TODOIST_API_TOKEN": "your-api-token-here"}}}}

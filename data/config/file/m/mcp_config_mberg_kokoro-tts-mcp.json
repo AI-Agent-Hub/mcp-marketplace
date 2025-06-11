@@ -1,0 +1,1 @@
+{"mcpServers": {"kokoro-tts": {"command": "/Users/giannisan/pinokio/bin/miniconda/bin/uv", "args": ["--directory", "/Users/giannisan/Documents/Cline/MCP/kokoro-tts-mcp", "run", "tts-mcp.py"]}}}

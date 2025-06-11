@@ -1,0 +1,1 @@
+{"mcpServers": {"safe-local-python-executor": {"command": "uv", "args": ["--directory", "/path/to/mcp_local_python_executor/", "run", "mcp_server.py"]}}}

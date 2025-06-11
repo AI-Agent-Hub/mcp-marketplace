@@ -1,0 +1,1 @@
+{"mcpServers": {"clickup": {"command": "docker", "args": ["run", "-i", "--rm", "-e", "CLICKUP_API_TOKEN", "-e", "CLICKUP_WORKSPACE_ID", "mcp/clickup"], "env": {"CLICKUP_API_TOKEN": "your-api-token", "CLICKUP_WORKSPACE_ID": "your-workspace-id"}}}}

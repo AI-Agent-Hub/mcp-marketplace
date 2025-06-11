@@ -1,0 +1,1 @@
+{"mcpServers": {"netbox": {"command": "uvx", "args": ["mcp-openapi-proxy"], "env": {"OPENAPI_SPEC_URL": "https://raw.githubusercontent.com/APIs-guru/openapi-directory/refs/heads/main/APIs/netbox.dev/3.4/openapi.yaml", "API_KEY": "${NETBOX_API_KEY}"}}}}

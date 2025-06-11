@@ -1,0 +1,1 @@
+{"mcpServers": {"outlook-calendar": {"command": "npx", "args": ["-y", "outlook-calendar-mcp"], "env": {}}}}

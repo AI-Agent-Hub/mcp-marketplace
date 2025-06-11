@@ -1,0 +1,1 @@
+{"mcpServers": {"memory_recall": {"command": "/path/to/python3", "args": ["/path/2/your/cloned/repository/memory_plugin.py"]}}}

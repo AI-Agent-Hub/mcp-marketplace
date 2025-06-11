@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-substack": {"command": "/opt/homebrew/bin/node", "args": ["/path/to/mcp-substack/lib/index.mjs"], "methods": {"download_substack": {"description": "Download and parse content from a Substack post"}}}}}
