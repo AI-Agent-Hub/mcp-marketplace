@@ -1,0 +1,1 @@
+{"mcpServers": {"stata-mcp": {"command": "/path/to/mcp-proxy", "args": ["http://127.0.0.1:4000/mcp"]}}}

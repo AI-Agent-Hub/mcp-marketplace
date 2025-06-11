@@ -1,0 +1,1 @@
+{"mcpServers": {"postman-runner": {"command": "node", "args": ["/absolute/path/to/mcp-postman/build/index.js"]}}}

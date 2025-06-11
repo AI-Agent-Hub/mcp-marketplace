@@ -1,0 +1,1 @@
+{"mcpServers": {"tailorkit-mcp": {"command": "node", "args": ["path/to/your/dist/index.js"], "env": {"HOST": "https://your-api-host.com", "ACCESS_TOKEN": "your-access-token"}}}}

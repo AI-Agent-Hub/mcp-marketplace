@@ -1,0 +1,1 @@
+{"mcpServers": {"rami-levy": {"command": "npx", "args": ["-y", "@modelcontextprotocol/server-rami-levy"], "env": {"RAMI_LEVY_API_KEY": "<YOUR_API_KEY>", "ECOM_TOKEN": "<YOUR_ECOM_TOKEN>", "COOKIE": "<YOUR_COOKIE>"}}}}

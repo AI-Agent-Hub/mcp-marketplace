@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-k8s": {"command": "docker", "args": ["run", "-i", "-v", "~/.kube/config:/root/.kube/config", "--rm", "ghcr.io/silenceper/mcp-k8s:latest"]}}}

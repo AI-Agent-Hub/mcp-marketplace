@@ -1,0 +1,1 @@
+{"mcpServers": {"realtime-crypto": {"command": "npx", "args": ["realtime-crypto-mcp-server"]}}}

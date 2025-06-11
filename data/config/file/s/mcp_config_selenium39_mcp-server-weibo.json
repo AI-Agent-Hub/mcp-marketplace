@@ -1,0 +1,1 @@
+{"mcpServers": {"weibo": {"command": "uvx", "args": ["--from", "git+https://github.com/qinyuanpei/mcp-server-weibo.git", "mcp-server-weibo"]}}}

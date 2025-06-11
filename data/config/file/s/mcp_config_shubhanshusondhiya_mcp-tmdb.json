@@ -1,0 +1,1 @@
+{"mcpServers": {"tmdb-mcp": {"command": "node", "args": ["/absolute/path/to/your/tmdb-mcp/build/index.js"]}}}

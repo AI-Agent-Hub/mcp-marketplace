@@ -1,0 +1,1 @@
+{"mcpServers": {"ppts": {"command": "uv", "args": ["run", "path/to/main.py"]}}}

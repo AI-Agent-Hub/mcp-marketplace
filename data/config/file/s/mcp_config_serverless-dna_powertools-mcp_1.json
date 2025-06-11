@@ -1,0 +1,1 @@
+{"mcpServers": {"powertools": {"command": "node", "args": ["\\\\wsl$\\Ubuntu\\home\\walmsles\\dev\\serverless-dna\\powertools-mcp\\dist\\bundle.js"]}}}

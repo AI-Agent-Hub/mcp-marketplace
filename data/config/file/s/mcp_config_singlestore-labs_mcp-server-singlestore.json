@@ -1,0 +1,1 @@
+{"mcpServers": {"singlestore-mcp-server": {"command": "uvx", "args": ["singlestore-mcp-server", "start", "<SINGLESTORE_API_KEY>"]}}}

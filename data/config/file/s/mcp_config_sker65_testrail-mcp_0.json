@@ -1,0 +1,1 @@
+{"mcpServers": {"testrail": {"command": "uvx", "args": ["testrail-mcp"], "env": {"TESTRAIL_URL": "https://your-instance.testrail.io", "TESTRAIL_USERNAME": "your-email@example.com", "TESTRAIL_API_KEY": "your-api-key"}}}}

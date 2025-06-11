@@ -1,0 +1,1 @@
+{"mcpServers": {"hubspot": {"command": "docker", "args": ["run", "-i", "--rm", "-e", "HUBSPOT_API_KEY", "mcp/hubspot"], "env": {"HUBSPOT_API_KEY": "your-api-key-here"}}}}

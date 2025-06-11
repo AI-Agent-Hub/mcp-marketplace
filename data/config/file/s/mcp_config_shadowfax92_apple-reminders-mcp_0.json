@@ -1,0 +1,1 @@
+{"mcpServers": {"apple-reminders": {"command": "node", "args": ["/path/to/mcp-apple-reminders/dist/index.js"]}}}

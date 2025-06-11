@@ -1,0 +1,1 @@
+{"mcpServers": {"sidecar": {"command": "npx", "args": ["-y", "--package", "markdown-sidecar-mcp", "--", "mcp", "start", "--workingDir", "{REPO_WORKING_DIR}", "--packageName", "{PACKAGE_NAME}", "--registry", "npm"]}}}

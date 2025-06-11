@@ -1,0 +1,1 @@
+{"mcpServers": {"aer-mcp": {"command": "uv", "args": ["--directory", "/path/to/the/repo/", "run", "aer_mcp.py"]}}}

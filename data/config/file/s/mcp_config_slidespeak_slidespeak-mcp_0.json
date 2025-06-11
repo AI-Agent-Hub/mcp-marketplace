@@ -1,0 +1,1 @@
+{"mcpServers": {"slidespeak": {"command": "docker", "args": ["run", "-i", "--rm", "-e", "SLIDESPEAK_API_KEY", "slidespeak/slidespeak-mcp:latest"], "env": {"SLIDESPEAK_API_KEY": "YOUR-API-KEY-HERE"}}}}

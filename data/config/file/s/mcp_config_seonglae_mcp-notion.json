@@ -1,0 +1,1 @@
+{"mcpServers": {"notion-texonom": {"command": "node", "args": ["/path/to/mcp/build/index.js"], "env": {"ROOT_PAGE": "$SOME_UUID"}}}}

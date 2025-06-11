@@ -1,0 +1,1 @@
+{"mcpServers": {"hefeng-weather": {"command": "npx", "args": ["hefeng-mcp-weather@latest", "--apiKey=${API_KEY}"]}}}

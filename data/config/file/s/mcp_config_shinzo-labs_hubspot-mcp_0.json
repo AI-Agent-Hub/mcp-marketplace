@@ -1,0 +1,1 @@
+{"mcpServers": {"hubspot": {"command": "npx", "args": ["-y", "@modelcontextprotocol/server-hubspot"], "env": {"HUBSPOT_API_KEY": "your-api-key-here"}}}}

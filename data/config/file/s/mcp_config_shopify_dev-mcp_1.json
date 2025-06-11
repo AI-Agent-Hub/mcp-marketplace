@@ -1,0 +1,1 @@
+{"mcpServers": {"shopify-dev-mcp": {"command": "cmd", "args": ["/k", "npx", "-y", "@shopify/dev-mcp@latest"]}}}

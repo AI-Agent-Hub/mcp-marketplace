@@ -1,0 +1,1 @@
+{"mcpServers": {"jina-ai": {"command": "node", "args": ["/path/to/jina-ai-mcp/build/index.js"], "env": {"JINA_API_KEY": "your_api_key_here"}}}}

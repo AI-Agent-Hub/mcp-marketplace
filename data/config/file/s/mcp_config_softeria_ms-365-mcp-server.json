@@ -1,0 +1,1 @@
+{"mcpServers": {"ms365": {"command": "npx", "args": ["-y", "@softeria/ms-365-mcp-server"]}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"git-v2": {"command": "node", "args": ["path/to/git-mcp-v2/build/index.js"], "env": {"GIT_DEFAULT_PATH": "/path/to/default/git/directory", "GITHUB_PERSONAL_ACCESS_TOKEN": "your-github-pat"}}}}

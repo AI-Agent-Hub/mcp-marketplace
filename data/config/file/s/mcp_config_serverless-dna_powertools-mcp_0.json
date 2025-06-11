@@ -1,0 +1,1 @@
+{"mcpServers": {"powertools": {"command": "npx", "args": ["-y", "@serverless-dna/powertools-mcp"]}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-duckduckgo-search": {"command": "npx", "args": ["-y", "mcp-duckduckgo-search"], "env": {"SERPAPI_KEY": "your-serpapi-api-key"}}}}

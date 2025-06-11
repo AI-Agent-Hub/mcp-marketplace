@@ -1,0 +1,1 @@
+{"mcpServers": {"youtube-subtitles": {"command": "docker", "args": ["run", "-i", "mcp/youtube-subtitles"]}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"smart-photo-journal": {"command": "/Users/<YOUR_DEVICE_USERNAME>/.local/bin/uv", "args": ["--directory", "/Users/<PATH_TO_CLONED_DIR>/memory-journal-mcp-server", "run", "server.py"]}}}

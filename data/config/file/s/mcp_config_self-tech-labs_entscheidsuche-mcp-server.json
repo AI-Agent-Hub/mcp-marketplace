@@ -1,0 +1,1 @@
+{"mcpServers": {"entscheidsuche": {"command": "node", "args": ["/absolute/path/to/entscheidsuche-mcp-server/build/index.js"]}}}
