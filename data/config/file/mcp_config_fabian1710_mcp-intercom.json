@@ -1,0 +1,1 @@
+{"mcpServers": {"intercom": {"command": "node", "args": ["/path/to/mcp-intercom/dist/index.js"], "env": {"INTERCOM_API_KEY": "your_api_key_here"}}}}

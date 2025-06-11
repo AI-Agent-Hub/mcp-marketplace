@@ -1,0 +1,1 @@
+{"mcpServers": {"linkedin-mcp": {"command": "uv", "args": ["--directory", "absolute\\path\\to\\linkedin-mcp", "run", "-m", "linkedin_mcp.server"], "env": {"LINKEDIN_CLIENT_ID": "<yours>", "LINKEDIN_CLIENT_SECRET": "<yours>", "LINKEDIN_REDIRECT_URI": "<yours>"}}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"okx": {"command": "node", "args": ["/path/to/okx-mcp-server/build/index.js"], "disabled": false, "autoApprove": []}}}

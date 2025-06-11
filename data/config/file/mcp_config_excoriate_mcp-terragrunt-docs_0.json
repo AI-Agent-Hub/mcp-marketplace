@@ -1,0 +1,1 @@
+{"mcpServers": {"terragrunt_docs": {"command": "docker", "args": ["run", "-e", "GITHUB_TOKEN=<YOUR_TOKEN>", "mcp-terragrunt-docs"], "env": {"GITHUB_TOKEN": "<YOUR_TOKEN>"}}}}

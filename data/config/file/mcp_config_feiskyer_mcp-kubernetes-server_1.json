@@ -1,0 +1,1 @@
+{"mcpServers": {"kubernetes": {"command": "uvx", "args": ["mcp-kubernetes-server"], "env": {"KUBECONFIG": "<your-kubeconfig-path>"}}}}

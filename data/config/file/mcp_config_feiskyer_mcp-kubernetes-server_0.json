@@ -1,0 +1,1 @@
+{"mcpServers": {"kubernetes": {"command": "docker", "args": ["run", "-i", "--rm", "--mount", "type=bind,src=/home/username/.kube/config,dst=/home/mcp/.kube/config", "ghcr.io/feiskyer/mcp-kubernetes-server"]}}}

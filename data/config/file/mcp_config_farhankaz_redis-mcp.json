@@ -1,0 +1,1 @@
+{"mcpServers": {"redis": {"command": "npx", "args": ["redis-mcp", "--redis-host", "localhost", "--redis-port", "6379"], "disabled": false}}}
