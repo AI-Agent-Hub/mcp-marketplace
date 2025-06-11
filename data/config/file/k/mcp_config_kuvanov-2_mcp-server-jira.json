@@ -1,0 +1,1 @@
+{"mcpServers": {"github.com/kuvanov-2/mcp-server-jira": {"command": "/path/to/mcp-server-jira/start-server.sh", "env": {"JIRA_HOST": "https://your-domain.atlassian.net", "JIRA_EMAIL": "your-email@example.com", "JIRA_API_TOKEN": "op://YOUR_VAULT_NAME/YOUR_ITEM_NAME/info/access token"}, "disabled": false, "autoApprove": []}}}

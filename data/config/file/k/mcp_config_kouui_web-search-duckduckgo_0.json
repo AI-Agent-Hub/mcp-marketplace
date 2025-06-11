@@ -1,0 +1,1 @@
+{"mcpServers": {"web-search-duckduckgo": {"command": "uvx", "args": ["--from", "git+https://github.com/kouui/web-search-duckduckgo.git@main", "main.py"]}}}

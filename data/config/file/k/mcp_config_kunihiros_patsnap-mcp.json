@@ -1,0 +1,1 @@
+{"mcpServers": {"@kunihiros/patsnap-mcp": {"command": "npx", "args": ["@kunihiros/patsnap-mcp"], "env": {"PATSNAP_CLIENT_ID": "your_patsnap_client_id_here", "PATSNAP_CLIENT_SECRET": "your_patsnap_client_secret_here"}, "disabled": false, "autoApprove": []}}}

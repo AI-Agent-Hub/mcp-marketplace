@@ -1,0 +1,1 @@
+{"mcpServers": {"consul-mcp": {"command": "node", "args": ["/ABSOLUTE/PATH/TO/PARENT/FOLDER/consul-mcp-server/build/index.js"]}}}

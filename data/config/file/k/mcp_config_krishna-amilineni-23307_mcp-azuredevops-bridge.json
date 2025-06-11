@@ -1,0 +1,1 @@
+{"mcpServers": {"azuredevops-bridge": {"command": "/full/path/to/mcp-azuredevops-bridge/mcp-azuredevops-bridge", "args": [], "env": {"AZURE_DEVOPS_ORG": "organization", "AZDO_PAT": "personal_access_token", "AZURE_DEVOPS_PROJECT": "project"}}}}

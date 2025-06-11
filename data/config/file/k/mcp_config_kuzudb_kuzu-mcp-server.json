@@ -1,0 +1,1 @@
+{"mcpServers": {"kuzu": {"command": "docker", "args": ["run", "-v", "{Absolute Path to the Kuzu database}:/database", "--rm", "-i", "kuzudb/mcp-server"]}}}
