@@ -1,0 +1,1 @@
+{"mcpServers": {"Whoop": {"command": "python", "args": ["/path/to/whoop/src/whoop_server.py"], "cwd": "/path/to/whoop", "env": {"WHOOP_EMAIL": "your.email@example.com", "WHOOP_PASSWORD": "your_password"}}}}

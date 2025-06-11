@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-dbs": {"command": "node", "args": ["/path/to/your/mcp-dbs/dist/cli.js", "--stdio"], "env": {"MCP_MONGODB_URI": "mongodb://localhost:27017", "MCP_MONGODB_DATABASE": "your-database-name"}}}}

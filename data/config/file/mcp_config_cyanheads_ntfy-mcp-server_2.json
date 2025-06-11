@@ -1,0 +1,1 @@
+{"mcpServers": {"ntfy": {"command": "ntfy-mcp-server", "env": {"NTFY_BASE_URL": "https://ntfy.sh", "NTFY_DEFAULT_TOPIC": "your_default_topic", "LOG_LEVEL": "info", "NODE_ENV": "production"}}}}

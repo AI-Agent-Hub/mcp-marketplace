@@ -1,0 +1,1 @@
+{"mcpServers": {"snapshot": {"command": "node", "args": ["/ABSOLUTE/PATH/TO/snapshot-server/build/index.js"]}}}

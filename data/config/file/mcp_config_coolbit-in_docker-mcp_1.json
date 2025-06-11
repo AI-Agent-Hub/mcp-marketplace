@@ -1,0 +1,1 @@
+{"mcpServers": {"docker-mcp": {"command": "uv", "args": ["--directory", "<path-to-docker-mcp>", "run", "docker-mcp"]}}}

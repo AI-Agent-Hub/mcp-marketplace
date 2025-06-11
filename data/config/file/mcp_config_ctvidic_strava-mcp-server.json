@@ -1,0 +1,1 @@
+{"mcpServers": {"Strava": {"command": "python", "args": ["src/strava_server.py"], "cwd": "/path/to/strava_mcp", "env": {"STRAVA_CLIENT_ID": "your_client_id", "STRAVA_CLIENT_SECRET": "your_client_secret", "STRAVA_REFRESH_TOKEN": "your_refresh_token"}}}}
