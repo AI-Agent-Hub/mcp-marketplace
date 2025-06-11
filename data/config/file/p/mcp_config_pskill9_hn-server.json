@@ -1,0 +1,1 @@
+{"mcpServers": {"hacker-news": {"command": "node", "args": ["/path/to/hn-server/build/index.js"]}}}

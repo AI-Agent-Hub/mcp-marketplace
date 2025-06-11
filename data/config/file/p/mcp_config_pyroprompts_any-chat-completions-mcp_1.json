@@ -1,0 +1,1 @@
+{"mcpServers": {"chat-openai": {"command": "node", "args": ["/path/to/any-chat-completions-mcp/build/index.js"], "env": {"AI_CHAT_KEY": "OPENAI_KEY", "AI_CHAT_NAME": "OpenAI", "AI_CHAT_MODEL": "gpt-4o", "AI_CHAT_BASE_URL": "https://api.openai.com/v1"}}}}

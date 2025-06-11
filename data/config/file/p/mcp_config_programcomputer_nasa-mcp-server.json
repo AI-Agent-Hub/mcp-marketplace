@@ -1,0 +1,1 @@
+{"mcpServers": {"nasa-mcp": {"command": "npx", "args": ["-y", "@programcomputer/nasa-mcp-server@latest"], "env": {"NASA_API_KEY": "your-api-key"}}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"chroma": {"command": "uv", "args": ["--directory", "C:/MCP/server/community/chroma", "run", "chroma"]}}}

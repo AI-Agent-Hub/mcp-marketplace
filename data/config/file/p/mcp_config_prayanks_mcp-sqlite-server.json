@@ -1,0 +1,1 @@
+{"mcpServers": {"sqlite_mcp_server": {"command": "python", "args": ["-u", "/absolute/path/to/sqlite_mcp_server.py"]}}}

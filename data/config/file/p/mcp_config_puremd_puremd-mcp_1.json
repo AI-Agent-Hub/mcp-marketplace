@@ -1,0 +1,1 @@
+{"mcpServers": {"pure.md": {"command": "npx", "args": ["-y", "puremd-mcp"], "env": {"PUREMD_API_KEY": "<TOKEN>"}}}}

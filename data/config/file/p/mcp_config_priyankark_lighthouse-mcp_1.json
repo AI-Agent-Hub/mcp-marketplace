@@ -1,0 +1,1 @@
+{"mcpServers": {"lighthouse": {"command": "node", "args": ["/absolute/path/to/lighthouse-mcp/build/index.js"], "disabled": false, "autoApprove": []}}}

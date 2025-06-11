@@ -1,0 +1,1 @@
+{"mcpServers": {"wordpress": {"command": "node", "args": ["path/to/wordpress-mcp-server/build/index.js"]}}}

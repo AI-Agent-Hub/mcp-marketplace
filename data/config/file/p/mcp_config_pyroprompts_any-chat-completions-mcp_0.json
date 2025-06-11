@@ -1,0 +1,1 @@
+{"mcpServers": {"chat-openai": {"command": "npx", "args": ["@pyroprompts/any-chat-completions-mcp"], "env": {"AI_CHAT_KEY": "OPENAI_KEY", "AI_CHAT_NAME": "OpenAI", "AI_CHAT_MODEL": "gpt-4o", "AI_CHAT_BASE_URL": "https://api.openai.com/v1"}}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"dataset-viewer": {"command": "uv", "args": ["--directory", "parent_to_repo/dataset-viewer", "run", "dataset-viewer"]}}}

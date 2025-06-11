@@ -1,0 +1,1 @@
+{"mcpServers": {"minimax-mcp-tools": {"command": "npx", "args": ["minimax-mcp-tools"], "env": {"MINIMAX_API_KEY": "your-minimax-api-key", "MINIMAX_GROUP_ID": "your-minimax-group-id"}}}}

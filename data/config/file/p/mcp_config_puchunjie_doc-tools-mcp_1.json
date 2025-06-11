@@ -1,0 +1,1 @@
+{"mcpServers": {"doc-tools-mcp": {"command": "node", "args": ["/path/to/your/doc-tools-mcp/dist/mcp-server.js"]}}}

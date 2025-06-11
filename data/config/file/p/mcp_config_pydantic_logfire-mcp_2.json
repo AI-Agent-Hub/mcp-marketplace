@@ -1,0 +1,1 @@
+{"mcpServers": {"logfire": {"command": "uvx", "args": ["logfire-mcp"], "env": {"LOGFIRE_READ_TOKEN": "YOUR_TOKEN"}, "disabled": false, "autoApprove": []}}}

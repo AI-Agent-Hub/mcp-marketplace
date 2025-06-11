@@ -1,0 +1,1 @@
+{"mcpServers": {"logfire": {"command": "uvx", "args": ["logfire-mcp", "--read-token=YOUR-TOKEN"]}}}

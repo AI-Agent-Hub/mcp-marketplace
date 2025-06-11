@@ -1,0 +1,1 @@
+{"mcpServers": {"openfec": {"command": "node", "args": ["/absolute/path/to/mcp-openfec/build/server.js"], "env": {"OPENFEC_API_KEY": "your_api_key_here"}, "disabled": false, "autoApprove": []}}}

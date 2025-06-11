@@ -1,0 +1,1 @@
+{"mcpServers": {"imagegen-go": {"command": "/path/to/imagegen-go/bin/imagegen-go", "env": {"OPENAI_API_KEY": "your-api-key", "DEFAULT_DOWNLOAD_PATH": "/path/to/downloads"}}}}

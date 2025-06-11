@@ -1,0 +1,1 @@
+{"mcpServers": {"putio": {"command": "uvx", "args": ["putio-mcp-server"], "env": {"PUTIO_TOKEN": "<your-putio-api-token>"}}}}

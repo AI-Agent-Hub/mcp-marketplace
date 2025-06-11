@@ -1,0 +1,1 @@
+{"mcpServers": {"SmartCustomerSupportMCP": {"command": "uv", "args": ["--directory", "/opt/apps/python_project/SmartCustomerSupportMCP", "run", "mcp-smart-customer-support", "--stdio"]}}}

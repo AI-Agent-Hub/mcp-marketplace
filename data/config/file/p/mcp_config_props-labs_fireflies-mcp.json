@@ -1,0 +1,1 @@
+{"mcpServers": {"fireflies": {"command": "npx", "args": ["-y", "@props-labs/mcp/fireflies"], "env": {"FIREFLIES_API_KEY": "<YOUR_API_KEY>"}}}}
