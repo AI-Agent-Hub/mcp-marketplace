@@ -1,0 +1,1 @@
+{"mcpServers": {"aindreyway-mcp-neurolora": {"command": "npx", "args": ["-y", "@aindreyway/mcp-neurolora@latest"], "env": {"NODE_OPTIONS": "--max-old-space-size=256", "OPENAI_API_KEY": "your_api_key_here"}}}}

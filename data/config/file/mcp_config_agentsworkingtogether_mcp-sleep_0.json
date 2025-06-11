@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-sleep": {"command": "uvx", "args": ["mcp-sleep"], "env": {"MCP_SLEEP_TIMEOUT": "<MCP_SLEEP_TIMEOUT>"}}}}

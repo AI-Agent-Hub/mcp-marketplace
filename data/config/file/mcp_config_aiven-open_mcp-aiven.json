@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-aiven": {"command": "uv", "args": ["--directory", "$REPOSITORY_DIRECTORY", "run", "--with-editable", "$REPOSITORY_DIRECTORY", "--python", "3.13", "mcp-aiven"], "env": {"AIVEN_BASE_URL": "https://api.aiven.io", "AIVEN_TOKEN": "$AIVEN_TOKEN"}}}}

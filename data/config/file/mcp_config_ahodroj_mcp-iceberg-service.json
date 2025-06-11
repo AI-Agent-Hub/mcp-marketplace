@@ -1,0 +1,1 @@
+{"mcpServers": {"iceberg": {"command": "uv", "args": ["--directory", "PATH_TO_/mcp-iceberg-service", "run", "mcp-server-iceberg"], "env": {"ICEBERG_CATALOG_URI": "http://localhost:8181", "ICEBERG_WAREHOUSE": "YOUR ICEBERG WAREHOUSE NAME", "S3_ENDPOINT": "OPTIONAL IF USING S3", "AWS_ACCESS_KEY_ID": "YOUR S3 ACCESS KEY", "AWS_SECRET_ACCESS_KEY": "YOUR S3 SECRET KEY"}}}}

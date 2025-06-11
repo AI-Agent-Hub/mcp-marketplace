@@ -1,0 +1,1 @@
+{"mcpServers": {"zerolib-email": {"command": "uvx", "args": ["mcp-email-server@latest", "stdio"]}}}

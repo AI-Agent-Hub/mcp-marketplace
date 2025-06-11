@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-sleep": {"command": "docker", "args": ["run", "-i", "--rm", "-e", "MCP_SLEEP_TIMEOUT", "mcp/sleep"], "env": {"MCP_SLEEP_TIMEOUT": "<MCP_SLEEP_TIMEOUT>"}}}}

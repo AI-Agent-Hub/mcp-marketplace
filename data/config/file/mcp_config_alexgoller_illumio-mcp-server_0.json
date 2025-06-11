@@ -1,0 +1,1 @@
+{"mcpServers": {"illumio-mcp-docker": {"command": "docker", "args": ["run", "-i", "--init", "--rm", "-v", "/Users/YOUR_USERNAME/tmp:/var/log/illumio-mcp", "-e", "DOCKER_CONTAINER=true", "-e", "PYTHONWARNINGS=ignore", "--env-file", "/Users/YOUR_USERNAME/.illumio-mcp.env", "illumio-mcp:latest"]}}}

@@ -1,0 +1,1 @@
+{"mcpServers": {"argocd-mcp": {"command": "npx", "args": ["argocd-mcp@latest", "stdio"], "env": {"ARGOCD_BASE_URL": "<argocd_url>", "ARGOCD_API_TOKEN": "<argocd_token>"}}}}

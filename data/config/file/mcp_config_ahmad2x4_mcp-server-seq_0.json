@@ -1,0 +1,1 @@
+{"mcpServers": {"seq": {"command": "npx", "args": ["-y", "mcp-seq"], "env": {"SEQ_BASE_URL": "your-seq-url", "SEQ_API_KEY": "your-api-key"}}}}
