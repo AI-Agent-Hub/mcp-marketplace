@@ -1,0 +1,1 @@
+{"mcpServers": {"sentry": {"command": "npx", "args": ["ts-node", "/Users/<your-user-directory>/mcp-sentry-ts/index.ts"], "env": {"SENTRY_AUTH": "<YOUR_AUTH_TOKEN>"}}}}

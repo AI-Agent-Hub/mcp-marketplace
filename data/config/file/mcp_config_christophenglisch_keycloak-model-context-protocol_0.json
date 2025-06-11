@@ -1,0 +1,1 @@
+{"mcpServers": {"keycloak": {"command": "npx", "args": ["-y", "keycloak-model-context-protocol"], "env": {"KEYCLOAK_URL": "http://localhost:8080", "KEYCLOAK_ADMIN": "admin", "KEYCLOAK_ADMIN_PASSWORD": "admin"}}}}

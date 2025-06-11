@@ -1,0 +1,1 @@
+{"mcpServers": {"dicom": {"command": "uv", "args": ["tool", "dicom-mcp", "/path/to/your_config.yaml"]}}}

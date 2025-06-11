@@ -1,0 +1,1 @@
+{"mcpServers": {"chromia-mcp": {"command": "node", "args": ["/PATH_TO_FOLDER/chromia-mcp/build/index.js"]}}}

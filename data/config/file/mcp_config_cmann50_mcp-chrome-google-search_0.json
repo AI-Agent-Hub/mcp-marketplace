@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-chrome-google-search": {"command": "npx", "args": ["-y", "@cmann50/mcp-chrome-google-search"]}}}

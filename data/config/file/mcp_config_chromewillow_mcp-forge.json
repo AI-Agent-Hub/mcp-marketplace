@@ -1,0 +1,1 @@
+{"mcpServers": {"mcp-forge": {"command": "npx", "args": ["-y", "@smithery/cli@latest", "run", "@your-username/mcp-forge", "--config", "{}"]}}}

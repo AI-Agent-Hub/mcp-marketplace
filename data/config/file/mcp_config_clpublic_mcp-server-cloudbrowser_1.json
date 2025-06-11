@@ -1,0 +1,1 @@
+{"mcpServers": {"cloudbrowser": {"command": "cmd", "args": ["/c", "npx", "-y", "@browsercloud/mcp-server-cloudbrowser"], "env": {"API_KEY": "<YOUR_BROWSERBASE_API_KEY>"}, "transportType": "stdio"}}}

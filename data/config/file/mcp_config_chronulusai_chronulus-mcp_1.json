@@ -1,0 +1,1 @@
+{"mcpServers": {"chronulus-agents": {"command": "docker", "args": ["run", "-i", "--rm", "-e", "CHRONULUS_API_KEY", "chronulus-mcp"], "env": {"CHRONULUS_API_KEY": "<YOUR_CHRONULUS_API_KEY>"}}}}
