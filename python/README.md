@@ -2,13 +2,16 @@
 
 MCP Marketplace Python Package is a common interface to give you access to public MCP Servers, Tools, Configurations. It supports various API endpoint (such as pulsemcp.com, deepnlp.org, etc).
 
-[PyPI](https://www.pypi.org/project/mcp-marketplace)|[Document](http://www.deepnlp.org/doc/mcp_marketplace)|[MCP Marketplace](http://deepnlp.org/store/ai-agent/mcp-server)|
+[PyPI](https://www.pypi.org/project/mcp-marketplace)|[Document](http://www.deepnlp.org/doc/mcp_marketplace)|[MCP Marketplace](http://www.deepnlp.org/store/ai-agent/mcp-server)|[AI Agent Search](http://www.deepnlp.org/search/agent)
 
 ### Features
 
 1. Search API of MCP Tools: Users can search MCP Servers Meta Info and tools fit for mcp.json by query, such as "map", "payment", "browser use"
 2. List MCP Tools API: And Allow LLM and AI Apps to Find Your MCP Server
-3. Registry: Allow Users to register the MCP Marketplace create, delete, update their MCP servers through various endpoints. (WIP)
+3. Load MCP Config: Get latest mcp_config.json files
+4. Development Customized API and Endpoint to Support Your Local MCP Marketplace API or Services
+5. Registry: Allow Users to register the MCP Marketplace create, delete, update their MCP servers through various endpoints. (WIP)
+
 
 ### Python API
 
@@ -19,7 +22,9 @@ pip install mcp-marketplace
 
 ```
 
-### Usage 
+### 1. Search API of MCP Tools
+
+**Usage**
 
 Example 1. Search MCP Marketplace By Query or Server ID
 
@@ -47,23 +52,7 @@ print (result2)
 ```
 
 
-Example 2. List Tools of MCP Servers 
-
-Let's choose the unique id of browser use mcp "/puppeteer/puppeteer". And we can search the MCP meta and list the tools as below.
-
-```
-    import mcp_marketplace as mcpm
-        
-    result_q = mcpm.search(query="browser use", mode="list", page_id=0, count_per_page=100, config_name="deepnlp")
-    result_id = mcpm.search(id="/puppeteer/puppeteer", mode="list", page_id=0, count_per_page=100, config_name="deepnlp")
-    tools = mcpm.list_tools(id="/puppeteer/puppeteer", config_name="deepnlp_tool")
-
-    print (f'{result_id}')
-    print (f'{tools}')
-```
-
-
-### MCP Result
+**MCP Result**
 
 ```
 
@@ -87,6 +76,96 @@ Let's choose the unique id of browser use mcp "/puppeteer/puppeteer". And we can
   ]
 }
 ```
+
+
+### 2. List MCP Tools API
+
+ 
+Example 2. List Tools of MCP Servers  <code>list_tools</code> method
+
+
+Let's choose the unique id of browser use mcp "/puppeteer/puppeteer". And we can search the MCP meta and list the tools as below.
+
+```
+    import mcp_marketplace as mcpm
+        
+    result_q = mcpm.search(query="browser use", mode="list", page_id=0, count_per_page=100, config_name="deepnlp")
+    result_id = mcpm.search(id="/puppeteer/puppeteer", mode="list", page_id=0, count_per_page=100, config_name="deepnlp")
+    tools = mcpm.list_tools(id="/puppeteer/puppeteer", config_name="deepnlp_tool")
+
+    print (f'{result_id}')
+    print (f'{tools}')
+```
+
+Example 2.1 List Batch Tools of MCP Servers  <code>list_tools_batch</code> method
+
+Let's choose the unique id of browser use mcp "/puppeteer/puppeteer". And we can search the MCP meta and list the tools as below.
+
+```
+    import mcp_marketplace as mcpm
+        
+    servers_ids = ["puppeteer/puppeteer", "google-maps/google-maps"]
+    query_params_list = [{"id": server_id, "config_name": "deepnlp_tool"} for server_id in server_ids]
+    batch_tools_result = mcpm.list_tools_batch(query_params_list)
+    print (f'DEBUG: list_tools_batch servers_ids {servers_ids}')
+    print (f'DEBUG: list_tools_batch batch_tools_result {batch_tools_result}')
+
+```
+
+
+
+### 3. Load MCP Config 
+
+Example 3.1 <code>load_config_batch</code> Method
+
+
+```
+    import mcp_marketplace as mcpm
+    server_ids = ["puppeteer/puppeteer", "mendableai/firecrawl-mcp-server", "google-maps/google-maps"]
+    mcp_config_result = mcpm.load_config_batch(server_ids, config_name="deepnlp_server")
+    print (mcp_config_result)
+
+```
+
+
+
+
+### 4. Development Customized API and Endpoint
+
+If you have MCP server APIs and want to customized the mcp_marketplace lib. You can pass the get_customized_url() function to the lib
+
+The get_customized_url method assemble the endpoint and your id in a customized way and will post request to your Endpoint.
+
+```
+def customized_client():
+
+
+    def get_customized_url(**param):
+        id_value = param["id"] if "id" in param else ""
+        base_url = param["endpoint"] if "endpoint" in param else ""
+        return base_url + "/" + id_value
+    
+    mcpm.set_endpoint("http://www.deepnlp.org/api/mcp_marketplace/v1/tools")
+    mcpm.get_customized_endpoint = get_customized_url
+    
+    ## **param: {"id": "puppeteer/puppeteer", "endpoint":"your_endpoint"}
+    tools = mcpm.list_tools(id="puppeteer/puppeteer", endpoint=mcpm.endpoint)
+
+```
+
+
+### 5. Registry
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## API Configuration
