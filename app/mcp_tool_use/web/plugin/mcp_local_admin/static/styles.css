@@ -1,0 +1,411 @@
+body { 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0; 
+    padding: 20px;   
+    color: #1c1e21;
+    line-height: 1.6;
+}
+
+h1, h2, h3 { 
+/*    color: #1c1e21; 
+*/
+    color: #343541;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+h1 { font-size: 1.5em; }
+h2 { font-size: 1.2em; border-bottom: 1px solid #ccd0d5; padding-bottom: 0.3em; }
+h3 { font-size: 1.0em; }
+
+.server-section, .query-section { 
+    background-color: #ffffff; 
+    padding: 20px; 
+    margin-bottom: 25px; 
+    border-radius: 8px; 
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.server-item { 
+    border: 1px solid #dddfe2; 
+    padding: 15px; 
+    margin-bottom: 12px; 
+    border-radius: 6px; 
+    background-color: #f7f8fa; 
+}
+.server-item h3 { 
+    margin-top: 0; 
+    font-size: 1.1em;
+    color: #606770;
+}
+.server-item p { 
+    margin-bottom: 8px; 
+    font-size: 0.95em;
+}
+.server-item code {
+    background-color: #e9ebee;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 0.85em;
+}
+
+.server-item .status { font-weight: bold; }
+.status-On { color: #31a24c; } /* Green */
+.status-Off { color: #fa383e; } /* Red */
+.status-Error { color: #f5a623; } /* Orange */
+
+button { 
+    background-color: #10a37f; /* Facebook Blue */
+    color: white; 
+    padding: 8px 16px; 
+    border: none; 
+    border-radius: 6px; 
+    cursor: pointer; 
+    margin-right: 8px; 
+    margin-top: 8px; 
+    font-size: 0.9em;
+    font-weight: bold;
+    transition: background-color 0.2s ease-in-out;
+}
+button:hover { background-color: #10a37f; }
+button:disabled { background-color: #bec3c9; cursor: not-allowed;}
+
+button.disable-btn { background-color: #e74c3c; }
+button.disable-btn:hover { background-color: #c0392b; }
+button.install-btn { background-color: #10a37f; } /* Green */
+button.install-btn:hover { background-color: #10a37f; }
+
+input[type="text"], textarea { 
+    width: calc(100% - 24px); /* Account for padding */
+    padding: 10px; 
+    margin-bottom: 12px; 
+    border: 1px solid #ccd0d5; 
+    border-radius: 6px; 
+    font-size: 0.95em;
+}
+textarea { min-height: 70px; resize: vertical; }
+
+pre { 
+    background-color: #f0f2f5; 
+    padding: 15px; 
+    border-radius: 6px; 
+    border: 1px solid #dddfe2;
+    white-space: pre-wrap; 
+    word-wrap: break-word; 
+    font-size: 0.9em;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.form-group { margin-bottom: 15px; }
+.form-group label { 
+    display: block; 
+    margin-bottom: 5px; 
+    font-weight: bold; 
+    font-size: 0.9em;
+    color: #606770;
+}
+
+
+.section-container { 
+    display: grid; 
+    grid-template-columns: 0.6fr 0.4fr;
+    grid-row-gap: 10px;
+}
+
+.section-container > .server-section { 
+    flex: 1; 
+    min-width: 320px; 
+}
+
+.section-divider { 
+    border: 0; 
+    height: 1px; 
+    background: #ccd0d5; 
+    margin: 30px 0; 
+}
+
+/* Modal Styles */
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+.modal-content {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+}
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.8em;
+    font-weight: bold;
+    cursor: pointer;
+    color: #aaa;
+}
+.close-button:hover {
+    color: #333;
+}
+
+
+.div_server_tool_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);  
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+}
+
+.div_server_tool {
+    font-size: 12px;
+    background: #e9ebee;
+    border-radius: 4px;
+
+    position: relative;
+    cursor: pointer;
+}
+
+.div_server_tool_hint {
+    display: none; 
+    position: absolute;
+    top: 100%;   
+    left: 0;
+    width: 400px;
+    padding: 10px;
+    background: #333;
+    color: white;
+    border-radius: 5px;
+    z-index: 100; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.div_server_tool_hint h4 {
+    font-size: 15px;
+}
+
+.div_server_tool:hover .div_server_tool_hint {
+    display: block;
+}
+
+.tool_description {
+
+}
+
+.tool_param_list {
+    display: grid;
+    grid-template-rows: repeat(auto-fill, 1fr);
+    grid-row-gap: 5px;
+}
+
+.tool_parameter {
+    display: grid;
+    grid-template-columns: 50px 40px 250px;
+    grid-column-gap: 10px;
+}
+
+.tool_parameter_name {
+
+}
+
+.tool_parameter_type {
+
+}
+
+.tool_parameter_description {
+
+}
+
+
+#fetch-marketplace-btn {
+    background-color: #6c757d; /* Secondary button color */
+}
+#fetch-marketplace-btn:hover {
+    background-color: #5a6268;
+}
+
+/*mcp server export styles*/
+.json-modal {
+            display: none;
+            position: relative;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 600px;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+            z-index: 1000;
+            border-radius: 8px;
+            overflow: hidden;
+            animation: fadeIn 0.3s ease-out;
+        }
+        
+
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 999;
+        }
+        
+
+        .json-display {
+            padding: 20px;
+            background: #2d2d2d;
+            color: #f8f8f2;
+            font-family: monospace;
+            max-height: 60vh;
+            overflow: auto;
+            white-space: pre-wrap;
+            line-height: 1.5;
+        }
+        
+
+        .modal-footer {
+            display: flex;
+            padding: 10px 20px;
+            background: #f5f5f5;
+            border-top: 1px solid #eee;
+        }
+
+        .copy-btn {
+            flex: 1;
+            padding: 10px;
+            background: #1877f2;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .copy-btn::after {
+            content: "✓ Copied";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #388E3C;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .close-btn {
+            margin-left: 10px;
+            padding: 10px 15px;
+            background: #f44336;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .close-modal-btn {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin-top: 10px;  
+            margin-right: 10px; 
+            z-index: 10;       
+
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+            color: #6e6e80;
+            line-height: 1;
+        }
+
+/*        #modal-trigger:target ~ .json-modal,
+        #modal-trigger:target ~ .modal-overlay {
+            display: block;
+        }*/
+        
+        .copy-success::after {
+            opacity: 1 !important;
+        }
+        
+/*Controller*/
+
+        .controls {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .search-container {
+            flex: 1;
+            min-width: 250px;
+            position: relative;
+            margin-top: 10px;
+        }
+        
+        .search-icon {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #6c757d;
+        }
+        
+        #searchInput {
+            width: 100%;
+            padding: 12px 12px 12px 40px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+            box-sizing: border-box;
+        }
+        
+        #searchInput:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+        }
+        
+        .sort-container {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        #sortSelect {
+            padding: 10px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            background-color: white;
+            cursor: pointer;
+        }
+
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translate(-50%, -40%); }
+            to { opacity: 1; transform: translate(-50%, -50%); }
+        }
+
+
