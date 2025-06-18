@@ -1,0 +1,99 @@
+
+.tool-call-container {
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.tool-call-header {
+    padding: 12px 15px;
+    background-color: #f6f8fa;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.tool-call-header:hover {
+    background-color: #ebf0f3;
+}
+
+.arrow {
+    margin-right: 8px;
+    transition: transform 0.2s ease;
+    font-size: 12px;
+}
+
+.header-text {
+    font-weight: 600;
+    color: #24292e;
+}
+
+.div_tool_call_row {
+    padding: 15px;
+    border-top: 1px solid #eaecef;
+    background-color: white;
+}
+
+.div_tool_call_row h3 {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    color: #586069;
+}
+
+.div_tool_call_json {
+    background-color: #fafbfc;
+    border: 1px solid #e1e4e8;
+    border-radius: 4px;
+    padding: 10px;
+    overflow: auto;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 13px;
+    line-height: 1.5;
+    max-height: 300px;
+    white-space: pre-wrap;
+}
+
+.collapsible-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.collapsible-content.expanded {
+    max-height: 1000px; 
+}
+
+.results-section {
+    background-color: #f0fff4;
+    border-top: 1px solid #dcffe4;
+}
+
+
+.div_tool_call_row_options {
+  display: grid;
+  grid-template-columns: repeat(5, 100px);
+  grid-column-gap: 10px;
+}
+
+
+.agent-button-base {
+  border: 1px solid #D3D3D3;    
+  cursor: pointer;
+  border-radius: 50px;
+  height: 30px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.agent-button-highlight {
+  background-color: #10a37f !important;
+  color: white !important;
+}
+
