@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCP Marketplace Admin</title>
+
+    <!-- add plugin -->
+    <link rel="stylesheet" href="{{ url_for('plugin', path='mcp_local_admin/static/styles.css') }}">
+
+</head>
+<body>
+    <h1>MCP Marketplace Admin</h1>
+
+    <div class="section-container">
+        <div class="server-section">
+            <div class="controls">
+                <div class="search-container">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="searchInput" placeholder="Search...">
+                </div>
+                
+                <div class="sort-container">
+                    <label for="sortSelect">Sort By</label>
+                    <select id="sortSelect">
+                        <option value="text-asc">A-Z</option>
+                        <option value="text-desc">Z-A</option>
+                    </select>
+                </div>
+            </div>            
+            <div id="local-servers-list">Loading local servers...</div>
+        </div>
+
+        <div class="query-section">
+            <h2>Inspect MCP Server Tool</h2>
+            <div class="form-group">
+                <label for="query-server-id">Server ID:</label>
+                <input type="text" id="query-server-id" placeholder="e.g., server_1">
+            </div>
+            <div class="form-group">
+                <label for="query-tool-name">Tool Name:</label>
+                <input type="text" id="query-tool-name" placeholder="e.g., server_1_tool">
+            </div>
+            <div class="form-group"><label>Tool Parameters:</label></div>
+            <div class="form-group form-group-parameters" id="form-group-parameter">
+                
+            </div>         
+            <div class="form-group">
+                <label for="query-tool-input">Tool Input Json (Optional):</label>
+                <textarea id="query-tool-input" placeholder='{"message": "hello"}' rows="3"></textarea>
+            </div>
+            <button id="send-query-btn">Send Query</button>
+            <h3>Query Result:</h3>
+            <pre id="query-result">No query sent yet.</pre>
+        </div>
+
+        <div class="div_modal_section">
+            <div id="modal-trigger"></div>
+            <div class="modal-overlay"></div>
+            <div class="json-modal">
+                <button class="close-modal-btn">&times;</button>
+                <div class="json-display" id="json-content">
+                </div>
+                <div class="modal-footer">
+                    <button class="copy-btn">Copy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <hr class="section-divider">
+
+    <div id="install-modal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3>Configure Installation</h3>
+            <p><strong>Server:</strong> <span id="modal-server-name"></span></p>
+            <p><strong>GitHub URL:</strong> <span id="modal-github-url"></span></p>
+            <div class="form-group">
+                <label for="modal-install-command">Install Command:</label>
+                <input type="text" id="modal-install-command" style="width: 95%;">
+            </div>
+            <p><em>Note: Start command and tool definitions path will be taken from marketplace data.</em></p>
+            <button id="modal-confirm-install-btn">Confirm Install</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('plugin', path='mcp_local_admin/static/scripts.js') }}"></script>
+
+</body>
+</html>
