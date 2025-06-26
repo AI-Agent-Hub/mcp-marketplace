@@ -1,0 +1,80 @@
+{
+  "mcpServers": {
+      "amap-amap-sse": {
+          "url": "https://mcp.amap.com/sse?key=<your_api_key>"
+      },
+      "amap-maps": {
+        "command": "npx",
+        "args": [
+            "-y",
+            "@amap/amap-maps-mcp-server"
+        ],
+        "env": {
+            "AMAP_MAPS_API_KEY": "<your_api_key>"
+        }
+      },       
+      "everart": {
+        "command": "npx",
+        "args": ["-y", "@modelcontextprotocol/server-everart"],
+        "env": {
+          "EVERART_API_KEY": "your_key_here"
+        }
+      },
+      "github": {
+        "command": "docker",
+        "args": [
+          "run",
+          "-i",
+          "--rm",
+          "-e",
+          "GITHUB_PERSONAL_ACCESS_TOKEN",
+          "ghcr.io/github/github-mcp-server"
+        ],
+        "env": {
+          "GITHUB_PERSONAL_ACCESS_TOKEN": "<YOUR_TOKEN>"
+        }
+      },
+      "gdrive": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-gdrive"
+        ]
+      },
+      "fetch": {
+        "command": "python",
+        "args": ["-m", "mcp_server_fetch"]
+      },
+      "brave-search": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-brave-search"
+        ],
+        "env": {
+          "BRAVE_API_KEY": "YOUR_API_KEY_HERE"
+        }
+      },
+      "perplexity-ask": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "server-perplexity-ask"
+        ],
+        "env": {
+          "PERPLEXITY_API_KEY": "YOUR_API_KEY_HERE"
+        }
+      },
+      "firecrawl-mcp": {
+        "command": "npx",
+        "args": ["-y", "firecrawl-mcp"],
+        "env": {
+          "FIRECRAWL_API_KEY": "<your_api_key>"
+        }
+      },
+      "puppeteer": {
+        "command": "npx",
+        "args": ["-y", "@modelcontextprotocol/server-puppeteer"]
+      }      
+  }
+}
