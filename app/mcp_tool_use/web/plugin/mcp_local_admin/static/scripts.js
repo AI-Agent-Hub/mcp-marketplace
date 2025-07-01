@@ -20,6 +20,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let currentMarketplaceServerForInstall = null;
 
+
+    // switch tabs
+    const sidebarItems = document.querySelectorAll('.sidebar-item');
+    const contentTabs = document.querySelectorAll('.main-content-tab');
+
+    function switchTab(tabId) {
+        document.querySelectorAll('.main-content-tab').forEach(tab => {
+            tab.classList.add('main-content-tab-hidden');
+        });
+        document.getElementById(tabId).classList.remove('main-content-tab-hidden');
+    }
+
+    function updateUrl(baseUrl, tabId) {
+        const newUrl = `${baseUrl}/${tabId}`;
+        history.pushState({ tab: tabId }, '', newUrl);
+    }
+
+    if (sidebarItems != null) {
+        sidebarItems.forEach(item => {
+            item.addEventListener('click', function() {
+                // const tabIndex = parseInt(this.getAttribute('data-tab'));
+                const targetTab = this.getAttribute('data-tab');
+                switchTab(targetTab);
+                updateUrl("/mcp", targetTab);
+            });
+        });
+
+        window.addEventListener('popstate', (event) => {
+            if (event.state?.tab) {
+                switchTab(event.state.tab);
+            }
+        });
+    }
+ 
     async function apiCall(url, method = 'GET', body = null) {
         try {
             const options = {
@@ -41,7 +75,6 @@ document.addEventListener('DOMContentLoaded', () => {
             throw error;
         }
     }
-
 
     function addToolsInspector(target) {
         if (target == null) {
@@ -467,6 +500,88 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
     }
 
+    // MCP Config File Explorer
+    const editorPanel = document.getElementById('editor-panel');
+    const fileEditor = document.getElementById('file-editor');
+    const saveBtn = document.getElementById('save-btn');
+    const closeBtn = document.getElementById('close-panel');
+    const saveStatus = document.getElementById('save-status');
+    const filenameDisplay = document.getElementById('filename-display');
+    const editor = CodeMirror.fromTextArea(fileEditor, {
+        lineNumbers: true,
+        mode: null,
+        theme: 'default',
+        lineWrapping: true,
+        autofocus: true
+    });
+    //
+    document.querySelectorAll('.edit-btn').forEach(btn => {
+        btn.addEventListener('click', async () => {
+            const filePath = btn.dataset.path;
+            filenameDisplay.textContent = filePath;
+            try {
+                saveStatus.textContent = 'loading...';
+                const response = await fetch(`/file-content?path=${encodeURIComponent(filePath)}`);
+                const data = await response.json();
+                
+                editor.setValue(data.content);
+                editorPanel.classList.toggle('editor-hidden');
+                const ext = filePath.split('.').pop().toLowerCase();
+                if (['js', 'json', 'html', 'css', 'py', 'txt'].includes(ext)) {
+                    editor.setOption('mode', ext);
+                }
+                
+                saveStatus.textContent = '';
+                currentFilePath = filePath;
+            } catch (error) {
+                saveStatus.textContent = 'loading failed...';
+                console.error(error);
+            }
+        });
+    });
+    
+    closeBtn.addEventListener('click', () => {
+        editorPanel.classList.toggle('editor-hidden');
+    });
+    
+    saveBtn.addEventListener('click', saveFile);
+    
+    document.addEventListener('keydown', e => {
+        if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+            e.preventDefault();
+            saveFile();
+        }
+    });
+    
+    let currentFilePath = null;
+    
+    async function saveFile() {
+        if (!currentFilePath) return;
+        
+        try {
+            saveStatus.textContent = 'Saving...';
+            const content = editor.getValue();
+            
+            const response = await fetch('/save-file', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    path: currentFilePath,
+                    content: content
+                })
+            });
+            
+            const result = await response.json();
+            saveStatus.textContent = 'Save Successfully!';
+            setTimeout(() => saveStatus.textContent = '', 2000);
+        } catch (error) {
+            saveStatus.textContent = 'Save failed!';
+            console.error(error);
+        }
+    };
+
 
     let itemList, originalItems, searchInput, sortSelect;
     async function initPage() {
@@ -487,7 +602,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             if (target.classList.contains('export-btn')) {
                 const serverId = target.dataset.id;
-                handleServerAction(serverId, 'export');
+                handleServerExport(serverId, 'export');
             }
             // click on tool tag a
             if (target.classList.contains('div_server_tool') || target.parentNode.classList.contains('div_server_tool')) {
@@ -516,3 +631,4 @@ document.addEventListener('DOMContentLoaded', () => {
     initPage();
 
 });
+
