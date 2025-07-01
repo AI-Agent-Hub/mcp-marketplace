@@ -13,6 +13,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const historyItemSideBar = document.querySelectorAll('.history-item');
     const settingBtn = document.querySelector('.setting-btn');
 
+    // processing received message
+    const messageStates = new Map();
+    const TYPEWRITER_SPEED = 5000;
+    const MARKDOWN_RENDER_DELAY = 200;
+
     // keep track of chat history
     let chatHistory = [];
 
@@ -63,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // wrapper
                 msgDiv = createDivByTemplate(template);
                 msgDiv.id = id;
-                msgDiv,className = `message ${role} ${message_type}`;
+                msgDiv.className = `message ${role} ${message_type}`;
                 updateMessageDivByContent(template, msgDiv, section, content);
                 chatbox.appendChild(msgDiv);
             }
@@ -217,20 +222,283 @@ document.addEventListener('DOMContentLoaded', function() {
     /**
     * messagesHistory: list
     */
-
     function getModelSelected() {
 
         try {
             var button = document.getElementById("modelBtn");
-            var modelName = button.querySelector('span').textContent;
-            return modelName;
+            var modelDataValue = button.getAttribute('data-value');
+            return modelDataValue;
         } catch (err) {
-            defaultModelName = "Qwen";
-            return defaultModelName;
+            console.log(err);
+            return "";
         }
     }
 
+    async function waitForAllMessages(messageIds) {
+        return new Promise((resolve) => {
+            const checkAllCompleted = () => {
+                const allDone = messageIds.every(id => {
+                    const state = messageStates.get(id);
+                    return state && state.isFinished;
+                });
+                
+                if (allDone) resolve();
+                else setTimeout(checkAllCompleted, 100);
+            };
+            checkAllCompleted();
+        });
+    }
+
+    async function processStream(reader, decoder) {
+        let done = false;
+        let buffer = "";
+        var messageIdTotal = [];
+
+        while (!done) {
+            const { value, done: doneReading } = await reader.read();
+            done = doneReading;
+            
+            if (value) {
+                const chunk = decoder.decode(value, { stream: true });
+                buffer += chunk;
+                // Router According to Chunk
+                var curMessageIdList = processBuffer(buffer);
+                messageIdTotal = messageIdTotal.concat(curMessageIdList);
+                buffer = "";
+            }
+        }
+        
+        if (buffer) {
+            var curMessageIdList = processBuffer(buffer);
+            messageIdTotal = messageIdTotal.concat(curMessageIdList);
+        };
+        messageIdTotal = [...new Set(messageIdTotal)]; 
+
+        // append chat history
+        appendChatHistory(messageIdTotal);
+
+        return messageIdTotal;
+
+    }
+
+    function appendChatHistory(messageIdList) {
+        messageIdList.forEach(messageId => {
+                var messageState = messageStates.get(messageId);
+                if (messageState != null) {
+                    var contentMap = messageState.sectionContentMap;
+                    var thinkVar = contentMap.get("think").display;
+                    var toolVar = contentMap.get("tool").display;
+                    var answerVar = contentMap.get("answer").display;
+                    var contextVar = contentMap.get("context").display;
+                    var msgSummary = [thinkVar, answerVar, toolVar].join("|");
+                    var allEmpty = ([thinkVar, toolVar, answerVar, contextVar].join("") == "")
+                    if (!allEmpty) {
+                        chatHistory.push({role: 'assistant', content: msgSummary, context: contextVar});
+                    }
+                }
+        });
+    }
+
+    function processBuffer(buffer) {
+
+        var messageIdList = [];
+
+        buffer.split('\n').forEach(line => {
+            if (!line.trim()) return;
+            try {
+                const data = JSON.parse(line);
+                const messageId = data.message_id || `msg-${Date.now()}`;
+                
+                if (!messageIdList.includes(messageId)) {
+                    messageIdList.push(messageId);
+                }
+
+                // system, assistant
+                const dataType = data.type;
+                // image, video, html, text
+                const dataFormat = data?.format ?? "";
+                // system_msg, think, tool, answer, context
+                const dataSection = data?.section ?? "";
+                const dataContent = data?.content ?? "";
+                // template: reason_html: reason+tool+answer, reason_text: reason + answer, others
+                const dataTemplate = data?.template ?? "reason_html";
+
+                if (!messageStates.has(messageId)) {
+                    messageStates.set(messageId, {
+                        messageId,
+                        displayedContent: '',
+                        pendingContent: '',
+                        isFinished: false,
+                        sectionContentMap: new Map([
+                            ["system_msg", {pending: "", display:""}],
+                            ["think", {pending: "", display:""}],
+                            ["tool", {pending: "", display:""}],
+                            ["answer", {pending: "", display:""}],
+                            ["context", {pending: "", display:""}]
+                        ]),
+                        template: dataTemplate,
+                        timer: null
+                    });
+                }
+
+                // update message States
+                const state = messageStates.get(messageId);
+                var curSectionContent = state.sectionContentMap.get(dataSection);
+                if (curSectionContent != null) {
+                    curSectionContent.pending += dataContent;
+                }
+
+                updateMessageDOM(state);
+
+            } catch (err) {
+                console.error('process error:', err);
+                appendSystemMessage('Failed to process Error...');
+            }
+        });
+
+        return messageIdList;
+    }
+
+    /**
+    * display text in a paragraph with \r\n break lines
+    */
+    function formatTextWithParagraphs(text, div_class) {
+        if (text == null || text.trim() == "") {
+            return '';
+        }
+        try {
+            var lineList = text.split(/\r\n|\r|\n/);
+            var wrappedParagraphDivList = "";
+            if (lineList != null) {
+                wrappedParagraphDivList = lineList.map(line => {
+                    const hasHtmlTags = /<\/?[a-zA-Z][\s\S]*?>/i.test(line);
+                    if (!hasHtmlTags) {
+                        return line.trim() ? `<p>${line}</p>` : ''
+                    } else {
+                        return line.trim() ? `${line}` : ''
+                    }
+                }).join('');
+            }
+            var wraperContent = `<div class="${div_class}">` + wrappedParagraphDivList + '</div>';
+            return wraperContent;
+        } catch (err) {
+            console.log(err)
+            return text;
+        }
+    }
+
+    /**
+    * display Content
+    */
+    function updateMessageDOM(state) {
+
+        // update message unfinished
+        var existingPendingContent = "";
+        if (state.sectionContentMap != null) {
+            state.sectionContentMap.forEach(function(value, key) {
+                existingPendingContent += value.pending.trim();
+            })
+        }
+        if (existingPendingContent.trim().length === 0) {
+            return;
+        }        
+
+        const messageId = state.messageId;
+        const template = state.template;
+        const messageRole = "assistant";
+
+        state.sectionContentMap.forEach(function(value, key) {
+            var curSection = key;
+            var curPendingContent = value.pending;
+            var curDisplayContent = value.display;
+            if (curPendingContent == "") {
+                return;
+            }
+            var curMessageDiv = document.getElementById(messageId);
+            if (curMessageDiv == null) {
+                curMessageDiv = createDivByTemplate(template);
+                curMessageDiv.id = messageId;
+                curMessageDiv.className = `message ${messageRole} ${messageTypeIncoming}`;
+                chatbox.appendChild(curMessageDiv);
+                chatbox.scrollTop = chatbox.scrollHeight;
+            }
+            var curSectionElement  = curMessageDiv.querySelector(`.${curSection}`)
+            // append pendding to display and clear pending
+            if (curSection == "system_msg") {
+                // update State
+                value.display = curPendingContent;
+                value.pending = "";
+                curSectionElement.innerHTML = formatTextWithParagraphs(value.display, "div_msg_paragraph");
+
+            } else if (curSection == "think" || curSection == "tool" || curSection == "context") {
+
+                value.display += curPendingContent;
+                value.pending = "";
+                curSectionElement.innerHTML = formatTextWithParagraphs(value.display, "div_msg_paragraph");
+
+            } else if (curSection == "answer") {
+                // markdown and html
+                value.display += curPendingContent;
+                value.pending = "";
+                try {
+                    setTimeout(() => {
+                        curSectionElement.innerHTML = marked.parse(value.display);
+                    }, MARKDOWN_RENDER_DELAY);
+                } catch (err) {
+                    console.log(err);
+                    curSectionElement.innerHTML = formatTextWithParagraphs(value.display, "div_msg_paragraph");
+                }
+
+            } else if (curSection == "context") {
+
+                value.display += curPendingContent;
+                value.pending = "";
+
+                curSectionElement.innerHTML = formatTextWithParagraphs(value.display, "div_msg_paragraph");
+
+            } else {
+                curDisplayContent += curPendingContent;
+
+                value.pending = "";
+                value.display = curDisplayContent;
+
+                curSectionElement.innerHTML = formatTextWithParagraphs(value.display, "div_msg_paragraph");
+
+            }
+        })
+
+    }
+
+
+    /**
+    * Main function to process API request and update Message Card
+    */
     async function callChatService(chatHistory, kwargs) {
+        // Stream response from backend
+        try {
+            const response = await fetch('http://127.0.0.1:5000/api/chat', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ messages: chatHistory, kwargs: kwargs})
+            });
+            if (!response.body) throw new Error('No response body');
+            const reader = response.body.getReader();
+            // let assistantMsg = '';
+            hideThinking();
+
+            let responseMap = new Map()
+
+            let decoder = new TextDecoder();
+
+            var messageIdTotal = await processStream(reader, decoder);
+
+        } catch (err) {
+            appendSystemMessage('Error: ' + err.message);
+        }
+    } 
+
+
+    async function callChatServiceVBeta(chatHistory, kwargs) {
         // Stream response from backend
         try {
             const response = await fetch('http://127.0.0.1:5000/api/chat', {
@@ -243,8 +511,6 @@ document.addEventListener('DOMContentLoaded', function() {
             // let assistantMsg = '';
 
             // Remoeve Thinking Status
-
-
             let responseMap = new Map()
 
             let decoder = new TextDecoder();
@@ -361,16 +627,32 @@ document.addEventListener('DOMContentLoaded', function() {
             appendSystemMessage('Error: ' + err.message);
         }
     } 
+
+
+    // model selection
+    const modelActionButton = document.querySelector('.action-btn');
+    const modelDropDownContent = document.querySelector('.dropdown-content');
+    
+    document.addEventListener('click', (e) => {
+
+        const isModelButtonClick = modelActionButton.contains(e.target);
+        if (isModelButtonClick) {
+            modelDropDownContent.classList.toggle('dropdown-content-show');
+        } else {
+            modelDropDownContent.classList.remove('dropdown-content-show');
+        }
+    });
+
     // AI Agent Marketplace End
-
-
     const dropdownItems = document.querySelectorAll('.dropdown-item');
     const modelBtn = document.getElementById('modelBtn');
     
     dropdownItems.forEach(item => {
         item.addEventListener('click', function() {
             const modelName = this.querySelector('strong').textContent;
+            const dataValue = this.getAttribute('data-value');
             modelBtn.querySelector('span').textContent = modelName;
+            modelBtn.setAttribute("data-value", dataValue);
         });
     });
 
