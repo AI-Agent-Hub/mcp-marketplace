@@ -3,89 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MCP Marketplace Admin</title>
+    <title>MCP Marketplace</title>
 
     <!-- add plugin -->
     <link rel="stylesheet" href="{{ url_for('plugin', path='mcp_local_admin/static/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css">
 
 </head>
 <body>
-    <h1>MCP Marketplace Admin</h1>
+    <div class="container">
 
-    <div class="section-container">
-        <div class="server-section">
-            <div class="controls">
-                <div class="search-container">
-                    <span class="search-icon">🔍</span>
-                    <input type="text" id="searchInput" placeholder="Search...">
-                </div>
-                
-                <div class="sort-container">
-                    <label for="sortSelect">Sort By</label>
-                    <select id="sortSelect">
-                        <option value="text-asc">A-Z</option>
-                        <option value="text-desc">Z-A</option>
-                    </select>
-                </div>
-            </div>            
-            <div id="local-servers-list">Loading local servers...</div>
+    <div class="sidebar">
+        <div class="sidebar-item" id="mcp-admin-sidebar" data-tab="admin">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z" fill="currentColor"></path>
+            </svg>
+            <span class="sidebar-text">MCP Admin</span>
         </div>
-
-        <div class="query-section">
-            <h2>Inspect MCP Server Tool</h2>
-            <div class="form-group">
-                <label for="query-server-id">Server ID:</label>
-                <input type="text" id="query-server-id" placeholder="e.g., server_1">
-            </div>
-            <div class="form-group">
-                <label for="query-tool-name">Tool Name:</label>
-                <input type="text" id="query-tool-name" placeholder="e.g., server_1_tool">
-            </div>
-            <div class="form-group"><label>Tool Parameters:</label></div>
-            <div class="form-group form-group-parameters" id="form-group-parameter">
-                
-            </div>         
-            <div class="form-group">
-                <label for="query-tool-input">Tool Input Json (Optional):</label>
-                <textarea id="query-tool-input" placeholder='{"message": "hello"}' rows="3"></textarea>
-            </div>
-            <button id="send-query-btn">Send Query</button>
-            <h3>Query Result:</h3>
-            <pre id="query-result">No query sent yet.</pre>
-        </div>
-
-        <div class="div_modal_section">
-            <div id="modal-trigger"></div>
-            <div class="modal-overlay"></div>
-            <div class="json-modal">
-                <button class="close-modal-btn">&times;</button>
-                <div class="json-display" id="json-content">
-                </div>
-                <div class="modal-footer">
-                    <button class="copy-btn">Copy</button>
-                </div>
-            </div>
-        </div>
+        <div class="sidebar-item" id="mcp-config-sidebar" data-tab="config">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z" fill="currentColor"></path>
+            </svg>
+            <span class="sidebar-text">MCP Config</span>
+        </div>        
     </div>
-    
-    <hr class="section-divider">
+    <div class="main-content">
+        
+        {% if tab_id == "" or tab_id == "admin" %} <div id="admin" class="main-content-tab"> {% else %} <div id="admin" class="main-content-tab main-content-tab-hidden"> {% endif %}
 
-    <div id="install-modal" class="modal" style="display:none;">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <h3>Configure Installation</h3>
-            <p><strong>Server:</strong> <span id="modal-server-name"></span></p>
-            <p><strong>GitHub URL:</strong> <span id="modal-github-url"></span></p>
-            <div class="form-group">
-                <label for="modal-install-command">Install Command:</label>
-                <input type="text" id="modal-install-command" style="width: 95%;">
+            <h1>MCP Marketplace Admin</h1>
+
+            <div class="section-container">
+                <div class="server-section">
+                    <div class="controls">
+                        <div class="search-container">
+                            <span class="search-icon">🔍</span>
+                            <input type="text" id="searchInput" placeholder="Search...">
+                        </div>
+                        
+                        <div class="sort-container">
+                            <label for="sortSelect">Sort By</label>
+                            <select id="sortSelect">
+                                <option value="text-asc">A-Z</option>
+                                <option value="text-desc">Z-A</option>
+                            </select>
+                        </div>
+                    </div>            
+                    <div id="local-servers-list">Loading local servers...</div>
+                </div>
+
+                <div class="query-section">
+                    <h2>Inspect MCP Server Tool</h2>
+                    <div class="form-group">
+                        <label for="query-server-id">Server ID:</label>
+                        <input type="text" id="query-server-id" placeholder="e.g., server_1">
+                    </div>
+                    <div class="form-group">
+                        <label for="query-tool-name">Tool Name:</label>
+                        <input type="text" id="query-tool-name" placeholder="e.g., server_1_tool">
+                    </div>
+                    <div class="form-group"><label>Tool Parameters:</label></div>
+                    <div class="form-group form-group-parameters" id="form-group-parameter">
+                        
+                    </div>         
+                    <div class="form-group">
+                        <label for="query-tool-input">Tool Input Json (Optional):</label>
+                        <textarea id="query-tool-input" placeholder='{"message": "hello"}' rows="3"></textarea>
+                    </div>
+                    <button id="send-query-btn">Send Query</button>
+                    <h3>Query Result:</h3>
+                    <pre id="query-result">No query sent yet.</pre>
+                </div>
+
+                <div class="div_modal_section">
+                    <div id="modal-trigger"></div>
+                    <div class="modal-overlay"></div>
+                    <div class="json-modal">
+                        <button class="close-modal-btn">&times;</button>
+                        <div class="json-display" id="json-content">
+                        </div>
+                        <div class="modal-footer">
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <p><em>Note: Start command and tool definitions path will be taken from marketplace data.</em></p>
-            <button id="modal-confirm-install-btn">Confirm Install</button>
+            
+            <hr class="section-divider">
+
+            <div id="install-modal" class="modal" style="display:none;">
+                <div class="modal-content">
+                    <span class="close-button">&times;</span>
+                    <h3>Configure Installation</h3>
+                    <p><strong>Server:</strong> <span id="modal-server-name"></span></p>
+                    <p><strong>GitHub URL:</strong> <span id="modal-github-url"></span></p>
+                    <div class="form-group">
+                        <label for="modal-install-command">Install Command:</label>
+                        <input type="text" id="modal-install-command" style="width: 95%;">
+                    </div>
+                    <p><em>Note: Start command and tool definitions path will be taken from marketplace data.</em></p>
+                    <button id="modal-confirm-install-btn">Confirm Install</button>
+                </div>
+            </div>
+
         </div>
+
+        {% if tab_id == "config" %} <div id="config" class="main-content-tab"> {% else %} <div id="config" class="main-content-tab main-content-tab-hidden"> {% endif %}
+
+            <div class="config-container">
+                <h2><a href="/mcp/config">🏠Home</a><span id="current-path"><a>/</a><a href="/mcp/config/{{ current_path }}">{{ current_path }}</a></span></h2>
+                
+                <div class="file-list">
+                    {% for item in items %}
+                    <div class="file-item {% if item.is_dir %}directory{% else %}file{% endif %}">
+                        <div class="file-icon">
+                            {% if item.is_dir %}📁{% else %}📄{% endif %}
+                        </div>
+
+                        {% if item.is_dir %}
+                            <div class="file-name"><a href="{{ item.uri }}">{{ item.name }}</a></div>
+                        {% else %}
+                            <div class="file-name"><a>{{ item.name }}</a></div>
+                        {% endif %}
+
+                        {% if not item.is_dir %}
+                            <button class="edit-btn" data-path="{{ item.path }}">Edit</button>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <!--  -->
+            <div id="editor-panel" class="editor-hidden">
+                <div class="panel-header">
+                    <h3 id="filename-display"></h3>
+                    <button id="close-panel">×</button>
+                </div>
+                <textarea id="file-editor"></textarea>
+                <div class="panel-footer">
+                    <button id="save-btn">Save (Cmd/Ctrl+S)</button>
+                    <span id="save-status"></span>
+                </div>
+            </div>
+            
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+
+        </div>
+
     </div>
 
     <script src="{{ url_for('plugin', path='mcp_local_admin/static/scripts.js') }}"></script>
-
+        
+    </div>
 </body>
 </html>
