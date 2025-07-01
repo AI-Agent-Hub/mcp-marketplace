@@ -8,7 +8,7 @@ from contextlib import AsyncExitStack
 from typing import Optional, List, Dict, Any
 import httpx
 
-from anthropic import Anthropic # Make sure you have this installed if you use it
+from anthropic import Anthropic
 from mcp import ClientSession, StdioServerParameters
 from mcp.client.stdio import stdio_client
 from mcp.client.sse import sse_client
@@ -16,6 +16,7 @@ from mcp.client.sse import sse_client
 import mcp_marketplace as mcpm
 
 from fastapi import APIRouter
+from fastapi import Path, HTTPException
 from pydantic import BaseModel
 
 import uuid
@@ -33,9 +34,6 @@ from .utils import *
 logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
 logger = logging.getLogger(__name__)
 
-# Global dictionaries (we'll modify how these are populated)
-mcp_client_dict: Dict[str, 'MCPClient'] = {}
-server_tools_dict_local: Dict[str, List[Any]] = {} # Type hint for clarity
 
 router = APIRouter()
 
@@ -424,13 +422,16 @@ async def call_tools_base(server_id: str, tool_name: str, tool_arguments: Dict):
             tool_result = await robust_call_tool(client, tool_name, tool_arguments)
             if tool_result is not None and not tool_result.isError:
                 tool_results_text = tool_result.content[0].text if len(tool_result.content) > 0 else ""
+                tool_results_text = str(tool_results_text)
                 output[KEY_SUCCESS] = True 
                 output[KEY_CONTENT] = tool_results_text
                 output[KEY_MESSAGE] = ""
             else:
                 output[KEY_SUCCESS] = False 
                 output[KEY_CONTENT] = ""
-                output[KEY_MESSAGE] = tool_result.content
+                output[KEY_MESSAGE] = str(tool_result.content)
+                print (f"DEBUG: After tool_result.content type {type(tool_result.content)} and tool_results_text {tool_result.content}")
+
         elif mcp_server_type == MCP_TYPE_STDIO:
             ## fetch MCP Server from Process List
             output = await call_tools_mcp_stdio(server_id, tool_name, tool_arguments)
@@ -969,6 +970,7 @@ async def call_tools_mcp_stdio(server_id: str, tool_name: str, tool_input: Dict)
 
             content = result["content"] if "content" in result else []
             isError = result["isError"] if "isError" in result else False
+            print (f"DEBUG: call_tools_mcp_stdio content type {type(content)} and content {content}")            
 
             # print (f"response line result {result} content {content}, isError {isError}")
             result_lines = []
@@ -985,10 +987,9 @@ async def call_tools_mcp_stdio(server_id: str, tool_name: str, tool_input: Dict)
                 output[KEY_CONTENT] = response_line
                 output[KEY_MESSAGE] = message
             else:
-                message = content  # error message
                 output[KEY_SUCCESS] = False 
-                output[KEY_CONTENT] = content
-                output[KEY_MESSAGE] = message
+                output[KEY_CONTENT] = str(content)
+                output[KEY_MESSAGE] = str(content)
         except json.JSONDecodeError:
             output[KEY_SUCCESS] = False 
             output[KEY_CONTENT] = ""
@@ -1020,8 +1021,12 @@ def check_tool_input(tool_input):
         return False, "check_tool_input Tool Input is Empty..."
     missing_fields = []
     for key, value in tool_input.items():
-        if value.strip() == "":
+        if value is None:
             missing_fields.append(key)
+        elif isinstance(value, str) and value.strip() == "":
+            missing_fields.append(key)
+        else:
+            continue
     # all parameters are empty return
     if len(missing_fields) == len(tool_input):
         return False, f"check_tool_input tool_input {tool_input} all values empty, missing values {missing_fields} "
@@ -1032,7 +1037,7 @@ async def query_mcp_server(request: QueryRequest):
     """
         server_id type <class 'str'> and value amap-amap-sse
         tool_name type <class 'str'> and value maps_weather
-        tool_input type <class 'dict'> and value {'city': 'New York'}
+        tool_input type <class 'dict'> and value {'city': 'New York', radius: 1000}
     """
     try:
         server_id = request.server_id 
@@ -1052,7 +1057,7 @@ async def query_mcp_server(request: QueryRequest):
         content = output[KEY_CONTENT] if KEY_CONTENT in output else ""
         message = output[KEY_MESSAGE] if KEY_MESSAGE in output else ""
         if success:
-            return QueryResponse(success=success, data=content)
+            return QueryResponse(success=success, data=[content])
         else:
             return QueryResponse(success=False, error=message)
     except Exception as e:
@@ -1164,6 +1169,311 @@ async def get_marketplace_config(server_ids: str):
         print(f"An unexpected error occurred while fetching marketplace servers: {e}")
         logging.error(e)
         return {}
+
+def list_files_recursively_pathlib(top):
+    file_path_all = []
+    for file_path in Path(top).rglob('*'):
+        file_path_all.append(file_path)
+    return file_path_all
+
+def get_all_mcp_server_config(folder_path):
+    """
+        folder_path: string, e.g. "./servers_list"
+    """
+    content_path_dict = {}
+    for sub_folder in os.listdir(folder_path):
+        sub_folder_path = os.path.join(folder_path, sub_folder)
+
+        ## find serve file, walk through
+        filepath_list = list_files_recursively_pathlib(sub_folder_path)
+        server_file_path = ""
+        server_file_name = ""
+        for filepath_iter in filepath_list:
+            filepath = str(filepath_iter)
+            if "server.ts" in str(filepath) or "server.py" in str(filepath) or "mcp.js" in str(filepath) or "mcp.py" in str(filepath):
+                server_file_path = filepath
+                server_file_name = filepath.split("/")[len(filepath.split("/")) - 1]
+                is_python = server_file_name.endswith('.py')
+                is_js = server_file_name.endswith('.js')
+                is_ts = server_file_name.endswith('.ts')
+
+        if server_file_path != "":
+            content_path_dict[sub_folder] = server_file_path
+    return content_path_dict
+
+
+async def initialize_and_run_mcp_clients_parallel(server_map: Dict[str, Any]) -> Dict[str, List[str]]:
+    """
+    Connects to a list of MCP servers in parallel using the mock mcp client
+    and lists their tools.
+
+    Args:
+        server_map: A list of dictionaries, where each dictionary contains
+                     server configuration details (name, command/url, args/etc.).
+
+    Returns:
+        server_tools_map, A dictionary where keys are server names and values are lists of tools.
+    """
+    tasks = []
+    server_id_list = []
+    for server_id, server_config in server_map.items():
+        server_id_list.append(server_id)
+        tasks.append(asyncio.wait_for(process_mcp_server(server_id, server_config), timeout= MCP_CONNECTION_TIMEOUT ))
+    results = await asyncio.gather(*tasks, return_exceptions=True)
+    server_tools_map = {}
+    for result in results:
+        if isinstance(result, Exception):
+            print(f"Error: {result}")
+        else:
+            server_name, tools = result
+            tools_dict_list = [{ 
+                "name": tool.name,
+                "description": tool.description,
+                "input_schema": tool.inputSchema
+            } for tool in tools]
+            server_tools_map[server_name] = tools_dict_list
+    return server_tools_map
+
+
+async def process_mcp_server(server_name, server_config: Dict[str, Any]) -> tuple[str, List[str]]:
+    """
+    Connects to a single MCP server using the mock mcp client,
+    lists its tools, and disconnects.
+
+    Args:
+        server_config: Dictionary containing server configuration,
+                       e.g., {'name': 'Server A', 'command': 'python', 'args': ['server_a.py']}
+                       or {'name': 'Server X', 'url': 'http://localhost:8000'}
+
+    Returns:
+        A tuple containing the server name and a list of its tools.
+    """
+    tools: List[str] = []
+
+    try:
+
+        client = MCPClient(name=server_name)
+        try:
+            tools = await client.connect_to_server_config(server_config)
+        except Exception as e2:
+            print (f"DEBUG: Server Connection Error {server_name} {e2}")
+    except Exception as e:
+        print(f"An error occurred while processing {server_name}: {e}")
+        tools = [] # Ensure tools is an empty list on error
+
+    ## tempfile
+    tools_json_list = [json.dumps({ 
+        "name": tool.name,
+        "description": tool.description,
+        "input_schema": tool.inputSchema
+    }) for tool in tools]
+
+    print (f"## process_mcp_server output server_name {server_name}, tools {tools}" )
+
+    return server_name, tools
+
+def run_search_tools_marketplace_pulsemcp():
+
+    ## PulseMAP
+    import mcp_marketplace
+    mcp_marketplace.set_endpoint("pulsemcp")
+
+    ## search by single query
+    query = "map"
+    result_query = mcp_marketplace.search(query=query, offset=0, count_per_page=100)
+
+    total_count = result_query["total_count"] if "total_count" in result_query else []
+    servers = result_query["servers"] if "servers" in result_query else []
+
+    servers_source = [server["source_code_url"] for server in servers]
+    servers_names = [server["name"] for server in servers]
+
+    print (f"DEBUG: Marketplace Search Query '{query}', total_count {total_count}, Result names {servers_names}")
+
+    ## parallel calling
+    ## batch process, search by querys
+    query_list = ["map", "chart"]
+    params_list = [{"query": query, "offset":0, "count_per_page":20} for query in query_list]
+    results = mcp_marketplace.search_batch(params_list)
+    for (params, result) in results:
+        query = params["query"] if "query" in params else ""
+        items = result["servers"] if "servers" in result else []
+        item_names = [item["name"] for item in items]
+        item_cnt = len(items)
+        print (f"DEBUG: Mcp Marketplace Search Query {query}, Get Item Count {item_cnt}, Get Names {item_names}")
+
+def run_search_tools_marketplace_deepnlp():
+
+    ## PulseMAP
+    import mcp_marketplace as mcpm
+    mcpm.set_endpoint("deepnlp")
+    
+    ## search by query
+    query = "map"
+    result_query = mcpm.search(query=query, mode="dict", page_id=0, count_per_page=100)
+
+    item_map = result_query["item_map"] if "item_map" in result_query else {}
+    servers = []
+    for key, values in item_map.items():
+        servers.extend(values)
+
+    servers_source = [server["website"] for server in servers]
+    servers_ids = [server["id"] for server in servers]
+    servers_names = [server["content_name"] for server in servers]
+    group_cnt_map = result_query["group_cnt"] if "group_cnt" in result_query else {}
+    group_total_map = result_query["group_total"] if "group_total" in result_query else {}
+    print (f"DEBUG: Search Query '{query}', group_cnt_map {group_cnt_map}, group_total_map {group_total_map}, servers_ids {servers_ids}")
+
+    ## search by id
+    unique_id = "google-maps/google-maps"
+    result_id = mcpm.search(id=unique_id, mode="list")
+    print (f"DEBUG: Search By ID '{unique_id}', Result {result_id}")
+
+    ## search by category
+    category = "map"
+    result_cate = mcpm.search(category=category, mode="list")
+    print (f"DEBUG: Search By ID '{category}', Result {result_cate}")
+
+    ## batch process, search by querys
+    query_list = ["map", "chart"]
+    params_list = [{"query": query, "page_id":0, "count_per_page":50} for query in query_list]
+    results = mcpm.search_batch(params_list)
+    for (params, result) in results:
+        query = params["query"] if "query" in params else ""
+        items = result["items"] if "items" in result else []
+        item_names = [item["content_name"] for item in items]
+        item_cnt = len(items)
+        print (f"DEBUG: Mcp Marketplace Search Query {query}, Get Item Count {item_cnt}, Get Names {item_names}")
+
+def run_search_tools_marketplace():
+    """
+    """
+
+    ## PulseMAP
+    run_search_tools_marketplace_pulsemcp()
+    
+    ## DeepNLP Endpoint
+    run_search_tools_marketplace_deepnlp()
+
+
+
+def execute_llm_tool_call(tool_call_request, mcp_config):
+    """
+        args:
+            tool_call_request
+            mcp_config: dict
+                method: get the server_name and tool_fuction
+        return:
+            response: response
+    """
+    method = tool_call_request.get("method")
+    params = tool_call_request.get("params", {})
+    request_id = tool_call_request.get("id")
+
+    if not method:
+        print("Error: Tool call method missing.")
+        return None
+    try:
+        server_name, tool_function = method.split("/", 1)
+    except ValueError:
+        print(f"Error: Invalid method format: {method}")
+        return None
+
+    server_config = mcp_config.get(KEY_MCP_JSON_SERVERS, {}).get(server_name)
+
+    if not server_config:
+        print(f"Error: MCP server '{server_name}' not found in configuration.")
+        return None
+
+    server_is_command = True if server_config.get("command") is not None else False
+    server_is_url = True if server_config.get("url") is not None else False
+    ## local
+    server_type = ""
+    if server_is_command:
+        server_type = "command"
+    elif (not server_is_command and server_is_url):
+        server_type = "sse"
+    else:
+        server_type = "command"
+
+    # run command
+    if server_type == "command":
+        command_template = server_config.get("command")
+        args = server_config.get("args")
+        env_vars = server_config.get("env", {})
+
+        if not command_template:
+            print(f"Error: Command not specified for server '{server_name}'.")
+            return None
+
+        command_to_run = [command_template]
+
+        for arg in args:
+            command_to_run.append(arg)
+
+        # Append parameters from the LLM call (simplified approach)
+        for key, value in params.items():
+            command_to_run.append(f"--{key}={value}") # Example: --param1=value1
+
+        print(f"Executing command: {' '.join(command_to_run)}")
+
+        try:
+            process_env = os.environ.copy()
+            process_env.update(env_vars)
+            result = subprocess.run(command_to_run, capture_output=True, text=True, env=process_env, check=True)
+            print("Command stdout:", result.stdout)
+            print("Command stderr:", result.stderr)
+
+            response = {
+                "jsonrpc": "2.0",
+                "id": request_id,
+                "result": {
+                    "output": result.stdout # Or a structured result based on tool output
+                }
+            }
+            return response
+
+        except FileNotFoundError:
+            print(f"Error: Command not found: {command_to_run[0]}")
+            return {
+                "jsonrpc": "2.0",
+                "id": request_id,
+                "error": {
+                    "code": -32601, # Method not found in JSON-RPC spec
+                    "message": f"Tool command not found: {command_to_run[0]}"
+                }
+            }
+        except subprocess.CalledProcessError as e:
+            print(f"Error executing command: {e}")
+            return {
+                "jsonrpc": "2.0",
+                "id": request_id,
+                "error": {
+                    "code": 1, # Generic error code
+                    "message": f"Tool execution failed: {e.stderr}"
+                }
+            }
+        except Exception as e:
+            print(f"An unexpected error occurred: {e}")
+            return {
+                "jsonrpc": "2.0",
+                "id": request_id,
+                "error": {
+                    "code": -32603, # Internal error in JSON-RPC spec
+                    "message": f"An internal error occurred during tool execution: {e}"
+                }
+            }
+
+    else:
+        print(f"Error: Unsupported server type '{server_type}' for server '{server_name}'.")
+        return {
+            "jsonrpc": "2.0",
+            "id": request_id,
+            "error": {
+                "code": -32601, # Method not found
+                "message": f"Unsupported MCP server type: {server_type}"
+            }
+        }
 
 def main():
     try:
