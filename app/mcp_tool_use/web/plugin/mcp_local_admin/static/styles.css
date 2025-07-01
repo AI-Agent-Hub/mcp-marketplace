@@ -6,6 +6,49 @@ body {
     line-height: 1.6;
 }
 
+.container {
+    display: grid;
+    grid-template-columns: 250px auto;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: white;
+    border-right: 1px solid #e7eaec;
+    display: flex;
+    flex-direction: column;
+    transition: width 0.3s ease;
+    position: relative;
+}
+
+.sidebar-item {
+    padding: 12px 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #343541;
+    background-color: #f4f4f4;
+    margin: 5px;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.main-content-tab {
+
+
+}
+
+.main-content-tab-hidden {
+    display: none;
+}
+
 h1, h2, h3 { 
 /*    color: #1c1e21; 
 */
@@ -17,6 +60,12 @@ h1 { font-size: 1.5em; }
 h2 { font-size: 1.2em; border-bottom: 1px solid #ccd0d5; padding-bottom: 0.3em; }
 h3 { font-size: 1.0em; }
 
+
+#local-servers-list {
+    height: 100vh;
+    overflow-y: auto;
+}
+
 .server-section, .query-section { 
     background-color: #ffffff; 
     padding: 20px; 
@@ -24,6 +73,7 @@ h3 { font-size: 1.0em; }
     border-radius: 8px; 
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
+
 
 .server-item { 
     border: 1px solid #dddfe2; 
@@ -97,6 +147,7 @@ pre {
     overflow-y: auto;
 }
 
+
 .form-group { margin-bottom: 15px; }
 .form-group label { 
     display: block; 
@@ -118,12 +169,21 @@ pre {
     min-width: 320px; 
 }
 
+
+.section-container > .query-section {
+    width: 400px;
+}
+
+
 .section-divider { 
     border: 0; 
     height: 1px; 
     background: #ccd0d5; 
     margin: 30px 0; 
 }
+
+
+
 
 /* Modal Styles */
 .modal {
@@ -227,6 +287,9 @@ pre {
 
 }
 
+#query-result {
+    max-width: 100%;
+}
 
 #fetch-marketplace-btn {
     background-color: #6c757d; /* Secondary button color */
@@ -366,14 +429,14 @@ pre {
         .search-icon {
             position: absolute;
             left: 12px;
-            top: 50%;
+            top: 40%;
             transform: translateY(-50%);
             color: #6c757d;
         }
         
         #searchInput {
             width: 100%;
-            padding: 12px 12px 12px 40px;
+            padding: 12px 12px 12px 30px;
             border: 2px solid #e0e0e0;
             border-radius: 8px;
             font-size: 16px;
@@ -408,4 +471,132 @@ pre {
             to { opacity: 1; transform: translate(-50%, -50%); }
         }
 
+
+/*MCP Config*/
+.config-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.config-container a {
+    text-decoration: none;
+    color: #606770;
+}
+
+.file-list {
+/*    background-color: #161b22;
+*/    
+    border-radius: 6px;
+    border: 1px solid #30363d;
+}
+
+.file-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-bottom: 1px solid #30363d;
+}
+
+.file-item:last-child {
+    border-bottom: none;
+}
+
+.file-item:hover {
+    background: #f7f8fa;
+}
+
+.file-icon {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.file-name {
+    flex-grow: 1;
+    word-break: break-all;
+}
+
+.file-name a {
+    color: #606770;
+    text-decoration: none;
+}
+
+
+.edit-btn {
+    background-color: #10a37f;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 5px 12px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.edit-btn:hover {
+    background-color: #2ea043;
+}
+
+#editor-panel {
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    bottom: 50px;
+    left: 50px;
+    background-color: #f7f8fa;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #30363d;
+}
+
+#close-panel {
+    background: none;
+    border: none;
+    color: #c9d1d9;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#file-editor {
+    flex-grow: 1;
+    font-family: monospace;
+    background: #161b22;
+    color: #c9d1d9;
+    border: none;
+    padding: 15px;
+    resize: none;
+}
+
+.panel-footer {
+    padding: 15px;
+    border-top: 1px solid #30363d;
+    display: flex;
+    align-items: center;
+}
+
+#save-btn {
+    background-color: #238636;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+#save-status {
+    color: #8b949e;
+}
+
+.editor-hidden {
+    display: none !important;
+}
 
