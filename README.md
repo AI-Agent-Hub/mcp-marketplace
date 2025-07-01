@@ -1,21 +1,35 @@
-## Open MCP Marketplace | AI Agent Marketplace Index and Web Client from DeepNLP
+## Open MCP Marketplace | AI Agent Marketplace Index | MCP Client | AI Search from DeepNLP
 
 [![MCP Marketplace User Review Rating Badge](http://www.deepnlp.org/api/marketplace/svg?name=ai-agent-marketplace-index/ai-agent-marketplace-index)](http://deepnlp.org/store/mcp-server/mcp-server/pub-ai-agent-marketplace-index/ai-agent-marketplace-index) |
 [![AI Agent Marketplace DeepNLP](http://www.deepnlp.org/api/ai_agent_marketplace/svg?name=ai-agent-marketplace-index/ai-agent-marketplace-index)](http://deepnlp.org/store/mcp-server/mcp-server/pub-ai-agent-marketplace-index/ai-agent-marketplace-index) |
 [WeChat](https://raw.githubusercontent.com/AI-Agent-Hub/mcp-marketplace/refs/heads/main/docs/mcp_marketplace_wechat_group.png)
 
 
-![Open MCP Marketplace DeepNLP Panel](https://raw.githubusercontent.com/AI-Agent-Hub/mcp-marketplace/refs/heads/main/docs/remote_mcp_server.jpg)
-
-
 ## Basic
 
-
-Open MCP Marketplace is an open source project, which aims to make MCP and AI Agent integration **Easier**.
+Open MCP Marketplace is an open source project aims to make MCP and AI Agent integration **Easier**.
 
 - You can get well-cleaned up MCP Servers Tools Meta information, Tools and Config Schema, etc. 
-- You can integrate a MCP Marketplace (web based client) button or a panel to your AI Apps. So that users can choose their preferred MCP tools (such as Map, Browser Use, Payment, Fetch, etc) to answer their questions. It can be easily integrated to your AI apps, such as Chatbot, AI Search/Deep Research Engine, Video/Image generation, Coding IDE, etc.
+- You can integrate a MCP Marketplace (web based client) button or a panel to your AI Apps (Chatbot, AI Search/Deep Research Engine, Video/Image generation, Coding IDE, etc.). So that users can choose their preferred MCP tools (such as Map, Browser Use, Payment, Fetch, etc) to answer their questions.
+- Python/TypeScript Support
 
+
+**Example: Route Planning using Google Map MCP**
+
+Visit [MCP Tool Use App](https://github.com/AI-Agent-Hub/mcp-marketplace/tree/main/app/mcp_tool_use)
+
+![Route Planning](https://raw.githubusercontent.com/AI-Agent-Hub/mcp-marketplace/refs/heads/main/app/mcp_tool_use/docs/route_planning_mcp_v2.jpg)
+
+**Example: MCP Admin and Playground To Manage Tools and Servers**
+
+Visit [MCP Tool Use App](https://github.com/AI-Agent-Hub/mcp-marketplace/tree/main/app/mcp_tool_use)
+
+![MCP Marketplace Tool Use](https://raw.githubusercontent.com/AI-Agent-Hub/mcp-marketplace/refs/heads/main/app/mcp_tool_use/docs/marketplace_mcp_admin.jpg?raw=true)
+
+**Example: Demo AI Search**
+
+Visit [MCP Tool Use App](https://github.com/AI-Agent-Hub/mcp-marketplace/tree/main/app/ai_search)
+![Open MCP Marketplace DeepNLP Panel](https://raw.githubusercontent.com/AI-Agent-Hub/mcp-marketplace/refs/heads/main/docs/remote_mcp_server.jpg)
 
 **KEY Features**
 
