@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="{{ url_for('plugin', path='agent_toolbox/styles.css') }}">
     <link rel="stylesheet" href="{{ url_for('plugin', path='mcp_marketplace_v1/styles.css') }}">
 
+    <!-- markdown and safe xml -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.0/marked.min.js"></script>
+
 </head>
 <body>
     <div class="app-container">
@@ -65,24 +68,40 @@
                 
                 <div class="button-container">
                     <div class="dropdown">
-                        <button class="action-btn" id="modelBtn">
+                        <button class="action-btn" id="modelBtn" data-value="claude-opus-4">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
                                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z" fill="currentColor"/>
                             </svg>
-                            <span>DeepSeek</span>
+                            <span>Claude Opus 4</span>
                         </button>
                         <div class="dropdown-content">
-                            <div class="dropdown-item" data-value="deepseek">
-                                <strong>DeepSeek</strong>
+                            <div class="dropdown-item" data-value="claude-opus-4">
+                                <strong>Claude Opus 4</strong>
+                                <span>Claude Opus 4</span>
+                            </div>
+                            <div class="dropdown-item" data-value="claude-3.7">
+                                <strong>Claude 3.7</strong>
+                                <span>Claude 3.7</span>
+                            </div>                            
+                            <div class="dropdown-item" data-value="gpt-4o">
+                                <strong>GPT-4o</strong>
+                                <span>GPT-4o</span>
+                            </div>
+                            <div class="dropdown-item" data-value="gemini-2.5-flash">
+                                <strong>Gemini 2.5 Flash</strong>
+                                <span>Gemini 2.5 Flash</span>
+                            </div>                         
+                            <div class="dropdown-item" data-value="qwen3-max">
+                                <strong>Qwen3 Max</strong>
+                                <span>Qwen3 Max</span>
+                            </div>
+                            <div class="dropdown-item" data-value="qwen3-plus">
+                                <strong>Qwen3 plus</strong>
+                                <span>Qwen3 plus</span>
+                            </div>                            
+                            <div class="dropdown-item" data-value="deepseek-r1">
+                                <strong>DeepSeek R1</strong>
                                 <span>DeepSeek R1</span>
-                            </div>
-                            <div class="dropdown-item" data-value="claude">
-                                <strong>Claude</strong>
-                                <span>Claude4</span>
-                            </div>
-                            <div class="dropdown-item" data-value="qwen">
-                                <strong>Qwen</strong>
-                                <span>Qwen3</span>
                             </div>
                         </div>
                     </div>
