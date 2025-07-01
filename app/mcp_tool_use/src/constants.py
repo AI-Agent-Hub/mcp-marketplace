@@ -7,6 +7,11 @@ SRC_DIR = ROOT_DIR / "src"
 ## local managed mcp config
 MCP_CONFIG_LOCAL_JSON_PATH = DATA_DIR/ "mcp/config/mcp_config.json"
 MCP_CONFIG_LOCAL_CATEGORY_JSON_PATH = DATA_DIR/ "mcp/config/category"
+MCP_CONFIG_FOLDER = DATA_DIR/ "mcp/config"
+MCP_BASE_URI = "/mcp"
+MCP_BASE_CONFIG_URI = "/mcp/config"
+MCP_FOLDER_SKIPPED_EXTENSION = ["ds_store"]
+
 ## Marketplace Web-Based MCP Config
 MCP_CONFIG_MARKETPLACE_JSON_PATH = DATA_DIR/ "mcp/mcp_marketplace/mcp_config.json"
 MCP_CONFIG_LOCAL_CACHE_FOLDER = DATA_DIR/ "mcp/mcp_marketplace/files"
@@ -44,10 +49,15 @@ SECTION_SYSTEM_MSG = "system_msg"
 SECTION_CONTEXT = "context"
 
 KEY_MODEL_SELECTION = "model_selection"
-MODEL_SELECTION_CLAUDE_37 = "Claude"
-MODEL_SELECTION_QWEN_MAX = "Qwen"
-MODEL_SELECTION_DEEPSEEK = "DeepSeek"
-MODEL_SELECTION_DEFAULT = "Claude"
+MODEL_SELECTION_CLAUDE_OPUS_4 = "claude-opus-4"
+MODEL_SELECTION_CLAUDE_37 =  "claude-3.7"
+MODEL_SELECTION_GPT4O =  "gpt-4o"
+MODEL_SELECTION_GEMINI_25_FLASH = "gemini-2.5-flash"
+MODEL_SELECTION_QWEN3_MAX = "qwen3-max"
+MODEL_SELECTION_QWEN3_PLUS = "qwen3-plus"
+MODEL_SELECTION_DEEPSEEK_R1 = "deepseek-r1"
+MODEL_SELECTION_DEFAULT = MODEL_SELECTION_QWEN3_PLUS
+
 
 KEY_MCP_JSON_SERVERS = "mcpServers"
 MCP_TYPE_SSE = "SSE"
@@ -57,4 +67,8 @@ MCP_CALL_TOOL_TIMEOUT = 15.0
 KEY_SUCCESS = "success"
 KEY_CONTENT = "content" 
 KEY_MESSAGE = "message"
+
+## timeout for MCP servers to start and connect
+MCP_CONNECTION_TIMEOUT = 2.5
+
 
