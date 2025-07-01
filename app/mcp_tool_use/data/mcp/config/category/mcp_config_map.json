@@ -1,0 +1,27 @@
+{
+	"mcpServers": {
+		"google-maps": {
+			"command": "npx",
+			"args": ["-y", "@modelcontextprotocol/server-google-maps"],
+			"env": {
+				"GOOGLE_MAPS_API_KEY": "<YOUR_API_KEY>"
+			}
+		},
+		"amap-amap-sse": {
+			"url": "https://mcp.amap.com/sse?key=your_api_key_here"
+		},
+		"baidu-maps-sse": {
+			"url": "https://mcp.map.baidu.com/sse?ak=your_api_key_here"
+		},
+		"baidu-map": {
+			"command": "npx",
+			"args": [
+				"-y",
+				"@baidumap/mcp-server-baidu-map"
+			],
+			"env": {
+				"BAIDU_MAP_API_KEY": "your_api_key_here"
+			}
+		}
+	}
+}
