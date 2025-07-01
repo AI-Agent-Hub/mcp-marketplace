@@ -5,6 +5,9 @@ import asyncio
 from typing import Dict, List, Any
 import uvicorn
 
+import os
+import aiofiles
+
 from fastapi import FastAPI
 from fastapi import Body
 from fastapi.middleware.cors import CORSMiddleware
@@ -12,8 +15,9 @@ from fastapi.responses import StreamingResponse
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
-from pathlib import Path
 from fastapi import Request
+from fastapi import Path as APIPath
+from fastapi import HTTPException
 
 from pydantic import BaseModel
 from contextlib import asynccontextmanager
@@ -90,8 +94,173 @@ async def read_index(request: Request):
 @app.get("/mcp", response_class=HTMLResponse)
 async def mcp_page(request: Request):
     """
+        MCP_CONFIG_FOLDER = DATA_DIR/ "mcp/config/category"
+        "./data/mcp/config"
     """
-    return plugins.TemplateResponse("mcp_local_admin/templates/index.html", {"request": request})
+    items = []
+    try:
+        # BASE_DIR = MCP_CONFIG_FOLDER
+        # path = ""
+        subfolder = ""
+        target_path = os.path.join(MCP_CONFIG_FOLDER, subfolder)
+        if not os.path.exists(target_path):
+            raise HTTPException(status_code=404, detail="path not exists")
+        for item in os.listdir(target_path):
+            item_path = os.path.join(target_path, item)
+            # skipped item not for display
+            item_split_tuples = item.split(".")
+            item_extension = ""
+            if len(item_split_tuples) >= 2:
+                item_extension = item_split_tuples[-1].lower()
+            else:
+                item_extension = ""
+            print (f"DEBUG: mcp_subfolder_view Skipped Item {item}")
+            print (f"DEBUG: mcp_page item_extension {item_extension}")
+
+            if item_extension in MCP_FOLDER_SKIPPED_EXTENSION:
+                continue
+            is_dir = os.path.isdir(item_path)
+            items.append({
+                "name": item,
+                "path": os.path.join(subfolder, item),
+                "uri": MCP_BASE_CONFIG_URI + "/" + os.path.join(subfolder, item),            
+                "is_dir": is_dir,
+                "size": os.path.getsize(item_path) if not is_dir else 0
+            })
+        print (f"DEBUG: Output Items {items}")
+    except Exception as e:
+        print (f"mcp_page failed {e}")
+    
+    return plugins.TemplateResponse("mcp_local_admin/templates/index.html", 
+        {
+            "request": request, 
+            "items": items, 
+            "tab_id": "admin"
+        })
+
+@app.get("/mcp/{tab_id}", response_class=HTMLResponse)
+async def mcp_page_tab(request: Request, tab_id: str = ""):
+    """
+        MCP_CONFIG_FOLDER = DATA_DIR/ "mcp/config/category"
+        "./data/mcp/config"
+    """
+    items = []
+    try:
+        # BASE_DIR = MCP_CONFIG_FOLDER
+        # path = ""
+        subfolder = ""
+        target_path = os.path.join(MCP_CONFIG_FOLDER, subfolder)
+        if not os.path.exists(target_path):
+            raise HTTPException(status_code=404, detail="path not exists")
+        for item in os.listdir(target_path):
+            item_path = os.path.join(target_path, item)
+            # skipped item not for display
+            item_split_tuples = item.split(".")
+            item_extension = ""
+            if len(item_split_tuples) >= 2:
+                item_extension = item_split_tuples[-1].lower()
+            else:
+                item_extension = ""
+            print (f"DEBUG: mcp_subfolder_view Skipped Item {item}")
+            print (f"DEBUG: mcp_page item_extension {item_extension}")
+
+            if item_extension in MCP_FOLDER_SKIPPED_EXTENSION:
+                continue
+            is_dir = os.path.isdir(item_path)
+            items.append({
+                "name": item,
+                "path": os.path.join(subfolder, item),
+                "uri": MCP_BASE_CONFIG_URI + "/" + os.path.join(subfolder, item),            
+                "is_dir": is_dir,
+                "size": os.path.getsize(item_path) if not is_dir else 0
+            })
+        print (f"DEBUG: Output Items {items}")
+    except Exception as e:
+        print (f"mcp_page failed {e}")
+    
+    return plugins.TemplateResponse("mcp_local_admin/templates/index.html", 
+        {
+            "request": request, 
+            "items": items,
+            "tab_id": tab_id
+        })
+
+@app.get("/mcp/config/{sub_path:path}")
+async def mcp_subfolder_view(request: Request, sub_path: str = APIPath(..., regex=r"^[\w\-./]+$")):
+    if ".." in sub_path:
+        raise HTTPException(400, "Invalid path")
+    
+    target_path = os.path.join(MCP_CONFIG_FOLDER, sub_path)
+    if not os.path.exists(target_path):
+        raise HTTPException(status_code=404, detail="path not exists")
+    items = []
+    for item in os.listdir(target_path):
+        item_path = os.path.join(target_path, item)
+
+        item_split_tuples = item.split(".")
+        item_extension = ""
+        if len(item_split_tuples) >= 2:
+            item_extension = item_split_tuples[-1].lower()
+        else:
+            item_extension = ""
+        print (f"DEBUG: mcp_page item_extension {item_extension}")
+        if item_extension != "" and item_extension in MCP_FOLDER_SKIPPED_EXTENSION:
+            print (f"DEBUG: mcp_subfolder_view Skipped Item {item}")
+            continue
+        is_dir = os.path.isdir(item_path)
+        items.append({
+            "name": item,
+            "path": os.path.join(sub_path, item),
+            "uri": MCP_BASE_CONFIG_URI + "/" + os.path.join(sub_path, item),
+            "is_dir": is_dir,
+            "size": os.path.getsize(item_path) if not is_dir else 0
+        })
+    
+    print (f"mcp_subfolder_view {items}")
+
+    return plugins.TemplateResponse("mcp_local_admin/templates/index.html", 
+        {
+            "request": request,
+            "items": items,
+            "tab_id": "config",
+            "current_path": sub_path
+        })
+
+@app.get("/file-content")
+async def get_file_content(path: str):
+    """"""
+    try:
+        file_path = os.path.join(MCP_CONFIG_FOLDER, path)
+        
+        if not os.path.isfile(file_path):
+            raise HTTPException(status_code=404, detail="File Not Found...")
+        
+        async with aiofiles.open(file_path, 'r') as f:
+            content = await f.read()
+        
+        # print (f"DEBUG: get_file_content path {path} and content {content}")
+        return {"content": content, "path": path}
+    except Exception as e:
+        print (f"get_file_content failed {e}")
+        return {"content": "", "path": ""}
+
+@app.post("/save-file")
+async def save_file(request: Request):
+    """"""
+    try:
+        data = await request.json()
+        file_path = os.path.join(MCP_CONFIG_FOLDER, data['path'])
+        if not os.path.isfile(file_path):
+            raise HTTPException(status_code=404, detail="File Not Found...")
+        
+        async with aiofiles.open(file_path, 'w') as f:
+            await f.write(data['content'])
+        
+        return {"status": "success", "path": data['path']}
+
+    except Exception as e:
+        print (f"Failed to save_file {e}")
+        return {"status": "fail", "path": ""}
 
 CHUNK_JS_SEPARATOR = "\n"
 
@@ -112,7 +281,7 @@ async def chat(messages: list = Body(...), kwargs: dict = Body(...)):
 
         response_type = kwargs["response_type"] if "response_type" in kwargs else RESPONSE_TYPE_TEXT
         logger.info(f"Received kwargs Input Response Route: {response_type}")
-        
+
         kwargs["mcp_client_dict"] = gv._global_mcp_client_dict
         kwargs["server_tools_dict_local"] = gv._global_server_tools_dict_local
         
@@ -129,9 +298,6 @@ async def main_entry(messages: List[Dict[str, Any]], kwargs: Dict[str, Any]):
     """
     try:
         logger.info(f"main_entry input: {messages}")
-
-        yield json.dumps({"type": "assistant", "format": "html", "content": "First returned", "section": "", "message_id": "message1"}) + CHUNK_JS_SEPARATOR
-        await asyncio.sleep(0)
         async for chunk in deep_tool_use_agent(messages, kwargs):
             yield chunk + CHUNK_JS_SEPARATOR
 
