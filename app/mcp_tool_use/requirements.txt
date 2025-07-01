@@ -1,0 +1,8 @@
+python-dotenv==1.0.1
+fastapi>=0.115.12
+pydantic>=2.9.2
+asyncio>=3.4.3
+httpx>=0.28.1
+mcp>=1.9.0
+mcp_marketplace>=0.0.4
+uuid>=1.30
