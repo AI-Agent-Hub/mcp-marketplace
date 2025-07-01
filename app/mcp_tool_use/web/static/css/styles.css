@@ -175,7 +175,7 @@ body {
 
 .message {
     max-width: 70%;
-    padding: 12px 16px;
+    padding: 15px 30px;
     margin-bottom: 15px;
     border-radius: 8px;
     line-height: 1.5;
@@ -218,6 +218,33 @@ body {
     background-color: white;
     border: 1px solid var(--border-color);
     border-radius: 8px;
+}
+
+/*message div class*/
+.system_msg {
+}
+
+.think {
+}
+
+.tool {
+}
+
+.answer {
+
+}
+
+.div_msg_paragraph {
+    display: grid;
+    grid-row-gap: 5px;
+}
+
+.div_planning_highlight {
+    background: #e9ebee;
+    display: flex;
+    float: left;
+    margin: 0px 5px;
+    padding: 2px;
 }
 
 .dot-flashing {
@@ -361,8 +388,13 @@ body {
     padding: 8px 0;
 }
 
-.dropdown:hover .dropdown-content {
+/*.dropdown:hover .dropdown-content {
     display: block;
+}
+*/
+
+.dropdown-content-show {
+    display: block !important;
 }
 
 .dropdown-item {
@@ -437,6 +469,10 @@ body {
     margin-bottom: 10px;
     color: #6e6e80;
 }
+
+
+
+
 
 /*.template-tools, .my-tools {
     display: flex;
