@@ -6,7 +6,8 @@ from contextlib import AsyncExitStack
 from mcp import ClientSession, StdioServerParameters
 from mcp.client.stdio import stdio_client
 from mcp.client.sse import sse_client
-from pydantic_settings import BaseSettings
+from pydantic_settings import BaseSettings, SettingsConfigDict
+from typing import Optional
 
 from dotenv import load_dotenv
 
@@ -221,9 +222,16 @@ class MCPClient:
             raise ValueError(f"Unexpected response from MCP server: {response}")
 
 class Settings(BaseSettings):
-    QWEN_API_KEY: str = os.getenv("QWEN_API_KEY")
-    OPENAI_API_KEY: str = os.getenv("OPENAI_API_KEY")
-    CLAUDE_API_KEY: str = os.getenv("CLAUDE_API_KEY")
+
+    QWEN_API_KEY: Optional[str] = None
+    OPENAI_API_KEY: Optional[str] = None
+    CLAUDE_API_KEY: Optional[str] = None
+
+    model_config = SettingsConfigDict(
+        env_file=".env",  
+        env_file_encoding="utf-8",
+        extra="ignore"            
+    )
 
 ## Python Program
 _global_server_tools_dict_local: Dict[str, List[Any]] = {}
@@ -237,3 +245,4 @@ _global_mcp_config_local_cache: Dict[str, Any] = {}  # key: server_id, value: mc
 _global_mcp_client_dict: Dict[str, Dict[str, Any]] = {}
 
 settings = Settings()
+
