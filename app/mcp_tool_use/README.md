@@ -4,17 +4,16 @@ Try our AI Agent MCP Tool Use App at [https://agent.deepnlp.org/agent/mcp_tool_u
 
 Use Map/Finance/Browser/Search and many other tools with LLM support.
 
-## Weather Demo
+#### Weather Demo
 q = What's the weather like in Shanghai?
 
-## Trip Planning Demo
+#### Trip Planning Demo
 q = Find route from JFK Aiport to Time Square
 ![Route Planning](https://raw.githubusercontent.com/AI-Agent-Hub/mcp-marketplace/refs/heads/main/app/mcp_tool_use/docs/route_planning_mcp_v2.jpg)
 
-## Web Search Demo
+#### Web Search Demo
 q = NBA 2025 Draft
 ![Search MCP](https://raw.githubusercontent.com/AI-Agent-Hub/mcp-marketplace/refs/heads/main/app/mcp_tool_use/docs/search_mcp.jpg)
-
 
 This app is an open-source MCP Tool Use Agent (equivalent to MCP features of Cline, Cursor, Claude Desktop, etc), which contain a ChatGPT/Claude/Gemini Style Chatbot UI and MCP client integration (Management/Start/Disable/Export servers) of various MCP servers and tools. To get MCP configs and tools schema files from DeepNLP MCP Marketplace, please Visit at: https://www.deepnlp.org/store/ai-agent/mcp-server
 
