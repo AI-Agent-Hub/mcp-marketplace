@@ -12,6 +12,7 @@ from anthropic import Anthropic
 from mcp import ClientSession, StdioServerParameters
 from mcp.client.stdio import stdio_client
 from mcp.client.sse import sse_client
+from mcp.client.streamable_http import streamablehttp_client
 
 import mcp_marketplace as mcpm
 
@@ -257,9 +258,12 @@ async def start_mcp_server_process(server_id: str):
             }
             await send_mcp_message(process.stdin, initialized_notification_message)
 
-            print (f"DEBUG: End of Sleeping Waiting for Request")
+            print (f"DEBUG: start_mcp_server_process End of Sleeping Waiting for Request")
 
             query_response = await list_tools_stdio_server(process, server_id)
+
+            print (f"DEBUG: start_mcp_server_process  End of Sleeping Waiting for query_response {query_response}")
+
             tools = query_response.data if query_response.success else []
 
             gv._global_server_registry[server_id]["process"] = process
@@ -302,6 +306,7 @@ async def list_tools_stdio_server(process, server_id):
             server_id: (str)
         Return:
             https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/overview
+        ## modification, add consuming non json rpc like text
     """
     if process is None:
         return QueryResponse(success=False, error="No process from server found...")
@@ -313,7 +318,110 @@ async def list_tools_stdio_server(process, server_id):
             "params": {}
         }
         await send_mcp_message(process.stdin, mcp_request)
-        print("DEBUG: Data written to stdin and drained.")
+        print(f"DEBUG: Data written to stdin and drained. {mcp_request}")
+        print("DEBUG: Waiting for response from stdout...")
+
+        response_data = None
+        stderr_output = b'' # Accumulate stderr output
+        total_timeout = 15.0 # Total time to wait for the actual JSON response
+        start_time = asyncio.get_event_loop().time()
+
+        while response_data is None and (asyncio.get_event_loop().time() - start_time < total_timeout):
+            try:
+                current_line_bytes = await asyncio.wait_for(process.stdout.readline(), timeout=0.5)
+
+                # Concurrently check for stderr output
+                try:
+                    current_stderr_chunk = await asyncio.wait_for(process.stderr.read(1024), timeout=0.01)
+                    if current_stderr_chunk:
+                        stderr_output += current_stderr_chunk
+                        print(f"DEBUG: Stderr captured concurrently: {current_stderr_chunk.decode().strip()}")
+                except asyncio.TimeoutError:
+                    pass # No stderr chunk ready
+
+                if not current_line_bytes:
+                    # If stdout stream closes, server likely exited
+                    print("DEBUG: Server stdout stream closed unexpectedly while waiting for response.")
+                    break
+
+                decoded_line = current_line_bytes.decode('utf-8').strip()
+                print(f"DEBUG: Received raw response line: {decoded_line!r}")
+
+                try:
+                    parsed_json = json.loads(decoded_line)
+                    # Check if it's a JSON-RPC response and if the ID matches our request
+                    if "jsonrpc" in parsed_json and parsed_json.get("id") == mcp_request["id"]:
+                        response_data = parsed_json # Found our response!
+                        print(f"DEBUG: Successfully parsed and matched response for ID {mcp_request['id']}: {response_data}")
+                        break # Exit the loop, we found what we're looking for
+                    else:
+                        print(f"DEBUG: Received JSON but ID does not match request ID ({parsed_json.get('id')}). Continuing to read.")
+                        # This could be a notification or a response to an old/untracked request.
+                        # We continue reading until we find *our* response.
+                except json.JSONDecodeError as e:
+                    print(f"DEBUG: Not Valid Json '{decoded_line}' with error {e}. Discarding and continuing to read.")
+                except UnicodeDecodeError as e:
+                    print(f"DEBUG: UnicodeDecodeError: {e} for line {current_line_bytes!r}. Discarding and continuing to read.")
+
+            except asyncio.TimeoutError:
+                # This specific timeout (0.5s) means no line was read within this small window.
+                # The outer while loop continues until the total_timeout is hit.
+                print("DEBUG: No stdout line received within 0.5s. Retrying...")
+                
+            # Crucial: Check if the process has exited at each iteration
+            if process.returncode is not None:
+                print(f"ERROR: Server process exited with code: {process.returncode} while waiting for response.")
+                # Read any remaining stderr output before returning
+                try:
+                    remaining_stderr = await asyncio.wait_for(process.stderr.read(), timeout=1.0)
+                    if remaining_stderr:
+                        stderr_output += remaining_stderr
+                        print(f"ERROR: Remaining stderr: {remaining_stderr.decode().strip()}")
+                except asyncio.TimeoutError:
+                    pass
+                return QueryResponse(success=False, error=f"Server '{server_id}' process exited with code {process.returncode} and no response. Stderr: {stderr_output.decode().strip()}")
+
+        if response_data is None:
+            # This block is reached if the loop completes without finding a matching response
+            print(f"ERROR: Timeout after {total_timeout} seconds waiting for response for ID '{mcp_request['id']}'.")
+            # Final check for stderr if we timed out
+            try:
+                final_stderr = await asyncio.wait_for(process.stderr.read(), timeout=1.0)
+                if final_stderr:
+                    stderr_output += final_stderr
+                    print(f"ERROR: Final stderr upon timeout: {final_stderr.decode().strip()}")
+            except asyncio.TimeoutError:
+                pass
+            return QueryResponse(success=False, error=f"Server '{server_id}' did not respond within {total_timeout} seconds. Stderr: {stderr_output.decode().strip()}")
+
+        result = response_data["result"] if "result" in response_data else {}
+        tools = result["tools"] if "tools" in result else []
+        tools = tool_mapper_json(tools)
+        print (f"Available Tools From Server {server_id} tools {tools}")
+        return QueryResponse(success=True, data=tools)
+    except Exception as e:
+        logger.error(e)
+        return QueryResponse(success=False, error=f"Failed to process list_tools_stdio_server {e}")
+
+async def list_tools_stdio_server_v0(process, server_id):
+    """
+        Args:
+            process: (proc)
+            server_id: (str)
+        Return:
+            https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/overview
+    """
+    if process is None:
+        return QueryResponse(success=False, error="No process from server found...")
+    try:
+        mcp_request = {
+            "jsonrpc": "2.0", 
+            "id": str(uuid.uuid4()),
+            "method": "tools/list",
+            "params": {}
+        }
+        await send_mcp_message(process.stdin, mcp_request)
+        print(f"DEBUG: Data written to stdin and drained. {mcp_request}")
         print("DEBUG: Waiting for response from stdout...")
 
         response_line = b''
@@ -365,9 +473,9 @@ async def list_tools_stdio_server(process, server_id):
         response_data = {}
         try:
             response_data = json.loads(response_line_decode)
-            print(f"DEBUG: response_data {response_data}")
+            print(f"DEBUG: list_tools_stdio_server response_data {response_data}")
         except Exception as e:
-            print (f"DEBUG: Not Valid Json {e}")
+            print (f"DEBUG: Not Valid Json '{response_line_decode}' with error {e}")
         result = response_data["result"] if "result" in response_data else {}
         tools = result["tools"] if "tools" in result else []
         tools = tool_mapper_json(tools)
@@ -389,6 +497,8 @@ async def robust_call_tool(client, tool_name, tool_arguments, retry_attempts=3):
             if not client.is_session_active: # Assuming a method to check connection status
                 print(f"Attempting to reconnect (attempt {attempt + 1}/{retry_attempts})...")
                 await client.reconnect()
+            else:
+                print (f"DEBUG: Client {client.name} is Session Active")
             result = await client.session.call_tool(tool_name, tool_arguments)
             print (f"DEBUG: robust_call_tool result {result}")
             break
@@ -1032,6 +1142,20 @@ def check_tool_input(tool_input):
         return False, f"check_tool_input tool_input {tool_input} all values empty, missing values {missing_fields} "
     return True, "check_tool_input Pass..."
 
+def preprocess_tool_input(tool_input):
+    if tool_input is None:
+        return False, "check_tool_input Tool Input is Empty..."
+
+    ## convert input params from int str, e.g. "2" to int 2
+    tool_input_clean = {}
+    for key, value in tool_input.items():
+        if isinstance(value, str) and value.isdigit():
+            value_clean = int(value)
+            tool_input_clean[key] = value_clean
+        else:
+            tool_input_clean[key] = value
+    return tool_input_clean
+
 @router.post("/api/query", response_model=QueryResponse)
 async def query_mcp_server(request: QueryRequest):
     """
@@ -1042,16 +1166,20 @@ async def query_mcp_server(request: QueryRequest):
     try:
         server_id = request.server_id 
         tool_name = request.tool_name
-        tool_input = request.tool_input
-        print (f"DEBUG: Input server_id {server_id}|tool_name {tool_name} | tool_input {tool_input}")
+        tool_input_raw = request.tool_input
+        print (f"DEBUG: Input server_id {server_id}|tool_name {tool_name} | tool_input {tool_input_raw}")
 
         if tool_name is None or tool_name == "":
             return QueryResponse(success=False, error=f"Server {server_id} tool_name is empty {tool_name}")
         
+        tool_input = preprocess_tool_input(tool_input_raw)
+        print (f"DEBUG: tool_input after preprocess_tool_input is {tool_input}")
+
         check, check_msg = check_tool_input(tool_input)
         if not check:
             return QueryResponse(success=False, error=check_msg)
 
+        print (f"DEBUG: tool_input is {tool_input}")
         output = await call_tools_base(server_id, tool_name, tool_input)
         success = output[KEY_SUCCESS] if KEY_SUCCESS in output else False 
         content = output[KEY_CONTENT] if KEY_CONTENT in output else ""
