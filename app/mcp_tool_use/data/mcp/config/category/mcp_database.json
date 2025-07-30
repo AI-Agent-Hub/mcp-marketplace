@@ -1,0 +1,63 @@
+{
+  "mcpServers": {
+    "postgres": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-postgres",
+        "postgresql://localhost/mydb"
+      ]
+    },
+    "redis": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-redis",
+        "redis://localhost:6379"
+      ]
+    },
+    "sqlite": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "/your_local_path/data/mcp/github/servers-archived/src/sqlite",
+        "run",
+        "mcp-server-sqlite",
+        "--db-path",
+        "~/test.db"
+      ]
+    },
+    "adb-mysql-mcp-server": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "/your_local_path/data/mcp/github/alibabacloud-adb-mysql-mcp-server",
+        "run",
+        "adb-mysql-mcp-server"
+      ],
+      "env": {
+        "ADB_MYSQL_HOST": "host",
+        "ADB_MYSQL_PORT": "port",
+        "ADB_MYSQL_USER": "database_user",
+        "ADB_MYSQL_PASSWORD": "database_password",
+        "ADB_MYSQL_DATABASE": "database"
+      }
+    },
+    "mysql": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "/your_local_path/data/mcp/github/mysql_mcp_server",
+        "run",
+        "mysql_mcp_server"
+      ],
+      "env": {
+        "MYSQL_HOST": "localhost",
+        "MYSQL_PORT": "3306",
+        "MYSQL_USER": "your_username",
+        "MYSQL_PASSWORD": "your_password",
+        "MYSQL_DATABASE": "your_database"
+      }
+    }    
+  }
+}
