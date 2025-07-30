@@ -1,0 +1,29 @@
+{
+    "mcpServers": {
+        "mcp-server-alipay": {
+            "command": "npx",
+            "args": ["-y", "@alipay/mcp-server-alipay"],
+            "env": {
+              "AP_APP_ID": "xxxxxx",
+              "AP_APP_KEY": "xxxxxx",
+              "AP_PUB_KEY": "xxxxxxx",
+              "AP_RETURN_URL": "https://github.com/modelcontextprotocol/servers",
+              "AP_NOTIFY_URL": "https://github.com/modelcontextprotocol/servers"
+            },
+            "disable": false,
+            "autoApprove": []
+        },
+        "paypal": {
+            "command": "npx",
+            "args": [
+              "-y",
+              "@paypal/mcp",
+              "--tools=all"
+            ],
+            "env": {
+              "PAYPAL_ACCESS_TOKEN": "xxxxxxxx",
+              "PAYPAL_ENVIRONMENT": "SANDBOX"
+            }
+        }  
+    }
+}
