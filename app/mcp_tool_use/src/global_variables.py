@@ -6,6 +6,9 @@ from contextlib import AsyncExitStack
 from mcp import ClientSession, StdioServerParameters
 from mcp.client.stdio import stdio_client
 from mcp.client.sse import sse_client
+from mcp.client.streamable_http import streamablehttp_client
+from datetime import timedelta
+
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from typing import Optional
 
@@ -35,6 +38,10 @@ def tool_to_dict(tools):
         logging.error(e)
         return []
 
+SERVER_TYPE_STDIO = "stdio"
+SERVER_TYPE_SSE = "sse"
+SERVER_TYPE_STREAMING_HTTP = "streaming_http"
+
 class MCPClient:
     def __init__(self, name: str = ""):
         self.session: Optional[ClientSession] = None
@@ -43,6 +50,7 @@ class MCPClient:
         self.name = name
         # save for future reconnection
         self.server_config = None
+        self.server_type = None
 
     async def connect_to_sse_server(self, server_url: str):
         """Connect to an SSE MCP server."""
@@ -54,6 +62,19 @@ class MCPClient:
         response = await self.session.list_tools()
         tools = response.tools
         logger.info(f"Connected to SSE MCP Server at {server_url}. Available tools: {[tool.name for tool in tools]}")
+        return tool_to_dict(tools)
+
+    async def connect_to_streaming_http_server(self, url: str):
+        """Connect to a streaming HTTP MCP server."""
+        logger.debug(f"Connecting to streaming HTTP MCP server at {url}")
+
+        read_stream, write_stream, _ = await self.exit_stack.enter_async_context(streamablehttp_client(url=url))
+        self.session = await self.exit_stack.enter_async_context(ClientSession(read_stream, write_stream))
+
+        await self.session.initialize()
+        response = await self.session.list_tools()
+        tools = response.tools
+        logger.info(f"Connected to streaming HTTP MCP Server at {url}. Available tools: {[tool.name for tool in tools]}")
         return tool_to_dict(tools)
 
     async def connect_to_stdio_server(self, server_script_path: str):
@@ -92,6 +113,25 @@ class MCPClient:
         logger.info(f"Connected to stdio MCP Server. Available tools: {[tool.name for tool in tools]}")
         return tool_to_dict(tools)
 
+    def get_client_type(self, server_config):
+        """
+            return:
+                str, type of client, "stdio", "sse", "streaming_http"
+        """
+        server_type = ""
+        if "url" in server_config:
+            server_url = server_config['url'] if "url" in server_config else ""
+            if "sse" in server_url:
+                server_type = SERVER_TYPE_SSE
+            else:
+                server_type = SERVER_TYPE_STREAMING_HTTP
+        elif "command" in server_config:
+            server_type = SERVER_TYPE_STDIO
+        else:
+            # default
+            server_type = SERVER_TYPE_STDIO
+        return server_type
+
     async def connect_to_server_config(self, server_config: dict):
         """Connect to an MCP server based on config.
         args:
@@ -101,13 +141,18 @@ class MCPClient:
         """
         global env
         self.server_config = server_config
+        self.server_type = self.get_client_type(self.server_config)
 
         tools = []
-        if "url" in server_config:
+        if self.server_type == SERVER_TYPE_SSE:
             server_url = server_config['url']
             tools = await self.connect_to_sse_server(server_url) # This will now use exit_stack internally
 
-        elif "command" in server_config:
+        elif self.server_type == SERVER_TYPE_STREAMING_HTTP:
+            server_url = server_config['url']
+            tools = await self.connect_to_streaming_http_server(server_url) # This will now use exit_stack internally
+
+        elif self.server_type == SERVER_TYPE_STDIO:
             # Re-use connect_to_stdio_server for cleaner code
             command = server_config.get("command")
             args = server_config.get("args", [])
