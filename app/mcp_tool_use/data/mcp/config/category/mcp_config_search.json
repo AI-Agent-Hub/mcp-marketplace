@@ -1,0 +1,43 @@
+{
+    "mcpServers": {
+        "ddg-search": {
+            "command": "uvx",
+            "args": ["duckduckgo-mcp-server"]
+        },
+        "tavily-mcp": {
+            "command": "npx",
+            "args": ["-y", "tavily-mcp@latest"],
+            "env": {
+                "TAVILY_API_KEY": "your-api-key"
+            },
+            "disabled": false,
+            "autoApprove": []
+        },
+        "bing-search": {
+            "command": "uvx",
+            "args": [
+                "bing-search-mcp"
+            ],
+            "env": {
+                "BING_API_KEY": "your-bing-api-key"
+            }
+        },
+        "brave-search": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-brave-search"
+            ],
+            "env": {
+                "BRAVE_API_KEY": "your-api-key"
+            }
+        },
+        "firecrawl-mcp": {
+            "command": "npx",
+            "args": ["-y", "firecrawl-mcp"],
+            "env": {
+                "FIRECRAWL_API_KEY": "your-api-key"
+            }
+        }
+    }
+}
