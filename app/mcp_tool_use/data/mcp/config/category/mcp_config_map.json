@@ -10,6 +10,9 @@
 		"amap-amap-sse": {
 			"url": "https://mcp.amap.com/sse?key=your_api_key_here"
 		},
+	        "amap-maps-streamableHTTP": {
+	            "url": "https://mcp.amap.com/mcp?key=your_api_key_here"
+	        },		
 		"baidu-maps-sse": {
 			"url": "https://mcp.map.baidu.com/sse?ak=your_api_key_here"
 		},
