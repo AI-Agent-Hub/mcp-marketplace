@@ -64,12 +64,16 @@ class MCPClient:
         logger.info(f"Connected to SSE MCP Server at {server_url}. Available tools: {[tool.name for tool in tools]}")
         return tool_to_dict(tools)
 
-    async def connect_to_streaming_http_server(self, url: str):
+    async def connect_to_streaming_http_server(self, url: str, headers: dict):
         """Connect to a streaming HTTP MCP server."""
         logger.debug(f"Connecting to streaming HTTP MCP server at {url}")
 
-        read_stream, write_stream, _ = await self.exit_stack.enter_async_context(streamablehttp_client(url=url))
-        self.session = await self.exit_stack.enter_async_context(ClientSession(read_stream, write_stream))
+        if len(headers) > 0:
+            read_stream, write_stream, _ = await self.exit_stack.enter_async_context(streamablehttp_client(url=url, headers=headers))
+            self.session = await self.exit_stack.enter_async_context(ClientSession(read_stream, write_stream))
+        else:
+            read_stream, write_stream, _ = await self.exit_stack.enter_async_context(streamablehttp_client(url=url))
+            self.session = await self.exit_stack.enter_async_context(ClientSession(read_stream, write_stream))
 
         await self.session.initialize()
         response = await self.session.list_tools()
@@ -150,7 +154,8 @@ class MCPClient:
 
         elif self.server_type == SERVER_TYPE_STREAMING_HTTP:
             server_url = server_config['url']
-            tools = await self.connect_to_streaming_http_server(server_url) # This will now use exit_stack internally
+            headers = server_config['headers'] if 'headers' in server_config else {}
+            tools = await self.connect_to_streaming_http_server(server_url, headers) 
 
         elif self.server_type == SERVER_TYPE_STDIO:
             # Re-use connect_to_stdio_server for cleaner code
