@@ -119,6 +119,9 @@ server_id = "financial-datasets/mcp-server"
 result2 = mcpm.search(query="financial datasets", count_per_page=20, offset=0)
 print (result2)
 
+## Search By Unique ID:  e.g. github {owner_name}/{repo_name}
+result_id = mcpm.search(id="puppeteer/puppeteer", mode="list", page_id=0, count_per_page=100, config_name="deepnlp")
+
 # search by batch query
 query_list = ["map", "navigation", "route planning"]
 params_list = [{"query": query, "page_id":0, "count_per_page":50} for query in query_list]
