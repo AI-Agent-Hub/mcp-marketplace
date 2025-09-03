@@ -2,10 +2,28 @@
 
 Try our AI Agent MCP Tool Use App at [https://agent.deepnlp.org/agent/mcp_tool_use](https://agent.deepnlp.org/agent/mcp_tool_use)
 
-Use Map/Finance/Browser/Search and many other tools with LLM support.
+Use Map/Finance/Browser/Search/Excel Spreadsheet and many other tools with LLM support.
 
-#### Weather Demo
-q = What's the weather like in Shanghai?
+
+#### Office Agent Excel Spreadsheet and Powerpoint Creation Usage
+```
+q=Write below information to an excel spreadsheet. Derek: male, graduated in years 2019, IT department, Jenifer: female graduated in 2024 Sales and Marketing department, Alan: male, graduated in 2021 in R&D department, Paul: mail, graduated in 2015, Staff in Operations department. Please formalize the data into three columns: name, graduation year and department. Then use spreadsheet formula to calculate the percentage of employees graduated within 3 years.
+```
+
+![Excel Agent](https://raw.githubusercontent.com/AI-Agent-Hub/mcp-marketplace/refs/heads/main/app/mcp_tool_use/docs/office_excel_use_agent.jpg)
+
+[Excel Spreadsheet and Powerpoint Office Agent](https://agent.deepnlp.org/agent/mcp_tool_use/share/36f34bd2-5527-40b7-9365-5f0c33fd5e22)
+
+
+#### Chart Plotting
+
+```
+q=Plot a pie chart showing 25% of employees graduated within 3 years and 75% graduated more than 3 years ago.
+```
+![Chart Plotting](https://raw.githubusercontent.com/AI-Agent-Hub/mcp-marketplace/refs/heads/main/app/mcp_tool_use/docs/demo_plot_chart.jpg)
+
+[Excel Spreadsheet and Powerpoint Office Agent](https://agent.deepnlp.org/agent/mcp_tool_use/share/93d94694-e673-49d3-b805-820c4ef842bd)
+
 
 #### Trip Planning Demo
 q = Find route from JFK Aiport to Time Square
