@@ -1,24 +1,74 @@
 ## Open MCP Marketplace | AI Agent Marketplace Index | MCP Client | AI Search from DeepNLP
 
-[![MCP Marketplace User Review Rating Badge](http://www.deepnlp.org/api/marketplace/svg?name=ai-agent-marketplace-index/ai-agent-marketplace-index)](http://deepnlp.org/store/mcp-server/mcp-server/pub-ai-agent-marketplace-index/ai-agent-marketplace-index) |
-[![AI Agent Marketplace DeepNLP](http://www.deepnlp.org/api/ai_agent_marketplace/svg?name=ai-agent-marketplace-index/ai-agent-marketplace-index)](http://deepnlp.org/store/mcp-server/mcp-server/pub-ai-agent-marketplace-index/ai-agent-marketplace-index) |
+[![MCP Marketplace User Review Rating Badge](https://www.deepnlp.org/api/marketplace/svg?name=ai-agent-marketplace-index/ai-agent-marketplace-index)](https://www.deepnlp.org/store/mcp-server/mcp-server/pub-ai-agent-marketplace-index/ai-agent-marketplace-index) |
+[![AI Agent Marketplace DeepNLP](https://www.deepnlp.org/api/ai_agent_marketplace/svg?name=ai-agent-marketplace-index/ai-agent-marketplace-index)](https://www.deepnlp.org/store/mcp-server/mcp-server/pub-ai-agent-marketplace-index/ai-agent-marketplace-index) |
 [WeChat](https://raw.githubusercontent.com/AI-Agent-Hub/mcp-marketplace/refs/heads/main/docs/mcp_marketplace_wechat_group.png)
 
 
+Visit the website [MCP Tool Use Agent App](https://agent.deepnlp.org/agent/mcp_tool_use) to explore MCP Servers with sota agentic AI Search/Deep Research, Finance Data,Chart Creation, Excel Spreadsheet/Powerpoint usage.
+
 ## Basic
 
-Open MCP Marketplace is an open source project aims to make MCP and AI Agent integration **Easier**.
+Open MCP Marketplace is an open source project aims to make MCP Servers integration into your AI Agent Workflow **Easier**.
 
-- You can get well-cleaned up MCP Servers Tools Meta information, Tools and Config Schema, etc. 
-- You can integrate a MCP Marketplace (web based client) button or a panel to your AI Apps (Chatbot, AI Search/Deep Research Engine, Video/Image generation, Coding IDE, etc.). So that users can choose their preferred MCP tools (such as Map, Browser Use, Payment, Fetch, etc) to answer their questions.
-- Python/TypeScript Support
+- **MCP Server Tool Meta and Config**: You can get well-cleaned up MCP Servers Tools Meta information, Tools and Config Schema, etc. 
+- **Web Based MCP Client with Admin Page**: Similar to Claude Desktop, Cursor, and many other clients, Open MCP-Marketplace provides a pured web based MCP client and Admin Page to connect(Start/End) and use MCP tools.
+- **Agent ToolBox**: Explore, Search Various 11k+ MCP Servers from open mcp marketplace. You can also filter by category, such as official, browser use, map, finance, coding, office software usage, etc.
+- **MCP Search Engine and Marketplace**: [MCP Marketplace Index](https://www.deepnlp.org/store/ai-agent/mcp-server) and [MCP Search Engine](https://www.deepnlp.org/search/agent)
+- **Various AI Agent Apps Support**: You can easily integrate the app into your existing Chatbot, AI Search/Deep Research Engine, Excel Spreadsheet/Powerpoint Creation, Video/Image generation, Coding IDE, etc. 
+- **Public API Access**: Visit [API Documentation](http://deepnlp.org/doc/mcp-marketplace) to search related mcp server and tools by keywords, category and more.
+- **MCP Tool Use Agent and Workflow App**: [MCP Tool Use Agent Source Code](https://github.com/AI-Agent-Hub/mcp-marketplace/tree/main/app/mcp_tool_use)
+- **Python/Typescript Package Support**: [Pypi](https://pypi.org/project/mcp-marketplace/), Npm
+
+
+## News
+
+- **Upgraded: Office File Agent and Visualization Agent**: Excel spreadsheet data writing and data analysis agent, Powerpoint generation, Charts Creation. [Excel Spreadsheet Agent](https://agent.deepnlp.org/agent/mcp_tool_use?server=haris-musa/excel-mcp-server), [Visualization Agent](https://agent.deepnlp.org/agent/mcp_tool_use?server=antvis/mcp-server-chart)
+- **Live MCP Tool Use Agent is Online**, Visit the [MCP Tool Use Agent App](https://agent.deepnlp.org/agent/mcp_tool_use) to see the workflows
+
+
+## Example MCP Categories Usage
+
+| Domain | Related MCP Server|  Demo |
+| ---- | ---- |  ----  |
+| Office File Agent |  Excel Spreadsheet, Powerpoint, PDF, etc | [Demo](https://agent.deepnlp.org/agent/mcp_tool_use/share/b23f0b85-cc6e-4a02-9bf2-e1f3ca796ef2) |
+| AI Search/Deep Research | Bing/Google Custom/Perplexity/Tavily/Firecrawl |  [Demo](https://agent.deepnlp.org/agent/mcp_tool_use?server=tavily-ai/tavily-mcp)  |
+| Map Trip Planning | GoogleMap, Amap(Gaode), BaiduMap, etc. |  [Demo](https://agent.deepnlp.org/agent/mcp_tool_use?server=amap-mcp/amap-mcp-%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE-mcp)  |
+| Browser Usage | Playwright, Puppeteer, etc. |  [Demo](https://agent.deepnlp.org/agent/mcp_tool_use?server=puppeteer/puppeteer)   |
+| Chart,Graph,Image | everart,mcp-server-charts(AntV),canva-mcp |  [Demo](https://agent.deepnlp.org/agent/mcp_tool_use/share/93d94694-e673-49d3-b805-820c4ef842bd)  |
 
 
 **Example: Route Planning using Google Map MCP**
-
-Visit [MCP Tool Use App](https://github.com/AI-Agent-Hub/mcp-marketplace/tree/main/app/mcp_tool_use)
-
+```
+q=Find the best route from JFK Airport to Times Square in New York
+```
 ![Route Planning](https://raw.githubusercontent.com/AI-Agent-Hub/mcp-marketplace/refs/heads/main/app/mcp_tool_use/docs/route_planning_mcp_v2.jpg)
+
+
+**Example: Office Agent Excel Spreadsheet and Powerpoint Creation Usage**
+```
+q=Write below information to an excel spreadsheet. Derek: male, graduated in years 2019, IT department, Jenifer: female graduated in 2024 Sales and Marketing department, Alan: male, graduated in 2021 in R&D department, Paul: mail, graduated in 2015, Staff in Operations department. Please formalize the data into three columns: name, graduation year and department. Then use spreadsheet formula to calculate the percentage of employees graduated within 3 years.
+```
+
+![Excel Agent](https://raw.githubusercontent.com/AI-Agent-Hub/mcp-marketplace/refs/heads/main/app/mcp_tool_use/docs/office_excel_use_agent.jpg)
+
+[Excel Spreadsheet and Powerpoint Office Agent](https://agent.deepnlp.org/agent/mcp_tool_use/share/36f34bd2-5527-40b7-9365-5f0c33fd5e22)
+
+
+**Exmaple: Chart Plotting**
+
+```
+q=Plot a pie chart showing 25% of employees graduated within 3 years and 75% graduated more than 3 years ago.
+```
+![Chart Plotting](https://raw.githubusercontent.com/AI-Agent-Hub/mcp-marketplace/refs/heads/main/app/mcp_tool_use/docs/demo_plot_chart.jpg)
+
+[Excel Spreadsheet and Powerpoint Office Agent](https://agent.deepnlp.org/agent/mcp_tool_use/share/93d94694-e673-49d3-b805-820c4ef842bd)
+
+
+**Example: AI Search Deep Research**
+
+Visit [MCP Tool Use App](https://github.com/AI-Agent-Hub/mcp-marketplace/tree/main/app/ai_search)
+
 
 **Example: MCP Admin and Playground To Manage Tools and Servers**
 
@@ -26,29 +76,23 @@ Visit [MCP Tool Use App](https://github.com/AI-Agent-Hub/mcp-marketplace/tree/ma
 
 ![MCP Marketplace Tool Use](https://raw.githubusercontent.com/AI-Agent-Hub/mcp-marketplace/refs/heads/main/app/mcp_tool_use/docs/marketplace_mcp_admin.jpg?raw=true)
 
-**Example: Demo AI Search**
 
-Visit [MCP Tool Use App](https://github.com/AI-Agent-Hub/mcp-marketplace/tree/main/app/ai_search)
-![Open MCP Marketplace DeepNLP Panel](https://raw.githubusercontent.com/AI-Agent-Hub/mcp-marketplace/refs/heads/main/docs/remote_mcp_server.jpg)
-
-**KEY Features**
-
+## KEY Features
 
 1. MCP Server Public Index of Tools Schema and Config file
 Dataset Collection of MCP Servers Tool/Function Call Schemas from 5000+ MCP servers, Useful for Tools RAG, Tools Dispatcher research and R&D. You can search route planning or "map" keywords from raw schema files. Welcome to add your config to the index. [MCP Tool Schema](./tools/README.md)
-
 
 2. MCP Marketplace Web Integration, See Web Demo and Video how to integrate the Open MCP Marketplace to Your AI Search Engine or Agent Workflow.
 
 - **Pure Web-based Plugin** : Show the Panel of MCP Tools from available open MCP marketplace, Support Filtering, Search, Installation  <br>
 - **Browse Navigate and Pagination** : User can browser the MCP Tools by category and use pagination to navigate. <br>
 - **Customized MCP servers Selection and Installation** : Users can choose which MCP tools to perform tasks from mcp tools marketplace with similar features, such as Map Location, Search, Fetch, Payment, etc.  <br>
-- **Badge**: Put Badge on your homepage Track MCP Servers User Reviews and Ratings, such as ![MCP Marketplace User Review Rating Badge](http://www.deepnlp.org/api/marketplace/svg?name=ai-agent-marketplace-index/ai-agent-marketplace-index)
+- **Badge**: Put Badge on your homepage Track MCP Servers User Reviews and Ratings, such as ![MCP Marketplace User Review Rating Badge](https://www.deepnlp.org/api/marketplace/svg?name=ai-agent-marketplace-index/ai-agent-marketplace-index)
 
 
 3. Various API Endpoint Support for Your AI Client Development
 
-- **Various MCP Marketplace API Endpoint**: Get Server Schema, Such as [pulsemcp.com](http://www.pulsemcp.com), [deepnlp.org](http://www.deepnlp.org), [aiagenta2z.com](http://www.aiagenta2z.com),etc. <br>
+- **Various MCP Marketplace API Endpoint**: Get Server Schema, Such as [pulsemcp.com](https://www.pulsemcp.com), [deepnlp.org](https://www.deepnlp.org), [aiagenta2z.com](https://www.aiagenta2z.com),etc. <br>
 - **GET/UPDATE/CREATE** MCP Servers Meta information to get your MCP Server more visibilityy. <br>
 - **Python and Typescript SDK** Search and registry of MCP Servers and Tools <br>
 - **Rich Meta Data** Tools, Servers Description, URL, Category, Github stars, User reviews score, Ratings and more statistics. <br>
@@ -71,11 +115,14 @@ Collected tools schema from google map mcp
 
 ## 2. MCP Marketplace Web Client Integration
 
-### Demo: AI Search Engine
 
-MCP Marketplace Browse and Pagination of MCP Servers [Demo](http://deepnlp.org/tool/mcp_marketplace)
 
-![Open MCP Marketplace DeepNLP Panel](https://raw.githubusercontent.com/AI-Agent-Hub/mcp-marketplace/refs/heads/main/docs/remote_mcp_server.jpg)
+### MCP Tool Use Agent
+
+
+MCP Marketplace Browse and Pagination of MCP Servers [Demo](https://agent.deepnlp.org/agent/mcp_tool_use)
+
+![Excel Agent](https://raw.githubusercontent.com/AI-Agent-Hub/mcp-marketplace/refs/heads/main/app/mcp_tool_use/docs/office_excel_use_agent.jpg)
 
 
 
@@ -85,13 +132,13 @@ MCP Marketplace Browse and Pagination of MCP Servers [Demo](http://deepnlp.org/t
 
 | Endpoint | API | Website |
 | --- | ---- | ---- |
-| deepnlp.org | http://www.deepnlp.org/api/mcp_marketplace/v1 | http://www.deepnlp.org/doc/mcp_marketplace |
+| deepnlp.org | https://www.deepnlp.org/api/mcp_marketplace/v1 | https://www.deepnlp.org/doc/mcp_marketplace |
 | pulsemcp.com | https://api.pulsemcp.com/v0beta/servers | https://www.pulsemcp.com/api |
 
 
 ### Python and Typescript SDK
 
-For official documentation of MCP Marketplace API, please check http://www.deepnlp.org/doc/mcp_marketplace
+For official documentation of MCP Marketplace API, please check https://www.deepnlp.org/doc/mcp_marketplace
 , [Python SDK](./python/README.md) and [Typescript SDK (WIP)]()
 
 **Installation**
@@ -132,7 +179,7 @@ results = mcpm.search_batch(params_list)
 **Curl Endpoint**
 
 ```
-curl http://www.deepnlp.org/api/mcp_marketplace/v1/server/google-maps/google-maps
+curl https://www.deepnlp.org/api/mcp_marketplace/v1/server/google-maps/google-maps
 ```
 
 **Result**
@@ -156,7 +203,7 @@ curl http://www.deepnlp.org/api/mcp_marketplace/v1/server/google-maps/google-map
     "id": "google-maps/google-maps",
     "content_tag_list": "official",
     "config": [],
-    "thumbnail_picture": "http://118.190.154.215/scripts/img/ai_service_content/b7fe82a3ab985ce1a953f7b4ad9c5e01.jpeg"
+    "thumbnail_picture": "https://118.190.154.215/scripts/img/ai_service_content/b7fe82a3ab985ce1a953f7b4ad9c5e01.jpeg"
   }]
 }
 ```
@@ -178,7 +225,7 @@ result = mcpm.list_tools(id=server_id, config_name="deepnlp_tool")
 **Curl Endpoint**
 
 ```
-curl http://www.deepnlp.org/api/mcp_marketplace/v1/tools/google-maps/google-maps
+curl https://www.deepnlp.org/api/mcp_marketplace/v1/tools/google-maps/google-maps
 ```
 
 ```
@@ -201,15 +248,15 @@ GET /api/mcp_marketplace/v1/server/${owner_id}/${repo_name}
 
 ### Badage
 
-Put Badge on your homepage markdown to track MCP Servers User Reviews and Ratings, such as [![MCP Marketplace User Review Rating Badge](http://www.deepnlp.org/api/marketplace/svg?name=google-maps/google-maps)](http://www.deepnlp.org/store/ai-agent/mcp-server/pub-google-maps/google-maps). 
+Put Badge on your homepage markdown to track MCP Servers User Reviews and Ratings, such as [![MCP Marketplace User Review Rating Badge](https://www.deepnlp.org/api/marketplace/svg?name=google-maps/google-maps)](https://www.deepnlp.org/store/ai-agent/mcp-server/pub-google-maps/google-maps). 
 
 
 change google-maps/google-maps to your MCP "owner_name"/"repo_name"
 ```
-![MCP Marketplace User Review Rating Badge](http://www.deepnlp.org/api/marketplace/svg?name=${owner_name}/${repo_name})](http://www.deepnlp.org/store/ai-agent/mcp-server/pub-${owner_name}/${repo_name})
+![MCP Marketplace User Review Rating Badge](https://www.deepnlp.org/api/marketplace/svg?name=${owner_name}/${repo_name})](https://www.deepnlp.org/store/ai-agent/mcp-server/pub-${owner_name}/${repo_name})
 
 ## google map
-![MCP Marketplace User Review Rating Badge](http://www.deepnlp.org/api/marketplace/svg?name=google-maps/google-maps)](http://www.deepnlp.org/store/ai-agent/mcp-server/pub-google-maps/google-maps)
+![MCP Marketplace User Review Rating Badge](https://www.deepnlp.org/api/marketplace/svg?name=google-maps/google-maps)](https://www.deepnlp.org/store/ai-agent/mcp-server/pub-google-maps/google-maps)
 ```
 
 
@@ -252,9 +299,9 @@ graph TD
 ## Resources
 
 
-- [MCP Marketplace DeepNLP](http://www.deepnlp.org/store/ai-agent/mcp-server)
+- [MCP Marketplace DeepNLP](https://www.deepnlp.org/store/ai-agent/mcp-server)
 - [MCP Marketplace PulseMCP](https://www.pulsemcp.com/)
-- [AI Agent Marketplace](http://www.deepnlp.org/store/ai-agent)
+- [AI Agent Marketplace](https://www.deepnlp.org/store/ai-agent)
 
 
 
