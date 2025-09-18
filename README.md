@@ -31,11 +31,12 @@ Open MCP Marketplace is an open source project aims to make MCP Servers integrat
 
 | Domain | Related MCP Server|  Demo |
 | ---- | ---- |  ----  |
-| Office File Agent |  Excel Spreadsheet, Powerpoint, PDF, etc | [Demo](https://agent.deepnlp.org/agent/mcp_tool_use/share/b23f0b85-cc6e-4a02-9bf2-e1f3ca796ef2) |
-| AI Search/Deep Research | Bing/Google Custom/Perplexity/Tavily/Firecrawl |  [Demo](https://agent.deepnlp.org/agent/mcp_tool_use?server=tavily-ai/tavily-mcp)  |
-| Map Trip Planning | GoogleMap, Amap(Gaode), BaiduMap, etc. |  [Demo](https://agent.deepnlp.org/agent/mcp_tool_use?server=amap-mcp/amap-mcp-%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE-mcp)  |
-| Browser Usage | Playwright, Puppeteer, etc. |  [Demo](https://agent.deepnlp.org/agent/mcp_tool_use?server=puppeteer/puppeteer)   |
-| Chart,Graph,Image | everart,mcp-server-charts(AntV),canva-mcp |  [Demo](https://agent.deepnlp.org/agent/mcp_tool_use/share/93d94694-e673-49d3-b805-820c4ef842bd)  |
+| Office File Agent |  Excel Spreadsheet, Powerpoint, PDF, etc | [Example](https://agent.deepnlp.org/agent/mcp_tool_use/share/ee640008-6bc1-4c3a-832b-2557f985b540) [MCP]() |
+| AI Search/Deep Research | Bing/Google Custom/Perplexity/Tavily/Firecrawl |  [Demo](https://agent.deepnlp.org/agent/mcp_tool_use?server=tavily-ai/tavily-mcp) [MCP]() |
+| Map Trip Planning | GoogleMap, Amap(Gaode), BaiduMap, etc. | [Example](https://agent.deepnlp.org/agent/mcp_tool_use/share/8ab0b25c-b72d-4cae-9c86-a852df8c6541)  [MCP](https://agent.deepnlp.org/agent/mcp_tool_use?server=amap-mcp/amap-mcp-%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE-mcp) [Use MCP]() |
+| Browser Usage | Playwright, Puppeteer, etc. |  [Demo](https://agent.deepnlp.org/agent/mcp_tool_use?server=puppeteer/puppeteer) [MCP]()  |
+| Chart,Graph,Image | everart,mcp-server-charts(AntV),canva-mcp |  [Demo](https://agent.deepnlp.org/agent/mcp_tool_use/share/93d94694-e673-49d3-b805-820c4ef842bd) [MCP]() |
+
 
 
 **Example: Route Planning using Google Map MCP**
