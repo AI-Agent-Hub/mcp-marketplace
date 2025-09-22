@@ -1,4 +1,5 @@
-## Open MCP Marketplace | AI Agent Marketplace Index | MCP Client | AI Search from DeepNLP
+## Open MCP Marketplace | AI Agent Store Marketplace Index | OneKey MCP Router | AI Agent & MCP Moneytization Revenue Sharing plans | MCP Tool Use Agent from DeepNLP
+
 
 [![MCP Marketplace User Review Rating Badge](https://www.deepnlp.org/api/marketplace/svg?name=ai-agent-marketplace-index/ai-agent-marketplace-index)](https://www.deepnlp.org/store/mcp-server/mcp-server/pub-ai-agent-marketplace-index/ai-agent-marketplace-index) |
 [![AI Agent Marketplace DeepNLP](https://www.deepnlp.org/api/ai_agent_marketplace/svg?name=ai-agent-marketplace-index/ai-agent-marketplace-index)](https://www.deepnlp.org/store/mcp-server/mcp-server/pub-ai-agent-marketplace-index/ai-agent-marketplace-index) |
@@ -7,22 +8,33 @@
 
 Visit the website [MCP Tool Use Agent App](https://agent.deepnlp.org/agent/mcp_tool_use) to explore MCP Servers with sota agentic AI Search/Deep Research, Finance Data,Chart Creation, Excel Spreadsheet/Powerpoint usage.
 
+
+**[MCP Open Marketplace and Search Engine](https://www.deepnlp.org/store/ai-agent/mcp-server)**<br>
+<img src="https://raw.githubusercontent.com/AI-Agent-Hub/mcp-marketplace/refs/heads/main/docs/mcp_marketplace_intro.png" alt="mcp marketplace" width="300" style="object-fit: contain;">
+
+**[MCP Tool Use Agent App](https://agent.deepnlp.org/agent/mcp_tool_use)**<br>
+<img src="https://raw.githubusercontent.com/AI-Agent-Hub/mcp-marketplace/refs/heads/main/app/mcp_tool_use/docs/demo_plot_chart.jpg" alt="mcp tool use agent" width="300" style="object-fit: contain;">
+
+
 ## Basic
 
 Open MCP Marketplace is an open source project aims to make MCP Servers integration into your AI Agent Workflow **Easier**.
 
+- **MCP Search Engine and Marketplace**: [MCP Marketplace Index](https://www.deepnlp.org/store/ai-agent/mcp-server) and [MCP Search Engine](https://www.deepnlp.org/search/agent)
+- **MCP OneKey Router** Use Just One Access Key to Authenticate and Use commercial MCPs, AI Agent & MCP Moneytization Revenue Sharing plans: [OneKey MCP Router](https://github.com/AI-Agent-Hub/OneKey-MCP-Router) introduction and proxy [Onekey MCP servers App](https://github.com/AI-Agent-Hub/mcp-marketplace/tree/main/app/onekey_mcp_router).
 - **MCP Server Tool Meta and Config**: You can get well-cleaned up MCP Servers Tools Meta information, Tools and Config Schema, etc. 
 - **Web Based MCP Client with Admin Page**: Similar to Claude Desktop, Cursor, and many other clients, Open MCP-Marketplace provides a pured web based MCP client and Admin Page to connect(Start/End) and use MCP tools.
 - **Agent ToolBox**: Explore, Search Various 11k+ MCP Servers from open mcp marketplace. You can also filter by category, such as official, browser use, map, finance, coding, office software usage, etc.
-- **MCP Search Engine and Marketplace**: [MCP Marketplace Index](https://www.deepnlp.org/store/ai-agent/mcp-server) and [MCP Search Engine](https://www.deepnlp.org/search/agent)
 - **Various AI Agent Apps Support**: You can easily integrate the app into your existing Chatbot, AI Search/Deep Research Engine, Excel Spreadsheet/Powerpoint Creation, Video/Image generation, Coding IDE, etc. 
 - **Public API Access**: Visit [API Documentation](http://deepnlp.org/doc/mcp-marketplace) to search related mcp server and tools by keywords, category and more.
 - **MCP Tool Use Agent and Workflow App**: [MCP Tool Use Agent Source Code](https://github.com/AI-Agent-Hub/mcp-marketplace/tree/main/app/mcp_tool_use)
 - **Python/Typescript Package Support**: [Pypi](https://pypi.org/project/mcp-marketplace/), Npm
 
 
+
 ## News
 
+- **OneKey MCP Router**: Use OneKey to Access commercial MCPs. Visit [OneKey MCP Router](https://github.com/AI-Agent-Hub/OneKey-MCP-Router) for details.
 - **Upgraded: Office File Agent and Visualization Agent**: Excel spreadsheet data writing and data analysis agent, Powerpoint generation, Charts Creation. [Excel Spreadsheet Agent](https://agent.deepnlp.org/agent/mcp_tool_use?server=haris-musa/excel-mcp-server), [Visualization Agent](https://agent.deepnlp.org/agent/mcp_tool_use?server=antvis/mcp-server-chart)
 - **Live MCP Tool Use Agent is Online**, Visit the [MCP Tool Use Agent App](https://agent.deepnlp.org/agent/mcp_tool_use) to see the workflows
 
