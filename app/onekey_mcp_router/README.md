@@ -6,15 +6,16 @@ Calling MCPs or AI Agent APIs by the credit system will reduce the costs of plan
 [OneKey MCP Website](https://www.deepnlp.org/agent/onekey-mcp-router) | [Agent Web Portal](https://agent.deepnlp.org)
 
 **Features**
-1. Use just one key to access commercial and non-Commercial MCP servers via Proxy Router for free tier and discounted rates, without needs to registered one keys at a time.
-2. Authentication of various MCP or AI Agent service provides 
-3. Revenue Sharing Initiative : Support MCP APIs and AI Agents Moneytization By Credit System
+1. **OneKey Access**: Use just one key to access commercial and non-Commercial MCP servers via Proxy Router for free tier and discounted rates, without needs to registered all keys for each indivisual servers
+2. **Streamable Http Based MCP Server**: The OneKey Access to Proxy MCP Server via Http Connection without the needs for local registered such as pyhon or nodejs.
+3. **Authentication**: of various MCP or AI Agent service provides 
+4. **Revenue Sharing Initiative** : Support MCP APIs and AI Agents Moneytization By Credit System, Gain Credit By comments and Publishing to Save Cost.
 
 
 ```mermaid
 
 graph LR
-    A[User Request] --> B[MCP Router Proxy]
+    A[User Request] -- OneKey Authentication --> B[MCP Router Proxy Server]
     B --> C[MCP Server 1]
     B --> D[MCP Server 2]
     B --> E[MCP Server 3]
@@ -25,26 +26,87 @@ graph LR
 
 Source Code of MCP Onekey Proxy Server visit Github (https://github.com/AI-Agent-Hub/mcp-marketplace)
 
+
 ## MCP Servers Supported By OneKey MCP Router
+
+
+### QuickStart
+
+1. **Generate Keys**: Your DeepNLP OneKey Router AccessKey in [OneKey Generation](https://www.deepnlp.org/agent/onekey-mcp-router)
+
+or 
+
+Use the beta Test Keys Below with limited call number
+
+```
+DEEPNLP_ONEKEY_ROUTER_ACCESS=BETA_TEST_KEY_OCT_2025 
+```
+
+2. **Setup Config**: Setup MCP config in your client, Cursor, VSCode or Other Clients.
+
+Setup Environemnt Viariables
+```
+export DEEPNLP_ONEKEY_ROUTER_ACCESS=BETA_TEST_KEY_OCT_2025 
+```
+
+3. **Add config**: Add below config to mcp.config files
+
+```
+{
+	"mcpServers": {
+		"deepnlp-onekey-google-maps": {
+			"url": "https://agent.deepnlp.org/mcp?server_name=google-maps&onekey={DEEPNLP_ONEKEY_ROUTER_ACCESS}"
+		},
+		"deepnlp-onekey-amap-maps": {
+			"url": "https://agent.deepnlp.org/mcp?server_name=amap-maps-streamableHTTP&onekey={DEEPNLP_ONEKEY_ROUTER_ACCESS}"
+		},
+		"deepnlp-onekey-baidu-map": {
+			"url": "https://agent.deepnlp.org/mcp?server_name=baidu-map&onekey={DEEPNLP_ONEKEY_ROUTER_ACCESS}"
+		},
+		"deepnlp-onekey-puppeteer": {
+			"url": "https://agent.deepnlp.org/mcp?server_name=puppeteer&onekey={DEEPNLP_ONEKEY_ROUTER_ACCESS}"
+		},
+		"deepnlp-onekey-tavily": {
+			"url": "https://agent.deepnlp.org/mcp?server_name=tavily-remote-mcp&onekey={DEEPNLP_ONEKEY_ROUTER_ACCESS}"
+		},
+		"deepnlp-onekey-firecrawl": {
+			"url": "https://agent.deepnlp.org/mcp?server_name=firecrawl-mcp&onekey={DEEPNLP_ONEKEY_ROUTER_ACCESS}"
+		},
+		"deepnlp-onekey-bing-image-search": {
+			"url": "https://agent.deepnlp.org/mcp?server_name=bing-image-search-mcp&onekey={DEEPNLP_ONEKEY_ROUTER_ACCESS}"
+		}
+	}
+}
+```
+
+
+4. **Integration** is Done (Cursor Example)
+
+<img src="https://raw.githubusercontent.com/AI-Agent-Hub/mcp-marketplace/refs/heads/main/app/onekey_mcp_router/docs/deepnlp_onekey_router.jpg" style="height:400px" alt="image">
+
+
 
 ### Beta Test
 Now we are in beta testing mode, you can use below beta test keys for beta testing in your Clients.
 
 
 ```
-export DEEPNLP_ONEKEY_ROUTER_ACCESS=BETA_TEST_KEY_SEP_2025 
+export DEEPNLP_ONEKEY_ROUTER_ACCESS=BETA_TEST_KEY_OCT_2025 
 ```
-
 
 | Category | MCP Server | Config |  Web Demo Playground  |
 | ---- | ---- |  ---- |  ---- | 
 | Maps | Google Maps | [Google Map OneKey Config](https://www.deepnlp.org/store/mcp-server/map/pub-google-maps/google-maps) | [Web Demo](https://agent.deepnlp.org/agent/mcp_tool_use?server=google-maps/google-maps) |
 | Maps | AMap (Gaode) Maps | [Amap OneKey Config](https://www.deepnlp.org/store//mcp-server/map/pub-amap-mcp/amap-mcp-%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE-mcp) | [Web Demo](https://agent.deepnlp.org/agent/mcp_tool_use?server=amap-mcp/amap-mcp-%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE-mcp) |
+| Maps | Baidu Maps | [Baidu Maps](https://www.deepnlp.org/store/mcp-server/map/pub-baidu-map/baidu-map-mcp-%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE-mcp-server) | [Web Demo](https://agent.deepnlp.org/agent/mcp_tool_use?server=baidu-map/baidu-map-mcp-%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE-mcp-server) |
 | Web Search | Tavily AI Search | [Tavily OneKey Config](https://www.deepnlp.org/store/mcp-server/mcp-server/pub-tavily-ai/tavily-mcp) | [Web Demo](https://agent.deepnlp.org/agent/mcp_tool_use?server=tavily-ai/tavily-mcp) |
 | Web Search | Firecrawl mcp | [Firecrawl OneKey Config](https://www.deepnlp.org/store/mcp-server/mcp-server/pub-mendableai/firecrawl-mcp-server) | [Web Demo](https://agent.deepnlp.org/agent/mcp_tool_use?server=mendableai/firecrawl-mcp-server) |
+| Image Search| Bing Image Search MCP |    |     |
 
 
-Get Config By Visiting [Open MCP Marketplace](https://www.deepnlp.org/store/ai-agent/mcp-server). Search the MCPs, Choose the OneKey Tab to see if it's available.
+Find More OneKey Supported MCPs or Agents, Visit [Open MCP Marketplace](https://www.deepnlp.org/store/ai-agent/mcp-server) or [Open AI Agent Marketplace](https://www.deepnlp.org/store/ai-agent)
+
+Search the MCPs, Choose the OneKey Tab to see if it's available.
 For example, you can visit [Google Map MCP OneKey Config](https://www.deepnlp.org/store/mcp-server/map/pub-google-maps/google-maps) and switch to OneKey tab.
 
 
