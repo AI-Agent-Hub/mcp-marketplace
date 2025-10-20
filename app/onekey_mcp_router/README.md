@@ -51,6 +51,9 @@ export DEEPNLP_ONEKEY_ROUTER_ACCESS=BETA_TEST_KEY_OCT_2025
 
 3. **Add config**: Add below config to mcp.config files
 
+Remember to replace the placeholder with your registered keys or use the beta test key to run.
+e.g. https://agent.deepnlp.org/mcp?server_name=google-maps&onekey=BETA_TEST_KEY_OCT_2025
+
 ```
 {
 	"mcpServers": {
